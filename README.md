@@ -7,9 +7,9 @@
 [Vite](https://vite.org) is a next-generation Reactive Blockchain that adopts a _message-driven, asynchronous architecture and a DAG-based ledger_.
 The goal for Vite’s design is to _provide a reliable public platform for industrial dApps_, with features of ultra-high throughput and scalability.
 
-## Go Vite
+## SkyVite
 
-Official golang implementation of Vite Protocol
+Go to Delphi translation of official golang implementation of Vite Protocol.
 
 [![GitHub release](https://img.shields.io/github/release/vitelabs/go-vite.svg)](https://github.com/vitelabs/go-vite/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/vitelabs/go-vite)](https://goreportcard.com/report/github.com/vitelabs/go-vite)

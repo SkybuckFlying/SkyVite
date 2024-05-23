@@ -3,7 +3,10 @@ unit unit_config;
 interface
 
 uses
-  SysUtils, Classes, IniFiles;
+  SysUtils,
+  Classes,
+  IniFiles,
+  unit_Producer;
 
 type
   TConfig = class

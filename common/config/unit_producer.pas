@@ -3,13 +3,15 @@ unit unit_producer;
 interface
 
 uses
-  SysUtils, StrUtils, Types;
+  SysUtils,
+  StrUtils,
+  unit_address;
 
 type
   TProducer = class
   private
     FProducer: Boolean;
-    FCoinbase: String;
+	FCoinbase: String;
     FEntropyStorePath: String;
     FVirtualSnapshotVerifier: Boolean;
     FcoinbaseAddress: TAddress;

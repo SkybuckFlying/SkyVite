@@ -19,7 +19,16 @@ uses
   unit_address in 'common\types\unit_address.pas',
   unit_crypto in 'crypto\unit_crypto.pas',
   unit_ed25519 in 'crypto\ed25519\unit_ed25519.pas',
-  unit_ed25519_alternative_1 in 'crypto\ed25519\unit_ed25519_alternative_1.pas';
+  unit_ed25519_alternative_1 in 'crypto\ed25519\unit_ed25519_alternative_1.pas',
+  unit_manager in 'wallet\unit_manager.pas',
+  unit_rpc in 'node\unit_rpc.pas',
+  unit_pow in 'pow\unit_pow.pas',
+  unit_node_config in 'node\config\unit_node_config.pas',
+  unit_chain in 'ledger\chain\unit_chain.pas',
+  unit_consensus in 'ledger\consensus\unit_consensus.pas',
+  unit_pool in 'ledger\pool\unit_pool.pas',
+  unit_verifier in 'ledger\verifier\unit_verifier.pas',
+  unit_chain_v2 in 'ledger\chain\unit_chain_v2.pas';
 
 begin
   try

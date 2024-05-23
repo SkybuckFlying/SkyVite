@@ -1,6 +1,8 @@
-unit unit_load_plugins;
+﻿unit unit_load_plugins;
 
 interface
+
+uses unit_default_node_manager;
 
 procedure Loading;
 
@@ -69,6 +71,7 @@ begin
 	ExitCode := 1;
   end;
 }
+	Action;
 end;
 
 // Skybuck: for now logging activity ignored.
@@ -142,6 +145,102 @@ initialization
 //	Init;
 
 
+
+
+{
+  //TODO: Whether the command name is fixed ？
+  app.Name := ExtractFileName(ParamStr(0));
+  app.HideVersion := False;
+  app.Version := version.VITE_BUILD_VERSION;
+  app.Compiled := Now;
+  app.Authors := TAuthors.Create(
+    TAuthor.Create('Vite Labs', 'info@vite.org')
+  );
+  app.Copyright := 'Copyright 2018-2024 The go-vite Authors';
+  app.Usage := 'the go-vite cli application';
+
+  //Import: Please add the New command here
+  app.Commands := TCommands.Create(
+	versionCommand,
+    licenseCommand,
+    subcmd_recover.LedgerRecoverCommand,
+    subcmd_export.ExportCommand,
+    subcmd_plugin_data.PluginDataCommand,
+    subcmd_rpc.RpcCommand,
+    subcmd_loadledger.LoadLedgerCommand,
+    subcmd_ledger.QueryLedgerCommand,
+    subcmd_virtualnode.VirtualNodeCommand
+  );
+  app.Commands.SortByName;
+
+  //Import: Please add the New Flags here
+  for element in app.Commands do
+    app.Flags := MergeFlags(app.Flags, element.Flags);
+  app.Flags := MergeFlags(app.Flags, StatFlags);
+
+  app.Before := beforeAction;
+  app.Action := action;
+  app.After := afterAction;
+}
+
+procedure Loading;
+begin
+  if app.Run(ParamStr(0)) <> 0 then
+  begin
+    WriteLn(ErrOutput, 'Error: ', GetLastError);
+    Halt(1);
+  end;
+end;
+
+function beforeAction(ctx: TContext): TError;
+var
+  max: Integer;
+begin
+  max := System.CPUCount + 1;
+  log.Info('runtime num', 'max', max);
+  System.SetProcessAffinityMask(GetCurrentProcess, max);  // wrong.
+
+  //TODO: we can add dashboard here
+  if ctx.GlobalIsSet(PPROF_ENABLED_FLAG.Name) then
+  begin
+    var pprofPort := ctx.GlobalUint(PPROF_PORT_FLAG.Name);
+    var listenAddress: string;
+    if pprofPort = 0 then
+      pprofPort := 8080;
+    listenAddress := Format('%s:%d', ['0.0.0.0', pprofPort]);
+    var visitAddress := Format('http://localhost:%d/debug/pprof', [pprofPort]);
+
+    TThread.CreateAnonymousThread(
+      procedure
+      begin
+        log.Info('Enable chain performance analysis tool, you can visit the address of `' + visitAddress + '`');
+        HTTPServer := THTTPServer.Create(listenAddress, nil);
+      end
+    ).Start;
+  end;
+
+  Result := nil;
+end;
+
+function action(ctx: TContext): TError;
+begin
+  //Make sure No subCommands were entered,Only the flags
+  if ctx.Args.Count > 0 then
+    Result := Format('invalid command: %s', [ctx.Args[0]])
+  else
+  begin
+    var nodeManager, err := nodemanager.NewDefaultNodeManager(ctx, nodemanager.FullNodeMaker);
+    if err <> nil then
+      Result := Format('new node error, %+v', [err])
+    else
+      Result := nodeManager.Start;
+  end;
+end;
+
+function afterAction(ctx: TContext): TError;
+begin
+  Result := nil;
+end;
 
 
 

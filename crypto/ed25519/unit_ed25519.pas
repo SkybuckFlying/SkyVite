@@ -218,7 +218,7 @@ var
   signature: array[0..SignatureSize - 1] of Byte;
 begin
   if Length(privateKey) <> PrivateKeySize then
-    raise Exception.Create('ed25519: bad private key length: ' + IntToStr(Length(privateKey)));
+	raise Exception.Create('ed25519: bad private key length: ' + IntToStr(Length(privateKey)));
 
   h := TBlake2bHash.Create(512);
   try

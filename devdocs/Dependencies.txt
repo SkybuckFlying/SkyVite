@@ -1,0 +1,922 @@
+V:\go-vite\release v2.14>goda tree ./...:all
+  + github.com/vitelabs/go-vite/v2/cmd/printer/blocks
+    + github.com/vitelabs/go-vite/v2/common/helper
+      + github.com/stretchr/testify/assert
+        + github.com/davecgh/go-spew/spew
+        + github.com/pmezard/go-difflib/difflib
+        + gopkg.in/yaml.v3
+    + github.com/vitelabs/go-vite/v2/ledger/chain/block
+      + github.com/golang/snappy
+      + github.com/pkg/errors
+      + github.com/vitelabs/go-vite/v2/common/types
+        + github.com/pkg/errors ~
+        + github.com/vitelabs/go-vite/v2/common/helper ~
+        + github.com/vitelabs/go-vite/v2/crypto
+          + github.com/vitelabs/go-vite/v2/crypto/ed25519
+            + github.com/vitelabs/go-vite/v2/crypto/ed25519/internal/edwards25519
+            + golang.org/x/crypto/blake2b
+              + golang.org/x/sys/cpu
+          + golang.org/x/crypto/blake2b ~
+          + golang.org/x/crypto/curve25519
+            + golang.org/x/crypto/curve25519/internal/field
+          + golang.org/x/crypto/sha3
+        + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+      + github.com/vitelabs/go-vite/v2/crypto ~
+      + github.com/vitelabs/go-vite/v2/interfaces
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core
+          + github.com/golang/protobuf/proto
+            + google.golang.org/protobuf/encoding/prototext
+              + google.golang.org/protobuf/encoding/protowire
+                + google.golang.org/protobuf/internal/errors
+                  + google.golang.org/protobuf/internal/detrand
+              + google.golang.org/protobuf/internal/encoding/messageset
+                + google.golang.org/protobuf/encoding/protowire ~
+                + google.golang.org/protobuf/internal/errors ~
+                + google.golang.org/protobuf/reflect/protoreflect
+                  + google.golang.org/protobuf/encoding/protowire ~
+                  + google.golang.org/protobuf/internal/pragma
+              + google.golang.org/protobuf/internal/encoding/text
+                + google.golang.org/protobuf/internal/detrand ~
+                + google.golang.org/protobuf/internal/errors ~
+                + google.golang.org/protobuf/internal/flags
+                + google.golang.org/protobuf/internal/strs
+                  + google.golang.org/protobuf/internal/flags ~
+                  + google.golang.org/protobuf/reflect/protoreflect ~
+              + google.golang.org/protobuf/internal/errors ~
+              + google.golang.org/protobuf/internal/flags ~
+              + google.golang.org/protobuf/internal/genid
+                + google.golang.org/protobuf/reflect/protoreflect ~
+              + google.golang.org/protobuf/internal/order
+                + google.golang.org/protobuf/reflect/protoreflect ~
+              + google.golang.org/protobuf/internal/pragma ~
+              + google.golang.org/protobuf/internal/set
+              + google.golang.org/protobuf/internal/strs ~
+              + google.golang.org/protobuf/proto
+                + google.golang.org/protobuf/encoding/protowire ~
+                + google.golang.org/protobuf/internal/encoding/messageset ~
+                + google.golang.org/protobuf/internal/errors ~
+                + google.golang.org/protobuf/internal/flags ~
+                + google.golang.org/protobuf/internal/genid ~
+                + google.golang.org/protobuf/internal/order ~
+                + google.golang.org/protobuf/internal/pragma ~
+                + google.golang.org/protobuf/internal/strs ~
+                + google.golang.org/protobuf/reflect/protoreflect ~
+                + google.golang.org/protobuf/reflect/protoregistry
+                  + google.golang.org/protobuf/internal/encoding/messageset ~
+                  + google.golang.org/protobuf/internal/errors ~
+                  + google.golang.org/protobuf/internal/flags ~
+                  + google.golang.org/protobuf/reflect/protoreflect ~
+                + google.golang.org/protobuf/runtime/protoiface
+                  + google.golang.org/protobuf/internal/pragma ~
+                  + google.golang.org/protobuf/reflect/protoreflect ~
+              + google.golang.org/protobuf/reflect/protoreflect ~
+              + google.golang.org/protobuf/reflect/protoregistry ~
+            + google.golang.org/protobuf/encoding/protowire ~
+            + google.golang.org/protobuf/proto ~
+            + google.golang.org/protobuf/reflect/protodesc
+              + google.golang.org/protobuf/encoding/protowire ~
+              + google.golang.org/protobuf/internal/encoding/defval
+                + google.golang.org/protobuf/internal/encoding/text ~
+                + google.golang.org/protobuf/internal/errors ~
+                + google.golang.org/protobuf/reflect/protoreflect ~
+              + google.golang.org/protobuf/internal/errors ~
+              + google.golang.org/protobuf/internal/filedesc
+                + google.golang.org/protobuf/encoding/protowire ~
+                + google.golang.org/protobuf/internal/descfmt
+                  + google.golang.org/protobuf/internal/detrand ~
+                  + google.golang.org/protobuf/internal/pragma ~
+                  + google.golang.org/protobuf/reflect/protoreflect ~
+                + google.golang.org/protobuf/internal/descopts
+                  + google.golang.org/protobuf/reflect/protoreflect ~
+                + google.golang.org/protobuf/internal/encoding/defval ~
+                + google.golang.org/protobuf/internal/encoding/messageset ~
+                + google.golang.org/protobuf/internal/errors ~
+                + google.golang.org/protobuf/internal/genid ~
+                + google.golang.org/protobuf/internal/pragma ~
+                + google.golang.org/protobuf/internal/strs ~
+                + google.golang.org/protobuf/proto ~
+                + google.golang.org/protobuf/reflect/protoreflect ~
+                + google.golang.org/protobuf/reflect/protoregistry ~
+              + google.golang.org/protobuf/internal/flags ~
+              + google.golang.org/protobuf/internal/genid ~
+              + google.golang.org/protobuf/internal/pragma ~
+              + google.golang.org/protobuf/internal/strs ~
+              + google.golang.org/protobuf/proto ~
+              + google.golang.org/protobuf/reflect/protoreflect ~
+              + google.golang.org/protobuf/reflect/protoregistry ~
+              + google.golang.org/protobuf/types/descriptorpb
+                + google.golang.org/protobuf/reflect/protoreflect ~
+                + google.golang.org/protobuf/runtime/protoimpl
+                  + google.golang.org/protobuf/internal/filedesc ~
+                  + google.golang.org/protobuf/internal/filetype
+                    + google.golang.org/protobuf/internal/descopts ~
+                    + google.golang.org/protobuf/internal/filedesc ~
+                    + google.golang.org/protobuf/internal/impl
+                      + google.golang.org/protobuf/encoding/prototext ~
+                      + google.golang.org/protobuf/encoding/protowire ~
+                      + google.golang.org/protobuf/internal/descopts ~
+                      + google.golang.org/protobuf/internal/detrand ~
+                      + google.golang.org/protobuf/internal/encoding/messageset ~
+                      + google.golang.org/protobuf/internal/encoding/tag
+                        + google.golang.org/protobuf/internal/encoding/defval ~
+                        + google.golang.org/protobuf/internal/filedesc ~
+                        + google.golang.org/protobuf/internal/strs ~
+                        + google.golang.org/protobuf/reflect/protoreflect ~
+                      + google.golang.org/protobuf/internal/errors ~
+                      + google.golang.org/protobuf/internal/filedesc ~
+                      + google.golang.org/protobuf/internal/flags ~
+                      + google.golang.org/protobuf/internal/genid ~
+                      + google.golang.org/protobuf/internal/order ~
+                      + google.golang.org/protobuf/internal/pragma ~
+                      + google.golang.org/protobuf/internal/strs ~
+                      + google.golang.org/protobuf/proto ~
+                      + google.golang.org/protobuf/reflect/protoreflect ~
+                      + google.golang.org/protobuf/reflect/protoregistry ~
+                      + google.golang.org/protobuf/runtime/protoiface ~
+                    + google.golang.org/protobuf/reflect/protoreflect ~
+                    + google.golang.org/protobuf/reflect/protoregistry ~
+                  + google.golang.org/protobuf/internal/impl ~
+                  + google.golang.org/protobuf/internal/version
+            + google.golang.org/protobuf/reflect/protoreflect ~
+            + google.golang.org/protobuf/reflect/protoregistry ~
+            + google.golang.org/protobuf/runtime/protoiface ~
+            + google.golang.org/protobuf/runtime/protoimpl ~
+          + github.com/vitelabs/go-vite/v2/common
+            + github.com/pkg/errors ~
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/log15
+              + github.com/go-stack/stack
+              + github.com/mattn/go-colorable
+                + github.com/mattn/go-isatty
+              + github.com/mattn/go-isatty ~
+            + gopkg.in/natefinch/lumberjack.v2
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/common/upgrade
+            + github.com/vitelabs/go-vite/v2/common ~
+            + github.com/vitelabs/go-vite/v2/log15 ~
+          + github.com/vitelabs/go-vite/v2/common/vitepb
+            + github.com/golang/protobuf/proto ~
+          + github.com/vitelabs/go-vite/v2/crypto ~
+          + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+          + github.com/vitelabs/go-vite/v2/log15 ~
+        + github.com/vitelabs/go-vite/v2/ledger/consensus/core
+          + github.com/golang/mock/gomock
+          + github.com/pkg/errors ~
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/interfaces/core ~
+      + github.com/vitelabs/go-vite/v2/interfaces/core ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/file_manager
+        + github.com/pkg/errors ~
+        + github.com/vitelabs/go-vite/v2/common/fileutils
+        + github.com/vitelabs/go-vite/v2/interfaces ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/utils
+        + github.com/vitelabs/go-vite/v2/common ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/file_manager ~
+      + github.com/vitelabs/go-vite/v2/log15 ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain/file_manager ~
+  + github.com/vitelabs/go-vite/v2/cmd/printer/vote
+    + github.com/vitelabs/go-vite/v2/common/config
+      + github.com/vitelabs/go-vite/v2/common ~
+      + github.com/vitelabs/go-vite/v2/common/types ~
+      + github.com/vitelabs/go-vite/v2/common/upgrade ~
+      + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+    + github.com/vitelabs/go-vite/v2/common/types ~
+    + github.com/vitelabs/go-vite/v2/interfaces/core ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain
+      + github.com/pkg/errors ~
+      + github.com/syndtr/goleveldb/leveldb
+        + github.com/syndtr/goleveldb/leveldb/cache
+          + github.com/syndtr/goleveldb/leveldb/util
+        + github.com/syndtr/goleveldb/leveldb/comparer
+        + github.com/syndtr/goleveldb/leveldb/errors
+          + github.com/syndtr/goleveldb/leveldb/storage
+          + github.com/syndtr/goleveldb/leveldb/util ~
+        + github.com/syndtr/goleveldb/leveldb/filter
+          + github.com/syndtr/goleveldb/leveldb/util ~
+        + github.com/syndtr/goleveldb/leveldb/iterator
+          + github.com/syndtr/goleveldb/leveldb/comparer ~
+          + github.com/syndtr/goleveldb/leveldb/errors ~
+          + github.com/syndtr/goleveldb/leveldb/util ~
+        + github.com/syndtr/goleveldb/leveldb/journal
+          + github.com/syndtr/goleveldb/leveldb/errors ~
+          + github.com/syndtr/goleveldb/leveldb/storage ~
+          + github.com/syndtr/goleveldb/leveldb/util ~
+        + github.com/syndtr/goleveldb/leveldb/memdb
+          + github.com/syndtr/goleveldb/leveldb/comparer ~
+          + github.com/syndtr/goleveldb/leveldb/errors ~
+          + github.com/syndtr/goleveldb/leveldb/iterator ~
+          + github.com/syndtr/goleveldb/leveldb/util ~
+        + github.com/syndtr/goleveldb/leveldb/opt
+          + github.com/syndtr/goleveldb/leveldb/cache ~
+          + github.com/syndtr/goleveldb/leveldb/comparer ~
+          + github.com/syndtr/goleveldb/leveldb/filter ~
+        + github.com/syndtr/goleveldb/leveldb/storage ~
+        + github.com/syndtr/goleveldb/leveldb/table
+          + github.com/golang/snappy ~
+          + github.com/syndtr/goleveldb/leveldb/cache ~
+          + github.com/syndtr/goleveldb/leveldb/comparer ~
+          + github.com/syndtr/goleveldb/leveldb/errors ~
+          + github.com/syndtr/goleveldb/leveldb/filter ~
+          + github.com/syndtr/goleveldb/leveldb/iterator ~
+          + github.com/syndtr/goleveldb/leveldb/opt ~
+          + github.com/syndtr/goleveldb/leveldb/storage ~
+          + github.com/syndtr/goleveldb/leveldb/util ~
+        + github.com/syndtr/goleveldb/leveldb/util ~
+      + github.com/vitelabs/go-vite/v2/common ~
+      + github.com/vitelabs/go-vite/v2/common/config ~
+      + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util
+      + github.com/vitelabs/go-vite/v2/common/helper ~
+      + github.com/vitelabs/go-vite/v2/common/types ~
+      + github.com/vitelabs/go-vite/v2/common/upgrade ~
+      + github.com/vitelabs/go-vite/v2/interfaces ~
+      + github.com/vitelabs/go-vite/v2/interfaces/core ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/block ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/cache
+        + github.com/patrickmn/go-cache
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/interfaces ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/utils ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/file_manager ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/flusher
+        + github.com/vitelabs/go-vite/v2/common/fileutils ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/crypto ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/genesis
+        + github.com/vitelabs/go-vite/v2/common/config ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/crypto ~
+        + github.com/vitelabs/go-vite/v2/interfaces ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/vm/contracts/abi
+          + github.com/vitelabs/go-vite/v2/common/helper ~
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/interfaces ~
+          + github.com/vitelabs/go-vite/v2/vm/abi
+            + github.com/vitelabs/go-vite/v2/common/helper ~
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/vm/util
+              + github.com/vitelabs/go-vite/v2/common/helper ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/common/upgrade ~
+              + github.com/vitelabs/go-vite/v2/interfaces/core ~
+              + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+          + github.com/vitelabs/go-vite/v2/vm/util ~
+        + github.com/vitelabs/go-vite/v2/vm/contracts/dex
+          + github.com/golang/protobuf/proto ~
+          + github.com/pkg/errors ~
+          + github.com/vitelabs/go-vite/v2/common ~
+          + github.com/vitelabs/go-vite/v2/common/helper ~
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/common/upgrade ~
+          + github.com/vitelabs/go-vite/v2/crypto ~
+          + github.com/vitelabs/go-vite/v2/interfaces ~
+          + github.com/vitelabs/go-vite/v2/interfaces/core ~
+          + github.com/vitelabs/go-vite/v2/log15 ~
+          + github.com/vitelabs/go-vite/v2/vm/contracts/abi ~
+          + github.com/vitelabs/go-vite/v2/vm/contracts/dex/proto
+            + github.com/golang/protobuf/proto ~
+            + google.golang.org/protobuf/reflect/protoreflect ~
+            + google.golang.org/protobuf/runtime/protoimpl ~
+          + github.com/vitelabs/go-vite/v2/vm/util ~
+        + github.com/vitelabs/go-vite/v2/vm/util ~
+        + github.com/vitelabs/go-vite/v2/vm_db
+          + github.com/pkg/errors ~
+          + github.com/vitelabs/go-vite/v2/common/db
+            + github.com/syndtr/goleveldb/leveldb ~
+            + github.com/syndtr/goleveldb/leveldb/comparer ~
+            + github.com/vitelabs/go-vite/v2/common/db/xleveldb
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/cache
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/comparer
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/storage
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/filter
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/iterator
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/comparer ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/journal
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/storage ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/memdb
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/comparer ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/iterator ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/opt
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/cache ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/comparer ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/filter ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/storage ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/table
+                + github.com/golang/snappy ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/cache ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/comparer ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/filter ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/iterator ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/opt ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/storage ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+            + github.com/vitelabs/go-vite/v2/common/db/xleveldb/comparer ~
+            + github.com/vitelabs/go-vite/v2/common/db/xleveldb/memdb ~
+            + github.com/vitelabs/go-vite/v2/interfaces ~
+          + github.com/vitelabs/go-vite/v2/common/db/xleveldb/comparer ~
+          + github.com/vitelabs/go-vite/v2/common/db/xleveldb/memdb ~
+          + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/crypto ~
+          + github.com/vitelabs/go-vite/v2/interfaces ~
+          + github.com/vitelabs/go-vite/v2/interfaces/core ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/index
+        + github.com/allegro/bigcache
+          + github.com/allegro/bigcache/queue
+        + github.com/hashicorp/golang-lru
+          + github.com/hashicorp/golang-lru/simplelru
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+        + github.com/vitelabs/go-vite/v2/common/helper ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/interfaces ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/db
+          + github.com/vitelabs/go-vite/v2/common/db ~
+          + github.com/vitelabs/go-vite/v2/common/db/xleveldb ~
+          + github.com/vitelabs/go-vite/v2/common/db/xleveldb/memdb ~
+          + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/crypto ~
+          + github.com/vitelabs/go-vite/v2/interfaces ~
+          + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/file_manager ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/utils ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/plugins
+        + github.com/golang/protobuf/proto ~
+        + github.com/pkg/errors ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+        + github.com/vitelabs/go-vite/v2/common/helper ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/common/vitepb ~
+        + github.com/vitelabs/go-vite/v2/interfaces ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/db ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/flusher ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/utils ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/state
+        + github.com/golang/mock/gomock ~
+        + github.com/patrickmn/go-cache ~
+        + github.com/pkg/errors ~
+        + github.com/vitelabs/go-vite/v2/common ~
+        + github.com/vitelabs/go-vite/v2/common/config ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb/comparer ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb/iterator ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb/memdb ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+        + github.com/vitelabs/go-vite/v2/common/helper ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/interfaces ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/db ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/utils ~
+        + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/sync_cache
+        + github.com/golang/protobuf/proto ~
+        + github.com/golang/snappy ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb ~
+        + github.com/vitelabs/go-vite/v2/common/db/xleveldb/util ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/common/vitepb ~
+        + github.com/vitelabs/go-vite/v2/interfaces ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain/block ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain/utils ~
+      + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+      + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/vm/contracts/abi ~
+      + github.com/vitelabs/go-vite/v2/vm/contracts/dex ~
+      + github.com/vitelabs/go-vite/v2/vm/quota
+        + github.com/vitelabs/go-vite/v2/common/helper ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/common/upgrade ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/vm/util ~
+      + github.com/vitelabs/go-vite/v2/vm/util ~
+      + github.com/vitelabs/go-vite/v2/vm_db ~
+    + github.com/vitelabs/go-vite/v2/ledger/consensus
+      + github.com/golang/mock/gomock ~
+      + github.com/hashicorp/golang-lru ~
+      + github.com/pkg/errors ~
+      + github.com/syndtr/goleveldb/leveldb ~
+      + github.com/vitelabs/go-vite/v2/common ~
+      + github.com/vitelabs/go-vite/v2/common/types ~
+      + github.com/vitelabs/go-vite/v2/interfaces ~
+      + github.com/vitelabs/go-vite/v2/interfaces/core ~
+      + github.com/vitelabs/go-vite/v2/ledger/consensus/cdb
+        + github.com/golang/protobuf/proto ~
+        + github.com/pkg/errors ~
+        + github.com/syndtr/goleveldb/leveldb ~
+        + github.com/syndtr/goleveldb/leveldb/util ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/common/vitepb ~
+      + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+      + github.com/vitelabs/go-vite/v2/ledger/pool/lock
+      + github.com/vitelabs/go-vite/v2/log15 ~
+    + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+    + github.com/vitelabs/go-vite/v2/vm/quota ~
+  + github.com/vitelabs/go-vite/v2/tools/queue
+    + github.com/vitelabs/go-vite/v2/tools/list
+  + github.com/vitelabs/go-vite/v2/cmd/printer
+    + github.com/vitelabs/go-vite/v2/common/config ~
+    + github.com/vitelabs/go-vite/v2/common/types ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain ~
+    + github.com/vitelabs/go-vite/v2/ledger/consensus ~
+    + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+    + github.com/vitelabs/go-vite/v2/ledger/pool/lock ~
+    + github.com/vitelabs/go-vite/v2/vm/quota ~
+  + github.com/vitelabs/go-vite/v2/tools/unique_list
+  + github.com/vitelabs/go-vite/v2/ledger/chain/integration_test
+    + github.com/vitelabs/go-vite/v2/common/types ~
+    + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+    + github.com/vitelabs/go-vite/v2/interfaces ~
+    + github.com/vitelabs/go-vite/v2/interfaces/core ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain ~
+    + github.com/vitelabs/go-vite/v2/vm_db ~
+  + github.com/vitelabs/go-vite/v2/cmd/printer/index
+    + github.com/vitelabs/go-vite/v2/common/helper ~
+    + github.com/vitelabs/go-vite/v2/common/types ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain/index ~
+  + github.com/vitelabs/go-vite/v2/ledger/test_tools
+    + github.com/vitelabs/go-vite/v2/common/config ~
+    + github.com/vitelabs/go-vite/v2/common/upgrade ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain/test_tools
+      + github.com/golang/mock/gomock ~
+      + github.com/vitelabs/go-vite/v2/common/types ~
+      + github.com/vitelabs/go-vite/v2/interfaces ~
+      + github.com/vitelabs/go-vite/v2/interfaces/core ~
+      + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+    + github.com/vitelabs/go-vite/v2/vm/quota ~
+  + github.com/vitelabs/go-vite/v2/tools/mock_conn
+  + github.com/vitelabs/go-vite/v2/cmd/updater_consensus
+    + github.com/syndtr/goleveldb/leveldb ~
+    + github.com/vitelabs/go-vite/v2/ledger/consensus/cdb ~
+  + github.com/vitelabs/go-vite/v2/tools/ticket
+  + github.com/vitelabs/go-vite/v2/net/connector
+    + github.com/vitelabs/go-vite/v2/log15 ~
+    + github.com/vitelabs/go-vite/v2/net/vnode
+      + github.com/golang/protobuf/proto ~
+  + github.com/vitelabs/go-vite/v2/cmd/subcmd_check_chain
+    + github.com/vitelabs/go-vite/v2/cmd/nodemanager
+      + github.com/vitelabs/go-vite/v2/cmd/utils
+        + github.com/vitelabs/go-vite/v2/common ~
+        + gopkg.in/urfave/cli.v1
+      + github.com/vitelabs/go-vite/v2/common ~
+      + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+      + github.com/vitelabs/go-vite/v2/common/upgrade ~
+      + github.com/vitelabs/go-vite/v2/ledger/chain ~
+      + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/node
+        + github.com/vitelabs/go-vite/v2
+          + github.com/vitelabs/go-vite/v2/common/config ~
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/common/upgrade ~
+          + github.com/vitelabs/go-vite/v2/ledger/chain ~
+          + github.com/vitelabs/go-vite/v2/ledger/consensus ~
+          + github.com/vitelabs/go-vite/v2/ledger/onroad
+            + github.com/pkg/errors ~
+            + github.com/syndtr/goleveldb/leveldb ~
+            + github.com/vitelabs/go-vite/v2/common ~
+            + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+            + github.com/vitelabs/go-vite/v2/common/math
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/common/upgrade ~
+            + github.com/vitelabs/go-vite/v2/interfaces ~
+            + github.com/vitelabs/go-vite/v2/interfaces/core ~
+            + github.com/vitelabs/go-vite/v2/ledger/chain ~
+            + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+            + github.com/vitelabs/go-vite/v2/ledger/generator
+              + github.com/vitelabs/go-vite/v2/common/helper ~
+              + github.com/vitelabs/go-vite/v2/common/math ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/common/upgrade ~
+              + github.com/vitelabs/go-vite/v2/interfaces ~
+              + github.com/vitelabs/go-vite/v2/interfaces/core ~
+              + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+              + github.com/vitelabs/go-vite/v2/log15 ~
+              + github.com/vitelabs/go-vite/v2/pow
+                + github.com/vitelabs/go-vite/v2/common/helper ~
+                + github.com/vitelabs/go-vite/v2/common/types ~
+                + github.com/vitelabs/go-vite/v2/crypto ~
+                + golang.org/x/crypto/blake2b ~
+              + github.com/vitelabs/go-vite/v2/vm
+                + github.com/vitelabs/go-vite/v2/common ~
+                + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+                + github.com/vitelabs/go-vite/v2/common/helper ~
+                + github.com/vitelabs/go-vite/v2/common/types ~
+                + github.com/vitelabs/go-vite/v2/common/upgrade ~
+                + github.com/vitelabs/go-vite/v2/crypto ~
+                + github.com/vitelabs/go-vite/v2/interfaces ~
+                + github.com/vitelabs/go-vite/v2/interfaces/core ~
+                + github.com/vitelabs/go-vite/v2/log15 ~
+                + github.com/vitelabs/go-vite/v2/monitor
+                  + github.com/vitelabs/go-vite/v2/log15 ~
+                + github.com/vitelabs/go-vite/v2/vm/abi ~
+                + github.com/vitelabs/go-vite/v2/vm/contracts
+                  + github.com/golang/protobuf/proto ~
+                  + github.com/vitelabs/go-vite/v2/common/helper ~
+                  + github.com/vitelabs/go-vite/v2/common/types ~
+                  + github.com/vitelabs/go-vite/v2/common/upgrade ~
+                  + github.com/vitelabs/go-vite/v2/interfaces ~
+                  + github.com/vitelabs/go-vite/v2/interfaces/core ~
+                  + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+                  + github.com/vitelabs/go-vite/v2/log15 ~
+                  + github.com/vitelabs/go-vite/v2/vm/abi ~
+                  + github.com/vitelabs/go-vite/v2/vm/contracts/abi ~
+                  + github.com/vitelabs/go-vite/v2/vm/contracts/dex ~
+                  + github.com/vitelabs/go-vite/v2/vm/contracts/dex/proto ~
+                  + github.com/vitelabs/go-vite/v2/vm/util ~
+                + github.com/vitelabs/go-vite/v2/vm/quota ~
+                + github.com/vitelabs/go-vite/v2/vm/util ~
+                + golang.org/x/crypto/sha3 ~
+              + github.com/vitelabs/go-vite/v2/vm/util ~
+              + github.com/vitelabs/go-vite/v2/vm_db ~
+            + github.com/vitelabs/go-vite/v2/ledger/onroad/pool
+              + github.com/syndtr/goleveldb/leveldb ~
+              + github.com/syndtr/goleveldb/leveldb/util ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/interfaces ~
+              + github.com/vitelabs/go-vite/v2/interfaces/core ~
+              + github.com/vitelabs/go-vite/v2/ledger/chain/utils ~
+              + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/net
+              + github.com/golang/protobuf/proto ~
+              + github.com/golang/snappy ~
+              + github.com/pkg/errors ~
+              + github.com/vitelabs/go-vite/v2/common/bloom
+              + github.com/vitelabs/go-vite/v2/common/config ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/common/vitepb ~
+              + github.com/vitelabs/go-vite/v2/crypto ~
+              + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+              + github.com/vitelabs/go-vite/v2/interfaces ~
+              + github.com/vitelabs/go-vite/v2/interfaces/core ~
+              + github.com/vitelabs/go-vite/v2/ledger/consensus ~
+              + github.com/vitelabs/go-vite/v2/log15 ~
+              + github.com/vitelabs/go-vite/v2/monitor ~
+              + github.com/vitelabs/go-vite/v2/net/database
+                + github.com/syndtr/goleveldb/leveldb ~
+                + github.com/syndtr/goleveldb/leveldb/errors ~
+                + github.com/syndtr/goleveldb/leveldb/storage ~
+                + github.com/syndtr/goleveldb/leveldb/util ~
+                + github.com/vitelabs/go-vite/v2/net/vnode ~
+              + github.com/vitelabs/go-vite/v2/net/discovery
+                + github.com/golang/mock/gomock ~
+                + github.com/golang/protobuf/proto ~
+                + github.com/vitelabs/go-vite/v2/crypto ~
+                + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+                + github.com/vitelabs/go-vite/v2/log15 ~
+                + github.com/vitelabs/go-vite/v2/net/discovery/protos
+                  + github.com/golang/protobuf/proto ~
+                + github.com/vitelabs/go-vite/v2/net/netool
+                + github.com/vitelabs/go-vite/v2/net/vnode ~
+                + github.com/vitelabs/go-vite/v2/tools/list ~
+              + github.com/vitelabs/go-vite/v2/net/netool ~
+              + github.com/vitelabs/go-vite/v2/net/vnode ~
+              + github.com/vitelabs/go-vite/v2/tools/circle
+              + github.com/vitelabs/go-vite/v2/tools/list ~
+            + github.com/vitelabs/go-vite/v2/producer/producerevent
+              + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/vm/quota ~
+            + go.uber.org/atomic
+          + github.com/vitelabs/go-vite/v2/ledger/pool
+            + github.com/golang-collections/collections/stack
+            + github.com/hashicorp/golang-lru ~
+            + github.com/pkg/errors ~
+            + github.com/vitelabs/go-vite/v2/common ~
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/crypto ~
+            + github.com/vitelabs/go-vite/v2/interfaces ~
+            + github.com/vitelabs/go-vite/v2/interfaces/core ~
+            + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+            + github.com/vitelabs/go-vite/v2/ledger/pool/batch
+              + github.com/pkg/errors ~
+              + github.com/vitelabs/go-vite/v2/common ~
+              + github.com/vitelabs/go-vite/v2/common/helper ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/crypto ~
+              + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/ledger/pool/lock ~
+            + github.com/vitelabs/go-vite/v2/ledger/pool/tree
+              + github.com/pkg/errors ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/crypto ~
+              + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/ledger/verifier
+              + github.com/pkg/errors ~
+              + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+              + github.com/vitelabs/go-vite/v2/common/helper ~
+              + github.com/vitelabs/go-vite/v2/common/math ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/common/upgrade ~
+              + github.com/vitelabs/go-vite/v2/crypto ~
+              + github.com/vitelabs/go-vite/v2/interfaces ~
+              + github.com/vitelabs/go-vite/v2/interfaces/core ~
+              + github.com/vitelabs/go-vite/v2/ledger/chain ~
+              + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+              + github.com/vitelabs/go-vite/v2/ledger/generator ~
+              + github.com/vitelabs/go-vite/v2/ledger/onroad ~
+              + github.com/vitelabs/go-vite/v2/log15 ~
+              + github.com/vitelabs/go-vite/v2/monitor ~
+              + github.com/vitelabs/go-vite/v2/pow ~
+              + github.com/vitelabs/go-vite/v2/vm_db ~
+            + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/monitor ~
+            + github.com/vitelabs/go-vite/v2/net ~
+            + github.com/vitelabs/go-vite/v2/tools/toposort
+              + github.com/pkg/errors ~
+          + github.com/vitelabs/go-vite/v2/ledger/verifier ~
+          + github.com/vitelabs/go-vite/v2/log15 ~
+          + github.com/vitelabs/go-vite/v2/net ~
+          + github.com/vitelabs/go-vite/v2/node/config
+            + github.com/vitelabs/go-vite/v2/common ~
+            + github.com/vitelabs/go-vite/v2/common/config ~
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+          + github.com/vitelabs/go-vite/v2/producer
+            + github.com/hashicorp/golang-lru ~
+            + github.com/pkg/errors ~
+            + github.com/vitelabs/go-vite/v2/common ~
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/common/upgrade ~
+            + github.com/vitelabs/go-vite/v2/interfaces ~
+            + github.com/vitelabs/go-vite/v2/interfaces/core ~
+            + github.com/vitelabs/go-vite/v2/ledger/chain ~
+            + github.com/vitelabs/go-vite/v2/ledger/consensus ~
+            + github.com/vitelabs/go-vite/v2/ledger/pool ~
+            + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/monitor ~
+            + github.com/vitelabs/go-vite/v2/net ~
+            + github.com/vitelabs/go-vite/v2/producer/producerevent ~
+          + github.com/vitelabs/go-vite/v2/vm ~
+          + github.com/vitelabs/go-vite/v2/wallet
+            + github.com/pkg/errors ~
+            + github.com/tyler-smith/go-bip39
+              + github.com/tyler-smith/go-bip39/wordlists
+              + golang.org/x/crypto/pbkdf2
+            + github.com/vitelabs/go-vite/v2/common/config ~
+            + github.com/vitelabs/go-vite/v2/common/errors
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+            + github.com/vitelabs/go-vite/v2/interfaces ~
+            + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/wallet/entropystore
+              + github.com/pkg/errors ~
+              + github.com/tyler-smith/go-bip39 ~
+              + github.com/vitelabs/go-vite/v2/common/errors ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/crypto ~
+              + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+              + github.com/vitelabs/go-vite/v2/log15 ~
+              + github.com/vitelabs/go-vite/v2/wallet/hd-bip/derivation
+                + github.com/tyler-smith/go-bip39 ~
+                + github.com/vitelabs/go-vite/v2/common/types ~
+                + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+              + golang.org/x/crypto/scrypt
+                + golang.org/x/crypto/pbkdf2 ~
+            + github.com/vitelabs/go-vite/v2/wallet/hd-bip/derivation ~
+        + github.com/vitelabs/go-vite/v2/cmd/utils/flock
+        + github.com/vitelabs/go-vite/v2/common/config ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+        + github.com/vitelabs/go-vite/v2/monitor ~
+        + github.com/vitelabs/go-vite/v2/node/config ~
+        + github.com/vitelabs/go-vite/v2/pow ~
+        + github.com/vitelabs/go-vite/v2/pow/remote
+          + github.com/pkg/errors ~
+          + github.com/vitelabs/go-vite/v2/log15 ~
+          + github.com/vitelabs/go-vite/v2/pow ~
+        + github.com/vitelabs/go-vite/v2/rpc
+          + github.com/deckarep/golang-set
+          + github.com/rs/cors
+          + github.com/vitelabs/go-vite/v2/log15 ~
+          + github.com/vitelabs/go-vite/v2/rpcapi/api
+            + github.com/hashicorp/golang-lru ~
+            + github.com/pkg/errors ~
+            + github.com/shirou/gopsutil/host
+              + github.com/StackExchange/wmi
+                + github.com/go-ole/go-ole
+                + github.com/go-ole/go-ole/oleutil
+                  + github.com/go-ole/go-ole ~
+              + github.com/shirou/gopsutil/internal/common
+                + github.com/StackExchange/wmi ~
+                + golang.org/x/sys/windows
+                  + golang.org/x/sys/internal/unsafeheader
+              + github.com/shirou/gopsutil/process
+                + github.com/shirou/gopsutil/cpu
+                  + github.com/StackExchange/wmi ~
+                  + github.com/shirou/gopsutil/internal/common ~
+                  + golang.org/x/sys/windows ~
+                + github.com/shirou/gopsutil/internal/common ~
+                + github.com/shirou/gopsutil/mem
+                  + github.com/shirou/gopsutil/internal/common ~
+                  + golang.org/x/sys/windows ~
+                + github.com/shirou/gopsutil/net
+                  + github.com/shirou/gopsutil/internal/common ~
+                  + golang.org/x/sys/windows ~
+                + golang.org/x/sys/windows ~
+              + golang.org/x/sys/windows ~
+            + github.com/shirou/gopsutil/mem ~
+            + github.com/vitelabs/go-vite/v2 ~
+            + github.com/vitelabs/go-vite/v2/common ~
+            + github.com/vitelabs/go-vite/v2/common/config ~
+            + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+            + github.com/vitelabs/go-vite/v2/common/errors ~
+            + github.com/vitelabs/go-vite/v2/common/helper ~
+            + github.com/vitelabs/go-vite/v2/common/hexutil
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/common/upgrade ~
+            + github.com/vitelabs/go-vite/v2/crypto ~
+            + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+            + github.com/vitelabs/go-vite/v2/interfaces ~
+            + github.com/vitelabs/go-vite/v2/interfaces/core ~
+            + github.com/vitelabs/go-vite/v2/ledger/chain ~
+            + github.com/vitelabs/go-vite/v2/ledger/chain/plugins ~
+            + github.com/vitelabs/go-vite/v2/ledger/consensus ~
+            + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+            + github.com/vitelabs/go-vite/v2/ledger/generator ~
+            + github.com/vitelabs/go-vite/v2/ledger/onroad ~
+            + github.com/vitelabs/go-vite/v2/ledger/pool ~
+            + github.com/vitelabs/go-vite/v2/ledger/verifier ~
+            + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/net ~
+            + github.com/vitelabs/go-vite/v2/net/vnode ~
+            + github.com/vitelabs/go-vite/v2/pow ~
+            + github.com/vitelabs/go-vite/v2/pow/remote ~
+            + github.com/vitelabs/go-vite/v2/rpcapi/api/dex
+              + github.com/vitelabs/go-vite/v2 ~
+              + github.com/vitelabs/go-vite/v2/common/types ~
+              + github.com/vitelabs/go-vite/v2/interfaces ~
+              + github.com/vitelabs/go-vite/v2/interfaces/core ~
+              + github.com/vitelabs/go-vite/v2/ledger/chain ~
+              + github.com/vitelabs/go-vite/v2/vm/contracts/dex ~
+              + github.com/vitelabs/go-vite/v2/vm/util ~
+            + github.com/vitelabs/go-vite/v2/version
+            + github.com/vitelabs/go-vite/v2/vm ~
+            + github.com/vitelabs/go-vite/v2/vm/abi ~
+            + github.com/vitelabs/go-vite/v2/vm/contracts ~
+            + github.com/vitelabs/go-vite/v2/vm/contracts/abi ~
+            + github.com/vitelabs/go-vite/v2/vm/contracts/dex ~
+            + github.com/vitelabs/go-vite/v2/vm/quota ~
+            + github.com/vitelabs/go-vite/v2/vm/util ~
+            + github.com/vitelabs/go-vite/v2/vm_db ~
+            + github.com/vitelabs/go-vite/v2/wallet ~
+            + github.com/vitelabs/go-vite/v2/wallet/entropystore ~
+            + go.uber.org/atomic ~
+          + golang.org/x/net/websocket
+          + gopkg.in/natefinch/npipe.v2
+        + github.com/vitelabs/go-vite/v2/rpcapi
+          + github.com/vitelabs/go-vite/v2 ~
+          + github.com/vitelabs/go-vite/v2/rpc ~
+          + github.com/vitelabs/go-vite/v2/rpcapi/api ~
+          + github.com/vitelabs/go-vite/v2/rpcapi/api/filters
+            + github.com/vitelabs/go-vite/v2 ~
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/interfaces ~
+            + github.com/vitelabs/go-vite/v2/interfaces/core ~
+            + github.com/vitelabs/go-vite/v2/log15 ~
+            + github.com/vitelabs/go-vite/v2/rpc ~
+            + github.com/vitelabs/go-vite/v2/rpcapi/api ~
+        + github.com/vitelabs/go-vite/v2/rpcapi/api/filters ~
+        + github.com/vitelabs/go-vite/v2/wallet ~
+      + github.com/vitelabs/go-vite/v2/node/config ~
+      + gopkg.in/urfave/cli.v1 ~
+    + github.com/vitelabs/go-vite/v2/cmd/utils ~
+    + github.com/vitelabs/go-vite/v2/log15 ~
+    + gopkg.in/urfave/cli.v1 ~
+  + github.com/vitelabs/go-vite/v2/cmd/printer/consensus
+    + github.com/vitelabs/go-vite/v2/common/config ~
+    + github.com/vitelabs/go-vite/v2/common/types ~
+    + github.com/vitelabs/go-vite/v2/interfaces/core ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain ~
+    + github.com/vitelabs/go-vite/v2/ledger/consensus ~
+    + github.com/vitelabs/go-vite/v2/ledger/consensus/core ~
+    + github.com/vitelabs/go-vite/v2/ledger/pool/lock ~
+    + github.com/vitelabs/go-vite/v2/vm/quota ~
+  + github.com/vitelabs/go-vite/v2/cmd/gvite
+    + github.com/vitelabs/go-vite/v2/cmd/gvite_plugins
+      + github.com/vitelabs/go-vite/v2/cmd/nodemanager ~
+      + github.com/vitelabs/go-vite/v2/cmd/subcmd_export
+        + github.com/vitelabs/go-vite/v2/cmd/nodemanager ~
+        + github.com/vitelabs/go-vite/v2/cmd/utils ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+        + gopkg.in/urfave/cli.v1 ~
+      + github.com/vitelabs/go-vite/v2/cmd/subcmd_ledger
+        + github.com/vitelabs/go-vite/v2 ~
+        + github.com/vitelabs/go-vite/v2/cmd/nodemanager ~
+        + github.com/vitelabs/go-vite/v2/cmd/utils ~
+        + github.com/vitelabs/go-vite/v2/common ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/ledger/chain ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+        + github.com/vitelabs/go-vite/v2/vm/contracts/dex ~
+        + gopkg.in/urfave/cli.v1 ~
+      + github.com/vitelabs/go-vite/v2/cmd/subcmd_loadledger
+        + github.com/vitelabs/go-vite/v2/cmd/nodemanager ~
+        + github.com/vitelabs/go-vite/v2/cmd/utils ~
+        + github.com/vitelabs/go-vite/v2/ledger/pipeline
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/interfaces/core ~
+          + github.com/vitelabs/go-vite/v2/ledger/chain/block ~
+          + github.com/vitelabs/go-vite/v2/ledger/chain/file_manager ~
+          + github.com/vitelabs/go-vite/v2/log15 ~
+          + github.com/vitelabs/go-vite/v2/net ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+        + gopkg.in/urfave/cli.v1 ~
+      + github.com/vitelabs/go-vite/v2/cmd/subcmd_plugin_data
+        + github.com/vitelabs/go-vite/v2/cmd/nodemanager ~
+        + github.com/vitelabs/go-vite/v2/cmd/utils ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+        + gopkg.in/urfave/cli.v1 ~
+      + github.com/vitelabs/go-vite/v2/cmd/subcmd_recover
+        + github.com/vitelabs/go-vite/v2/cmd/nodemanager ~
+        + github.com/vitelabs/go-vite/v2/cmd/utils ~
+        + github.com/vitelabs/go-vite/v2/log15 ~
+        + gopkg.in/urfave/cli.v1 ~
+      + github.com/vitelabs/go-vite/v2/cmd/subcmd_rpc
+        + github.com/vitelabs/go-vite/v2/client
+          + github.com/vitelabs/go-vite/v2/client/rpc
+            + github.com/vitelabs/go-vite/v2/common/types ~
+            + github.com/vitelabs/go-vite/v2/interfaces/core ~
+            + github.com/vitelabs/go-vite/v2/ledger/consensus ~
+            + github.com/vitelabs/go-vite/v2/rpc ~
+            + github.com/vitelabs/go-vite/v2/rpcapi/api ~
+            + github.com/vitelabs/go-vite/v2/rpcapi/api/dex ~
+          + github.com/vitelabs/go-vite/v2/common/db/xleveldb/errors ~
+          + github.com/vitelabs/go-vite/v2/common/types ~
+          + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+          + github.com/vitelabs/go-vite/v2/interfaces/core ~
+          + github.com/vitelabs/go-vite/v2/rpc ~
+          + github.com/vitelabs/go-vite/v2/rpcapi/api ~
+          + github.com/vitelabs/go-vite/v2/vm/abi ~
+          + github.com/vitelabs/go-vite/v2/vm/contracts/abi ~
+          + github.com/vitelabs/go-vite/v2/vm/contracts/dex ~
+          + github.com/vitelabs/go-vite/v2/vm/util ~
+          + github.com/vitelabs/go-vite/v2/wallet/entropystore ~
+          + github.com/vitelabs/go-vite/v2/wallet/hd-bip/derivation ~
+        + github.com/vitelabs/go-vite/v2/cmd/utils ~
+        + gopkg.in/urfave/cli.v1 ~
+      + github.com/vitelabs/go-vite/v2/cmd/subcmd_virtualnode
+        + github.com/vitelabs/go-vite/v2/cmd/nodemanager ~
+        + github.com/vitelabs/go-vite/v2/cmd/utils ~
+        + github.com/vitelabs/go-vite/v2/common/config ~
+        + github.com/vitelabs/go-vite/v2/common/helper ~
+        + github.com/vitelabs/go-vite/v2/common/types ~
+        + github.com/vitelabs/go-vite/v2/interfaces/core ~
+        + github.com/vitelabs/go-vite/v2/node/config ~
+        + gopkg.in/urfave/cli.v1 ~
+      + github.com/vitelabs/go-vite/v2/cmd/utils ~
+      + github.com/vitelabs/go-vite/v2/log15 ~
+      + github.com/vitelabs/go-vite/v2/version ~
+      + gopkg.in/urfave/cli.v1 ~
+    + github.com/vitelabs/go-vite/v2/version ~
+  + github.com/vitelabs/go-vite/v2/log15/term
+  + github.com/vitelabs/go-vite/v2/cmd/updater
+    + github.com/syndtr/goleveldb/leveldb ~
+    + github.com/vitelabs/go-vite/v2/common/types ~
+    + github.com/vitelabs/go-vite/v2/ledger/consensus/cdb ~
+  + github.com/vitelabs/go-vite/v2/wallet/hd-bip/main
+    + github.com/vitelabs/go-vite/v2/wallet/hd-bip/derivation ~
+  + github.com/vitelabs/go-vite/v2/cmd/printer/storage
+    + github.com/vitelabs/go-vite/v2/common/config ~
+    + github.com/vitelabs/go-vite/v2/common/types ~
+    + github.com/vitelabs/go-vite/v2/ledger/chain ~
+    + github.com/vitelabs/go-vite/v2/vm/quota ~
+  + github.com/vitelabs/go-vite/v2/net/discovery/simular
+    + github.com/vitelabs/go-vite/v2/crypto/ed25519 ~
+    + github.com/vitelabs/go-vite/v2/net/discovery ~
+    + github.com/vitelabs/go-vite/v2/net/vnode ~
+  + github.com/vitelabs/go-vite/v2/cmd/generator/wallet
+    + github.com/vitelabs/go-vite/v2/wallet ~
+
+V:\go-vite\release v2.14>

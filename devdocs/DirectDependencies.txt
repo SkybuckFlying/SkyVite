@@ -1,0 +1,17 @@
+// direct dependencies:
+
+V:\go-vite\release v2.14>goda list .:import
+github.com/vitelabs/go-vite/v2/common/config
+github.com/vitelabs/go-vite/v2/common/types
+github.com/vitelabs/go-vite/v2/common/upgrade
+github.com/vitelabs/go-vite/v2/ledger/chain
+github.com/vitelabs/go-vite/v2/ledger/consensus
+github.com/vitelabs/go-vite/v2/ledger/onroad
+github.com/vitelabs/go-vite/v2/ledger/pool
+github.com/vitelabs/go-vite/v2/ledger/verifier
+github.com/vitelabs/go-vite/v2/log15
+github.com/vitelabs/go-vite/v2/net
+github.com/vitelabs/go-vite/v2/node/config
+github.com/vitelabs/go-vite/v2/producer
+github.com/vitelabs/go-vite/v2/vm
+github.com/vitelabs/go-vite/v2/wallet

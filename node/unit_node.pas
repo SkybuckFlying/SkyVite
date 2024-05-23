@@ -14,39 +14,40 @@ interface
 
 uses
   SysUtils,
-  Classes, Generics.Collections,
+  Classes,
+  Generics.Collections,
   Vite,
-  Wallet,
-  Config,
+  unit_manager, // Wallet,
+  unit_Config,
   Log,
   Monitor,
   NodeConfig,
-  Pow,
+  unit_Pow,
   RemotePow,
-  RPC,
+  unit_rpc,
   RPCApi,
   Filters;
 
 type
   TNode = class
   private
-    FConfig: TNodeConfig;
+	FConfig: TNodeConfig;
     FWalletConfig: TWalletConfig;
     FWalletManager: TWalletManager;
     FViteConfig: TViteConfig;
-    FViteServer: TVite;
+	FViteServer: TVite;
     FRPCAPIs: TList<TRPCApi>;
     FInProcessHandler: TRPCServer;
     FIPCEndpoint: string;
     FIPCListener: TIPCListener;
     FIPCHandler: TRPCServer;
-    FHTTPEndpoint: string;
+	FHTTPEndpoint: string;
     FHTTPWhitelist: TStrings;
     FHTTPListener: THTTPListener;
-    FHTTPHandler: TRPCServer;
-    FPrivateHTTPEndpoint: string;
+	FHTTPHandler: TRPCServer;
+	FPrivateHTTPEndpoint: string;
     FPrivateHTTPListener: THTTPListener;
-    FPrivateHTTPHandler: TRPCServer;
+	FPrivateHTTPHandler: TRPCServer;
     FWSEndpoint: string;
     FWSListener: TWebSocketListener;
     FWSHandler: TRPCServer;
@@ -62,7 +63,7 @@ type
     procedure StopVite;
     procedure StopRPC;
   public
-    constructor Create(const AConfig: TNodeConfig); reintroduce;
+	constructor Create(const AConfig: TNodeConfig); reintroduce;
     function Prepare: Boolean;
     function Start: Boolean;
     procedure Stop;
@@ -193,14 +194,14 @@ var
 begin
   while True do
   begin
-    if WaitForSingleObject(FStop.Handle, INFINITE) = WAIT_OBJECT_0 then
+	if WaitForSingleObject(FStop.Handle, INFINITE) = WAIT_OBJECT_0 then
       Break;
     if PeekMessage(Msg, 0, 0, 0, PM_REMOVE) then
     begin
       if Msg.message = WM_QUIT then
         Break
 	  else
-        DispatchMessage(Msg);
+		DispatchMessage(Msg);
     end;
   end;
   Stop;
@@ -294,14 +295,14 @@ begin
         FConfig.HTTPCors, FConfig.HttpVirtualHosts, FConfig.HttpTimeouts,
         FConfig.HttpExposeAll) then
         Exit;
-    end;
+	end;
 
     if FConfig.WSEnabled then
     begin
       if not StartWS(FWSEndpoint, AllApis, nil, FConfig.WSOrigins,
         FConfig.WSExposeAll) then
 		Exit;
-    end;
+	end;
 
     if FConfig.DashboardTargetURL <> '' then
 	begin
@@ -365,7 +366,7 @@ begin
   StopHTTP;
   StopIPC;
   if Filters.Es <> nil then
-    Filters.Es.Stop;
+	Filters.Es.Stop;
 end;
 
 function TNode.OpenDataDir: Boolean;
@@ -395,7 +396,7 @@ begin
   end;
 
   if not ForceDirectories(FWalletConfig.DataDir) then
-    Exit;
+	Exit;
   Log.Info(Format('Open NodeServer.walletConfig.DataDir:%s', [FWalletConfig.DataDir]));
 end;
 

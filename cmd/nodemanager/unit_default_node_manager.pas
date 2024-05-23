@@ -4,7 +4,7 @@ interface
 
 uses
   urfave.cli,
-  node;
+  unit_node;
 
 type
   TDefaultNodeManager = class
@@ -14,7 +14,7 @@ type
   public
 	constructor Create(const ctx: PCliContext; const maker: TNodeMaker);
     function Start: Integer;
-    function Stop: Integer;
+	function Stop: Integer;
     function GetNode: PNode;
   end;
 

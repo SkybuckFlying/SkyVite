@@ -5,7 +5,7 @@ interface
 uses
   SysUtils,
   Classes,
-  Crypto,
+  unit_Crypto,
   Math,
   StrUtils,
   Generics.Collections;

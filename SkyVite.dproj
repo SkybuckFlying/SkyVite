@@ -217,6 +217,15 @@
         <DCCReference Include="crypto\unit_crypto.pas"/>
         <DCCReference Include="crypto\ed25519\unit_ed25519.pas"/>
         <DCCReference Include="crypto\ed25519\unit_ed25519_alternative_1.pas"/>
+        <DCCReference Include="wallet\unit_manager.pas"/>
+        <DCCReference Include="node\unit_rpc.pas"/>
+        <DCCReference Include="pow\unit_pow.pas"/>
+        <DCCReference Include="node\config\unit_node_config.pas"/>
+        <DCCReference Include="ledger\chain\unit_chain.pas"/>
+        <DCCReference Include="ledger\consensus\unit_consensus.pas"/>
+        <DCCReference Include="ledger\pool\unit_pool.pas"/>
+        <DCCReference Include="ledger\verifier\unit_verifier.pas"/>
+        <DCCReference Include="ledger\chain\unit_chain_v2.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

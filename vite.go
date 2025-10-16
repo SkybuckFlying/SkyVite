@@ -120,6 +120,12 @@ func (v *Vite) Init() (err error) {
 }
 
 func (v *Vite) Start() (err error) {
+	log.Info("Starting network...")
+	err = v.net.Start()
+	if err != nil {
+		return err
+	}
+
 	log.Info("Starting OnRoad manager...")
 	v.onRoad.Start()
 
@@ -138,12 +144,6 @@ func (v *Vite) Start() (err error) {
 
 	log.Info("Starting consensus engine...")
 	v.consensus.Start()
-
-	log.Info("Starting network...")
-	err = v.net.Start()
-	if err != nil {
-		return
-	}
 
 	log.Info("Starting transaction pool...")
 	v.pool.Start()

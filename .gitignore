@@ -49,3 +49,6 @@ workbox-*
 
 # bin/dump_branch_diff
 commits-logs/
+
+# vite config file
+node_config.json

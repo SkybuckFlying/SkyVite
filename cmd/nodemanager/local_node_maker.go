@@ -1,11 +1,11 @@
 package nodemanager
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/vitelabs/go-vite/v2/common"
 	"github.com/vitelabs/go-vite/v2/node"
 	nodeconfig "github.com/vitelabs/go-vite/v2/node/config"
 )
@@ -19,7 +19,8 @@ func (maker LocalNodeMaker) MakeNode(ctx *cli.Context) (*node.Node, error) {
 	if err != nil {
 		return nil, err
 	}
-	log.Info(fmt.Sprintf("NodeConfig info: %v", common.ToJson(nodeConfig)))
+	nodeConfigBytes, _ := json.MarshalIndent(nodeConfig, "", "  ")
+	log.Info(fmt.Sprintf("NodeConfig info:\n%s", string(nodeConfigBytes)))
 	// 2: New Node
 	node, err := node.New(nodeConfig)
 
@@ -32,22 +33,26 @@ func (maker LocalNodeMaker) MakeNode(ctx *cli.Context) (*node.Node, error) {
 
 func (maker LocalNodeMaker) MakeNodeConfig(ctx *cli.Context) (*nodeconfig.Config, error) {
 	cfg := &nodeconfig.DefaultNodeConfig
-	log.Info(fmt.Sprintf("DefaultNodeconfig: %v", cfg))
+	cfgBytes, _ := json.MarshalIndent(cfg, "", "  ")
+	log.Info(fmt.Sprintf("DefaultNodeconfig:\n%s", string(cfgBytes)))
 
 	// 1: Load config file.
 	err := loadNodeConfigFromFile(ctx, cfg)
 	if err != nil {
 		return nil, err
 	}
-	log.Info(fmt.Sprintf("After load config file: %v", cfg))
+	cfgBytes, _ = json.MarshalIndent(cfg, "", "  ")
+	log.Info(fmt.Sprintf("After load config file:\n%s", string(cfgBytes)))
 
 	// 2: Apply flags, Overwrite the configuration file configuration
 	mappingNodeConfig(ctx, cfg)
-	log.Info(fmt.Sprintf("After mapping cmd input: %v", cfg))
+	cfgBytes, _ = json.MarshalIndent(cfg, "", "  ")
+	log.Info(fmt.Sprintf("After mapping cmd input:\n%s", string(cfgBytes)))
 
 	// 3: Override any default configs for hard coded networks.
 	overrideNodeConfigs(ctx, cfg)
-	log.Info(fmt.Sprintf("Last override config: %v", cfg))
+	cfgBytes, _ = json.MarshalIndent(cfg, "", "  ")
+	log.Info(fmt.Sprintf("Last override config:\n%s", string(cfgBytes)))
 	log.Info(fmt.Sprintf("NodeServer.DataDir:%v", cfg.DataDir))
 	log.Info(fmt.Sprintf("NodeServer.KeyStoreDir:%v", cfg.KeyStoreDir))
 

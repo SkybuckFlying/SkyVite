@@ -120,10 +120,13 @@ func (v *Vite) Init() (err error) {
 }
 
 func (v *Vite) Start() (err error) {
+	log.Info("Starting OnRoad manager...")
 	v.onRoad.Start()
 
+	log.Info("Starting blockchain...")
 	v.chain.Start()
 
+	log.Info("Initializing consensus engine...")
 	err = v.consensus.Init(consensus.Cfg())
 	if err != nil {
 		return err
@@ -133,21 +136,25 @@ func (v *Vite) Start() (err error) {
 
 	v.pool.Init(v.net, v.verifier, v.consensus.SBPReader())
 
+	log.Info("Starting consensus engine...")
 	v.consensus.Start()
 
+	log.Info("Starting network...")
 	err = v.net.Start()
 	if err != nil {
 		return
 	}
 
+	log.Info("Starting transaction pool...")
 	v.pool.Start()
 	if v.producer != nil {
-
+		log.Info("Starting block producer...")
 		if err := v.producer.Start(); err != nil {
 			log.Error("producer.Start failed, error is "+err.Error(), "method", "vite.Start")
 			return err
 		}
 	}
+	log.Info("Vite node started successfully")
 	return nil
 }
 

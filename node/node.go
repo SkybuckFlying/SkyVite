@@ -71,6 +71,7 @@ type Node struct {
 }
 
 func New(conf *nodeconfig.Config) (*Node, error) {
+	log.Info("Creating new node...")
 	return &Node{
 		config:       conf,
 		walletConfig: conf.MakeWalletConfig(),
@@ -84,6 +85,7 @@ func New(conf *nodeconfig.Config) (*Node, error) {
 }
 
 func (node *Node) Prepare() (err error) {
+	log.Info("Preparing node...")
 	node.lock.Lock()
 	defer node.lock.Unlock()
 
@@ -409,13 +411,13 @@ func (node *Node) openDataDir() error {
 
 	//Lock the instance directory to prevent concurrent use by another instance as well as accidental use of the instance directory as chain database.
 	lockDir := filepath.Join(node.config.DataDir, "LOCK")
-	log.Info(fmt.Sprintf("Try to Lock NodeServer.DataDir,lockDir:%v", lockDir))
+	log.Info("Attempting to acquire data directory lock...", "lockfile", lockDir)
 	release, _, err := flock.New(lockDir)
 	if err != nil {
-		log.Error(fmt.Sprintf("Directory locked failed,lockDir:%v", lockDir))
+		log.Error("Failed to acquire data directory lock", "lockfile", lockDir, "err", err)
 		return convertFileLockError(err)
 	}
-	log.Info(fmt.Sprintf("Directory locked successfully,lockDir:%v", lockDir))
+	log.Info("Data directory lock acquired", "lockfile", lockDir)
 	node.instanceDirLock = release
 
 	//open wallet data dir

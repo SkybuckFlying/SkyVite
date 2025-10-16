@@ -246,6 +246,7 @@ func IsExist(f string) bool {
 func makeRunLogFile(cfg *nodeconfig.Config) {
 	defaultHandler := common.LogHandler(cfg.RunLogDir(), "", "vite.log", cfg.LogLevel)
 	errorHandler := common.LogHandler(cfg.RunLogDir(), "error", "vite.error.log", log15.LvlError.String())
+	consoleHandler := log15.StreamHandler(os.Stdout, log15.TerminalFormat())
 
-	log15.Root().SetHandler(log15.MultiHandler(defaultHandler, errorHandler))
+	log15.Root().SetHandler(log15.MultiHandler(defaultHandler, errorHandler, consoleHandler))
 }

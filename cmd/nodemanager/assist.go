@@ -29,7 +29,6 @@ func StartNode(node *node.Node) error {
 		common.Crit(fmt.Sprintf("Failed to start node, %v", err))
 	}
 
-	node.Wait()
 	return nil
 }
 

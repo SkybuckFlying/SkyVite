@@ -16,8 +16,11 @@ procedure Crit(msg: string; ctx: array of const);
 
 implementation
 
+uses
+  Winapi.Windows;
+
 var
-  gRootLogger: TLogger;
+  gRootLogger: ILogger;
   gStdoutHandler: IHandler;
   gStderrHandler: IHandler;
 
@@ -33,40 +36,51 @@ end;
 
 procedure Debug(msg: string; ctx: array of const);
 begin
-  gRootLogger.Write(msg, TLvl.LvlDebug, ctx);
+  gRootLogger.Debug(msg, ctx);
 end;
 
 procedure Info(msg: string; ctx: array of const);
 begin
-  gRootLogger.Write(msg, TLvl.LvlInfo, ctx);
+  gRootLogger.Info(msg, ctx);
 end;
 
 procedure Warn(msg: string; ctx: array of const);
 begin
-  gRootLogger.Write(msg, TLvl.LvlWarn, ctx);
+  gRootLogger.Warn(msg, ctx);
 end;
 
 procedure Error(msg: string; ctx: array of const);
 begin
-  gRootLogger.Write(msg, TLvl.LvlError, ctx);
+  gRootLogger.Error(msg, ctx);
 end;
 
 procedure Crit(msg: string; ctx: array of const);
 begin
-  gRootLogger.Write(msg, TLvl.LvlCrit, ctx);
-  Halt(1);
+  gRootLogger.Crit(msg, ctx);
+end;
+
+function GetStdOutHandle: THandle;
+begin
+  Result := GetStdHandle(STD_OUTPUT_HANDLE);
+end;
+
+function GetStdErrHandle: THandle;
+begin
+  Result := GetStdHandle(STD_ERROR_HANDLE);
 end;
 
 initialization
-  if TConsole.IsConsole then
+  if IsConsole then
   begin
-    gStdoutHandler := TStreamHandler.Create(TFileStream.Create(TConsole.Handle), TTerminalFormat.Create);
-    gStderrHandler := TStreamHandler.Create(TFileStream.Create(TConsole.ErrorHandle), TTerminalFormat.Create);
+    gStdoutHandler := StreamHandler(THandleStream.Create(GetStdOutHandle), TerminalFormat);
+    gStderrHandler := StreamHandler(THandleStream.Create(GetStdErrHandle), TerminalFormat);
   end
   else
   begin
-    gStdoutHandler := TStreamHandler.Create(TFileStream.Create(TConsole.Handle), TLogfmtFormat.Create);
-    gStderrHandler := TStreamHandler.Create(TFileStream.Create(TConsole.ErrorHandle), TLogfmtFormat.Create);
+    // Fallback for non-console (e.g. GUI app), maybe just discard or write to file?
+    // For now, we'll just use the same handles but with Logfmt
+    gStdoutHandler := StreamHandler(THandleStream.Create(GetStdOutHandle), LogfmtFormat);
+    gStderrHandler := StreamHandler(THandleStream.Create(GetStdErrHandle), LogfmtFormat);
   end;
 
   gRootLogger := TLogger.Create;

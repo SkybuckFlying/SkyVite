@@ -19,34 +19,31 @@ type
     Lvl: string;
   end;
 
-  TLogRecord = record
-    Time: TDateTime;
-    Lvl: TLvl;
-    Msg: string;
-    Ctx: TArray<TValue>;
-    // Call: TStackFrame; // Missing stack trace implementation
-    KeyNames: TRecordKeyNames;
+  TLogRecord = class(TInterfacedObject, IRecord)
+  private
+    FTime: TDateTime;
+    FLvl: TLvl;
+    FMsg: string;
+    FCtx: TArray<TValue>;
+  public
+    constructor Create(ATime: TDateTime; ALvl: TLvl; const AMsg: string; const ACtx: TArray<TValue>);
+    function GetTime: TDateTime;
+    function GetLvl: TLvl;
+    function GetMsg: string;
+    function GetCtx: TArray<TValue>;
+    property Time: TDateTime read GetTime;
+    property Lvl: TLvl read GetLvl;
+    property Msg: string read GetMsg;
+    property Ctx: TArray<TValue> read GetCtx;
   end;
 
   TCtx = class(TDictionary<string, TValue>)
   public
-    function ToArray: TArray<TValue>;
+    function ToValueArray: TArray<TValue>;
   end;
 
   TLazy = record
     Fn: TFunc<TArray<TValue>>;
-  end;
-
-  ILogger = interface(Log15.ILogger)
-    ['{4B3B7E6C-82A3-4A7B-8AF3-24D897E65E5D}']
-    function New(Ctx: array of const): ILogger;
-    function GetHandler: IHandler;
-    procedure SetHandler(AHandler: IHandler);
-    procedure Debug(Msg: string; Ctx: array of const);
-    procedure Info(Msg: string; Ctx: array of const);
-    procedure Warn(Msg: string; Ctx: array of const);
-    procedure Error(Msg: string; Ctx: array of const);
-    procedure Crit(Msg: string; Ctx: array of const);
   end;
 
   TLogger = class(TInterfacedObject, ILogger)
@@ -72,17 +69,48 @@ implementation
 
 uses System.Variants;
 
+{ TLogRecord }
+
+constructor TLogRecord.Create(ATime: TDateTime; ALvl: TLvl; const AMsg: string; const ACtx: TArray<TValue>);
+begin
+  inherited Create;
+  FTime := ATime;
+  FLvl := ALvl;
+  FMsg := AMsg;
+  FCtx := ACtx;
+end;
+
+function TLogRecord.GetTime: TDateTime;
+begin
+  Result := FTime;
+end;
+
+function TLogRecord.GetLvl: TLvl;
+begin
+  Result := FLvl;
+end;
+
+function TLogRecord.GetMsg: string;
+begin
+  Result := FMsg;
+end;
+
+function TLogRecord.GetCtx: TArray<TValue>;
+begin
+  Result := FCtx;
+end;
+
 { TLogger }
 
 constructor TLogger.Create;
 begin
   inherited Create;
-  mSwapHandler := TSwapHandler.Create(nil);
+  mSwapHandler := SwapHandler(nil);
 end;
 
 procedure TLogger.Crit(Msg: string; Ctx: array of const);
 begin
-  Write(Msg, Tlvl.LvlCrit, Ctx);
+  Write(Msg, TLvl.LvlCrit, Ctx);
   Halt(1);
 end;
 
@@ -154,20 +182,16 @@ begin
     if Result[0].AsObject is TCtx then
     begin
       vCtxMap := Result[0].AsObject as TCtx;
-      Result := vCtxMap.ToArray;
+      Result := vCtxMap.ToValueArray;
     end;
   end;
 
   // ctx needs to be even because it's a series of key/value pairs
-  // no one wants to check for errors on logging functions,
-  // so instead of erroring on bad input, we'll just make sure
-  // that things are the right length and users can fix bugs
-  // when they see the output looks wrong
   if Length(Result) mod 2 <> 0 then
   begin
     SetLength(Result, Length(Result) + 2);
-    Result[High(Result) - 1] := nil;
-    Result[High(Result)] := TValue.From<string>(ConstErrorKey, 'Normalized odd number of arguments by adding nil');
+    Result[High(Result) - 1] := TValue.Empty;
+    Result[High(Result)] := TValue.From<string>('Normalized odd number of arguments by adding nil');
   end;
 end;
 
@@ -183,7 +207,7 @@ end;
 
 procedure TLogger.Write(Msg: string; Lvl: TLvl; Ctx: array of const);
 var
-  vRecord: TLogRecord;
+  vRecord: IRecord;
   vIndex: Integer;
   vConst: TVarRec;
   vValue: TValue;
@@ -191,13 +215,6 @@ var
 begin
   if mSwapHandler <> nil then
   begin
-    vRecord.Time := Now;
-    vRecord.Lvl := Lvl;
-    vRecord.Msg := Msg;
-    vRecord.KeyNames.Time := ConstTimeKey;
-    vRecord.KeyNames.Msg := ConstMsgKey;
-    vRecord.KeyNames.Lvl := ConstLvlKey;
-
     SetLength(vCtxArray, Length(Ctx));
     for vConst in Ctx do
     begin
@@ -205,14 +222,14 @@ begin
         vCtxArray[System.Low(vCtxArray)] := vValue;
     end;
 
-    vRecord.Ctx := NewContext(mCtx, vCtxArray);
+    vRecord := TLogRecord.Create(Now, Lvl, Msg, NewContext(mCtx, vCtxArray));
     mSwapHandler.Log(vRecord);
   end;
 end;
 
 { TCtx }
 
-function TCtx.ToArray: TArray<TValue>;
+function TCtx.ToValueArray: TArray<TValue>;
 var
   vPair: TPair<string, TValue>;
   vIndex: Integer;

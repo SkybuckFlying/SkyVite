@@ -1,14 +1,14 @@
-unit Log15Format;
+unit Log15.Format;
 
 interface
 
 uses
-  SysUtils, Classes, Log15;
+  System.SysUtils, System.Classes, Log15;
 
-function TerminalFormat: IFormat;
-function LogfmtFormat: IFormat;
-function JsonFormat: IFormat;
-function JsonFormatEx(pretty, lineSeparated: Boolean): IFormat;
+function TerminalFormat: Log15.IFormat;
+function LogfmtFormat: Log15.IFormat;
+function JsonFormat: Log15.IFormat;
+function JsonFormatEx(pretty, lineSeparated: Boolean): Log15.IFormat;
 
 type
   IFormat = interface
@@ -19,7 +19,7 @@ type
 implementation
 
 uses
-  System.JSON, System.SysConst, System.StrUtils, System.DateUtils;
+  System.JSON, System.SysConst, System.StrUtils, System.DateUtils, System.Rtti;
 
 const
   timeFormat = 'yyyy-mm-dd"T"hh:nn:ss.zzzZ';
@@ -28,7 +28,7 @@ const
   termMsgJust = 40;
 
 type
-  TFormatFunc = class(TInterfacedObject, IFormat)
+  TFormatFunc = class(TInterfacedObject, Log15.IFormat)
   private
     fFunc: TFunc<IRecord, TBytes>;
   public
@@ -46,38 +46,33 @@ begin
   Result := fFunc(r);
 end;
 
-function TerminalFormat: IFormat;
+function formatLogfmtValue(const v: TValue): string;
 begin
-  Result := TFormatFunc.Create(
-    function(r: IRecord): TBytes
-    var
-      color: Integer;
-      b: TStringBuilder;
-      lvl: string;
-    begin
-      color := 0;
-      case r.Lvl of
-        LvlCrit: color := 35;
-        LvlError: color := 31;
-        LvlWarn: color := 33;
-        LvlInfo: color := 32;
-        LvlDebug: color := 36;
-      end;
+  if v.IsEmpty then
+    Result := 'nil'
+  else if v.IsType<string> then
+    Result := '"' + v.AsString + '"'
+  else
+    Result := v.ToString;
+end;
 
-      b := TStringBuilder.Create;
-      lvl := UpperCase(r.Lvl.ToString);
-      if color > 0 then
-        b.AppendFormat(#27'[%dm%s'#27'[0m[%s] %s ', [color, lvl, FormatDateTime(termTimeFormat, r.Time), r.Msg])
-      else
-        b.AppendFormat('[%s] [%s] %s ', [lvl, FormatDateTime(termTimeFormat, r.Time), r.Msg]);
-
-      if (Length(r.Ctx) > 0) and (Length(r.Msg) < termMsgJust) then
-        b.Append(' ', termMsgJust - Length(r.Msg));
-
-      // logfmt(b, r.Ctx, color);
-      logfmt(b, r.Ctx, color);
-      Result := TEncoding.UTF8.GetBytes(b.ToString);
-    end);
+function formatJSONValue(const v: TValue): TJSONValue;
+begin
+  if v.IsEmpty then
+    Result := TJSONNull.Create
+  else if v.IsType<string> then
+    Result := TJSONString.Create(v.AsString)
+  else if v.IsType<Integer> then
+    Result := TJSONNumber.Create(v.AsInteger)
+  else if v.IsType<Boolean> then
+  begin
+    if v.AsBoolean then
+      Result := TJSONTrue.Create
+    else
+      Result := TJSONFalse.Create;
+  end
+  else
+    Result := TJSONString.Create(v.ToString);
 end;
 
 procedure logfmt(buf: TStringBuilder; ctx: TArray<TValue>; color: Integer);
@@ -109,28 +104,66 @@ begin
   buf.Append(sLineBreak);
 end;
 
-function LogfmtFormat: IFormat;
+function TerminalFormat: Log15.IFormat;
 begin
   Result := TFormatFunc.Create(
     function(r: IRecord): TBytes
     var
-      // common: TArray<TVar>;
-      buf: TStringBuilder;
+      color: Integer;
+      b: TStringBuilder;
+      lvl: string;
     begin
-      // common := [r.KeyNames.Time, r.Time, r.KeyNames.Lvl, r.Lvl, r.KeyNames.Msg, r.Msg];
-      buf := TStringBuilder.Create;
-      // logfmt(buf, common + r.Ctx, 0);
-      logfmt(buf, r.Ctx, 0);
-      Result := TEncoding.UTF8.GetBytes(buf.ToString);
+      color := 0;
+      case r.Lvl of
+        LvlCrit: color := 35;
+        LvlError: color := 31;
+        LvlWarn: color := 33;
+        LvlInfo: color := 32;
+        LvlDebug: color := 36;
+      end;
+
+      b := TStringBuilder.Create;
+      try
+        lvl := UpperCase(LvlToString(r.Lvl));
+        if color > 0 then
+          b.AppendFormat(#27'[%dm%s'#27'[0m[%s] %s ', [color, lvl, FormatDateTime(termTimeFormat, r.Time), r.Msg])
+        else
+          b.AppendFormat('[%s] [%s] %s ', [lvl, FormatDateTime(termTimeFormat, r.Time), r.Msg]);
+
+        if (Length(r.Ctx) > 0) and (Length(r.Msg) < termMsgJust) then
+          b.Append(' ', termMsgJust - Length(r.Msg));
+
+        logfmt(b, r.Ctx, color);
+        Result := TEncoding.UTF8.GetBytes(b.ToString);
+      finally
+        b.Free;
+      end;
     end);
 end;
 
-function JsonFormat: IFormat;
+function LogfmtFormat: Log15.IFormat;
+begin
+  Result := TFormatFunc.Create(
+    function(r: IRecord): TBytes
+    var
+      buf: TStringBuilder;
+    begin
+      buf := TStringBuilder.Create;
+      try
+        logfmt(buf, r.Ctx, 0);
+        Result := TEncoding.UTF8.GetBytes(buf.ToString);
+      finally
+        buf.Free;
+      end;
+    end);
+end;
+
+function JsonFormat: Log15.IFormat;
 begin
   Result := JsonFormatEx(False, True);
 end;
 
-function JsonFormatEx(pretty, lineSeparated: Boolean): IFormat;
+function JsonFormatEx(pretty, lineSeparated: Boolean): Log15.IFormat;
 begin
   Result := TFormatFunc.Create(
     function(r: IRecord): TBytes
@@ -142,19 +175,19 @@ begin
     begin
       props := TJSONObject.Create;
       try
-        // props.AddPair(r.KeyNames.Time, TJSONValue.Create(r.Time));
-        // props.AddPair(r.KeyNames.Lvl, TJSONValue.Create(r.Lvl.ToString));
-        // props.AddPair(r.KeyNames.Msg, TJSONValue.Create(r.Msg));
-
         i := 0;
         while i < Length(r.Ctx) do
         begin
           if r.Ctx[i].IsType<string> then
-            k := r.Ctx[i]
+            k := r.Ctx[i].AsString
           else
-            k := 'errorKey'; // or handle error appropriately
-          // props.AddPair(k, formatJSONValue(r.Ctx[i+1]));
-          props.AddPair(k, formatJSONValue(r.Ctx[i+1]));
+            k := 'errorKey';
+          
+          if i + 1 < Length(r.Ctx) then
+            props.AddPair(k, formatJSONValue(r.Ctx[i+1]))
+          else
+            props.AddPair(k, TJSONNull.Create);
+
           Inc(i, 2);
         end;
 

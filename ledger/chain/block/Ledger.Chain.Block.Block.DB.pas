@@ -3,7 +3,7 @@ unit ledger.chain.block.block_db;
 interface
 
 uses
-  SysUtils, Classes, types, crypto, interfaces, ledger.core, ledger.chain.file_manager, log15;
+  SysUtils, Classes, types, Crypto.Crypto in 'crypto/Crypto.Crypto.pas', interfaces, ledger.core, ledger.chain.file_manager, log15;
 
 const
   FixFileSize = 10 * 1024 * 1024;

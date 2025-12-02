@@ -1,57 +1,60 @@
-unit block_db_test;
+unit Ledger.Chain.Block.Block.DB.Test;
 
 interface
 
 uses
-  SysUtils, Classes, TestFramework, core, file_manager;
+  SysUtils, Classes,
+  ledger.chain.block.block_db in 'ledger/chain/block/Ledger.Chain.Block.Block.DB.pas',
+  Ledger.Chain.FileManager.FileManager in 'ledger/chain/file_manager/Ledger.Chain.File.Manager.File.Manager.pas',
+  Common.Types;
 
-procedure TestReadSnapshotBlocks;
-procedure TestReadAccountBlocks;
+type
+  TTestBlockDB = class
+  public
+    procedure Setup;
+    procedure TearDown;
+    procedure TestFlush;
+  end;
 
 implementation
 
-procedure TestReadSnapshotBlocks;
-var
-  ChainDir: string;
-  DB: TObject; // Replace with actual BlockDB type
-  StatusList: TList; // Replace with actual status type
-  Start, Current: TLocation;
-  I: Integer;
-  SB: TObject; // Replace with actual SnapshotBlock type
-  NextLocation: TLocation;
-  Err: Exception;
+procedure Assert(condition: Boolean; msg: string);
 begin
-  // Skipped by default. This test can be used to inspect ledger data.
-  Exit;
-  ChainDir := HomeDir + '.gvite/mockdata/ledger_2101_2';
-  // DB := NewBlockDB(ChainDir);
-  // StatusList := DB.GetStatus;
-  // for each status in StatusList do
-  //   Log(status.Name, status.Count, status.Size, status.Status);
-  Start := TLocation.Create(1, 0);
-  Current := Start;
-  I := 0;
-  while I < 10 do
-  begin
-    // SB, _, NextLocation, Err := DB.ReadUnit(Current);
-    // if Err = EOF then Break;
-    // Assert(Err = nil);
-    // if NextLocation = nil then Break;
-    // Log('location', NextLocation.ToString);
-    // if SB <> nil then
-    // begin
-    //   Inc(I);
-    //   Log(SB.Height, SB.Hash, Current.ToString);
-    // end;
-    // Current := NextLocation;
-  end;
+  if not condition then
+    raise Exception.Create(msg);
 end;
 
-procedure TestReadAccountBlocks;
+procedure TTestBlockDB.Setup;
 begin
-  // Skipped by default. This test can be used to inspect ledger data.
-  Exit;
-  // Similar structure as TestReadSnapshotBlocks
+end;
+
+procedure TTestBlockDB.TearDown;
+begin
+end;
+
+procedure TTestBlockDB.TestFlush;
+var
+  chainDir: string;
+  db: TBlockDB;
+  err: Exception;
+begin
+  chainDir := TPath.Combine(TPath.GetTempPath, 'gvite_test');
+  if TDirectory.Exists(chainDir) then
+    TDirectory.Delete(chainDir, True);
+  TDirectory.CreateDirectory(chainDir);
+
+  db := TBlockDB.Create(chainDir);
+  try
+    // This is a simplified version of a flush test.
+    // A more comprehensive test would write data and verify it.
+    db.Prepare;
+    db.Commit;
+    db.AfterCommit;
+  finally
+    db.Free;
+    if TDirectory.Exists(chainDir) then
+      TDirectory.Delete(chainDir, True);
+  end;
 end;
 
 end.

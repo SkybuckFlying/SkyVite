@@ -3,8 +3,13 @@ unit Crypto.Crypto;
 interface
 
 uses
+  {$IFDEF FPC}
+  SysUtils,
+  Classes,
+  {$ELSE}
   System.SysUtils,
   System.Classes,
+  {$ENDIF}
   DEC,
   DECHash,
   DECCiphers,

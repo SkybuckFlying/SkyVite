@@ -1509,3 +1509,46 @@ MICRO-TASK 10: DEFER & CLEANUP
 3. HOW TO EXECUTE
 ------------------------------------------------------------------------------
 Read the *.go file. Consult the mappings. If no mapping is there for filename follows fully qualified delphi unit name rules. Save converted delphi code to the *.pas or *.dpr file, Validate the output, save it, and move to the next Micro-Task.
+
+
+## 📝 Special Instructions for Free Pascal Compiler (FPC) Code Generation
+
+When generating code targeting the **Free Pascal Compiler (FPC)**, ensure the following practices are strictly followed to maintain compatibility and correct unit usage.
+
+### 1. Conditional Unit Naming for Cross-Compiler Compatibility
+
+Implement conditional compilation directives to switch between unit names, using **non-fully-qualified unit names** for FPC and modern, prefixed names for Delphi (or similar compilers).
+
+The block should be structured as follows:
+
+```pascal
+// This block ensures the correct unit path is used
+// based on the compiler:
+// - FPC: uses the older, non-prefixed name (SysUtils).
+// - Delphi (or other compilers): uses the modern, prefixed name (System.SysUtils).
+{$IFDEF FPC}
+uses
+  SysUtils; // Non-fully-qualified name for FPC
+{$ELSE}
+uses
+  System.SysUtils; // Fully-qualified name for Delphi/others
+{$ENDIF}
+````
+
+### 2. Enable Delphi Compatibility Mode
+
+Always include the special Delphi compatibility mode directive at the beginning of the unit/program file, before the `uses` clause.
+
+  * **Directive:** `{$MODE DELPHIUNICODE}`
+  * **Placement:** Must be located **before** the `uses` clause of the unit interface or program uses clause.
+
+**Example Placement:**
+
+```pascal
+{$MODE DELPHIUNICODE} // Must be placed first
+Unit myunit;
+
+// MODE directive is global and only one can be specified.
+// It does not influence the availability of other units.
+```
+

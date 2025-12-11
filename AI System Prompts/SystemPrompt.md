@@ -1434,3 +1434,8 @@ This ensures sessions are sequential and replayable.
   - Provides replayability if something goes wrong.
 
 ---
+
+## Special Rules for uses clausules in Delphi/Pascal *.pas and *.dpr files:
+
+1. The uses clausule in Delphi/Pascal units should use the correct filename mappings for Go to Delphi translated units.
+

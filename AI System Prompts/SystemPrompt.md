@@ -1560,20 +1560,20 @@ Unit myunit;
 ## Identity Detection
 Each AI worker must determine its own identity (AI number) before starting.
 
-1. **Preferred: Git config**  
+1. **Preferred: Git config**
    ```
    git config --get user.name
    git config --get user.email
    ```
-   Example output:  
+   Example output:
    ```
    Gemini Pro 2.5 AI 0006
    Gemini2.5ProAI0006@DelphinityLabs.local
    ```
    → Identity = AI0006
 
-2. **Fallback: Folder name**  
-   If config is not set, parse the workspace folder name:  
+2. **Fallback: Folder name**
+   If config is not set, parse the workspace folder name:
    ```
    X:\Vite\Workspace\Translator\Gemini 2.5 Pro\0006
    ```
@@ -1582,91 +1582,91 @@ Each AI worker must determine its own identity (AI number) before starting.
 ---
 
 ## Session Detection
-Each AI must also determine which **ConversionSession number** to create.  
+Each AI must also determine which **ConversionSession number** to create.
 This ensures sessions are sequential and replayable.
 
-1. **Check existing branches**  
+1. **Check existing branches**
    ```
-   git branch -r | grep "Branch/Translation/Delphi/Gemini2.5Pro/AI0006/ConversionSession/"
+   git branch -r | grep "Branch/Translation/Delphi/Gemini2.5Pro/AI0006/Session/"
    ```
-   Example output:  
+   Example output:
    ```
-   Branch/Translation/Delphi/Gemini2.5Pro/AI0006/ConversionSession/0001
-   Branch/Translation/Delphi/Gemini2.5Pro/AI0006/ConversionSession/0002
+   Branch/Translation/Delphi/Gemini2.5Pro/AI0006/Session/0001
+   Branch/Translation/Delphi/Gemini2.5Pro/AI0006/Session/0002
    ```
 
-2. **Determine next session number**  
-   - Find the highest existing session number.  
-   - Increment by 1.  
+2. **Determine next session number**
+   - Find the highest existing session number.
+   - Increment by 1.
    - If none exist, start at `0001`.
 
-   Example:  
-   - Highest = `0002`  
+   Example:
+   - Highest = `0002`
    - Next session = `0003`
 
-3. **Create translator branch**  
+3. **Create translator branch**
    ```
-   git checkout -b Branch/Translation/Delphi/Gemini2.5Pro/AI0006/ConversionSession/0003
+   git checkout -b Branch/Translation/Delphi/Gemini2.5Pro/AI0006/Session/0003
    ```
 
 ---
 
 ## Workflow Steps
 
-1. **Enter workspace folder**  
+1. **Enter workspace folder**
    ```
    cd X:\Vite\Workspace\Translator\Gemini 2.5 Pro\0006
    ```
 
-2. **Checkout latest Develop/Delphi**  
+2. **Checkout latest Develop/Delphi**
    ```
    git checkout Branch/Develop/Delphi
    git pull Repository Branch/Develop/Delphi
    ```
 
-3. **Create translator branch (with detected session)**  
+3. **Create translator branch (with detected session)**
    ```
-   git checkout -b Branch/Translation/Delphi/Gemini2.5Pro/AI0006/ConversionSession/0003
+   git checkout -b Branch/Translation/Delphi/Gemini2.5Pro/AI0006/Session/0003
    ```
 
-4. **Perform translation work**  
-   - Convert Go sources into Delphi units.  
+4. **Perform translation work**
+   - Convert Go sources into Delphi units.
    - Edit files directly inside this branch.
 
-5. **Stage and commit changes**  
+5. **Stage and commit changes**
    ```
    git add .
    git commit -m "Gemini2.5Pro AI0006 Session0003: translated Go sources into Delphi units"
    ```
 
-6. **Push translator branch**  
+6. **Push translator branch**
    ```
-   git push Repository Branch/Translation/Delphi/Gemini2.5Pro/AI0006/ConversionSession/0003
+   git push Repository Branch/Translation/Delphi/Gemini2.5Pro/AI0006/Session/0003
    ```
 
-7. **Stop here**  
-   - Do not merge into `/Develop/Delphi`.  
+7. **Stop here**
+   - Do not merge into `/Develop/Delphi`.
    - Await Coordinator integration.
 
 ---
 
 ## Coordinator Role (Later Integration)
 
-1. **Checkout Develop/Delphi**  
+1. **Checkout Develop/Delphi**
    ```
    git checkout Branch/Develop/Delphi
    git pull Repository Branch/Develop/Delphi
    ```
 
-2. **Sequentially merge translator branches in order**  
+2. **Sequentially merge translator branches in order**
    ```
-   git merge --no-ff Branch/Translation/Delphi/Gemini2.5Pro/AI0001/ConversionSession/0001
-   git merge --no-ff Branch/Translation/Delphi/Gemini2.5Pro/AI0002/ConversionSession/0002
-   git merge --no-ff Branch/Translation/Delphi/Gemini2.5Pro/AI0003/ConversionSession/0003
+   git merge --no-ff Branch/Translation/Delphi/Gemini2.5Pro/AI0001/Session/0001
+   git merge --no-ff Branch/Translation/Delphi/Gemini2.5Pro/AI0002/Session/0001
+   git merge --no-ff Branch/Translation/Delphi/Gemini2.5Pro/AI0003/Session/0001
    ...
    ```
 
-3. **Push updated Develop/Delphi**  
+3. **Push updated Develop/Delphi**
    ```
    git push Repository Branch/Develop/Delphi
    ```
@@ -1674,16 +1674,15 @@ This ensures sessions are sequential and replayable.
 ---
 
 ## Rules of Engagement
-- **Workers**:  
-  - Determine identity via `git config` or folder name.  
-  - Commit only to their translator branch.  
-  - Stop after pushing branch.  
+- **Workers**:
+  - Determine identity via `git config` or folder name.
+  - Commit only to their translator branch.
+  - Stop after pushing branch.
   - Never touch `/Develop/Delphi` directly.
 
-- **Coordinator**:  
-  - Integrates translator branches into `/Develop/Delphi`.  
-  - Ensures chronological order.  
+- **Coordinator**:
+  - Integrates translator branches into `/Develop/Delphi`.
+  - Ensures chronological order.
   - Provides replayability if something goes wrong.
 
 ---
-

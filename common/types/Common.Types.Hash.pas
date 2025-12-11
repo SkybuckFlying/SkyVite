@@ -3,8 +3,13 @@ unit Common.Types.Hash;
 interface
 
 uses
+{$IFDEF FPC}
+  SysUtils,
+  BigInts,
+{$ELSE}
   System.SysUtils,
   System.Math.BigInts,
+{$ENDIF}
   Common.Bytes,
   Common.HexUtil,
   Crypto.Hash;
@@ -40,7 +45,11 @@ function DataListHash(const ParaData: array of TBytes): THash;
 implementation
 
 uses
+{$IFDEF FPC}
+  StrUtils,
+{$ELSE}
   System.StrUtils,
+{$ENDIF}
   Common.Helper,
   Common.Types.Error,
   Common.Math.Big;

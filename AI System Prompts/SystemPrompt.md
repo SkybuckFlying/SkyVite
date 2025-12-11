@@ -1301,6 +1301,12 @@ Unit myunit;
 // It does not influence the availability of other units.
 ```
 
+### 3. Use FPCUnit for unit testing instead of DUnitX.
+
+2. DUnitX is Delphi only. For Free Pascal Compiler use FPCUnit for unit testing.
+
+Use conditional compilation directives to implement/support both testing frameworks.
+
 ### Git work flow
 
 # AI Worker / Translator Protocol (Go → Delphi)
@@ -1438,4 +1444,10 @@ This ensures sessions are sequential and replayable.
 ## Special Rules for uses clausules in Delphi/Pascal *.pas and *.dpr files:
 
 1. The uses clausule in Delphi/Pascal units should use the correct filename mappings for Go to Delphi translated units.
+
+
+## Special Rules for common/types:
+
+1. The common.types.pas file does not exist instead the common.<type>.pas file does exist, where type is a certain type that is needed. 
+   Thus find the type which is needed and use the correct common.<type>.pas in the uses clausule.
 

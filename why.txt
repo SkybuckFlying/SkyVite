@@ -1,0 +1,115 @@
+# github.com/BurntSushi/toml
+github.com/vitelabs/go-vite/v2/common
+gopkg.in/natefinch/lumberjack.v2
+gopkg.in/natefinch/lumberjack.v2.test
+github.com/BurntSushi/toml
+# github.com/StackExchange/wmi
+github.com/vitelabs/go-vite/v2/rpcapi/api
+github.com/shirou/gopsutil/host
+github.com/StackExchange/wmi
+# github.com/aead/ecdh
+github.com/vitelabs/go-vite/v2/crypto/ed25519
+github.com/vitelabs/go-vite/v2/crypto/ed25519.test
+github.com/aead/ecdh
+# github.com/allegro/bigcache
+github.com/vitelabs/go-vite/v2/ledger/chain/index
+github.com/allegro/bigcache
+# github.com/davecgh/go-spew
+github.com/vitelabs/go-vite/v2/common/helper
+github.com/stretchr/testify/assert
+github.com/davecgh/go-spew/spew
+# github.com/deckarep/golang-set
+github.com/vitelabs/go-vite/v2/rpc
+github.com/deckarep/golang-set
+# github.com/go-ole/go-ole
+github.com/vitelabs/go-vite/v2/rpcapi/api
+github.com/shirou/gopsutil/host
+github.com/StackExchange/wmi
+github.com/go-ole/go-ole
+# github.com/go-stack/stack
+github.com/vitelabs/go-vite/v2/log15
+github.com/go-stack/stack
+# github.com/golang-collections/collections
+github.com/vitelabs/go-vite/v2/ledger/pool
+github.com/golang-collections/collections/stack
+# github.com/golang/mock
+github.com/vitelabs/go-vite/v2/ledger/chain/state
+github.com/golang/mock/gomock
+# github.com/golang/protobuf
+github.com/vitelabs/go-vite/v2/common/vitepb
+github.com/golang/protobuf/proto
+# github.com/golang/snappy
+github.com/vitelabs/go-vite/v2/common/db/xleveldb/table
+github.com/golang/snappy
+# github.com/hashicorp/golang-lru
+github.com/vitelabs/go-vite/v2/ledger/chain/index
+github.com/hashicorp/golang-lru
+# github.com/kr/pretty
+github.com/vitelabs/go-vite/v2/common/helper
+github.com/stretchr/testify/assert
+gopkg.in/yaml.v3
+gopkg.in/yaml.v3.test
+gopkg.in/check.v1
+github.com/kr/pretty
+# github.com/mattn/go-colorable
+github.com/vitelabs/go-vite/v2/log15
+github.com/mattn/go-colorable
+# github.com/mattn/go-isatty
+github.com/vitelabs/go-vite/v2/log15
+github.com/mattn/go-isatty
+# github.com/patrickmn/go-cache
+github.com/vitelabs/go-vite/v2/ledger/chain/cache
+github.com/patrickmn/go-cache
+# github.com/pkg/errors
+github.com/vitelabs/go-vite/v2/common
+github.com/pkg/errors
+# github.com/rs/cors
+github.com/vitelabs/go-vite/v2/rpc
+github.com/rs/cors
+# github.com/shirou/gopsutil
+github.com/vitelabs/go-vite/v2/rpcapi/api
+github.com/shirou/gopsutil/host
+# github.com/stretchr/testify
+github.com/vitelabs/go-vite/v2/common/helper
+github.com/stretchr/testify/assert
+# github.com/syndtr/goleveldb
+github.com/vitelabs/go-vite/v2/cmd/updater
+github.com/syndtr/goleveldb/leveldb
+# github.com/tklauser/go-sysconf
+github.com/vitelabs/go-vite/v2/rpcapi/api
+github.com/shirou/gopsutil/host
+github.com/shirou/gopsutil/process
+github.com/tklauser/go-sysconf
+# github.com/tyler-smith/go-bip39
+github.com/vitelabs/go-vite/v2/wallet
+github.com/tyler-smith/go-bip39
+# go.uber.org/atomic
+github.com/vitelabs/go-vite/v2/ledger/onroad
+go.uber.org/atomic
+# golang.org/x/crypto
+github.com/vitelabs/go-vite/v2/crypto
+golang.org/x/crypto/blake2b
+# golang.org/x/net
+github.com/vitelabs/go-vite/v2/rpc
+golang.org/x/net/websocket
+# golang.org/x/sys
+github.com/vitelabs/go-vite/v2/log15/term
+golang.org/x/sys/unix
+# google.golang.org/protobuf
+github.com/vitelabs/go-vite/v2/vm/contracts/dex/proto
+google.golang.org/protobuf/reflect/protoreflect
+# gopkg.in/check.v1
+github.com/vitelabs/go-vite/v2/common/helper
+github.com/stretchr/testify/assert
+gopkg.in/yaml.v3
+gopkg.in/yaml.v3.test
+gopkg.in/check.v1
+# gopkg.in/natefinch/lumberjack.v2
+github.com/vitelabs/go-vite/v2/common
+gopkg.in/natefinch/lumberjack.v2
+# gopkg.in/natefinch/npipe.v2
+github.com/vitelabs/go-vite/v2/rpc
+gopkg.in/natefinch/npipe.v2
+# gopkg.in/urfave/cli.v1
+github.com/vitelabs/go-vite/v2/cmd/gvite_plugins
+gopkg.in/urfave/cli.v1

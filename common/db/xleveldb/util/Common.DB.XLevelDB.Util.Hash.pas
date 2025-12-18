@@ -3,6 +3,11 @@ unit Common.Db.Xleveldb.Util.Hash;
 interface
 
 uses
+  Common.DB.XLevelDB.Util.Buffer,
+  Common.DB.XLevelDB.Util.Buffer.Pool,
+  Common.DB.XLevelDB.Util.Crc32,
+  Common.DB.XLevelDB.Util.Range,
+  Common.DB.XLevelDB.Util.Util,
   System.SysUtils;
 
 function Hash(const ParaData: TBytes; ParaSeed: Cardinal): Cardinal;

@@ -57,11 +57,34 @@ interface
   client using the codec. The server can execute requests concurrently. Responses
   can be sent back to the client out of order.
 
-  An example server which uses the JSON codec:
-   type
-     TCalculatorService = class
-     public
-       function Add(const ParaA, ParaB: Integer): Integer;
+uses
+  An example server which  the JSON codec:,
+  function Add(const ParaA ParaB: Integer): Integer,
+  public,
+  RPC.Client,
+  RPC.Client.Example.Test,
+  RPC.Client.Test,
+  RPC.Endpoints,
+  RPC.Errors,
+  RPC.Health,
+  RPC.Http,
+  RPC.Http.Test,
+  RPC.Inproc,
+  RPC.IPC,
+  RPC.IPC.Unix,
+  RPC.IPC.Windows,
+  RPC.Json,
+  RPC.Json.Test,
+  RPC.Server,
+  RPC.Server.Test,
+  RPC.Subscription,
+  RPC.Subscription.Test,
+  RPC.Types,
+  RPC.Utils,
+  RPC.Utils.Test,
+  RPC.Websocket,
+  TCalculatorService = class,
+  type;
        function Div(const ParaA, ParaB: Integer): Integer;
      end;
 

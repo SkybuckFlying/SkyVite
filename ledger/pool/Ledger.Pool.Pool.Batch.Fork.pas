@@ -3,9 +3,32 @@ unit Ledger.Pool.Pool.Batch.Fork;
 interface
 
 uses
-  System.SysUtils,
+  Ledger.Pool.Account.Pool,
+  Ledger.Pool.Batch,
+  Ledger.Pool.Bc.Pool,
+  Ledger.Pool.Blacklist,
+  Ledger.Pool.Blacklist.Test,
+  Ledger.Pool.Branch.Chain,
+  Ledger.Pool.Chain.Pool,
+  Ledger.Pool.Chain.Pool.Test,
+  Ledger.Pool.Context,
+  Ledger.Pool.Face,
+  Ledger.Pool.Mock.Common.Block,
+  Ledger.Pool.Pipeline.Pool,
   Ledger.Pool.Pool,
-  Ledger.Pool.Batch;
+  Ledger.Pool.Pool.Batch,
+  Ledger.Pool.Pool.Batch.Chunk,
+  Ledger.Pool.Pool.Fork.Checker,
+  Ledger.Pool.Pool.Fork.Checker.Test,
+  Ledger.Pool.Snapshot.Listener,
+  Ledger.Pool.Snapshot.Pool,
+  Ledger.Pool.Snapshot.Pool.Test,
+  Ledger.Pool.Tools,
+  Ledger.Pool.Tools.Chain,
+  Ledger.Pool.Tools.Fetcher,
+  Ledger.Pool.Tools.Verifier,
+  Ledger.Pool.Worker,
+  System.SysUtils;
 
 type
   TPoolBatchForkHelper = class helper for TPool

@@ -3,9 +3,10 @@ unit Ledger.Chain.Flusher.Flusher;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.SyncObjs, System.Generics.Collections,
-  System.IOUtils, System.Threading,
-  Vite.Common.Types, Common.Log, Common.FileUtils, Crypto.Hash;
+  Ledger.Chain.Flusher.Flusher.Test,
+  System.IOUtils System.Threading,
+  System.SysUtils System.Classes System.SyncObjs System.Generics.Collections,
+  Vite.Common.Types Common.Log Common.FileUtils Crypto.Hash;
 
 type
   EFlusherException = class(Exception);

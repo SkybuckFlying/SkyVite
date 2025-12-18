@@ -3,10 +3,26 @@ unit VM.Abi.Error;
 interface
 
 uses
-  System.SysUtils,
-  System.Rtti,
   System.BigNumbers,
-  VM.Abi.Type;
+  System.Rtti,
+  System.SysUtils,
+  VM.ABI.ABI,
+  VM.ABI.ABI.Test,
+  VM.ABI.Argument,
+  VM.ABI.Event,
+  VM.ABI.Event.Test,
+  VM.ABI.Method,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.ABI.Reflect,
+  VM.Abi.Type,
+  VM.ABI.Type.Test,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable,
+  VM.ABI.Variable.Test;
 
 type
   EAbiException = class(Exception);

@@ -3,17 +3,18 @@ unit Ledger.Chain.IntegrationTest.Test.AccountForIntegration;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  System.Numerics,
-  GoToDelphi.Helpers.BigInt,
   Common.Types,
   Crypto,
   Crypto.Ed25519,
+  GoToDelphi.Helpers.BigInt,
   Interfaces,
   Interfaces.Core,
   Ledger.Chain,
+  Ledger.Chain.Integration.Test.Insert.Test,
+  System.Classes,
+  System.Generics.Collections,
+  System.Numerics,
+  System.SysUtils,
   VM.DB;
 
 type

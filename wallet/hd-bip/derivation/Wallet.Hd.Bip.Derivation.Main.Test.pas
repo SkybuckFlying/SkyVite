@@ -3,7 +3,10 @@ unit Wallet.Hd_Bip.Derivation.Main.Test;
 interface
 
 uses
-  DUnitX.TestFramework, SysUtils, Wallet.Hd_Bip.Derivation.Main, System.NetEncoding, common.types, common.hexutil;
+  DUnitX.TestFramework SysUtils Wallet.Hd_Bip.Derivation.Main System.NetEncoding common.types common.hexutil,
+  Wallet.Hd.Bip.Derivation.Bip.Example,
+  Wallet.Hd.Bip.Derivation.Bip.Main.Test,
+  Wallet.Hd.Bip.Derivation.Main;
 
 type
   [TestFixture]

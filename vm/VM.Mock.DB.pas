@@ -3,10 +3,36 @@ unit Vm.MockDb;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.Math.BigInteger,
-  System.DateUtils, System.NetEncoding,
-  Vite.Common.Types, Vite.Interfaces.Core, Vite.Interfaces.Chain, Vite.Interfaces.VmDb,
-  Vite.Crypto;
+  System.DateUtils System.NetEncoding,
+  System.SysUtils System.Classes System.Generics.Collections System.Math.BigInteger,
+  Vite.Common.Types Vite.Interfaces.Core Vite.Interfaces.Chain Vite.Interfaces.VmDb,
+  Vite.Crypto,
+  VM.Contract,
+  VM.Contract.Test,
+  VM.Contracts.Dex.Fund.Test,
+  VM.Contracts.Dex.Trade.Test,
+  VM.Contracts.Test,
+  VM.Database.Memory.Test,
+  VM.Database.Test,
+  VM.Destination,
+  VM.Destination.Test,
+  VM.Gas.Table,
+  VM.Gas.Table.Test,
+  VM.Instructions,
+  VM.Instructions.Test,
+  VM.Interpreter,
+  VM.Jump.Table,
+  VM.Memory,
+  VM.Memory.Table,
+  VM.Memory.Test,
+  VM.Opcodes,
+  VM.Params,
+  VM.Stack,
+  VM.Stack.Table,
+  VM.Stack.Test,
+  VM.VM,
+  VM.VM.Run.Test,
+  VM.VM.Test;
 
 type
   TMockIteratorItem = record

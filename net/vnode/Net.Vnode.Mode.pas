@@ -18,6 +18,15 @@
 unit net.vnode.mode;
 
 interface
+uses
+  Net.Vnode.Endpoint,
+  Net.Vnode.Endpoint.Test,
+  Net.Vnode.Host,
+  Net.Vnode.Host.Test,
+  Net.Vnode.Mock,
+  Net.Vnode.Node,
+  Net.Vnode.Node.PB,
+  Net.Vnode.Node.Test;
 
 type
 	// NodeMode mean the level of a node in the current hierarchy

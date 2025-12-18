@@ -3,8 +3,14 @@ unit reader;
 interface
 
 uses
-  System.SysUtils, System.Classes,
-  Vite.Common, Vite.Ledger, Vm_Db;
+  Ledger.Verifier.Account.Verifier,
+  Ledger.Verifier.Common,
+  Ledger.Verifier.Errors,
+  Ledger.Verifier.Snapshot.Verifier,
+  Ledger.Verifier.Snapshot.Verifier.Test,
+  Ledger.Verifier.Verifier,
+  System.SysUtils System.Classes,
+  Vite.Common Vite.Ledger Vm_Db;
 
 type
   ICssConsensus = interface

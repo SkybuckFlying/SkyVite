@@ -3,9 +3,14 @@ unit Interfaces.Wallet;
 interface
 
 uses
-  SysUtils, Classes,
   Common.Types,
-  Crypto.Ed25519;
+  Crypto.Ed25519,
+  Interfaces.Chain,
+  Interfaces.Consensus,
+  Interfaces.Generator,
+  Interfaces.Verifier,
+  Interfaces.VMDB,
+  SysUtils Classes;
 
 type
   TSignFunc = reference to function(ParaMsg: TBytes; out ParaSignedData: TBytes; out ParaPub: TPublicKey; out ParaError: Exception): Boolean;

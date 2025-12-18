@@ -7,16 +7,19 @@ unit Wallet.Manager.Test;
 interface
 
 uses
-<<<<<<< HEAD:wallet/manager_test.pas
-  DUnitX.TestFramework,
-  wallet.manager,
+  <<<<<<< HEAD:wallet/manager_test.pas,
   common.config,
   common.fileutils,
   common.helper,
   common.types,
-  System.SysUtils,
+  DUnitX.TestFramework,
   System.Classes,
-  System.Generics.Collections;
+  System.Generics.Collections,
+  System.SysUtils,
+  Wallet.Account,
+  Wallet.Account.Test,
+  wallet.manager,
+  Wallet.Wallet;
 =======
   SysUtils,
   Classes,

@@ -3,8 +3,15 @@ unit Ledger.Chain.DB.Flush.Test;
 interface
 
 uses
+  Common.DB.XLevelDB,
   DUnitX.TestFramework,
-  Common.DB.XLevelDB;
+  Ledger.Chain.DB.Flush,
+  Ledger.Chain.DB.Mem.DB.Test,
+  Ledger.Chain.DB.Rollback,
+  Ledger.Chain.DB.Store,
+  Ledger.Chain.DB.Store.Test,
+  Ledger.Chain.DB.Unconfirmed.Batch,
+  Ledger.Chain.DB.Write;
 
 type
   [TestFixture]

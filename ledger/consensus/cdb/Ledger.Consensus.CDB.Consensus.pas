@@ -3,11 +3,13 @@ unit Ledger.Consensus.CDB.Consensus;
 interface
 
 uses
-  System.SysUtils,
-  System.Generics.Collections,
   Common.Types,
   GoLevelDB,
-  Ledger.Consensus.CDB.Point;
+  Ledger.Consensus.CDB.DB.Test,
+  Ledger.Consensus.CDB.Point,
+  Ledger.Consensus.CDB.Point.Test,
+  System.Generics.Collections,
+  System.SysUtils;
 
 const
   IndexElectionResult = $00;

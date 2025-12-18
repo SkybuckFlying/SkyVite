@@ -3,11 +3,13 @@ unit Cmd.GvitePlugins.SubCmdDemo;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	Cli,
-	Cmd.Utils,
-	Cmd.NodeManager;
+  Cli,
+  Cmd.Gvite.Plugins.Load.Plugins,
+  Cmd.Gvite.Plugins.MiscCmd,
+  Cmd.NodeManager,
+  Cmd.Utils,
+  System.Classes,
+  System.SysUtils;
 
 var
 	demoCommand: ICommand;

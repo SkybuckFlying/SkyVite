@@ -3,16 +3,24 @@ unit VM.Contracts.Contracts.Asset;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.Math,
-	System.RegularExpressions,
-	Common.Types,
-	Interfaces,
-	Interfaces.Core,
-	VM.ABI.ABI,
-	VM.Util,
-	unit_GoLang_Compatibility_version_006;
+  Common.Types,
+  Interfaces,
+  Interfaces.Core,
+  System.Classes,
+  System.Math,
+  System.RegularExpressions,
+  System.SysUtils,
+  unit_GoLang_Compatibility_version_006,
+  VM.ABI.ABI,
+  VM.Contracts.Contracts,
+  VM.Contracts.Contracts.Dex.Fund,
+  VM.Contracts.Contracts.Dex.Trade,
+  VM.Contracts.Contracts.Governance,
+  VM.Contracts.Contracts.Quota,
+  VM.Contracts.Contracts.Test,
+  VM.Contracts.Params,
+  VM.Contracts.Reward.Test,
+  VM.Util;
 
 type
 	TMethodIssue = class( TInterfacedObject, IVmMethod )

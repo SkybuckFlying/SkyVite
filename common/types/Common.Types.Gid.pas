@@ -3,11 +3,24 @@ unit Common.Types.Gid;
 interface
 
 uses
-  System.SysUtils,
-  System.Math.BigInts,
   Common.Bytes,
   Common.HexUtil,
-  Crypto.Hash;
+  Common.Types.Address,
+  Common.Types.Address.Test,
+  Common.Types.Block.Source,
+  Common.Types.Contracts,
+  Common.Types.Enum,
+  Common.Types.Error,
+  Common.Types.Hash,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeID,
+  Common.Types.TokenTypeID.Test,
+  Crypto.Hash,
+  System.Math.BigInts,
+  System.SysUtils;
 
 const
   ConstGidSize = 10;

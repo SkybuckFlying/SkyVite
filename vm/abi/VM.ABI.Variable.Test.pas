@@ -3,13 +3,29 @@ unit VM.ABI.Variable.Test;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.JSON,
-	System.Rtti,
-	Common.Types,
-	VM.ABI.ABI,
-	unit_GoLang_Compatibility_version_006;
+  Common.Types,
+  System.Classes,
+  System.JSON,
+  System.Rtti,
+  System.SysUtils,
+  unit_GoLang_Compatibility_version_006,
+  VM.ABI.ABI,
+  VM.ABI.ABI.Test,
+  VM.ABI.Argument,
+  VM.ABI.Error,
+  VM.ABI.Event,
+  VM.ABI.Event.Test,
+  VM.ABI.Method,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.ABI.Reflect,
+  VM.ABI.Type,
+  VM.ABI.Type.Test,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable;
 
 procedure TestVariableMultiValueWithArray;
 procedure TestVariableTuple;

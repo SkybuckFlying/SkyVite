@@ -3,8 +3,16 @@ unit Common.VitePb.AccountBlockMeta;
 interface
 
 uses
-  System.SysUtils,
-  System.Generics.Collections;
+  Common.VitePB.Account.Block.PB,
+  Common.VitePB.Account.PB,
+  Common.VitePB.Consensus.Point.PB,
+  Common.VitePB.Message.PB,
+  Common.VitePB.Onroad.PB,
+  Common.VitePB.Snapshot.Block.PB,
+  Common.VitePB.Sync.Cache.PB,
+  Common.VitePB.VM.Log.List.PB,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   {

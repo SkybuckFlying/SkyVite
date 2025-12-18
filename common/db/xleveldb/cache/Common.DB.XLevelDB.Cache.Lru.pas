@@ -3,11 +3,12 @@ unit common.db.xleveldb.cache.lru;
 interface
 
 uses
-  System.SysUtils,
+  Common.DB.XLevelDB.Cache.Cache,
+  common.db.xleveldb.cache.cache // For TNode THandle ICacher,
   System.Classes,
-  System.SyncObjs,
   System.Generics.Collections,
-  common.db.xleveldb.cache.cache; // For TNode, THandle, ICacher
+  System.SyncObjs,
+  System.SysUtils;
 
 type
   TLruNode = class

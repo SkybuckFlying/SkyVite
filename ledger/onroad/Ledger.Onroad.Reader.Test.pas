@@ -3,11 +3,29 @@ unit Ledger.Onroad.Reader.Test;
 interface
 
 uses
-  SysUtils, Classes,
-  Ledger.Onroad.Reader, // The unit under test
-  Ledger.Mock.Chain,    // For mock chain
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Mock.Chain    // For mock chain,
+  Ledger.Onroad.Access,
+  Ledger.Onroad.Access.Test,
+  Ledger.Onroad.Chain.Events,
+  Ledger.Onroad.ChainDB.Test,
+  Ledger.Onroad.Contract,
+  Ledger.Onroad.Contract.Test,
+  Ledger.Onroad.Manager,
+  Ledger.Onroad.Manager.Test,
+  Ledger.Onroad.Pending.Cache,
+  Ledger.Onroad.Pending.Cache.Test,
+  Ledger.Onroad.Reader,
+  Ledger.Onroad.Reader // The unit under test,
+  Ledger.Onroad.Task.Pqueue,
+  Ledger.Onroad.Task.Pqueue.Test,
+  Ledger.Onroad.TaskProcessor,
+  Ledger.Onroad.TaskProcessor.Test,
+  Ledger.Onroad.Utils,
+  Ledger.Onroad.Utils.Test,
+  Ledger.Onroad.Worker,
+  SysUtils Classes;
 
 type
   TReaderTest = class

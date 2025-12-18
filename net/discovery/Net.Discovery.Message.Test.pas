@@ -3,16 +3,31 @@ unit net.discovery.message.test;
 interface
 
 uses
-  TestFramework,
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  System.DateUtils,
   common.bytes,
   crypto.ed25519,
-  net.vnode,
+  Net.Discovery.Booter,
+  Net.Discovery.Booter.Test,
+  Net.Discovery.Bucket.Test,
+  Net.Discovery.Discovery,
+  net.discovery.discovery // For TNode and other types if needed,
+  Net.Discovery.Discovery.Test,
+  Net.Discovery.Finder,
   net.discovery.message,
-  net.discovery.discovery; // For TNode and other types if needed
+  Net.Discovery.Mock.Socket,
+  Net.Discovery.Node,
+  Net.Discovery.Node.Test,
+  Net.Discovery.Pool,
+  Net.Discovery.Pool.Test,
+  Net.Discovery.Socket,
+  Net.Discovery.Socket.Test,
+  Net.Discovery.Table,
+  Net.Discovery.Table.Test,
+  net.vnode,
+  System.Classes,
+  System.DateUtils,
+  System.Generics.Collections,
+  System.SysUtils,
+  TestFramework;
 
 type
   [TestFixture]

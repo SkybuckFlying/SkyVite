@@ -3,12 +3,19 @@ unit Ledger.Chain.Utils.Generate.Key.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  System.SysUtils,
-  Common.Types,
   Common,
+  Common.Types,
+  DUnitX.TestFramework,
   Interfaces.Core,
-  Ledger.Chain.Utils.Keys; // Assuming Keys unit defines the key generation functions
+  Ledger.Chain.Utils.Conversion,
+  Ledger.Chain.Utils.Generate.Key,
+  Ledger.Chain.Utils.Key.Prefix,
+  Ledger.Chain.Utils.Keys,
+  Ledger.Chain.Utils.Keys // Assuming Keys unit defines the key generation functions,
+  Ledger.Chain.Utils.Keys.Index.DB,
+  Ledger.Chain.Utils.Keys.State.DB,
+  Ledger.Chain.Utils.Keys.State.Redo.DB,
+  System.SysUtils;
 
 type
   [TestFixture]

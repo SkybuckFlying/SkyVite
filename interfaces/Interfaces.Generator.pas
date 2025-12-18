@@ -3,11 +3,15 @@ unit Interfaces.Generator;
 interface
 
 uses
-  SysUtils, Classes, Math.BigInt,
-  GoToDelphi.Helpers.BigInt,
   Common.Types,
+  GoToDelphi.Helpers.BigInt,
+  Interfaces.Chain,
+  Interfaces.Consensus,
   Interfaces.Core,
-  Interfaces.VmDb;
+  Interfaces.Verifier,
+  Interfaces.VmDb,
+  Interfaces.Wallet,
+  SysUtils Classes Math.BigInt;
 
 type
   // GenResult represents the result of a block being validated by vm.

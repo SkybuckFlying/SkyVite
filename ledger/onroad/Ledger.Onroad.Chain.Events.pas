@@ -3,8 +3,26 @@ unit chain_events;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Vite.Common, Vite.Ledger, Vite.Interfaces, onroad.pool;
+  Ledger.Onroad.Access,
+  Ledger.Onroad.Access.Test,
+  Ledger.Onroad.ChainDB.Test,
+  Ledger.Onroad.Contract,
+  Ledger.Onroad.Contract.Test,
+  Ledger.Onroad.Manager,
+  Ledger.Onroad.Manager.Test,
+  Ledger.Onroad.Pending.Cache,
+  Ledger.Onroad.Pending.Cache.Test,
+  Ledger.Onroad.Reader,
+  Ledger.Onroad.Reader.Test,
+  Ledger.Onroad.Task.Pqueue,
+  Ledger.Onroad.Task.Pqueue.Test,
+  Ledger.Onroad.TaskProcessor,
+  Ledger.Onroad.TaskProcessor.Test,
+  Ledger.Onroad.Utils,
+  Ledger.Onroad.Utils.Test,
+  Ledger.Onroad.Worker,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vite.Common Vite.Ledger Vite.Interfaces onroad.pool;
 
 type
   TContractReactFunc = procedure(address: TAddress) of object;

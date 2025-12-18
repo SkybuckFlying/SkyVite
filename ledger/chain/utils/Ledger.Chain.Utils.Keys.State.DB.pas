@@ -3,10 +3,16 @@ unit Ledger.Chain.Utils.Keys_State_Db;
 interface
 
 uses
-  System.SysUtils,
-  Common.Types,
   Common.Bytes,
-  Ledger.Chain.Utils.Keys;
+  Common.Types,
+  Ledger.Chain.Utils.Conversion,
+  Ledger.Chain.Utils.Generate.Key,
+  Ledger.Chain.Utils.Generate.Key.Test,
+  Ledger.Chain.Utils.Key.Prefix,
+  Ledger.Chain.Utils.Keys,
+  Ledger.Chain.Utils.Keys.Index.DB,
+  Ledger.Chain.Utils.Keys.State.Redo.DB,
+  System.SysUtils;
 
 type
   TStorageKey = record

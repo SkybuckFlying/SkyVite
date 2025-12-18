@@ -3,9 +3,12 @@ unit VM.Quota.Params;
 interface
 
 uses
-  System.SysUtils,
+  GoToDelphi.Helpers.BigInt,
   System.Generics.Collections,
-  GoToDelphi.Helpers.BigInt;
+  System.SysUtils,
+  VM.Quota.Params.Test,
+  VM.Quota.Quota,
+  VM.Quota.Quota.Test;
 
 const
   // QuotaForCreateContractResponse defines available quota for create contract response block

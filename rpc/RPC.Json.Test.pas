@@ -1,6 +1,29 @@
 unit RPC_Json_Test;
 
 interface
+uses
+  RPC.Client,
+  RPC.Client.Example.Test,
+  RPC.Client.Test,
+  RPC.Doc,
+  RPC.Endpoints,
+  RPC.Errors,
+  RPC.Health,
+  RPC.Http,
+  RPC.Http.Test,
+  RPC.Inproc,
+  RPC.IPC,
+  RPC.IPC.Unix,
+  RPC.IPC.Windows,
+  RPC.Json,
+  RPC.Server,
+  RPC.Server.Test,
+  RPC.Subscription,
+  RPC.Subscription.Test,
+  RPC.Types,
+  RPC.Utils,
+  RPC.Utils.Test,
+  RPC.Websocket;
 
 procedure RunJsonTest;
 

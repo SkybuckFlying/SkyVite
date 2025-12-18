@@ -3,17 +3,30 @@ unit VM.DB.Unsaved;
 interface
 
 uses
-  System.SysUtils,
+  GoToDelphi.Helpers.TBytes,
   System.Classes,
   System.Generics.Collections,
   System.Math.BigInteger,
-  GoToDelphi.Helpers.TBytes,
+  System.SysUtils,
   Vite.Common.Db.Xleveldb.Comparer,
   Vite.Common.Db.Xleveldb.Memdb,
   Vite.Common.Db.Xleveldb.Util,
   Vite.Common.Types,
   Vite.Interfaces,
-  Vite.Interfaces.Core;
+  Vite.Interfaces.Core,
+  VM.DB.Account.Block,
+  VM.DB.Balance,
+  VM.DB.Builtin.Contract,
+  VM.DB.Context,
+  VM.DB.Debug,
+  VM.DB.Interface,
+  VM.DB.Meta.Code,
+  VM.DB.Snapshot.Block,
+  VM.DB.State,
+  VM.DB.Storage,
+  VM.DB.Storage.Iterator,
+  VM.DB.VM.DB,
+  VM.DB.VM.Log;
 
 type
   TUnsaved = class

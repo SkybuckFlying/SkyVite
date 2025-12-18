@@ -3,8 +3,15 @@ unit Vm.Contracts.Abi.AbiDexTrade;
 interface
 
 uses
-  System.SysUtils, System.Classes,
-  Vm.Abi.Abi;
+  System.SysUtils System.Classes,
+  Vm.Abi.Abi,
+  VM.Contracts.ABI.ABI.Asset,
+  VM.Contracts.ABI.ABI.Dex.Fund,
+  VM.Contracts.ABI.ABI.Dex.Fund.Test,
+  VM.Contracts.ABI.ABI.Gonvernance,
+  VM.Contracts.ABI.ABI.Quota,
+  VM.Contracts.ABI.ABI.Test,
+  VM.Contracts.ABI.Util;
 
 const
   MethodNameDexTradeNewOrder = 'DexTradeNewOrder';

@@ -3,8 +3,24 @@ unit net.discovery.message;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.DateUtils,
-  common.bytes, crypto, crypto.ed25519, net.vnode, net.discovery.protos.message_pb;
+  common.bytes crypto crypto.ed25519 net.vnode net.discovery.protos.message_pb,
+  Net.Discovery.Booter,
+  Net.Discovery.Booter.Test,
+  Net.Discovery.Bucket.Test,
+  Net.Discovery.Discovery,
+  Net.Discovery.Discovery.Test,
+  Net.Discovery.Finder,
+  Net.Discovery.Message.Test,
+  Net.Discovery.Mock.Socket,
+  Net.Discovery.Node,
+  Net.Discovery.Node.Test,
+  Net.Discovery.Pool,
+  Net.Discovery.Pool.Test,
+  Net.Discovery.Socket,
+  Net.Discovery.Socket.Test,
+  Net.Discovery.Table,
+  Net.Discovery.Table.Test,
+  System.SysUtils System.Classes System.Generics.Collections System.DateUtils;
 
 const
   Version: Byte = 0;

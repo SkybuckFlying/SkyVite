@@ -3,22 +3,24 @@ unit Cmd.GvitePlugins.LoadPlugins;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	Cli,
-	Cmd.NodeManager,
-	Cmd.SubCmdExport,
-	Cmd.SubCmdLedger,
-	Cmd.SubCmdLoadLedger,
-	Cmd.SubCmdPluginData,
-	Cmd.SubCmdRecover,
-	Cmd.SubCmdRpc,
-	Cmd.SubCmdVirtualNode,
-	Cmd.Utils,
-	Log15,
-	Version,
-	System.IOUtils,
-	System.DateUtils;
+  Cli,
+  Cmd.Gvite.Plugins.MiscCmd,
+  Cmd.Gvite.Plugins.SubCmd.Demo,
+  Cmd.NodeManager,
+  Cmd.SubCmdExport,
+  Cmd.SubCmdLedger,
+  Cmd.SubCmdLoadLedger,
+  Cmd.SubCmdPluginData,
+  Cmd.SubCmdRecover,
+  Cmd.SubCmdRpc,
+  Cmd.SubCmdVirtualNode,
+  Cmd.Utils,
+  Log15,
+  System.Classes,
+  System.DateUtils,
+  System.IOUtils,
+  System.SysUtils,
+  Version;
 
 procedure Loading;
 

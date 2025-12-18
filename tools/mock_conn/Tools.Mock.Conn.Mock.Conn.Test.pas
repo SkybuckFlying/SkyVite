@@ -4,9 +4,10 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
   System.Classes,
+  System.SysUtils,
   System.Threading,
+  Tools.Mock.Conn.Mock.Conn,
   Tools.MockConn.MockConn;
 
 type

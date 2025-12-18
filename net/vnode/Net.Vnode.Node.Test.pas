@@ -3,10 +3,16 @@ unit Net.Vnode.Node.Test;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Net.Vnode.Node,
-	Net.Vnode.Endpoint;
+  Net.Vnode.Endpoint,
+  Net.Vnode.Endpoint.Test,
+  Net.Vnode.Host,
+  Net.Vnode.Host.Test,
+  Net.Vnode.Mock,
+  Net.Vnode.Mode,
+  Net.Vnode.Node,
+  Net.Vnode.Node.PB,
+  System.Classes,
+  System.SysUtils;
 
 procedure TestNodeID_IsZero;
 procedure TestNodeID_Bytes;

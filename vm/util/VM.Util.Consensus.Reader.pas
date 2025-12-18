@@ -3,7 +3,15 @@ unit VM.Util.Consensus.Reader;
 interface
 
 uses
-  GoVite.Ledger.Consensus.Core;
+  GoVite.Ledger.Consensus.Core,
+  VM.Util.Common,
+  VM.Util.DB.Helper,
+  VM.Util.Errors,
+  VM.Util.IntPool,
+  VM.Util.Intpool.Test,
+  VM.Util.Quota,
+  VM.Util.Quota.Test,
+  VM.Util.Types;
 
 type
   IConsensusReader = interface

@@ -3,8 +3,9 @@ unit Common.Db.XLevelDB.Comparer.Comparer;
 interface
 
 uses
-  System.SysUtils,
-  GoToDelphi.Helpers.BigInt;
+  Common.DB.XLevelDB.Comparer.Bytes.Comparer,
+  GoToDelphi.Helpers.BigInt,
+  System.SysUtils;
 
 type
   // BasicComparer is the interface that wraps the basic Compare method.

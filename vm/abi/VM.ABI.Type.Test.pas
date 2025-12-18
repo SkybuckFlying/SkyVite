@@ -1,6 +1,24 @@
 unit VM.ABI.Type.Test;
 
 interface
+uses
+  VM.ABI.ABI,
+  VM.ABI.ABI.Test,
+  VM.ABI.Argument,
+  VM.ABI.Error,
+  VM.ABI.Event,
+  VM.ABI.Event.Test,
+  VM.ABI.Method,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.ABI.Reflect,
+  VM.ABI.Type,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable,
+  VM.ABI.Variable.Test;
 
 procedure RunTypeTests;
 

@@ -3,8 +3,16 @@ unit VM.Util.DB.Helper;
 interface
 
 uses
-  System.SysUtils, System.BigInt,
-  GoVite.Types, GoVite.Ledger;
+  GoVite.Types GoVite.Ledger,
+  System.SysUtils System.BigInt,
+  VM.Util.Common,
+  VM.Util.Consensus.Reader,
+  VM.Util.Errors,
+  VM.Util.IntPool,
+  VM.Util.Intpool.Test,
+  VM.Util.Quota,
+  VM.Util.Quota.Test,
+  VM.Util.Types;
 
 type
   IDbInterface = interface

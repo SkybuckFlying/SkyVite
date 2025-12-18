@@ -3,16 +3,24 @@ unit Ledger.Consensus.Core.Vote.Algo.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  System.SysUtils,
-  System.Generics.Collections,
   BigNumbers,
-  Common.Types,
   Common,
+  Common.Types,
+  DUnitX.TestFramework,
   Interfaces.Core,
+  Ledger.Consensus.Core.Consensus,
   Ledger.Consensus.Core.Group,
+  Ledger.Consensus.Core.Group.Test,
+  Ledger.Consensus.Core.Mock.SBP.Reader,
+  Ledger.Consensus.Core.SBP.Reader,
+  Ledger.Consensus.Core.SBP.Reader.Test,
   Ledger.Consensus.Core.State.Reader,
-  Ledger.Consensus.Core.Vote.Algo;
+  Ledger.Consensus.Core.Time.Index,
+  Ledger.Consensus.Core.Time.Index.Test,
+  Ledger.Consensus.Core.Utils,
+  Ledger.Consensus.Core.Vote.Algo,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   [TestFixture]

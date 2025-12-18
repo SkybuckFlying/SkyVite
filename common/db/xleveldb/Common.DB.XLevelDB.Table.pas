@@ -3,15 +3,33 @@ unit Common.Db.XLevelDb.Table;
 interface
 
 uses
-  System.SysUtils,
-  System.Generics.Collections,
-  Common.Db.XLevelDb.Storage,
-  Common.Db.XLevelDb.Internal,
-  Common.Db.XLevelDb.Comparer,
+  Common.DB.XLevelDB.Batch,
   Common.Db.XLevelDb.Cache,
+  Common.Db.XLevelDb.Comparer,
+  Common.DB.XLevelDB.DB,
+  Common.DB.XLevelDB.DB.Compaction,
+  Common.DB.XLevelDB.DB.Iter,
+  Common.DB.XLevelDB.DB.Snapshot,
+  Common.DB.XLevelDB.DB.State,
+  Common.DB.XLevelDB.DB.Transaction,
+  Common.DB.XLevelDB.DB.Util,
+  Common.DB.XLevelDB.DB.Write,
+  Common.DB.XLevelDB.Doc,
+  Common.DB.XLevelDB.Errors,
+  Common.DB.XLevelDB.Filter,
+  Common.Db.XLevelDb.Internal,
   Common.Db.XLevelDb.Iterator,
+  Common.DB.XLevelDB.Key,
   Common.Db.XLevelDb.Options,
-  Common.Db.XLevelDb.Util;
+  Common.DB.XLevelDB.Session,
+  Common.DB.XLevelDB.Session.Compaction,
+  Common.DB.XLevelDB.Session.Record,
+  Common.DB.XLevelDB.Session.Util,
+  Common.Db.XLevelDb.Storage,
+  Common.Db.XLevelDb.Util,
+  Common.DB.XLevelDB.Version,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   TtFile = record

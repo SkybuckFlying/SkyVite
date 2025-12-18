@@ -3,14 +3,17 @@ unit Ledger.Pipeline.Blocks;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  System.JSON,
-  System.IOUtils,
   Ledger.Chain.Block,
   Ledger.Chain.FileManager,
-  Log15;
+  Ledger.Pipeline.Blocks.Test,
+  Ledger.Pipeline.Pipeline.Blocks,
+  Ledger.Pipeline.Pipeline.Blocks.Test,
+  Log15,
+  System.Classes,
+  System.Generics.Collections,
+  System.IOUtils,
+  System.JSON,
+  System.SysUtils;
 
 type
   THeightMeta = record

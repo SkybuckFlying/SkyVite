@@ -3,8 +3,12 @@ unit Common.HexUtil.Json.Example.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  Common.HexUtil;
+  Common.HexUtil,
+  Common.HexUtil.HexUtil,
+  Common.HexUtil.HexUtil.Test,
+  Common.HexUtil.Json,
+  Common.HexUtil.Json.Test,
+  DUnitX.TestFramework;
 
 type
   TMyType = array[0..4] of Byte;

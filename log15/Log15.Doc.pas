@@ -1,6 +1,14 @@
 unit Log15.Doc;
 
 interface
+uses
+  Log15.Format,
+  Log15.Handler,
+  Log15.Handler.Go13,
+  Log15.Handler.Go14,
+  Log15.Logger,
+  Log15.Root,
+  Log15.Syslog;
 
 {
 	Package log15 provides an opinionated, simple toolkit for best-practice logging that is

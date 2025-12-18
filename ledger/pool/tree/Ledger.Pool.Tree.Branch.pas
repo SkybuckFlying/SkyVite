@@ -3,10 +3,19 @@ unit Ledger.Pool.Tree.Branch;
 interface
 
 uses
-  SysUtils, Classes,
-  System.Generics.Collections,
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Pool.Tree.Branch.Base,
+  Ledger.Pool.Tree.Branch.Test,
+  Ledger.Pool.Tree.Checker,
+  Ledger.Pool.Tree.Mock.Knot,
+  Ledger.Pool.Tree.Mock.Root.Branch,
+  Ledger.Pool.Tree.Printer,
+  Ledger.Pool.Tree.Tree,
+  Ledger.Pool.Tree.Tree.Impl,
+  Ledger.Pool.Tree.Tree.Impl.Test,
+  System.Generics.Collections,
+  SysUtils Classes;
 
 type
   // Forward declaration

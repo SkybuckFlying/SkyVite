@@ -3,11 +3,16 @@ unit Ledger.Onroad.Pool.Types.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  System.SysUtils,
-  Ledger.Onroad.Pool.Types,
   Common.Types,
-  Ledger.Onroad.Pool.Storage;
+  DUnitX.TestFramework,
+  Ledger.Onroad.Pool.Caller.Cache.Test,
+  Ledger.Onroad.Pool.Contract.Pool,
+  Ledger.Onroad.Pool.Error.Table,
+  Ledger.Onroad.Pool.Pool,
+  Ledger.Onroad.Pool.Storage,
+  Ledger.Onroad.Pool.Storage.Test,
+  Ledger.Onroad.Pool.Types,
+  System.SysUtils;
 
 type
   [TestFixture]

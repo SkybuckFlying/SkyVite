@@ -3,8 +3,16 @@ unit VM.Util.Common;
 interface
 
 uses
-  System.SysUtils, System.Generics.Collections, System.BigInt,
-  GoVite.Types, GoVite.Ledger;
+  GoVite.Types GoVite.Ledger,
+  System.SysUtils System.Generics.Collections System.BigInt,
+  VM.Util.Consensus.Reader,
+  VM.Util.DB.Helper,
+  VM.Util.Errors,
+  VM.Util.IntPool,
+  VM.Util.Intpool.Test,
+  VM.Util.Quota,
+  VM.Util.Quota.Test,
+  VM.Util.Types;
 
 var
   AttovPerVite: TBigInteger;

@@ -3,7 +3,11 @@ unit Common.Upgrade.Init;
 interface
 
 uses
-  Common.Upgrade, Common.Upgrade.Face, System.Generics.Collections;
+  Common.Upgrade Common.Upgrade.Face System.Generics.Collections,
+  Common.Upgrade.Face,
+  Common.Upgrade.Height.Point,
+  Common.Upgrade.Upgrade,
+  Common.Upgrade.Upgrade.Test;
 
 function NewLatestUpgradeBox: IUpgradeBox;
 function NewMainnetUpgradeBox: IUpgradeBox;

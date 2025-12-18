@@ -3,7 +3,17 @@ unit Cmd.NodeManager.NodeManager;
 interface
 
 uses
-	Node.Node;
+  Cmd.NodeManager.Assist,
+  Cmd.NodeManager.Check.Chain,
+  Cmd.NodeManager.Default.Node.Manager,
+  Cmd.NodeManager.Export.Node.Manager,
+  Cmd.NodeManager.Full.Node.Maker,
+  Cmd.NodeManager.Local.Node.Maker,
+  Cmd.NodeManager.Node.Maker,
+  Cmd.NodeManager.Plugin.Data.Node.Manager,
+  Cmd.NodeManager.Recover.Node.Manager,
+  Cmd.NodeManager.SubCmd.Node.Manager,
+  Node.Node;
 
 type
 	{

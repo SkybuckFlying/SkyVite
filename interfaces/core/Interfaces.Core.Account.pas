@@ -3,10 +3,24 @@ unit Interfaces.Core.Account;
 interface
 
 uses
-  System.SysUtils,
   Common.Types,
+  Common.VitePb,
   Crypto.Ed25519,
-  Common.VitePb;
+  Interfaces.Core.Account.Block,
+  Interfaces.Core.Account.Block.Test,
+  Interfaces.Core.Contract.Meta,
+  Interfaces.Core.Contract.Meta.Test,
+  Interfaces.Core.Hash.Height,
+  Interfaces.Core.Hash.Height.Test,
+  Interfaces.Core.Info,
+  Interfaces.Core.Serializable,
+  Interfaces.Core.Snapshot.Block,
+  Interfaces.Core.Snapshot.Block.Test,
+  Interfaces.Core.Snapshot.Chunk,
+  Interfaces.Core.Token,
+  Interfaces.Core.VM.Log.List,
+  Interfaces.Core.VM.Log.List.Test,
+  System.SysUtils;
 
 type
   TAccount = record

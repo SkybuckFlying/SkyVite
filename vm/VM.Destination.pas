@@ -3,12 +3,37 @@ unit VM.Destination;
 interface
 
 uses
-  System.SysUtils,
+  GoToDelphi.Helpers.BigInt,
   System.Classes,
   System.Generics.Collections,
-  GoToDelphi.Helpers.BigInt,
+  System.SysUtils,
   Vite.Common.Types,
-  VM.Opcodes;
+  VM.Contract,
+  VM.Contract.Test,
+  VM.Contracts.Dex.Fund.Test,
+  VM.Contracts.Dex.Trade.Test,
+  VM.Contracts.Test,
+  VM.Database.Memory.Test,
+  VM.Database.Test,
+  VM.Destination.Test,
+  VM.Gas.Table,
+  VM.Gas.Table.Test,
+  VM.Instructions,
+  VM.Instructions.Test,
+  VM.Interpreter,
+  VM.Jump.Table,
+  VM.Memory,
+  VM.Memory.Table,
+  VM.Memory.Test,
+  VM.Mock.DB,
+  VM.Opcodes,
+  VM.Params,
+  VM.Stack,
+  VM.Stack.Table,
+  VM.Stack.Test,
+  VM.VM,
+  VM.VM.Run.Test,
+  VM.VM.Test;
 
 type
   TBitVec = TBytes;

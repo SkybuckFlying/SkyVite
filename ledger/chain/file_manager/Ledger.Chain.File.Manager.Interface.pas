@@ -3,8 +3,12 @@ unit Ledger.Chain.FileManager.Interfaces;
 interface
 
 uses
-  System.SysUtils,
+  Ledger.Chain.File.Manager.FD,
+  Ledger.Chain.File.Manager.FD.Manager,
+  Ledger.Chain.File.Manager.File.Manager,
+  Ledger.Chain.File.Manager.Location,
   System.Classes,
+  System.SysUtils,
   Vite.Common,
   Vite.Interfaces;
 

@@ -3,13 +3,18 @@ unit Wallet.EntropyStore.CryptoStore.Test;
 interface
 
 uses
-  SysUtils,
   DUnitX.TestFramework,
   GoToDelphi.Helpers.TBytes,
-  Vite.Common.Types,
+  SysUtils,
   Vite.Common.FileUtils,
+  Vite.Common.Types,
   Vite.Crypto,
+  Wallet.EntropyStore.Crypto.Store,
   Wallet.EntropyStore.CryptoStore,
+  Wallet.EntropyStore.Manager,
+  Wallet.EntropyStore.Manager.Test,
+  Wallet.EntropyStore.Models,
+  Wallet.EntropyStore.Utils,
   Wallet.HD_BIP.Derivation;
 
 const

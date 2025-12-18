@@ -3,9 +3,9 @@ unit Vite.Mock;
 interface
 
 uses
-	Vite,
-	Common.Config.Config,
-	Wallet.Manager;
+  Common.Config.Config,
+  Vite,
+  Wallet.Manager;
 
 function NewMock( ParaCfg : TConfig; ParaWalletManager : TWalletManager ) : TVite;
 

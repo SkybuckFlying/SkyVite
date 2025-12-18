@@ -3,6 +3,13 @@ unit V2.Ledger.Chain.Utils.GenerateKey;
 interface
 
 uses
+  Ledger.Chain.Utils.Conversion,
+  Ledger.Chain.Utils.Generate.Key.Test,
+  Ledger.Chain.Utils.Key.Prefix,
+  Ledger.Chain.Utils.Keys,
+  Ledger.Chain.Utils.Keys.Index.DB,
+  Ledger.Chain.Utils.Keys.State.DB,
+  Ledger.Chain.Utils.Keys.State.Redo.DB,
   System.SysUtils,
   V2.Common.Types,
   V2.Crypto;

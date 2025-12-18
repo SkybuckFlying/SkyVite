@@ -3,7 +3,14 @@ unit Common.Helper.Common;
 interface
 
 uses
-  System.SysUtils, System.Math.BigInt;
+  Common.Helper.Common.Test,
+  Common.Helper.Math.Big,
+  Common.Helper.Math.Integer,
+  Common.Helper.Math.Test,
+  Common.Helper.Rand,
+  Common.Helper.Rand.Test,
+  Common.Helper.Slice,
+  System.SysUtils System.Math.BigInt;
 
 const
   MaxUint64 = High(UInt64);

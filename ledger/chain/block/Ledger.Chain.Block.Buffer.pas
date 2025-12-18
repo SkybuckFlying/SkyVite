@@ -3,7 +3,13 @@ unit Ledger.Chain.Block.Buffer;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Types;
+  Ledger.Chain.Block.Account.Block,
+  Ledger.Chain.Block.Block.DB,
+  Ledger.Chain.Block.Block.DB.Test,
+  Ledger.Chain.Block.Block.Parser,
+  Ledger.Chain.Block.Flush,
+  Ledger.Chain.Block.Snapshot.Block,
+  System.SysUtils System.Classes System.Types;
 
 function MakeWriteBytes(var ParaBuf: TBytes; ParaDataType: Byte; const ParaData: TBytes): TBytes;
 

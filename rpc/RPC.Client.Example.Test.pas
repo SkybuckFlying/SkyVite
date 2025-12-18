@@ -3,8 +3,30 @@ unit RPC.Client.Example.Test;
 interface
 
 uses
-  SysUtils, Classes,
-  RPC.Client; // Assuming the RPC client is in this unit
+  RPC.Client,
+  RPC.Client // Assuming the RPC client is in this unit,
+  RPC.Client.Test,
+  RPC.Doc,
+  RPC.Endpoints,
+  RPC.Errors,
+  RPC.Health,
+  RPC.Http,
+  RPC.Http.Test,
+  RPC.Inproc,
+  RPC.IPC,
+  RPC.IPC.Unix,
+  RPC.IPC.Windows,
+  RPC.Json,
+  RPC.Json.Test,
+  RPC.Server,
+  RPC.Server.Test,
+  RPC.Subscription,
+  RPC.Subscription.Test,
+  RPC.Types,
+  RPC.Utils,
+  RPC.Utils.Test,
+  RPC.Websocket,
+  SysUtils Classes;
 
 type
   TRPCClientExample = class

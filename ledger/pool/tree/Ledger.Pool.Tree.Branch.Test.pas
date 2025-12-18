@@ -3,10 +3,18 @@ unit Ledger.Pool.Tree.Branch.Test;
 interface
 
 uses
-  SysUtils, Classes,
-  Ledger.Pool.Tree.Branch,
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Pool.Tree.Branch,
+  Ledger.Pool.Tree.Branch.Base,
+  Ledger.Pool.Tree.Checker,
+  Ledger.Pool.Tree.Mock.Knot,
+  Ledger.Pool.Tree.Mock.Root.Branch,
+  Ledger.Pool.Tree.Printer,
+  Ledger.Pool.Tree.Tree,
+  Ledger.Pool.Tree.Tree.Impl,
+  Ledger.Pool.Tree.Tree.Impl.Test,
+  SysUtils Classes;
 
 type
   TBranchTest = class

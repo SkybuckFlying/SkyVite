@@ -3,16 +3,29 @@ unit Common.Types.Hash;
 interface
 
 uses
-{$IFDEF FPC}
-  SysUtils,
+  {$ELSE},
+  {$ENDIF},
+  {$IFDEF FPC},
   BigInts,
-{$ELSE}
-  System.SysUtils,
-  System.Math.BigInts,
-{$ENDIF}
   Common.Bytes,
   Common.HexUtil,
-  Crypto.Hash;
+  Common.Types.Address,
+  Common.Types.Address.Test,
+  Common.Types.Block.Source,
+  Common.Types.Contracts,
+  Common.Types.Enum,
+  Common.Types.Error,
+  Common.Types.Gid,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeID,
+  Common.Types.TokenTypeID.Test,
+  Crypto.Hash,
+  System.Math.BigInts,
+  System.SysUtils,
+  SysUtils;
 
 const
   ConstHashSize = 32;

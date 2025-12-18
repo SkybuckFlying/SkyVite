@@ -3,11 +3,14 @@ unit Common.Upgrade.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
   Common.Upgrade,
   Common.Upgrade.Face,
-  System.SysUtils,
-  System.Generics.Collections;
+  Common.Upgrade.Height.Point,
+  Common.Upgrade.Upgrade,
+  Common.Upgrade.Upgrade.Init,
+  DUnitX.TestFramework,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   [TestFixture]

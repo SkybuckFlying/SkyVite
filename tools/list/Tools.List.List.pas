@@ -3,7 +3,8 @@ unit Tools.List.List;
 interface
 
 uses
-  System.SysUtils, System.Classes;
+  System.SysUtils System.Classes,
+  Tools.List.List.Test;
 
 type
   TElement = class

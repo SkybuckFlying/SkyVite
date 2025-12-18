@@ -3,9 +3,6 @@ unit Producer.Tools;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.DateUtils,
   Common.Types,
   Common.Upgrade,
   Interfaces,
@@ -14,7 +11,15 @@ uses
   Ledger.Consensus,
   Ledger.Pool,
   Log15,
-  Monitor;
+  Monitor,
+  Producer.Face,
+  Producer.Producer,
+  Producer.Producer.Test,
+  Producer.Worker,
+  Producer.Worker.Test,
+  System.Classes,
+  System.DateUtils,
+  System.SysUtils;
 
 type
   TTools = class

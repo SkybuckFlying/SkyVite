@@ -3,9 +3,19 @@ unit Cmd.NodeManager.Assist;
 interface
 
 uses
-	System.SysUtils,
-	GoToDelphi.Helpers.Log15,
-	Node.Node;
+  Cmd.NodeManager.Check.Chain,
+  Cmd.NodeManager.Default.Node.Manager,
+  Cmd.NodeManager.Export.Node.Manager,
+  Cmd.NodeManager.Full.Node.Maker,
+  Cmd.NodeManager.Local.Node.Maker,
+  Cmd.NodeManager.Node.Maker,
+  Cmd.NodeManager.Node.Manager,
+  Cmd.NodeManager.Plugin.Data.Node.Manager,
+  Cmd.NodeManager.Recover.Node.Manager,
+  Cmd.NodeManager.SubCmd.Node.Manager,
+  GoToDelphi.Helpers.Log15,
+  Node.Node,
+  System.SysUtils;
 
 type
 	{

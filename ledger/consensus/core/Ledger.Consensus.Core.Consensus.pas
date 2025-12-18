@@ -3,7 +3,18 @@ unit ledger.consensus.core;
 interface
 
 uses
-  SysUtils, Classes, Math.BigInt, common.types, Generics.Defaults;
+  Ledger.Consensus.Core.Group,
+  Ledger.Consensus.Core.Group.Test,
+  Ledger.Consensus.Core.Mock.SBP.Reader,
+  Ledger.Consensus.Core.SBP.Reader,
+  Ledger.Consensus.Core.SBP.Reader.Test,
+  Ledger.Consensus.Core.State.Reader,
+  Ledger.Consensus.Core.Time.Index,
+  Ledger.Consensus.Core.Time.Index.Test,
+  Ledger.Consensus.Core.Utils,
+  Ledger.Consensus.Core.Vote.Algo,
+  Ledger.Consensus.Core.Vote.Algo.Test,
+  SysUtils Classes Math.BigInt common.types Generics.Defaults;
 
 type
   TVoteType = (NORMAL, SUCCESS_RATE_PROMOTION, SUCCESS_RATE_DEMOTION, RANDOM_PROMOTION);

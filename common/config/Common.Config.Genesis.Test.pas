@@ -3,9 +3,20 @@ unit Common.Config.Genesis.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
+  Common.Config.Chain,
+  Common.Config.Config,
   Common.Config.Genesis,
+  Common.Config.Genesis.Json,
+  Common.Config.Genesis.Mock.Json,
+  Common.Config.Net,
+  Common.Config.Node.Reward,
+  Common.Config.Producer,
+  Common.Config.Subscribe,
+  Common.Config.Upgrade,
+  Common.Config.VM,
+  Common.Config.Wallet,
   Common.Types,
+  DUnitX.TestFramework,
   GoToDelphi.Helpers.BigInt;
 
 /*

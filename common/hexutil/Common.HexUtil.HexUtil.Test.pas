@@ -3,6 +3,10 @@ unit Common.HexUtil.HexUtil.Test;
 interface
 
 uses
+  Common.HexUtil.HexUtil,
+  Common.HexUtil.Json,
+  Common.HexUtil.Json.Example.Test,
+  Common.HexUtil.Json.Test,
   DUnitX.TestFramework;
 
 type

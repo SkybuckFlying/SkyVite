@@ -3,11 +3,18 @@ unit Crypto.Ed25519.Ed25519.Test;
 interface
 
 uses
-  TestFramework,
+  Crypto.Crypto,
+  Crypto.Crypto.Test,
   Crypto.Ed25519.Ed25519,
-  System.SysUtils,
+  Crypto.Ed25519.Ed25519.Test,
+  Crypto.Ed25519.Internal.Edwards25519.Const,
+  Crypto.Ed25519.Internal.Edwards25519.Edwards25519,
+  Crypto.Hash,
+  Crypto.Hast.Test,
   System.Classes,
-  System.StrUtils;
+  System.StrUtils,
+  System.SysUtils,
+  TestFramework;
 
 type
   TEd25519Tests = class(TTestCase)

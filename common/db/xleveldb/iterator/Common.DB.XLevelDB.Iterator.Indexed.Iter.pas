@@ -3,11 +3,13 @@ unit Common.Db.Xleveldb.Iterator.Indexed_iter;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Common.Db.Xleveldb.Errors,
-	Common.Db.Xleveldb.Iterator.Iter,
-	Common.Db.Xleveldb.Util;
+  Common.Db.Xleveldb.Errors,
+  Common.DB.XLevelDB.Iterator.Array.Iter,
+  Common.Db.Xleveldb.Iterator.Iter,
+  Common.DB.XLevelDB.Iterator.Merged.Iter,
+  Common.Db.Xleveldb.Util,
+  System.Classes,
+  System.SysUtils;
 
 type
 	{

@@ -8,15 +8,34 @@ unit Common.Db.XLevelDB.DB.Snapshot;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.SyncObjs,
-  System.Generics.Collections,
-  Common.Db.XLevelDB.Iterator,
-  Common.Db.XLevelDB.Opt,
-  Common.Db.XLevelDB.Util,
+  Common.DB.XLevelDB.Batch,
+  Common.DB.XLevelDB.Comparer,
+  Common.Db.XLevelDB.DB,
+  Common.DB.XLevelDB.DB.Compaction,
+  Common.DB.XLevelDB.DB.Iter,
+  Common.DB.XLevelDB.DB.State,
+  Common.DB.XLevelDB.DB.Transaction,
+  Common.DB.XLevelDB.DB.Util,
+  Common.DB.XLevelDB.DB.Write,
+  Common.DB.XLevelDB.Doc,
   Common.Db.XLevelDB.Errors,
-  Common.Db.XLevelDB.DB;
+  Common.DB.XLevelDB.Filter,
+  Common.Db.XLevelDB.Iterator,
+  Common.DB.XLevelDB.Key,
+  Common.Db.XLevelDB.Opt,
+  Common.DB.XLevelDB.Options,
+  Common.DB.XLevelDB.Session,
+  Common.DB.XLevelDB.Session.Compaction,
+  Common.DB.XLevelDB.Session.Record,
+  Common.DB.XLevelDB.Session.Util,
+  Common.DB.XLevelDB.Storage,
+  Common.DB.XLevelDB.Table,
+  Common.Db.XLevelDB.Util,
+  Common.DB.XLevelDB.Version,
+  System.Classes,
+  System.Generics.Collections,
+  System.SyncObjs,
+  System.SysUtils;
 
 type
   EErrSnapshotReleased = class(ELevelDBError);

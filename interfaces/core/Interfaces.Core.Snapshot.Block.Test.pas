@@ -3,16 +3,30 @@ unit Interfaces.Core.SnapshotBlock.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  SysUtils,
   Classes,
-  Generics.Collections,
   Common.Types,
   Common.Upgrade,
   Crypto,
   Crypto.Ed25519,
+  DUnitX.TestFramework,
+  Generics.Collections,
+  Interfaces.Core.Account,
+  Interfaces.Core.Account.Block,
+  Interfaces.Core.Account.Block.Test,
+  Interfaces.Core.Contract.Meta,
+  Interfaces.Core.Contract.Meta.Test,
+  Interfaces.Core.Hash.Height,
+  Interfaces.Core.Hash.Height.Test,
+  Interfaces.Core.HashHeight,
+  Interfaces.Core.Info,
+  Interfaces.Core.Serializable,
+  Interfaces.Core.Snapshot.Block,
+  Interfaces.Core.Snapshot.Chunk,
   Interfaces.Core.SnapshotBlock,
-  Interfaces.Core.HashHeight;
+  Interfaces.Core.Token,
+  Interfaces.Core.VM.Log.List,
+  Interfaces.Core.VM.Log.List.Test,
+  SysUtils;
 
 type
   [TestFixture]

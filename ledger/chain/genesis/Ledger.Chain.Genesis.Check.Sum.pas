@@ -3,14 +3,18 @@ unit Ledger.Chain.Genesis.CheckSum;
 interface
 
 uses
-  System.SysUtils,
+  Common.Types,
+  Crypto,
+  GoToDelphi.Helpers.BigInt,
+  Interfaces,
+  Ledger.Chain.Genesis.Account.Block,
+  Ledger.Chain.Genesis.Genesis,
+  Ledger.Chain.Genesis.Interface,
+  Ledger.Chain.Genesis.Snapshot.Block,
   System.Classes,
   System.Generics.Collections,
   System.Numerics,
-  GoToDelphi.Helpers.BigInt,
-  Common.Types,
-  Interfaces,
-  Crypto;
+  System.SysUtils;
 
 type
   TSortVmBlocks = class(TComparer<IVmAccountBlock>)

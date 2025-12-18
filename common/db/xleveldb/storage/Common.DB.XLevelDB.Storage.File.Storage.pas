@@ -3,11 +3,18 @@ unit Common.Db.Xleveldb.Storage.File_storage;
 interface
 
 uses
-  System.SysUtils,
+  Common.Db.Xleveldb.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage.Nacl,
+  Common.DB.XLevelDB.Storage.File.Storage.Plan9,
+  Common.DB.XLevelDB.Storage.File.Storage.Solaris,
+  Common.DB.XLevelDB.Storage.File.Storage.Unix,
+  Common.DB.XLevelDB.Storage.File.Storage.Windows,
+  Common.DB.XLevelDB.Storage.Mem.Storage,
+  Common.DB.XLevelDB.Storage.Storage,
   System.Classes,
   System.IOUtils,
-  Winapi.Windows,
-  Common.Db.Xleveldb.Storage;
+  System.SysUtils,
+  Winapi.Windows;
 
 type
   EFileStorageError = class(EStorageError);

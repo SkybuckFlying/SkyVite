@@ -3,13 +3,28 @@ unit VM.Abi.Event;
 interface
 
 uses
-  System.SysUtils,
+  Common.Types.Hash,
   System.Classes,
   System.Generics.Collections,
   System.JSON,
-  Common.Types.Hash,
+  System.SysUtils,
+  VM.ABI.ABI,
+  VM.ABI.ABI.Test,
   VM.Abi.Argument,
-  VM.Abi.Type;
+  VM.ABI.Error,
+  VM.ABI.Event.Test,
+  VM.ABI.Method,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.ABI.Reflect,
+  VM.Abi.Type,
+  VM.ABI.Type.Test,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable,
+  VM.ABI.Variable.Test;
 
 type
   TEvent = record

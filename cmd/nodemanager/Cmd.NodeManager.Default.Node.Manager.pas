@@ -3,11 +3,21 @@ unit Cmd.NodeManager.DefaultNodeManager;
 interface
 
 uses
-	System.Classes,
-	GoToDelphi.Dependencies.Cli,
-	Node.Node,
-	Cmd.NodeManager.NodeMaker,
-	Cmd.NodeManager.NodeManager;
+  Cmd.NodeManager.Assist,
+  Cmd.NodeManager.Check.Chain,
+  Cmd.NodeManager.Export.Node.Manager,
+  Cmd.NodeManager.Full.Node.Maker,
+  Cmd.NodeManager.Local.Node.Maker,
+  Cmd.NodeManager.Node.Maker,
+  Cmd.NodeManager.Node.Manager,
+  Cmd.NodeManager.NodeMaker,
+  Cmd.NodeManager.NodeManager,
+  Cmd.NodeManager.Plugin.Data.Node.Manager,
+  Cmd.NodeManager.Recover.Node.Manager,
+  Cmd.NodeManager.SubCmd.Node.Manager,
+  GoToDelphi.Dependencies.Cli,
+  Node.Node,
+  System.Classes;
 
 type
 	TDefaultNodeManager = class( TInterfacedObject, INodeManager )

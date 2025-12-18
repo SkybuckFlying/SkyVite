@@ -3,11 +3,16 @@ unit Ledger.Chain.Block.Flush;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.Generics.Collections,
-	Common.Types,
-	Ledger.Chain.Block.Block.DB;
+  Common.Types,
+  Ledger.Chain.Block.Account.Block,
+  Ledger.Chain.Block.Block.DB,
+  Ledger.Chain.Block.Block.DB.Test,
+  Ledger.Chain.Block.Block.Parser,
+  Ledger.Chain.Block.Buffer,
+  Ledger.Chain.Block.Snapshot.Block,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
 	TBufWriter = class(TObject)

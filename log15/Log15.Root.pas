@@ -3,8 +3,15 @@ unit Log15.Root;
 interface
 
 uses
-  System.SysUtils, System.Classes,
-  Log15, Log15.Logger, Log15.Handler, Log15.Format;
+  Log15 Log15.Logger Log15.Handler Log15.Format,
+  Log15.Doc,
+  Log15.Format,
+  Log15.Handler,
+  Log15.Handler.Go13,
+  Log15.Handler.Go14,
+  Log15.Logger,
+  Log15.Syslog,
+  System.SysUtils System.Classes;
 
 function New(ctx: array of const): ILogger;
 function Root: ILogger;

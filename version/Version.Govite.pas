@@ -3,7 +3,8 @@ unit version.govite;
 interface
 
 uses
-  System.SysUtils;
+  System.SysUtils,
+  Version.Buildversion;
 
 procedure PrintBuildVersion;
 

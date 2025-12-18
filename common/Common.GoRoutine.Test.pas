@@ -3,10 +3,25 @@ unit Common.Goroutine.Test;
 interface
 
 uses
-	System.SysUtils,
-	System.Threading,
-	DUnitX.TestFramework,
-	Common.Goroutine;
+  Common.Bytes,
+  Common.Bytes.Test,
+  Common.Condtimeout,
+  Common.Condtimeout.Test,
+  Common.Condtimer,
+  Common.Condtimer.Test,
+  Common.Default.Params,
+  Common.Goroutine,
+  Common.Lifecycle,
+  Common.Lock,
+  Common.Lock.Test,
+  Common.Log,
+  Common.Mock,
+  Common.Mock.Test,
+  Common.Utils,
+  Common.Version,
+  DUnitX.TestFramework,
+  System.SysUtils,
+  System.Threading;
 
 type
 	[TestFixture]

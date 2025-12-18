@@ -3,6 +3,11 @@ unit Cmd.Utils.Flock.Flock.Windows;
 interface
 
 uses
+  Cmd.Utils.Flock.Flock,
+  Cmd.Utils.Flock.Flock.Darwin,
+  Cmd.Utils.Flock.Flock.Linux,
+  Cmd.Utils.Flock.Flock.Plan9,
+  Cmd.Utils.Flock.Flock.Solaris,
   System.SysUtils;
 
 type

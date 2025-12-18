@@ -3,11 +3,23 @@ unit Ledger.Chain.State.Iteration;
 interface
 
 uses
-  System.SysUtils,
   Common.DB.XLevelDB,
   Common.Types,
   Interfaces,
-  Ledger.Chain.State.StateDB;
+  Ledger.Chain.State.Cache,
+  Ledger.Chain.State.Delete,
+  Ledger.Chain.State.Interface,
+  Ledger.Chain.State.Interface.Mock,
+  Ledger.Chain.State.Redo,
+  Ledger.Chain.State.Redo.Cache,
+  Ledger.Chain.State.Round.Cache,
+  Ledger.Chain.State.Round.Cache.Test,
+  Ledger.Chain.State.State.DB,
+  Ledger.Chain.State.StateDB,
+  Ledger.Chain.State.Storage.Database,
+  Ledger.Chain.State.Transform.Iterator,
+  Ledger.Chain.State.Write,
+  System.SysUtils;
 
 type
   TStateDBIterationHelper = class helper for TStateDB

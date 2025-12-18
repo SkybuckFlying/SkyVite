@@ -3,9 +3,15 @@ unit Common.Helper.Math.Big;
 interface
 
 uses
-  System.SysUtils,
+  Common.Helper.Common,
+  Common.Helper.Common.Test,
+  Common.Helper.Math.Integer,
+  Common.Helper.Math.Test,
+  Common.Helper.Rand,
+  Common.Helper.Rand.Test,
+  Common.Helper.Slice,
   GoToDelphi.Helpers.BigInt,
-  Common.Helper.Common;
+  System.SysUtils;
 
 type
   TBigHelper = class

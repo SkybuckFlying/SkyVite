@@ -3,9 +3,21 @@ unit Common.Types.TokenTypeId.Test;
 interface
 
 uses
-	System.SysUtils,
-	DUnitX.TestFramework,
-	Common.Types.TokenTypeId;
+  Common.Types.Address,
+  Common.Types.Address.Test,
+  Common.Types.Block.Source,
+  Common.Types.Contracts,
+  Common.Types.Enum,
+  Common.Types.Error,
+  Common.Types.Gid,
+  Common.Types.Hash,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeId,
+  DUnitX.TestFramework,
+  System.SysUtils;
 
 const
 	ConstCorrectTTI = 'tti_2445f6e5cde8c2c70e446c83';

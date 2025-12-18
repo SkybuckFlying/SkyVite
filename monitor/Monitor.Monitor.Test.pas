@@ -4,7 +4,10 @@ interface
 
 uses
   DUnitX.TestFramework,
-  Monitor.Monitor;
+  Monitor.Monitor,
+  Monitor.Ntp,
+  Monitor.Ring,
+  Monitor.Ring.Test;
 
 type
   [TestFixture]

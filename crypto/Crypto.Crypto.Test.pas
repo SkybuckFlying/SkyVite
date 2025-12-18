@@ -3,11 +3,13 @@ unit Crypto.Crypto.Test;
 interface
 
 uses
-  TestFramework,
   Crypto.Crypto,
-  System.SysUtils,
+  Crypto.Hash,
+  Crypto.Hast.Test,
   System.Classes,
-  System.StrUtils;
+  System.StrUtils,
+  System.SysUtils,
+  TestFramework;
 
 type
   TCryptoTests = class(TTestCase)

@@ -3,11 +3,19 @@ unit Ledger.Pool.Tree.Tree.Impl.Test;
 interface
 
 uses
-  SysUtils, Classes,
-  Ledger.Pool.Tree.Tree.Impl,
-  Ledger.Mock.Chain,
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Mock.Chain,
+  Ledger.Pool.Tree.Branch,
+  Ledger.Pool.Tree.Branch.Base,
+  Ledger.Pool.Tree.Branch.Test,
+  Ledger.Pool.Tree.Checker,
+  Ledger.Pool.Tree.Mock.Knot,
+  Ledger.Pool.Tree.Mock.Root.Branch,
+  Ledger.Pool.Tree.Printer,
+  Ledger.Pool.Tree.Tree,
+  Ledger.Pool.Tree.Tree.Impl,
+  SysUtils Classes;
 
 type
   TTreeImplTest = class

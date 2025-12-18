@@ -7,6 +7,20 @@
 unit builtin_contract;
 
 interface
+uses
+  VM.DB.Account.Block,
+  VM.DB.Balance,
+  VM.DB.Context,
+  VM.DB.Debug,
+  VM.DB.Interface,
+  VM.DB.Meta.Code,
+  VM.DB.Snapshot.Block,
+  VM.DB.State,
+  VM.DB.Storage,
+  VM.DB.Storage.Iterator,
+  VM.DB.Unsaved,
+  VM.DB.VM.DB,
+  VM.DB.VM.Log;
 
 implementation
 

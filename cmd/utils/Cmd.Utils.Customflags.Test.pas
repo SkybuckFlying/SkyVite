@@ -3,9 +3,13 @@ unit Cmd.Utils.CustomFlags.Test;
 interface
 
 uses
-	DUnitX.TestFramework,
-	System.SysUtils,
-	System.IOUtils;
+  Cmd.Utils.Cli,
+  Cmd.Utils.Customflags,
+  Cmd.Utils.Flags,
+  Cmd.Utils.Path,
+  DUnitX.TestFramework,
+  System.IOUtils,
+  System.SysUtils;
 
 type
 	[TestFixture]

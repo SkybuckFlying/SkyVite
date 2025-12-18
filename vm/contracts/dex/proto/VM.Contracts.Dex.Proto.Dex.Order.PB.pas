@@ -3,7 +3,8 @@ unit VM.Contracts.Dex.Proto.Dex.Order.PB;
 interface
 
 uses
-  System.SysUtils, System.Generics.Collections;
+  System.SysUtils System.Generics.Collections,
+  VM.Contracts.Dex.Proto.Dex.Fund.PB;
 
 type
   TOrder = class

@@ -3,10 +3,12 @@ unit Common.Bloom.Bloom.Test;
 interface
 
 uses
-	System.SysUtils,
-	DUnitX.TestFramework,
-	Common.Bloom.Bloom,
-	Common.Types;
+  Common.Bloom.Bloom,
+  Common.Bloom.Bucket,
+  Common.Bloom.Util,
+  Common.Types,
+  DUnitX.TestFramework,
+  System.SysUtils;
 
 type
 	[TestFixture]

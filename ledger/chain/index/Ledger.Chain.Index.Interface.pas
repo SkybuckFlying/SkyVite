@@ -3,10 +3,19 @@ unit Ledger.Chain.Index.Interface;
 interface
 
 uses
-  System.SysUtils,
+  <<<<<<< HEAD,
   Common.Types,
-<<<<<<< HEAD
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Chain.Index.Account,
+  Ledger.Chain.Index.Account.Block,
+  Ledger.Chain.Index.Cache,
+  Ledger.Chain.Index.Delete,
+  Ledger.Chain.Index.Index.DB,
+  Ledger.Chain.Index.Index.DB.Test,
+  Ledger.Chain.Index.Insert,
+  Ledger.Chain.Index.Onroad,
+  Ledger.Chain.Index.Snapshot.Block,
+  System.SysUtils;
 
 type
   TIterateContractsFunc = reference to function(const ParaAddr: TAddress; const ParaMeta: IContractMeta; const ParaErr: Exception): Boolean;

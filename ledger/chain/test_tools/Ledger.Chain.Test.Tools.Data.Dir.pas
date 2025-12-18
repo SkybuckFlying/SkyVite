@@ -3,6 +3,7 @@ unit Ledger.Chain.Test.Tools.Data.Dir;
 interface
 
 uses
+  Ledger.Chain.Test.Tools.Mock,
   System.SysUtils;
 
 function DefaultDataDir: string;

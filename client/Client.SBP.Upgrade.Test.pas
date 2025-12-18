@@ -3,6 +3,14 @@ unit Client.SBPUpgrade.Test;
 interface
 
 uses
+  Client.ABI.Client,
+  Client.ABI.Client.Test,
+  Client.Client,
+  Client.Client.Test,
+  Client.Dex.Client,
+  Client.Dex.Client.Test,
+  Client.RPC,
+  Client.RPC.Test,
   DUnitX.TestFramework;
 
 type

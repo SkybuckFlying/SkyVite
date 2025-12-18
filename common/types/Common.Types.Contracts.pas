@@ -3,12 +3,21 @@ unit Common.Types.Contracts;
 interface
 
 uses
-  System.Math.BigInts,
   Common.Bytes,
   Common.Types.Address,
+  Common.Types.Address.Test,
+  Common.Types.Block.Source,
+  Common.Types.Enum,
+  Common.Types.Error,
   Common.Types.Gid,
+  Common.Types.Hash,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
   Common.Types.TokenTypeId,
-  Common.Types.Hash;
+  Common.Types.TokenTypeID.Test,
+  System.Math.BigInts;
 
 type
   PHash = ^THash;

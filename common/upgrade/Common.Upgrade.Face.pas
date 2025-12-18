@@ -3,10 +3,14 @@ unit Common.Upgrade.Face;
 interface
 
 uses
-  System.SysUtils,
-  System.Generics.Collections,
   Common.Upgrade,
-  Log15;
+  Common.Upgrade.Height.Point,
+  Common.Upgrade.Upgrade,
+  Common.Upgrade.Upgrade.Init,
+  Common.Upgrade.Upgrade.Test,
+  Log15,
+  System.Generics.Collections,
+  System.SysUtils;
 
 var
   gUpgrade: IUpgradeBox;

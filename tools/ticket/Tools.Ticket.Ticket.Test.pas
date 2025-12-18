@@ -4,11 +4,11 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
+  GoToDelphi.Helpers.TChannel,
   System.Classes,
+  System.SysUtils,
   System.Threading,
-  Tools.Ticket.Ticket,
-  GoToDelphi.Helpers.TChannel;
+  Tools.Ticket.Ticket;
 
 type
   [TestFixture]

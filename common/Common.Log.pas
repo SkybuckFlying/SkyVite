@@ -3,9 +3,25 @@ unit Common.Log;
 interface
 
 uses
-  System.SysUtils,
+  Common.Bytes,
+  Common.Bytes.Test,
+  Common.Condtimeout,
+  Common.Condtimeout.Test,
+  Common.Condtimer,
+  Common.Condtimer.Test,
+  Common.Default.Params,
+  Common.GoRoutine,
+  Common.GoRoutine.Test,
+  Common.Lifecycle,
+  Common.Lock,
+  Common.Lock.Test,
+  Common.Mock,
+  Common.Mock.Test,
+  Common.Utils,
+  Common.Version,
+  Log15,
   System.Classes,
-  Log15;
+  System.SysUtils;
 
 // LogHandler creates a log15 handler with file rotation, mirroring the Go implementation.
 function LogHandler(

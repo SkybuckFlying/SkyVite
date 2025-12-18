@@ -3,7 +3,10 @@ unit Wallet.Hd_Bip.Derivation.Main;
 interface
 
 uses
-  SysUtils, Classes, common.types, crypto.ed25519, common.errors, System.RegularExpressions;
+  SysUtils Classes common.types crypto.ed25519 common.errors System.RegularExpressions,
+  Wallet.Hd.Bip.Derivation.Bip.Example,
+  Wallet.Hd.Bip.Derivation.Bip.Main.Test,
+  Wallet.Hd.Bip.Derivation.Main.Test;
 
 const
   ConstViteAccountPrefix = 'm/44''/666666''';

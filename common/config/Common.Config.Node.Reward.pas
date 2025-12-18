@@ -3,8 +3,20 @@ unit Common.Config.Node_Reward;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes;
+  Common.Config.Chain,
+  Common.Config.Config,
+  Common.Config.Genesis,
+  Common.Config.Genesis.Json,
+  Common.Config.Genesis.Mock.Json,
+  Common.Config.Genesis.Test,
+  Common.Config.Net,
+  Common.Config.Producer,
+  Common.Config.Subscribe,
+  Common.Config.Upgrade,
+  Common.Config.VM,
+  Common.Config.Wallet,
+  System.Classes,
+  System.SysUtils;
 
 /*
  * Copyright 2019 The go-vite Authors

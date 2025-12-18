@@ -1,6 +1,18 @@
 unit Ledger.Consensus.Core.Mock.SBP.Reader;
 
 interface
+uses
+  Ledger.Consensus.Core.Consensus,
+  Ledger.Consensus.Core.Group,
+  Ledger.Consensus.Core.Group.Test,
+  Ledger.Consensus.Core.SBP.Reader,
+  Ledger.Consensus.Core.SBP.Reader.Test,
+  Ledger.Consensus.Core.State.Reader,
+  Ledger.Consensus.Core.Time.Index,
+  Ledger.Consensus.Core.Time.Index.Test,
+  Ledger.Consensus.Core.Utils,
+  Ledger.Consensus.Core.Vote.Algo,
+  Ledger.Consensus.Core.Vote.Algo.Test;
 
 // This unit is a placeholder for a mock implementation of ISBPStatReader.
 // In Delphi, mocking is typically done using a framework like Delphi Mocks or DUnitX's own mocking capabilities.

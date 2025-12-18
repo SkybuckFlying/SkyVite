@@ -3,9 +3,19 @@ unit Cmd.NodeManager.NodeMaker;
 interface
 
 uses
-	GoToDelphi.Dependencies.Cli,
-	Node.Node,
-	Node.Config;
+  Cmd.NodeManager.Assist,
+  Cmd.NodeManager.Check.Chain,
+  Cmd.NodeManager.Default.Node.Manager,
+  Cmd.NodeManager.Export.Node.Manager,
+  Cmd.NodeManager.Full.Node.Maker,
+  Cmd.NodeManager.Local.Node.Maker,
+  Cmd.NodeManager.Node.Manager,
+  Cmd.NodeManager.Plugin.Data.Node.Manager,
+  Cmd.NodeManager.Recover.Node.Manager,
+  Cmd.NodeManager.SubCmd.Node.Manager,
+  GoToDelphi.Dependencies.Cli,
+  Node.Config,
+  Node.Node;
 
 type
 	{

@@ -3,9 +3,23 @@ unit Interfaces.Core.ContractMeta.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
   Common.Types,
-  Interfaces.Core.ContractMeta;
+  DUnitX.TestFramework,
+  Interfaces.Core.Account,
+  Interfaces.Core.Account.Block,
+  Interfaces.Core.Account.Block.Test,
+  Interfaces.Core.Contract.Meta,
+  Interfaces.Core.ContractMeta,
+  Interfaces.Core.Hash.Height,
+  Interfaces.Core.Hash.Height.Test,
+  Interfaces.Core.Info,
+  Interfaces.Core.Serializable,
+  Interfaces.Core.Snapshot.Block,
+  Interfaces.Core.Snapshot.Block.Test,
+  Interfaces.Core.Snapshot.Chunk,
+  Interfaces.Core.Token,
+  Interfaces.Core.VM.Log.List,
+  Interfaces.Core.VM.Log.List.Test;
 
 type
   [TestFixture]

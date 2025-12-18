@@ -3,10 +3,16 @@ unit verifier;
 interface
 
 uses
-  System.SysUtils, System.Classes,
-  Vite.Common, Vite.Crypto, Vite.Interfaces, Vite.Ledger, Vite.Ledger.Chain,
-  Vite.Ledger.Consensus, Vite.Ledger.OnRoad, Verifier.Common, Verifier.Errors,
-  Verifier.SnapshotVerifier, Verifier.AccountVerifier;
+  Ledger.Verifier.Account.Verifier,
+  Ledger.Verifier.Common,
+  Ledger.Verifier.Errors,
+  Ledger.Verifier.Reader,
+  Ledger.Verifier.Snapshot.Verifier,
+  Ledger.Verifier.Snapshot.Verifier.Test,
+  System.SysUtils System.Classes,
+  Verifier.SnapshotVerifier Verifier.AccountVerifier,
+  Vite.Common Vite.Crypto Vite.Interfaces Vite.Ledger Vite.Ledger.Chain,
+  Vite.Ledger.Consensus Vite.Ledger.OnRoad Verifier.Common Verifier.Errors;
 
 type
   IVerifier = interface

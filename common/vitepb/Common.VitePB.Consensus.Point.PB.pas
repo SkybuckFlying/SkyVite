@@ -3,9 +3,17 @@ unit Common.VitePb.ConsensusPoint;
 interface
 
 uses
-  System.SysUtils,
+  Common.VitePB.Account.Block.PB,
+  Common.VitePB.Account.Blockmeta.PB,
+  Common.VitePB.Account.PB,
+  Common.VitePB.Message.PB,
+  Common.VitePB.Onroad.PB,
+  Common.VitePB.Snapshot.Block.PB,
+  Common.VitePB.Sync.Cache.PB,
+  Common.VitePB.VM.Log.List.PB,
   System.Classes,
-  System.Generics.Collections;
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   TPointVoteContent = class; // Forward declaration

@@ -3,12 +3,18 @@ unit Ledger.Chain.DB.Flush;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.Generics.Collections,
-	Common.Types,
-	Common.DB.XLevelDB.Batch,
-	Ledger.Chain.DB.Store;
+  Common.DB.XLevelDB.Batch,
+  Common.Types,
+  Ledger.Chain.DB.Flush.Test,
+  Ledger.Chain.DB.Mem.DB.Test,
+  Ledger.Chain.DB.Rollback,
+  Ledger.Chain.DB.Store,
+  Ledger.Chain.DB.Store.Test,
+  Ledger.Chain.DB.Unconfirmed.Batch,
+  Ledger.Chain.DB.Write,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
 	TStoreHelper = class helper for TStore

@@ -3,6 +3,13 @@ unit Ledger.Onroad.Pool.Error.Table;
 interface
 
 uses
+  Ledger.Onroad.Pool.Caller.Cache.Test,
+  Ledger.Onroad.Pool.Contract.Pool,
+  Ledger.Onroad.Pool.Pool,
+  Ledger.Onroad.Pool.Storage,
+  Ledger.Onroad.Pool.Storage.Test,
+  Ledger.Onroad.Pool.Types,
+  Ledger.Onroad.Pool.Types.Test,
   System.SysUtils;
 
 const

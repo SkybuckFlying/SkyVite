@@ -3,11 +3,19 @@ unit Crypto.Ed25519.Ed25519;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
+  Crypto.Crypto,
+  Crypto.Crypto.Test,
+  Crypto.Ed25519.Ed25519,
+  Crypto.Ed25519.Ed25519.Test,
   Crypto.Ed25519.Internal.Edwards25519,
+  Crypto.Ed25519.Internal.Edwards25519.Const,
+  Crypto.Ed25519.Internal.Edwards25519.Edwards25519,
+  Crypto.Hash,
+  Crypto.Hast.Test,
   DECHash,
-  DECKeys;
+  DECKeys,
+  System.Classes,
+  System.SysUtils;
 
 const
   PublicKeySize = 32;

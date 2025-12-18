@@ -3,17 +3,26 @@ unit Ledger.Chain.Index.IndexDB;
 interface
 
 uses
-<<<<<<< HEAD
-  System.SysUtils,
+  <<<<<<< HEAD,
+  Common.DB.XLevelDB.Cache,
+  Common.Log,
+  Common.Types,
+  GoToDelphi.Helpers.GoCache,
+  Interfaces,
+  Ledger.Chain.DB,
+  Ledger.Chain.Index.Account,
+  Ledger.Chain.Index.Account.Block,
+  Ledger.Chain.Index.Cache,
+  Ledger.Chain.Index.Delete,
+  Ledger.Chain.Index.Index.DB.Test,
+  Ledger.Chain.Index.Insert,
+  Ledger.Chain.Index.Interface,
+  Ledger.Chain.Index.Onroad,
+  Ledger.Chain.Index.Snapshot.Block,
   System.Classes,
   System.Generics.Collections,
   System.JSON,
-  Common.Types,
-  Interfaces,
-  Ledger.Chain.DB,
-  GoToDelphi.Helpers.GoCache,
-  Common.DB.XLevelDB.Cache,
-  Common.Log;
+  System.SysUtils;
 
 type
 =======

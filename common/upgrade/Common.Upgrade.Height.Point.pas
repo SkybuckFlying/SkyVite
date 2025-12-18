@@ -3,8 +3,11 @@ unit Common.Upgrade.HeightPoint;
 interface
 
 uses
+  Common.Upgrade,
   Common.Upgrade.Face,
-  Common.Upgrade;
+  Common.Upgrade.Upgrade,
+  Common.Upgrade.Upgrade.Init,
+  Common.Upgrade.Upgrade.Test;
 
 type
   IHeightPoint = interface

@@ -3,14 +3,26 @@ unit Ledger.Chain.State.RoundCache.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
   Common.Types,
+  DUnitX.TestFramework,
   Interfaces.Core,
   Ledger.Chain.State,
-  Ledger.Consensus.Core;
+  Ledger.Chain.State.Cache,
+  Ledger.Chain.State.Delete,
+  Ledger.Chain.State.Interface,
+  Ledger.Chain.State.Interface.Mock,
+  Ledger.Chain.State.Iteration,
+  Ledger.Chain.State.Redo,
+  Ledger.Chain.State.Redo.Cache,
+  Ledger.Chain.State.Round.Cache,
+  Ledger.Chain.State.State.DB,
+  Ledger.Chain.State.Storage.Database,
+  Ledger.Chain.State.Transform.Iterator,
+  Ledger.Chain.State.Write,
+  Ledger.Consensus.Core,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   [TestFixture]

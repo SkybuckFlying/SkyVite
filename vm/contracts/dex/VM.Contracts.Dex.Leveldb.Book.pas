@@ -3,7 +3,27 @@ unit VM.Contracts.Dex.Leveldb.Book;
 interface
 
 uses
-  GoVite.Interfaces, VM.Contracts.Dex.Order;
+  GoVite.Interfaces VM.Contracts.Dex.Order,
+  VM.Contracts.Dex.Account,
+  VM.Contracts.Dex.Calculator,
+  VM.Contracts.Dex.Errors,
+  VM.Contracts.Dex.Events,
+  VM.Contracts.Dex.Fund.Dividend,
+  VM.Contracts.Dex.Fund.Event,
+  VM.Contracts.Dex.Fund.Finish.Pendings,
+  VM.Contracts.Dex.Fund.Helper,
+  VM.Contracts.Dex.Fund.Helper.Test,
+  VM.Contracts.Dex.Fund.Mine,
+  VM.Contracts.Dex.Fund.Settle,
+  VM.Contracts.Dex.Fund.Stake,
+  VM.Contracts.Dex.Fund.Storage,
+  VM.Contracts.Dex.Fund.Verifier,
+  VM.Contracts.Dex.Matcher,
+  VM.Contracts.Dex.Matcher.Test,
+  VM.Contracts.Dex.Order,
+  VM.Contracts.Dex.Trade.Helper,
+  VM.Contracts.Dex.Utils,
+  VM.Contracts.Dex.Utils.Test;
 
 type
   TLevelDbBook = class

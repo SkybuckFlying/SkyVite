@@ -5,8 +5,15 @@ unit Common.Db.XLevelDb.Storage.FileStorage.Plan9;
 interface
 
 uses
-  System.SysUtils,
-  Common.Db.XLevelDb.Storage;
+  Common.Db.XLevelDb.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage.Nacl,
+  Common.DB.XLevelDB.Storage.File.Storage.Solaris,
+  Common.DB.XLevelDB.Storage.File.Storage.Unix,
+  Common.DB.XLevelDB.Storage.File.Storage.Windows,
+  Common.DB.XLevelDB.Storage.Mem.Storage,
+  Common.DB.XLevelDB.Storage.Storage,
+  System.SysUtils;
 
 type
   TPlan9FileLock = class(TInterfacedObject, IFileLock)

@@ -3,11 +3,31 @@ unit Common.DB.XLevelDB.Session.Record;
 interface
 
 uses
-  System.SysUtils,
+  Common.DB.XLevelDB.Batch,
+  Common.DB.XLevelDB.Comparer,
+  Common.DB.XLevelDB.DB,
+  Common.DB.XLevelDB.DB.Compaction,
+  Common.DB.XLevelDB.DB.Iter,
+  Common.DB.XLevelDB.DB.Snapshot,
+  Common.DB.XLevelDB.DB.State,
+  Common.DB.XLevelDB.DB.Transaction,
+  Common.DB.XLevelDB.DB.Util,
+  Common.DB.XLevelDB.DB.Write,
+  Common.DB.XLevelDB.Doc,
+  Common.DB.XLevelDB.Errors,
+  Common.DB.XLevelDB.Filter,
+  Common.DB.XLevelDB.Key,
+  Common.DB.XLevelDB.Options,
+  Common.DB.XLevelDB.Session,
+  Common.DB.XLevelDB.Session.Compaction,
+  Common.DB.XLevelDB.Session.Util,
+  Common.DB.XLevelDB.Storage,
+  Common.DB.XLevelDB.Table,
+  Common.DB.XLevelDB.Util,
+  Common.DB.XLevelDB.Version,
   System.Classes,
   System.Generics.Collections,
-  Common.DB.XLevelDB.Key,
-  Common.DB.XLevelDB.Table;
+  System.SysUtils;
 
 type
   TDeletedTable = record

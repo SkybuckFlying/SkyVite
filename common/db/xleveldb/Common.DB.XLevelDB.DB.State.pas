@@ -8,18 +8,36 @@ unit Common.Db.XLevelDB.DB.State;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.SyncObjs,
-  System.Threading,
-  System.Generics.Collections,
-  GoToDelphi.Helpers.TChannel,
-  Common.Db.XLevelDB.Journal,
-  Common.Db.XLevelDB.MemDB,
-  Common.Db.XLevelDB.Storage,
-  Common.Db.XLevelDB.Key,
+  Common.DB.XLevelDB.Batch,
+  Common.DB.XLevelDB.Comparer,
+  Common.Db.XLevelDB.DB,
+  Common.DB.XLevelDB.DB.Compaction,
+  Common.DB.XLevelDB.DB.Iter,
+  Common.DB.XLevelDB.DB.Snapshot,
+  Common.DB.XLevelDB.DB.Transaction,
+  Common.DB.XLevelDB.DB.Util,
+  Common.DB.XLevelDB.DB.Write,
+  Common.DB.XLevelDB.Doc,
   Common.Db.XLevelDB.Errors,
-  Common.Db.XLevelDB.DB;
+  Common.DB.XLevelDB.Filter,
+  Common.Db.XLevelDB.Journal,
+  Common.Db.XLevelDB.Key,
+  Common.Db.XLevelDB.MemDB,
+  Common.DB.XLevelDB.Options,
+  Common.DB.XLevelDB.Session,
+  Common.DB.XLevelDB.Session.Compaction,
+  Common.DB.XLevelDB.Session.Record,
+  Common.DB.XLevelDB.Session.Util,
+  Common.Db.XLevelDB.Storage,
+  Common.DB.XLevelDB.Table,
+  Common.DB.XLevelDB.Util,
+  Common.DB.XLevelDB.Version,
+  GoToDelphi.Helpers.TChannel,
+  System.Classes,
+  System.Generics.Collections,
+  System.SyncObjs,
+  System.SysUtils,
+  System.Threading;
 
 type
   EErrHasFrozenMem = class(ELevelDBError);

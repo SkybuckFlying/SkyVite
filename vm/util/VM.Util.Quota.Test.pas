@@ -4,9 +4,15 @@ interface
 
 uses
   DUnitX.TestFramework,
-  vm.util.quota,
+  SysUtils,
+  VM.Util.Common,
+  VM.Util.Consensus.Reader,
+  VM.Util.DB.Helper,
   vm.util.errors,
-  SysUtils;
+  VM.Util.IntPool,
+  VM.Util.Intpool.Test,
+  vm.util.quota,
+  VM.Util.Types;
 
 type
   [TestFixture]

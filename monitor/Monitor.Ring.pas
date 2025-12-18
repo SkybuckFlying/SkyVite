@@ -3,7 +3,11 @@ unit Monitor.Ring;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.SyncObjs;
+  Monitor.Monitor,
+  Monitor.Monitor.Test,
+  Monitor.Ntp,
+  Monitor.Ring.Test,
+  System.SysUtils System.Classes System.SyncObjs;
 
 type
   TRing = class

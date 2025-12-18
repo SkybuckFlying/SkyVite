@@ -3,8 +3,15 @@ unit Ledger.Chain.Utils.Conversion;
 interface
 
 uses
-  System.SysUtils,
-  Ledger.Chain.File.Manager;
+  Ledger.Chain.File.Manager,
+  Ledger.Chain.Utils.Generate.Key,
+  Ledger.Chain.Utils.Generate.Key.Test,
+  Ledger.Chain.Utils.Key.Prefix,
+  Ledger.Chain.Utils.Keys,
+  Ledger.Chain.Utils.Keys.Index.DB,
+  Ledger.Chain.Utils.Keys.State.DB,
+  Ledger.Chain.Utils.Keys.State.Redo.DB,
+  System.SysUtils;
 
 function SerializeLocation(const aLocation: ILocation): TBytes;
 function DeserializeLocation(const aBytes: TBytes): ILocation;

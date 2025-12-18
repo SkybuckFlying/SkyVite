@@ -3,15 +3,23 @@ unit Client.Rpc;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Client.Rpc.Ledger,
-	Client.Rpc.Onroad,
-	Client.Rpc.Tx,
-	Client.Rpc.Contract,
-	Client.Rpc.DexTrade,
-	Client.Rpc.Random,
-	Rpc;
+  Client.ABI.Client,
+  Client.ABI.Client.Test,
+  Client.Client,
+  Client.Client.Test,
+  Client.Dex.Client,
+  Client.Dex.Client.Test,
+  Client.Rpc.Contract,
+  Client.Rpc.DexTrade,
+  Client.Rpc.Ledger,
+  Client.Rpc.Onroad,
+  Client.Rpc.Random,
+  Client.RPC.Test,
+  Client.Rpc.Tx,
+  Client.SBP.Upgrade.Test,
+  Rpc,
+  System.Classes,
+  System.SysUtils;
 
 type
 	ERpcClientError = class(Exception);

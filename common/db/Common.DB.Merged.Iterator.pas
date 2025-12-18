@@ -3,12 +3,13 @@ unit Common.Db.MergedIterator;
 interface
 
 uses
-	System.SysUtils,
-	System.Generics.Collections,
-	interfaces,
-	common.db.xleveldb.comparer,
-	common.db.xleveldb.errors,
-  Common.Db.Globals;
+  Common.Db.Globals,
+  Common.DB.Memdb,
+  common.db.xleveldb.comparer,
+  common.db.xleveldb.errors,
+  interfaces,
+  System.Generics.Collections,
+  System.SysUtils;
 
 const
 	iterPointHead = 0;

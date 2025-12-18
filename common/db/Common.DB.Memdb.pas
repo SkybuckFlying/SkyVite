@@ -3,16 +3,17 @@ unit Common.Db.MemDB;
 interface
 
 uses
-  System.SysUtils,
-  System.SyncObjs,
-  GoToDelphi.Helpers.TChannel,
+  Common.Db.MemBatch,
+  Common.Db.MemSnapshot,
+  Common.DB.Merged.Iterator,
   common.db.xleveldb,
   common.db.xleveldb.comparer,
-  common.db.xleveldb.memdb,
   common.db.xleveldb.iterator,
+  common.db.xleveldb.memdb,
   common.db.xleveldb.util,
-  Common.Db.MemBatch,
-  Common.Db.MemSnapshot;
+  GoToDelphi.Helpers.TChannel,
+  System.SyncObjs,
+  System.SysUtils;
 
 type
   TMemDB = class

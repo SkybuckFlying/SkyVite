@@ -3,6 +3,9 @@ unit hash_test;
 interface
 
 uses
+  Crypto.Crypto,
+  Crypto.Crypto.Test,
+  Crypto.Hash,
   DUnitX.TestFramework;
 
 type

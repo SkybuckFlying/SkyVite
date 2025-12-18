@@ -3,15 +3,16 @@ unit Pow.Remote.Service;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Math.BigInt,
-  System.Net.HttpClient,
-  System.JSON,
+  Common.Log,
   Pow.Pow,
   Pow.Remote.Request,
   Pow.Remote.Response,
-  Common.Log;
+  Pow.Remote.Service.Test,
+  System.Classes,
+  System.JSON,
+  System.Math.BigInt,
+  System.Net.HttpClient,
+  System.SysUtils;
 
 const
   ConstApiActionGenerate = '/api/generate_work';

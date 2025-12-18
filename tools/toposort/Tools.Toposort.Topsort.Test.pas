@@ -4,11 +4,12 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
   System.Classes,
   System.Generics.Collections,
+  System.SysUtils,
   tools.toposort.sort,
-  tools.toposort.topsort; // For TNode
+  Tools.Toposort.Topsort,
+  tools.toposort.topsort // For TNode;
 
 type
   TItems = record

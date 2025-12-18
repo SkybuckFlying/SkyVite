@@ -3,12 +3,14 @@ unit Pow.Remote.Service.Test;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Common.Types,
-	Pow.Pow,
-	Pow.Remote.Service,
-	unit_GoLang_Compatibility_version_006;
+  Common.Types,
+  Pow.Pow,
+  Pow.Remote.Request,
+  Pow.Remote.Response,
+  Pow.Remote.Service,
+  System.Classes,
+  System.SysUtils,
+  unit_GoLang_Compatibility_version_006;
 
 procedure TestPowGenerate;
 

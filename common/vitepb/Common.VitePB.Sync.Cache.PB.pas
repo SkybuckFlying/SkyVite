@@ -3,8 +3,16 @@ unit Common.VitePb.SyncCache;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Common.VitePb.Message;
+  Common.VitePB.Account.Block.PB,
+  Common.VitePB.Account.Blockmeta.PB,
+  Common.VitePB.Account.PB,
+  Common.VitePB.Consensus.Point.PB,
+  Common.VitePb.Message,
+  Common.VitePB.Message.PB,
+  Common.VitePB.Onroad.PB,
+  Common.VitePB.Snapshot.Block.PB,
+  Common.VitePB.VM.Log.List.PB,
+  System.SysUtils System.Classes System.Generics.Collections;
 
 type
   TCacheItem = class;   // Forward declaration

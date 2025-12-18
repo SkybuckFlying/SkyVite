@@ -1,6 +1,14 @@
 unit VM.Contracts.ABI.ABI.Dex.Fund.Test;
 
 interface
+uses
+  VM.Contracts.ABI.ABI.Asset,
+  VM.Contracts.ABI.ABI.Dex.Fund,
+  VM.Contracts.ABI.ABI.Dex.Trade,
+  VM.Contracts.ABI.ABI.Gonvernance,
+  VM.Contracts.ABI.ABI.Quota,
+  VM.Contracts.ABI.ABI.Test,
+  VM.Contracts.ABI.Util;
 
 procedure RunDexFundAbiTest;
 

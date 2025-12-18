@@ -3,10 +3,12 @@ unit tools.toposort.sort;
 interface
 
 uses
-  System.SysUtils,
   System.Classes,
   System.Generics.Collections,
-  tools.toposort.topsort; // Reuse TNode from topsort unit
+  System.SysUtils,
+  Tools.Toposort.Topsort,
+  tools.toposort.topsort // Reuse TNode from topsort unit,
+  Tools.Toposort.Topsort.Test;
 
 type
   ISwapInterface = interface

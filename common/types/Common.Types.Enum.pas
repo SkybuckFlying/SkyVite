@@ -3,6 +3,19 @@ unit Common.Types.Enum;
 interface
 
 uses
+  Common.Types.Address,
+  Common.Types.Address.Test,
+  Common.Types.Block.Source,
+  Common.Types.Contracts,
+  Common.Types.Error,
+  Common.Types.Gid,
+  Common.Types.Hash,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeID,
+  Common.Types.TokenTypeID.Test,
   System.SysUtils;
 
 type

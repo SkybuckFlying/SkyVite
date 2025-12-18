@@ -3,8 +3,12 @@ unit Ledger.Chain.FileManager.Location;
 interface
 
 uses
-  System.SysUtils,
-  Ledger.Chain.FileManager.Interfaces;
+  Ledger.Chain.File.Manager.FD,
+  Ledger.Chain.File.Manager.FD.Manager,
+  Ledger.Chain.File.Manager.File.Manager,
+  Ledger.Chain.File.Manager.Interface,
+  Ledger.Chain.FileManager.Interfaces,
+  System.SysUtils;
 
 const
   LocationSize = 12;

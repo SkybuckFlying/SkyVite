@@ -3,8 +3,18 @@ unit Ledger.Chain.Cache.HotData;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Vite.Common.Types, Interfaces.Core, Ledger.Chain.Cache.DataSet;
+  Ledger.Chain.Cache.Account.Block,
+  Ledger.Chain.Cache.Cache,
+  Ledger.Chain.Cache.Dataset,
+  Ledger.Chain.Cache.Init,
+  Ledger.Chain.Cache.Interface,
+  Ledger.Chain.Cache.Quota,
+  Ledger.Chain.Cache.Quota.List,
+  Ledger.Chain.Cache.Snapshot.Block,
+  Ledger.Chain.Cache.Unconfirmed,
+  Ledger.Chain.Cache.Unconfirmed.Pool,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vite.Common.Types Interfaces.Core Ledger.Chain.Cache.DataSet;
 
 type
   THotData = class

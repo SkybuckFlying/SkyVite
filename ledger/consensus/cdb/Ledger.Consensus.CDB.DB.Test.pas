@@ -3,14 +3,15 @@ unit Ledger.Consensus.CDB.DB.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  System.SysUtils,
-  System.IOUtils,
-  System.Generics.Collections,
-  GoLevelDB,
   Common.Types,
+  DUnitX.TestFramework,
+  GoLevelDB,
   Ledger.Consensus.CDB.Consensus,
-  Ledger.Consensus.CDB.Point;
+  Ledger.Consensus.CDB.Point,
+  Ledger.Consensus.CDB.Point.Test,
+  System.Generics.Collections,
+  System.IOUtils,
+  System.SysUtils;
 
 type
   [TestFixture]

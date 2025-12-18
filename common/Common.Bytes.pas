@@ -3,7 +3,23 @@ unit Common.Bytes;
 interface
 
 uses
-  System.SysUtils, System.Classes, Common.BigInt;
+  Common.Bytes.Test,
+  Common.Condtimeout,
+  Common.Condtimeout.Test,
+  Common.Condtimer,
+  Common.Condtimer.Test,
+  Common.Default.Params,
+  Common.GoRoutine,
+  Common.GoRoutine.Test,
+  Common.Lifecycle,
+  Common.Lock,
+  Common.Lock.Test,
+  Common.Log,
+  Common.Mock,
+  Common.Mock.Test,
+  Common.Utils,
+  Common.Version,
+  System.SysUtils System.Classes Common.BigInt;
 
 type
   TBytes = TArray<Byte>;

@@ -3,13 +3,21 @@ unit Ledger.Chain.Sync.Cache.Cache.Item;
 interface
 
 uses
-  System.SysUtils,
+  Common.Types,
+  Common.VitePB,
+  Interfaces.Core,
+  Ledger.Chain.Sync.Cache.Cache.Item.Test,
+  Ledger.Chain.Sync.Cache.Reader,
+  Ledger.Chain.Sync.Cache.Reader.Test,
+  Ledger.Chain.Sync.Cache.Segment,
+  Ledger.Chain.Sync.Cache.Segment.Test,
+  Ledger.Chain.Sync.Cache.Sync.Cache,
+  Ledger.Chain.Sync.Cache.Sync.Cache.Test,
+  Ledger.Chain.Sync.Cache.Writer,
+  Proto,
   System.Classes,
   System.Generics.Collections,
-  Proto,
-  Interfaces.Core,
-  Common.Types,
-  Common.VitePB;
+  System.SysUtils;
 
 var
   dbItemPrefix: TBytes;

@@ -3,9 +3,15 @@ unit snapshot_verifier;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.DateUtils,
-  Vite.Common, Vite.Crypto, Vite.Interfaces, Vite.Ledger, Vite.Ledger.Chain,
-  Vite.Monitor, Verifier.Common, Verifier.Errors, big_int;
+  Ledger.Verifier.Account.Verifier,
+  Ledger.Verifier.Common,
+  Ledger.Verifier.Errors,
+  Ledger.Verifier.Reader,
+  Ledger.Verifier.Snapshot.Verifier.Test,
+  Ledger.Verifier.Verifier,
+  System.SysUtils System.Classes System.Generics.Collections System.DateUtils,
+  Vite.Common Vite.Crypto Vite.Interfaces Vite.Ledger Vite.Ledger.Chain,
+  Vite.Monitor Verifier.Common Verifier.Errors big_int;
 
 type
   TSnapshotVerifier = class

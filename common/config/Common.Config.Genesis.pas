@@ -3,11 +3,23 @@ unit Common.Config.Genesis;
 interface
 
 uses
-  System.SysUtils,
+  Common.Config.Chain,
+  Common.Config.Config,
+  Common.Config.Genesis.Json,
+  Common.Config.Genesis.Mock.Json,
+  Common.Config.Genesis.Test,
+  Common.Config.Net,
+  Common.Config.Node.Reward,
+  Common.Config.Producer,
+  Common.Config.Subscribe,
+  Common.Config.Upgrade,
+  Common.Config.VM,
+  Common.Config.Wallet,
+  Common.Types,
+  GoToDelphi.Helpers.BigInt,
   System.Generics.Collections,
   System.JSON,
-  Common.Types,
-  GoToDelphi.Helpers.BigInt;
+  System.SysUtils;
 
 /*
  * Copyright 2019 The go-vite Authors

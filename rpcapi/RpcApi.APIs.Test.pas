@@ -4,9 +4,9 @@ interface
 
 uses
   DUnitX.TestFramework,
-  RpcApi.Apis,
   Rpc,
   RpcApi.Api.Filters,
+  RpcApi.Apis,
   Vite;
 
 type

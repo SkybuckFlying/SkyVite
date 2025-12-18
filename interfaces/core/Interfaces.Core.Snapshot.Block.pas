@@ -3,13 +3,27 @@ unit Interfaces.Core.SnapshotBlock;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
   Common.Types,
+  Common.Upgrade,
   Common.VitePb,
   Crypto,
   Crypto.Ed25519,
+  Interfaces.Core.Account,
+  Interfaces.Core.Account.Block,
+  Interfaces.Core.Account.Block.Test,
+  Interfaces.Core.Contract.Meta,
+  Interfaces.Core.Contract.Meta.Test,
+  Interfaces.Core.Hash.Height,
+  Interfaces.Core.Hash.Height.Test,
   Interfaces.Core.HashHeight,
-  Common.Upgrade;
+  Interfaces.Core.Info,
+  Interfaces.Core.Serializable,
+  Interfaces.Core.Snapshot.Block.Test,
+  Interfaces.Core.Snapshot.Chunk,
+  Interfaces.Core.Token,
+  Interfaces.Core.VM.Log.List,
+  Interfaces.Core.VM.Log.List.Test,
+  System.SysUtils System.Classes System.Generics.Collections;
 
 type
   TSnapshotContent = TDictionary<TAddress, THashHeight>;

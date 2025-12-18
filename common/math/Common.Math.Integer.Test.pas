@@ -3,10 +3,12 @@ unit Common.Math.Integer.Test;
 interface
 
 uses
-	DUnitX.TestFramework,
-	System.SysUtils,
-	Common.Bytes,
-	Common.Math.Integer;
+  Common.Bytes,
+  Common.Math.Big,
+  Common.Math.Big.Test,
+  Common.Math.Integer,
+  DUnitX.TestFramework,
+  System.SysUtils;
 
 type
 	[TestFixture]

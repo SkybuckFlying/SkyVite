@@ -3,9 +3,10 @@ unit RpcApi.Api.Dex.Converter;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.JSON, System.Generics.Collections,
   BigNumbers,
-  Common.Types, Interfaces.Core, Ledger.Chain, Vm.Contracts.Dex;
+  Common.Types Interfaces.Core Ledger.Chain Vm.Contracts.Dex,
+  RpcApi.API.Dex.Util,
+  System.SysUtils System.Classes System.JSON System.Generics.Collections;
 
 type
   TRpcDexTokenInfo = class

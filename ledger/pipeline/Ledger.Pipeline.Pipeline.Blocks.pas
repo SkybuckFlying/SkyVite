@@ -3,16 +3,18 @@ unit Ledger.Pipeline.Pipeline.Blocks;
 interface
 
 uses
-  System.SysUtils,
+  Common.Types,
+  GoToDelphi.Helpers.TChannel,
+  Ledger.Chain.Block,
+  Ledger.Pipeline.Blocks,
+  Ledger.Pipeline.Blocks.Test,
+  Ledger.Pipeline.Pipeline.Blocks.Test,
+  Net.Interface,
   System.Classes,
   System.Generics.Collections,
+  System.SysUtils,
   System.Threading,
-  Common.Types,
-  Vite.Interfaces.Core,
-  Ledger.Chain.Block,
-  Net.Interface,
-  Ledger.Pipeline.Blocks,
-  GoToDelphi.Helpers.TChannel;
+  Vite.Interfaces.Core;
 
 type
   TBlocksPipeline = class(TInterfacedObject, IChunkReader)

@@ -3,9 +3,35 @@ unit Vm.JumpTable;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Math.BigInteger,
-  Vm.Vm, Vm.Contract, Vm.Memory, Vm.Stack, Vm.Opcodes, Vm.Instructions,
-  Vm.GasTable, Vm.MemoryTable, Vm.StackTable;
+  System.SysUtils System.Classes System.Math.BigInteger,
+  VM.Contract,
+  VM.Contract.Test,
+  VM.Contracts.Dex.Fund.Test,
+  VM.Contracts.Dex.Trade.Test,
+  VM.Contracts.Test,
+  VM.Database.Memory.Test,
+  VM.Database.Test,
+  VM.Destination,
+  VM.Destination.Test,
+  VM.Gas.Table,
+  VM.Gas.Table.Test,
+  Vm.GasTable Vm.MemoryTable Vm.StackTable,
+  VM.Instructions,
+  VM.Instructions.Test,
+  VM.Interpreter,
+  VM.Memory,
+  VM.Memory.Table,
+  VM.Memory.Test,
+  VM.Mock.DB,
+  VM.Opcodes,
+  VM.Params,
+  VM.Stack,
+  VM.Stack.Table,
+  VM.Stack.Test,
+  VM.VM,
+  Vm.Vm Vm.Contract Vm.Memory Vm.Stack Vm.Opcodes Vm.Instructions,
+  VM.VM.Run.Test,
+  VM.VM.Test;
 
 type
   TOperation = class(TInterfacedObject, IOperation)

@@ -3,19 +3,37 @@ unit Ledger.Chain.IntegrationTest.Test.Insert;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  DUnitX.TestFramework,
   Common.Types,
+  DUnitX.TestFramework,
   Interfaces,
   Interfaces.Core,
   Ledger.Chain,
+  Ledger.Chain.Integration.Test.Account.For.Integration,
+  Ledger.Chain.IntegrationTest.Test.AccountForIntegration,
   Ledger.Chain.TestTools,
   Ledger.Verifier,
+  Log15.Doc,
+  Log15.Format,
+  Log15.Handler,
+  Log15.Handler.Go13,
+  Log15.Handler.Go14,
+  Log15.Logger,
+  Log15.Root,
+  Log15.Syslog,
+  Log15.Term.Terminal.AppEngine,
+  Log15.Term.Terminal.Darwin,
+  Log15.Term.Terminal.Freebsd,
+  Log15.Term.Terminal.Linux,
+  Log15.Term.Terminal.Netbsd,
+  Log15.Term.Terminal.NotWindows,
+  Log15.Term.Terminal.Openbsd,
+  Log15.Term.Terminal.Solaris,
+  Log15.Term.Terminal.Windows,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils,
   VM,
-  VM.Quota,
-  Ledger.Chain.IntegrationTest.Test.AccountForIntegration;
+  VM.Quota;
 
 type
   [TestFixture]

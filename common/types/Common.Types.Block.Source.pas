@@ -3,6 +3,19 @@ unit Common.Types.BlockSource;
 interface
 
 uses
+  Common.Types.Address,
+  Common.Types.Address.Test,
+  Common.Types.Contracts,
+  Common.Types.Enum,
+  Common.Types.Error,
+  Common.Types.Gid,
+  Common.Types.Hash,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeID,
+  Common.Types.TokenTypeID.Test,
   System.SysUtils;
 
 type

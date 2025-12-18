@@ -3,13 +3,23 @@ unit Cmd.NodeManager.CheckChain;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	GoToDelphi.Dependencies.Cli,
-	GoToDelphi.Helpers.Log15,
-	Node.Node,
-	Cmd.NodeManager.NodeMaker,
-	Cmd.NodeManager.NodeManager;
+  Cmd.NodeManager.Assist,
+  Cmd.NodeManager.Default.Node.Manager,
+  Cmd.NodeManager.Export.Node.Manager,
+  Cmd.NodeManager.Full.Node.Maker,
+  Cmd.NodeManager.Local.Node.Maker,
+  Cmd.NodeManager.Node.Maker,
+  Cmd.NodeManager.Node.Manager,
+  Cmd.NodeManager.NodeMaker,
+  Cmd.NodeManager.NodeManager,
+  Cmd.NodeManager.Plugin.Data.Node.Manager,
+  Cmd.NodeManager.Recover.Node.Manager,
+  Cmd.NodeManager.SubCmd.Node.Manager,
+  GoToDelphi.Dependencies.Cli,
+  GoToDelphi.Helpers.Log15,
+  Node.Node,
+  System.Classes,
+  System.SysUtils;
 
 type
 	TCheckChainNodeManager = class( TInterfacedObject, INodeManager )

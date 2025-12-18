@@ -3,18 +3,29 @@ unit Ledger.Chain.State.Interface.Mock;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  System.Math.BigInt,
-  GoMock,
-  Interfaces.Core,
-  Ledger.Chain.DB,
-  Ledger.Consensus.Core,
   Common.DB.XLevelDB,
   Common.DB.XLevelDB.MemDB,
   Common.Types,
-  Ledger.Chain.State.Interface;
+  GoMock,
+  Interfaces.Core,
+  Ledger.Chain.DB,
+  Ledger.Chain.State.Cache,
+  Ledger.Chain.State.Delete,
+  Ledger.Chain.State.Interface,
+  Ledger.Chain.State.Iteration,
+  Ledger.Chain.State.Redo,
+  Ledger.Chain.State.Redo.Cache,
+  Ledger.Chain.State.Round.Cache,
+  Ledger.Chain.State.Round.Cache.Test,
+  Ledger.Chain.State.State.DB,
+  Ledger.Chain.State.Storage.Database,
+  Ledger.Chain.State.Transform.Iterator,
+  Ledger.Chain.State.Write,
+  Ledger.Consensus.Core,
+  System.Classes,
+  System.Generics.Collections,
+  System.Math.BigInt,
+  System.SysUtils;
 
 type
   TMockConsensus = class(TInterfacedObject, IConsensus)

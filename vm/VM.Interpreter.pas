@@ -3,9 +3,35 @@ unit Vm.Interpreter;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.SyncObjs,
-  Vite.Common.Helper, Vite.Common.Upgrade, Vite.Vm.Util,
-  Vm.Vm, Vm.Contract, Vm.Memory, Vm.Stack, Vm.Opcodes;
+  System.SysUtils System.Classes System.SyncObjs,
+  Vite.Common.Helper Vite.Common.Upgrade Vite.Vm.Util,
+  VM.Contract,
+  VM.Contract.Test,
+  VM.Contracts.Dex.Fund.Test,
+  VM.Contracts.Dex.Trade.Test,
+  VM.Contracts.Test,
+  VM.Database.Memory.Test,
+  VM.Database.Test,
+  VM.Destination,
+  VM.Destination.Test,
+  VM.Gas.Table,
+  VM.Gas.Table.Test,
+  VM.Instructions,
+  VM.Instructions.Test,
+  VM.Jump.Table,
+  VM.Memory,
+  VM.Memory.Table,
+  VM.Memory.Test,
+  VM.Mock.DB,
+  VM.Opcodes,
+  VM.Params,
+  VM.Stack,
+  VM.Stack.Table,
+  VM.Stack.Test,
+  VM.VM,
+  Vm.Vm Vm.Contract Vm.Memory Vm.Stack Vm.Opcodes,
+  VM.VM.Run.Test,
+  VM.VM.Test;
 
 type
   IOperation = interface

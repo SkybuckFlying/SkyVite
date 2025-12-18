@@ -3,12 +3,16 @@ unit Producer.Worker.Test;
 interface
 
 uses
-  SysUtils, Classes,
-  Producer.Worker,
-  Pow.Pow,           // For IPow
-  Ledger.Chain,      // For mock chain
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Chain      // For mock chain,
+  Pow.Pow           // For IPow,
+  Producer.Face,
+  Producer.Producer,
+  Producer.Producer.Test,
+  Producer.Tools,
+  Producer.Worker,
+  SysUtils Classes;
 
 type
   // Mock IPow for testing

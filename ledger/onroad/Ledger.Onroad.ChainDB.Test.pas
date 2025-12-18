@@ -3,11 +3,29 @@ unit Ledger.Onroad.ChainDB.Test;
 interface
 
 uses
-  SysUtils, Classes,
-  Ledger.Onroad.ChainDB, // The unit under test
-  Common.DB,             // For mock database
+  Common.DB             // For mock database,
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Onroad.Access,
+  Ledger.Onroad.Access.Test,
+  Ledger.Onroad.Chain.Events,
+  Ledger.Onroad.ChainDB // The unit under test,
+  Ledger.Onroad.Contract,
+  Ledger.Onroad.Contract.Test,
+  Ledger.Onroad.Manager,
+  Ledger.Onroad.Manager.Test,
+  Ledger.Onroad.Pending.Cache,
+  Ledger.Onroad.Pending.Cache.Test,
+  Ledger.Onroad.Reader,
+  Ledger.Onroad.Reader.Test,
+  Ledger.Onroad.Task.Pqueue,
+  Ledger.Onroad.Task.Pqueue.Test,
+  Ledger.Onroad.TaskProcessor,
+  Ledger.Onroad.TaskProcessor.Test,
+  Ledger.Onroad.Utils,
+  Ledger.Onroad.Utils.Test,
+  Ledger.Onroad.Worker,
+  SysUtils Classes;
 
 type
   TChainDBTest = class

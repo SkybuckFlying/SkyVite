@@ -3,9 +3,14 @@ unit Common.Db.Xleveldb.Util.Crc32;
 interface
 
 uses
-<<<<<<< HEAD
-  System.SysUtils,
-  GoToDelphi.Helpers.CRC32;
+  <<<<<<< HEAD,
+  Common.DB.XLevelDB.Util.Buffer,
+  Common.DB.XLevelDB.Util.Buffer.Pool,
+  Common.DB.XLevelDB.Util.Hash,
+  Common.DB.XLevelDB.Util.Range,
+  Common.DB.XLevelDB.Util.Util,
+  GoToDelphi.Helpers.CRC32,
+  System.SysUtils;
 
 type
   CRC = type Cardinal;

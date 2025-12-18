@@ -4,7 +4,14 @@ unit Log15.Syslog;
 interface
 
 uses
-  Log15, Log15.Format, Log15.Handler;
+  Log15 Log15.Format Log15.Handler,
+  Log15.Doc,
+  Log15.Format,
+  Log15.Handler,
+  Log15.Handler.Go13,
+  Log15.Handler.Go14,
+  Log15.Logger,
+  Log15.Root;
 
 type
   TSyslogPriority = (

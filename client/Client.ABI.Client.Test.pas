@@ -3,6 +3,14 @@ unit Client.AbiClient.Test;
 interface
 
 uses
+  Client.ABI.Client,
+  Client.Client,
+  Client.Client.Test,
+  Client.Dex.Client,
+  Client.Dex.Client.Test,
+  Client.RPC,
+  Client.RPC.Test,
+  Client.SBP.Upgrade.Test,
   DUnitX.TestFramework;
 
 type

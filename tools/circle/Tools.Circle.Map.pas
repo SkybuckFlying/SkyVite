@@ -3,7 +3,11 @@ unit Tools.Circle.Map;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, Tools.Circle.Base, Tools.Circle.List;
+  System.SysUtils System.Classes System.Generics.Collections Tools.Circle.Base Tools.Circle.List,
+  Tools.Circle.Base,
+  Tools.Circle.List,
+  Tools.Circle.List.Test,
+  Tools.Circle.Map.Test;
 
 type
   TTraverseFn = TFunc<TKey, TValue, Boolean>;

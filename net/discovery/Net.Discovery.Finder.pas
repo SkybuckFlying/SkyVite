@@ -3,8 +3,24 @@ unit net.discovery.finder;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  net.vnode;
+  Net.Discovery.Booter,
+  Net.Discovery.Booter.Test,
+  Net.Discovery.Bucket.Test,
+  Net.Discovery.Discovery,
+  Net.Discovery.Discovery.Test,
+  Net.Discovery.Message,
+  Net.Discovery.Message.Test,
+  Net.Discovery.Mock.Socket,
+  Net.Discovery.Node,
+  Net.Discovery.Node.Test,
+  Net.Discovery.Pool,
+  Net.Discovery.Pool.Test,
+  Net.Discovery.Socket,
+  Net.Discovery.Socket.Test,
+  Net.Discovery.Table,
+  Net.Discovery.Table.Test,
+  net.vnode,
+  System.SysUtils System.Classes System.Generics.Collections;
 
 type
   ISubscriber = interface

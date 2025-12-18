@@ -3,8 +3,11 @@ unit Cmd.Utils.Flags;
 interface
 
 uses
-	Cli,
-	Cmd.Utils.CustomFlags;
+  Cli,
+  Cmd.Utils.Cli,
+  Cmd.Utils.CustomFlags,
+  Cmd.Utils.Customflags.Test,
+  Cmd.Utils.Path;
 
 // Config settings
 var

@@ -3,16 +3,30 @@ unit Net.Discovery.Pool;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  System.Threading,
-  System.DateUtils,
-  Net.VNode,
-  Net.Discovery.Message,
-  Net.Discovery.Node,
+  GoToDelphi.Helpers.TChannel,
   GoToDelphi.Helpers.TList,
-  GoToDelphi.Helpers.TChannel;
+  Net.Discovery.Booter,
+  Net.Discovery.Booter.Test,
+  Net.Discovery.Bucket.Test,
+  Net.Discovery.Discovery,
+  Net.Discovery.Discovery.Test,
+  Net.Discovery.Finder,
+  Net.Discovery.Message,
+  Net.Discovery.Message.Test,
+  Net.Discovery.Mock.Socket,
+  Net.Discovery.Node,
+  Net.Discovery.Node.Test,
+  Net.Discovery.Pool.Test,
+  Net.Discovery.Socket,
+  Net.Discovery.Socket.Test,
+  Net.Discovery.Table,
+  Net.Discovery.Table.Test,
+  Net.VNode,
+  System.Classes,
+  System.DateUtils,
+  System.Generics.Collections,
+  System.SysUtils,
+  System.Threading;
 
 const
   ErrStopped = 'discovery server has stopped';

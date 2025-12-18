@@ -4,8 +4,16 @@ interface
 
 {$IFDEF OPENBSD}
 uses
-	Posix.SysIoctl,
-	Posix.Termios;
+  Log15.Term.Terminal.AppEngine,
+  Log15.Term.Terminal.Darwin,
+  Log15.Term.Terminal.Freebsd,
+  Log15.Term.Terminal.Linux,
+  Log15.Term.Terminal.Netbsd,
+  Log15.Term.Terminal.NotWindows,
+  Log15.Term.Terminal.Solaris,
+  Log15.Term.Terminal.Windows,
+  Posix.SysIoctl,
+  Posix.Termios;
 
 const
 	Const_IOCtlReadTermios = TIOCGETA;

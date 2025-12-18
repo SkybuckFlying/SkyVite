@@ -4,7 +4,15 @@ interface
 
 uses
   GoToDelphi.Helpers.BigInt,
-  System.Generics.Collections;
+  System.Generics.Collections,
+  VM.Util.Common,
+  VM.Util.Consensus.Reader,
+  VM.Util.DB.Helper,
+  VM.Util.Errors,
+  VM.Util.Intpool.Test,
+  VM.Util.Quota,
+  VM.Util.Quota.Test,
+  VM.Util.Types;
 
 const
   poolLimit = 256;

@@ -3,10 +3,16 @@ unit Ledger.Chain.Sync.Cache.Writer;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
+  Ledger.Chain.Sync.Cache.Cache.Item,
+  Ledger.Chain.Sync.Cache.Cache.Item.Test,
+  Ledger.Chain.Sync.Cache.Reader,
+  Ledger.Chain.Sync.Cache.Reader.Test,
+  Ledger.Chain.Sync.Cache.Segment,
+  Ledger.Chain.Sync.Cache.Segment.Test,
   Ledger.Chain.Sync.Cache.Sync.Cache,
-  Ledger.Chain.Sync.Cache.Cache.Item;
+  Ledger.Chain.Sync.Cache.Sync.Cache.Test,
+  System.Classes,
+  System.SysUtils;
 
 type
   TWriter = class(TStream)

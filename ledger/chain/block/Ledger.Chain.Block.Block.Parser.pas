@@ -3,7 +3,13 @@ unit block_parser;
 interface
 
 uses
-  SysUtils, Classes;
+  Ledger.Chain.Block.Account.Block,
+  Ledger.Chain.Block.Block.DB,
+  Ledger.Chain.Block.Block.DB.Test,
+  Ledger.Chain.Block.Buffer,
+  Ledger.Chain.Block.Flush,
+  Ledger.Chain.Block.Snapshot.Block,
+  SysUtils Classes;
 
 const
   BlockTypeUnknown = $00;

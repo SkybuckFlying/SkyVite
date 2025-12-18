@@ -3,9 +3,10 @@ unit tools.unique_list.unique_list;
 interface
 
 uses
-  System.SysUtils,
   System.Classes,
-  System.Generics.Collections;
+  System.Generics.Collections,
+  System.SysUtils,
+  Tools.Unique.List.Unique.List.Test;
 
 type
   TElement = class

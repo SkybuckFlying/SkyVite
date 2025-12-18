@@ -3,10 +3,22 @@ unit Common.Config.Net;
 interface
 
 uses
-  System.SysUtils,
+  Common.Config.Chain,
+  Common.Config.Config,
+  Common.Config.Genesis,
+  Common.Config.Genesis.Json,
+  Common.Config.Genesis.Mock.Json,
+  Common.Config.Genesis.Test,
+  Common.Config.Node.Reward,
+  Common.Config.Producer,
+  Common.Config.Subscribe,
+  Common.Config.Upgrade,
+  Common.Config.VM,
+  Common.Config.Wallet,
+  Crypto.Ed25519,
   System.Classes,
   System.Generics.Collections,
-  Crypto.Ed25519;
+  System.SysUtils;
 
 const
   ConstDefaultSingle = false;

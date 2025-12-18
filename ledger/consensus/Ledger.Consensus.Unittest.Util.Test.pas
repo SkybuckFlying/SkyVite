@@ -3,10 +3,39 @@ unit Ledger.Consensus.UnitTest.Util;
 interface
 
 uses
-  DUnitX.TestFramework,
   Common.Config,
+  DUnitX.TestFramework,
+  GoToDelphi.Helpers.LevelDB,
   Ledger.Chain,
-  GoToDelphi.Helpers.LevelDB;
+  Ledger.Consensus.API,
+  Ledger.Consensus.Chain.Rw,
+  Ledger.Consensus.Chain.Rw.Test,
+  Ledger.Consensus.Config,
+  Ledger.Consensus.Consensus,
+  Ledger.Consensus.Consensus.Contract,
+  Ledger.Consensus.Consensus.Contract.Dpos,
+  Ledger.Consensus.Consensus.Contract.Dpos.Test,
+  Ledger.Consensus.Consensus.Event,
+  Ledger.Consensus.Consensus.Impl,
+  Ledger.Consensus.Consensus.Point.Array,
+  Ledger.Consensus.Consensus.Point.Array.Test,
+  Ledger.Consensus.Consensus.Simple,
+  Ledger.Consensus.Consensus.Simple.Test,
+  Ledger.Consensus.Consensus.Snapshot,
+  Ledger.Consensus.Consensus.Snapshot.Test,
+  Ledger.Consensus.Consensus.Test,
+  Ledger.Consensus.Consensus.Verifier,
+  Ledger.Consensus.Dpos,
+  Ledger.Consensus.Mock.Ch,
+  Ledger.Consensus.Mock.DposReader,
+  Ledger.Consensus.Mock.Linkedarray,
+  Ledger.Consensus.Mock.Rollback.Proof,
+  Ledger.Consensus.Result,
+  Ledger.Consensus.Rollback.Proof,
+  Ledger.Consensus.Rollback.Proof.Test,
+  Ledger.Consensus.Snapshot.Listener,
+  Ledger.Consensus.Subscriber,
+  Ledger.Consensus.Trigger;
 
 const
   GenesisJson = '{"GenesisAccountAddress":"vite_ab24ef68b84e642c0ddca06beec81c9acb1977bbd7da27a87a","ForkPoints":{},"GovernanceInfo":{"ConsensusGroupInfoMap":{"00000000000000000001":{"NodeCount":3,"Interval":1,"PerCount":3,"RandCount":2,"RandRank":100,"Repeat":1,"CheckLevel":0,"CountingTokenId":"tti_5649544520544f4b454e6e40","RegisterConditionId":1,"RegisterConditionParam":{"StakeAmount":100000000000000000000000,"StakeHeight":1,"StakeToken":"tti_5649544520544f4b454e6e40"},"VoteConditionId":1,"VoteConditionParam":{},"Owner":"vite_ab24ef68b84e642c0ddca06beec81c9acb1977bbd7da27a87a","StakeAmount":0,"ExpirationHeight":1},"00000000000000000002":{"NodeCount":3,"Interval":3,"PerCount":1,"RandCount":2,"RandRank":100,"Repeat":48,"CheckLevel":1,"CountingTokenId":"tti_5649544520544f4b454e6e40","RegisterConditionId":1,"RegisterConditionParam":{"StakeAmount":100000000000000000000000,"StakeHeight":1,"StakeToken":"tti_5649544520544f4b454e6e40"},"VoteConditionId":1,"VoteConditionParam":{},"Owner":"vite_ab24ef68b84e642c0ddca06beec81c9acb1977bbd7da27a87a","StakeAmount":0,"ExpirationHeight":1}},"RegistrationInfoMap":{"00000000000000000001":{"s1":{"BlockProducingAddress":"vite_360232b0378111b122685a15e612143dc9a89cfa7e803f4b5a","StakeAddress":"vite_360232b0378111b122685a15e612143dc9a89cfa7e803f4b5a","Amount":100000000000000000000000,"ExpirationHeight":7776000,"RewardTime":1,"RevokeTime":0,"HistoryAddressList":["vite_360232b0378111b122685a15e612143dc9a89cfa7e803f4b5a"]},"s2":{"BlockProducingAddress":"vite_ce18b99b46c70c8e6bf34177d0c5db956a8c3ea7040a1c1e25","StakeAddress":"vite_ce18b99b46c70c8e6bf34177d0c5db956a8c3ea7040a1c1e25","Amount":100000000000000000000000,"ExpirationHeight":7776000,"RewardTime":1,"RevokeTime":0,"HistoryAddressList":["vite_ce18b99b46c70c8e6bf34177d0c5db956a8c3ea7040a1c1e25"]},"s3":{"BlockProducingAddress":"vite_409...';

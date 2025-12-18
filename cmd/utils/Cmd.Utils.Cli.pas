@@ -3,7 +3,11 @@ unit Cmd.Utils.Cli;
 interface
 
 uses
-	Cli;
+  Cli,
+  Cmd.Utils.Customflags,
+  Cmd.Utils.Customflags.Test,
+  Cmd.Utils.Flags,
+  Cmd.Utils.Path;
 
 implementation
 

@@ -4,11 +4,40 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
+  Ledger.Consensus.API,
+  Ledger.Consensus.Chain.Rw,
+  Ledger.Consensus.Chain.Rw.Test,
+  Ledger.Consensus.Config,
+  Ledger.Consensus.Consensus,
+  Ledger.Consensus.Consensus.Contract,
+  Ledger.Consensus.Consensus.Contract.Dpos,
+  Ledger.Consensus.Consensus.Contract.Dpos.Test,
+  Ledger.Consensus.Consensus.Event,
+  Ledger.Consensus.Consensus.Impl,
+  Ledger.Consensus.Consensus.Point.Array,
+  Ledger.Consensus.Consensus.Point.Array.Test,
+  Ledger.Consensus.Consensus.Simple,
+  Ledger.Consensus.Consensus.Snapshot,
+  Ledger.Consensus.Consensus.Snapshot.Test,
+  Ledger.Consensus.Consensus.Test,
+  Ledger.Consensus.Consensus.Verifier,
+  Ledger.Consensus.ConsensusSimple,
+  Ledger.Consensus.Dpos,
+  Ledger.Consensus.Mock.Ch,
+  Ledger.Consensus.Mock.DposReader,
+  Ledger.Consensus.Mock.Linkedarray,
+  Ledger.Consensus.Mock.Rollback.Proof,
+  Ledger.Consensus.Result,
+  Ledger.Consensus.Rollback.Proof,
+  Ledger.Consensus.Rollback.Proof.Test,
+  Ledger.Consensus.Snapshot.Listener,
+  Ledger.Consensus.Subscriber,
+  Ledger.Consensus.Trigger,
+  Ledger.Consensus.Unittest.Util.Test,
+  Log15,
   System.Classes,
   System.Generics.Collections,
-  Ledger.Consensus.ConsensusSimple,
-  Log15;
+  System.SysUtils;
 
 type
   [TestFixture]

@@ -3,12 +3,21 @@ unit Ledger.Chain.Index.Test.IndexDB;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  DUnitX.TestFramework,
   Common,
   Common.Types,
-  Ledger.Chain.Index;
+  DUnitX.TestFramework,
+  Ledger.Chain.Index,
+  Ledger.Chain.Index.Account,
+  Ledger.Chain.Index.Account.Block,
+  Ledger.Chain.Index.Cache,
+  Ledger.Chain.Index.Delete,
+  Ledger.Chain.Index.Index.DB,
+  Ledger.Chain.Index.Insert,
+  Ledger.Chain.Index.Interface,
+  Ledger.Chain.Index.Onroad,
+  Ledger.Chain.Index.Snapshot.Block,
+  System.Classes,
+  System.SysUtils;
 
 type
   [TestFixture]

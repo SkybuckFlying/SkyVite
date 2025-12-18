@@ -3,11 +3,23 @@ unit Common.Config.Upgrade;
 interface
 
 uses
-  System.SysUtils,
+  Common.Config.Chain,
+  Common.Config.Config,
+  Common.Config.Genesis,
+  Common.Config.Genesis.Json,
+  Common.Config.Genesis.Mock.Json,
+  Common.Config.Genesis.Test,
+  Common.Config.Net,
+  Common.Config.Node.Reward,
+  Common.Config.Producer,
+  Common.Config.Subscribe,
+  Common.Config.VM,
+  Common.Config.Wallet,
+  Common.Upgrade,
   System.Classes,
   System.Generics.Collections,
   System.JSON,
-  Common.Upgrade;
+  System.SysUtils;
 
 /*
  * Copyright 2019 The go-vite Authors

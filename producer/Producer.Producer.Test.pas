@@ -3,11 +3,16 @@ unit Producer.Producer.Test;
 interface
 
 uses
-  SysUtils, Classes,
-  Producer.Producer, // The unit under test
-  Ledger.Chain,      // For mock chain
   Common.Types,
   Interfaces.Core,
+  Ledger.Chain      // For mock chain,
+  Producer.Face,
+  Producer.Producer,
+  Producer.Producer // The unit under test,
+  Producer.Tools,
+  Producer.Worker,
+  Producer.Worker.Test,
+  SysUtils Classes,
   unit_GoLang_Compatibility_version_006;
 
 type

@@ -133,8 +133,10 @@ NOTE: All fixed-length integer are little-endian.
 interface
 
 uses
-  System.SysUtils,
-  System.Classes;
+  Common.DB.XLevelDB.Table.Reader,
+  Common.DB.XLevelDB.Table.Writer,
+  System.Classes,
+  System.SysUtils;
 
 const
   BlockTrailerLen = 5;

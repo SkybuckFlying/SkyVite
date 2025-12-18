@@ -4,9 +4,17 @@ interface
 
 {$IFNDEF MSWINDOWS}
 uses
-	Posix.SysIoctl,
-	Posix.Unistd,
-	Log15.Term.Terminal.Linux; // Assuming common types or similar
+  Log15.Term.Terminal.AppEngine,
+  Log15.Term.Terminal.Darwin,
+  Log15.Term.Terminal.Freebsd,
+  Log15.Term.Terminal.Linux,
+  Log15.Term.Terminal.Linux // Assuming common types or similar,
+  Log15.Term.Terminal.Netbsd,
+  Log15.Term.Terminal.Openbsd,
+  Log15.Term.Terminal.Solaris,
+  Log15.Term.Terminal.Windows,
+  Posix.SysIoctl,
+  Posix.Unistd;
 
 function IsTty( ParaFD : Integer ) : Boolean;
 {$ENDIF}

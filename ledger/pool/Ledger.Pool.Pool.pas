@@ -3,10 +3,34 @@ unit Ledger.Pool.Pool;
 interface
 
 uses
-  SysUtils, Classes, SyncObjs,
-  System.Generics.Collections,
   Common.Types,
   Interfaces.Core,
+  Ledger.Pool.Account.Pool,
+  Ledger.Pool.Bc.Pool,
+  Ledger.Pool.Blacklist,
+  Ledger.Pool.Blacklist.Test,
+  Ledger.Pool.Branch.Chain,
+  Ledger.Pool.Chain.Pool,
+  Ledger.Pool.Chain.Pool.Test,
+  Ledger.Pool.Context,
+  Ledger.Pool.Face,
+  Ledger.Pool.Mock.Common.Block,
+  Ledger.Pool.Pipeline.Pool,
+  Ledger.Pool.Pool.Batch,
+  Ledger.Pool.Pool.Batch.Chunk,
+  Ledger.Pool.Pool.Batch.Fork,
+  Ledger.Pool.Pool.Fork.Checker,
+  Ledger.Pool.Pool.Fork.Checker.Test,
+  Ledger.Pool.Snapshot.Listener,
+  Ledger.Pool.Snapshot.Pool,
+  Ledger.Pool.Snapshot.Pool.Test,
+  Ledger.Pool.Tools,
+  Ledger.Pool.Tools.Chain,
+  Ledger.Pool.Tools.Fetcher,
+  Ledger.Pool.Tools.Verifier,
+  Ledger.Pool.Worker,
+  System.Generics.Collections,
+  SysUtils Classes SyncObjs,
   unit_Go__Lang_Compatibility_version_006;
 
 type

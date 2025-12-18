@@ -3,9 +3,16 @@ unit Vm.Contracts.Abi.AbiGovernance;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Vm.Abi.Abi, Common.Types.Address, Common.Types.Gid, Common.Types.TokenTypeId,
-  Interfaces.VmDb, Common.Types.Contracts, Vm.Util.Util;
+  Interfaces.VmDb Common.Types.Contracts Vm.Util.Util,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vm.Abi.Abi Common.Types.Address Common.Types.Gid Common.Types.TokenTypeId,
+  VM.Contracts.ABI.ABI.Asset,
+  VM.Contracts.ABI.ABI.Dex.Fund,
+  VM.Contracts.ABI.ABI.Dex.Fund.Test,
+  VM.Contracts.ABI.ABI.Dex.Trade,
+  VM.Contracts.ABI.ABI.Quota,
+  VM.Contracts.ABI.ABI.Test,
+  VM.Contracts.ABI.Util;
 
 const
   VariableNameConsensusGroupInfo = 'consensusGroupInfo';

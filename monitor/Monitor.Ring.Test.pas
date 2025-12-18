@@ -4,6 +4,9 @@ interface
 
 uses
   DUnitX.TestFramework,
+  Monitor.Monitor,
+  Monitor.Monitor.Test,
+  Monitor.Ntp,
   Monitor.Ring;
 
 type

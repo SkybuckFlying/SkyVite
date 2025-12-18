@@ -3,12 +3,15 @@ unit Wallet.Account.Test;
 interface
 
 uses
-  SysUtils,
   DUnitX.TestFramework,
   GoToDelphi.Helpers.TBytes,
-  Vite.Crypto,
+  SysUtils,
   Vite.Common.Types,
-  Wallet.Account;
+  Vite.Crypto,
+  Wallet.Account,
+  Wallet.Manager,
+  Wallet.Manager.Test,
+  Wallet.Wallet;
 
 type
   [TestFixture]

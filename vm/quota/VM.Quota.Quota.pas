@@ -3,10 +3,13 @@ unit VM.Quota.Quota;
 interface
 
 uses
-  GoToDelphi.Helpers.BigInt,
   Common.Types,
+  GoToDelphi.Helpers.BigInt,
   Interfaces.Core,
-  System.Generics.Collections;
+  System.Generics.Collections,
+  VM.Quota.Params,
+  VM.Quota.Params.Test,
+  VM.Quota.Quota.Test;
 
 type
   TQuotaDb = interface

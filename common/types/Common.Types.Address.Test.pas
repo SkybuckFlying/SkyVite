@@ -3,15 +3,27 @@ unit Common.Types.Address.Test;
 interface
 
 uses
-	DUnitX.TestFramework,
-	System.SysUtils,
-	System.JSON,
-	System.Classes,
-	System.Net.Encoding,
-	Common.Types.Address,
-	Common.Bytes,
-	Common.HexUtil,
-	Crypto.Ed25519;
+  Common.Bytes,
+  Common.HexUtil,
+  Common.Types.Address,
+  Common.Types.Block.Source,
+  Common.Types.Contracts,
+  Common.Types.Enum,
+  Common.Types.Error,
+  Common.Types.Gid,
+  Common.Types.Hash,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeID,
+  Common.Types.TokenTypeID.Test,
+  Crypto.Ed25519,
+  DUnitX.TestFramework,
+  System.Classes,
+  System.JSON,
+  System.Net.Encoding,
+  System.SysUtils;
 
 type
 	[TestFixture]

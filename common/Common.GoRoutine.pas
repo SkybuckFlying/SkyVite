@@ -3,7 +3,23 @@ unit Common.GoRoutine;
 interface
 
 uses
-	System.SysUtils;
+  Common.Bytes,
+  Common.Bytes.Test,
+  Common.Condtimeout,
+  Common.Condtimeout.Test,
+  Common.Condtimer,
+  Common.Condtimer.Test,
+  Common.Default.Params,
+  Common.GoRoutine.Test,
+  Common.Lifecycle,
+  Common.Lock,
+  Common.Lock.Test,
+  Common.Log,
+  Common.Mock,
+  Common.Mock.Test,
+  Common.Utils,
+  Common.Version,
+  System.SysUtils;
 
 type
 	TGoProc = reference to procedure;

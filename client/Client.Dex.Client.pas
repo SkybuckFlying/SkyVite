@@ -3,11 +3,19 @@ unit Client.Dex.Client;
 interface
 
 uses
-  System.SysUtils,
-  System.Math.BigInts,
+  Client.ABI.Client,
+  Client.ABI.Client.Test,
+  Client.Client,
+  Client.Client.Test,
+  Client.Dex.Client.Test,
+  Client.RPC,
+  Client.RPC.Test,
+  Client.SBP.Upgrade.Test,
   Common.Types,
   Interfaces.Core,
   RpcApi.Api,
+  System.Math.BigInts,
+  System.SysUtils,
   VM.Contracts.ABI,
   VM.Contracts.Dex;
 

@@ -3,14 +3,16 @@ unit Ledger.Pipeline.Blocks.Test;
 interface
 
 uses
+  Common.FileUtils,
   DUnitX.TestFramework,
-  System.SysUtils,
+  Ledger.Chain.Block,
+  Ledger.Pipeline.Blocks,
+  Ledger.Pipeline.Pipeline.Blocks,
+  Ledger.Pipeline.Pipeline.Blocks.Test,
   System.Classes,
   System.IOUtils,
-  Common.FileUtils,
-  Vite.Interfaces.Core,
-  Ledger.Chain.Block,
-  Ledger.Pipeline.Blocks;
+  System.SysUtils,
+  Vite.Interfaces.Core;
 
 type
   [TestFixture]

@@ -3,13 +3,20 @@ unit Ledger.Chain.Sync.Cache.Reader;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.IOUtils,
   Interfaces.Core,
+  Ledger.Chain.Block,
   Ledger.Chain.Sync.Cache,
   Ledger.Chain.Sync.Cache.Cache.Item,
-  Ledger.Chain.Block;
+  Ledger.Chain.Sync.Cache.Cache.Item.Test,
+  Ledger.Chain.Sync.Cache.Reader.Test,
+  Ledger.Chain.Sync.Cache.Segment,
+  Ledger.Chain.Sync.Cache.Segment.Test,
+  Ledger.Chain.Sync.Cache.Sync.Cache,
+  Ledger.Chain.Sync.Cache.Sync.Cache.Test,
+  Ledger.Chain.Sync.Cache.Writer,
+  System.Classes,
+  System.IOUtils,
+  System.SysUtils;
 
 type
   TReader = class

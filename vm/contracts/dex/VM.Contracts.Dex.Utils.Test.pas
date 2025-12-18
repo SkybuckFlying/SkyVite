@@ -3,11 +3,30 @@ unit VM.Contracts.Dex.Utils.Test;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Common.Types,
-	VM.Contracts.Dex.Utils,
-	unit_GoLang_Compatibility_version_006;
+  Common.Types,
+  System.Classes,
+  System.SysUtils,
+  unit_GoLang_Compatibility_version_006,
+  VM.Contracts.Dex.Account,
+  VM.Contracts.Dex.Calculator,
+  VM.Contracts.Dex.Errors,
+  VM.Contracts.Dex.Events,
+  VM.Contracts.Dex.Fund.Dividend,
+  VM.Contracts.Dex.Fund.Event,
+  VM.Contracts.Dex.Fund.Finish.Pendings,
+  VM.Contracts.Dex.Fund.Helper,
+  VM.Contracts.Dex.Fund.Helper.Test,
+  VM.Contracts.Dex.Fund.Mine,
+  VM.Contracts.Dex.Fund.Settle,
+  VM.Contracts.Dex.Fund.Stake,
+  VM.Contracts.Dex.Fund.Storage,
+  VM.Contracts.Dex.Fund.Verifier,
+  VM.Contracts.Dex.Leveldb.Book,
+  VM.Contracts.Dex.Matcher,
+  VM.Contracts.Dex.Matcher.Test,
+  VM.Contracts.Dex.Order,
+  VM.Contracts.Dex.Trade.Helper,
+  VM.Contracts.Dex.Utils;
 
 procedure TestDeComposeOrderId;
 

@@ -3,6 +3,12 @@ unit errors;
 interface
 
 uses
+  Ledger.Verifier.Account.Verifier,
+  Ledger.Verifier.Common,
+  Ledger.Verifier.Reader,
+  Ledger.Verifier.Snapshot.Verifier,
+  Ledger.Verifier.Snapshot.Verifier.Test,
+  Ledger.Verifier.Verifier,
   System.SysUtils;
 
 var

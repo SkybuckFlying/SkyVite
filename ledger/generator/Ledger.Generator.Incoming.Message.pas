@@ -3,8 +3,11 @@ unit incoming_message;
 interface
 
 uses
-  System.SysUtils, System.Classes,
-  Vite.Interfaces, Vite.Ledger, Vite.Common, Vite.Pow, big_int;
+  Ledger.Generator.Generator,
+  Ledger.Generator.Utils,
+  Ledger.Generator.Utils.Test,
+  System.SysUtils System.Classes,
+  Vite.Interfaces Vite.Ledger Vite.Common Vite.Pow big_int;
 
 function IncomingMessageToBlock(vmDb: IVmDb; im: IIncomingMessage): TAccountBlock;
 

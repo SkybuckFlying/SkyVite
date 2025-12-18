@@ -3,8 +3,11 @@ unit Common.Bloom.Bucket;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes;
+  Common.Bloom.Bloom,
+  Common.Bloom.Bloom.Test,
+  Common.Bloom.Util,
+  System.Classes,
+  System.SysUtils;
 
 type
   // TBuckets is a fast, space-efficient array of buckets where each bucket can

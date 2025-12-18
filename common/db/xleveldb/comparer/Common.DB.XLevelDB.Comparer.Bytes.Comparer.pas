@@ -3,7 +3,8 @@ unit bytes_comparer;
 interface
 
 uses
-  SysUtils, Classes, comparer;
+  Common.DB.XLevelDB.Comparer.Comparer,
+  SysUtils Classes comparer;
 
 type
   TBytesComparer = class(TInterfacedObject, IComparer)

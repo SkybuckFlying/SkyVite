@@ -3,11 +3,11 @@ unit common.db.xleveldb.filter.bloom;
 interface
 
 uses
-  System.SysUtils,
+  common.db.xleveldb.filter.filter,
+  common.db.xleveldb.util // For Hash function,
   System.Classes,
   System.Generics.Collections,
-  common.db.xleveldb.filter.filter,
-  common.db.xleveldb.util; // For Hash function
+  System.SysUtils;
 
 type
   TBloomFilter = class(TInterfacedObject, IFilter)

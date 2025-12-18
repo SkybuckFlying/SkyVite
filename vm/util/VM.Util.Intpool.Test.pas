@@ -4,9 +4,16 @@ interface
 
 uses
   DUnitX.TestFramework,
-  vm.util.intpool,
   GoToDelphi.Helpers.BigInt,
-  SysUtils;
+  SysUtils,
+  VM.Util.Common,
+  VM.Util.Consensus.Reader,
+  VM.Util.DB.Helper,
+  VM.Util.Errors,
+  vm.util.intpool,
+  VM.Util.Quota,
+  VM.Util.Quota.Test,
+  VM.Util.Types;
 
 type
   [TestFixture]

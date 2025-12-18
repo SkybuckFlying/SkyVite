@@ -3,11 +3,16 @@ unit Client.Rpc.DexTrade;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
+  Client.RPC.Contract,
+  Client.RPC.Ledger,
+  Client.RPC.Onroad,
+  Client.RPC.Random,
+  Client.RPC.Tx,
   Common.Types,
   Rpc,
-  RpcApi.Api.Dex;
+  RpcApi.Api.Dex,
+  System.Classes,
+  System.SysUtils;
 
 type
 	IDexTradeApi = interface

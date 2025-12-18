@@ -3,11 +3,21 @@ unit Cmd.NodeManager.FullNodeMaker;
 interface
 
 uses
-	System.Classes,
-	GoToDelphi.Dependencies.Cli,
-	Cmd.NodeManager.BaseNodeMaker,
-	Node.Node,
-	Node.Config;
+  Cmd.NodeManager.Assist,
+  Cmd.NodeManager.BaseNodeMaker,
+  Cmd.NodeManager.Check.Chain,
+  Cmd.NodeManager.Default.Node.Manager,
+  Cmd.NodeManager.Export.Node.Manager,
+  Cmd.NodeManager.Local.Node.Maker,
+  Cmd.NodeManager.Node.Maker,
+  Cmd.NodeManager.Node.Manager,
+  Cmd.NodeManager.Plugin.Data.Node.Manager,
+  Cmd.NodeManager.Recover.Node.Manager,
+  Cmd.NodeManager.SubCmd.Node.Manager,
+  GoToDelphi.Dependencies.Cli,
+  Node.Config,
+  Node.Node,
+  System.Classes;
 
 type
 	TFullNodeMaker = class( TBaseNodeMaker )

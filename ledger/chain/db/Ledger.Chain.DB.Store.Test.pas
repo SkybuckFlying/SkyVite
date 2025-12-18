@@ -3,10 +3,17 @@ unit Ledger.Chain.Db.Store.Test;
 interface
 
 uses
+  Common.Utils Crypto.Hash,
   DUnitX.TestFramework,
-  System.SysUtils, System.Classes, System.Generics.Collections, System.IOUtils,
-  Ledger.Chain.Db.Store, Common.DB.XLevelDB, Common.Test.Tools, Vite.Common.Types,
-  Common.Utils, Crypto.Hash;
+  Ledger.Chain.DB.Flush,
+  Ledger.Chain.DB.Flush.Test,
+  Ledger.Chain.DB.Mem.DB.Test,
+  Ledger.Chain.DB.Rollback,
+  Ledger.Chain.DB.Store,
+  Ledger.Chain.Db.Store Common.DB.XLevelDB Common.Test.Tools Vite.Common.Types,
+  Ledger.Chain.DB.Unconfirmed.Batch,
+  Ledger.Chain.DB.Write,
+  System.SysUtils System.Classes System.Generics.Collections System.IOUtils;
 
 type
   TChecker = class

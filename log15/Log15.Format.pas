@@ -3,7 +3,14 @@ unit Log15.Format;
 interface
 
 uses
-  System.SysUtils, System.Classes, Log15;
+  Log15.Doc,
+  Log15.Handler,
+  Log15.Handler.Go13,
+  Log15.Handler.Go14,
+  Log15.Logger,
+  Log15.Root,
+  Log15.Syslog,
+  System.SysUtils System.Classes Log15;
 
 function TerminalFormat: Log15.IFormat;
 function LogfmtFormat: Log15.IFormat;

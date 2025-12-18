@@ -3,9 +3,10 @@ unit RpcApi.Api.Dex.Util;
 interface
 
 uses
-  System.SysUtils, System.Classes, BigNumbers,
-  Vite, Common.Types, Interfaces, Vm.Contracts.Dex, Vm.Util,
-  RpcApi.Api.Dex.RpcConverter;
+  RpcApi.API.Dex.RPC.Converter,
+  RpcApi.Api.Dex.RpcConverter,
+  System.SysUtils System.Classes BigNumbers,
+  Vite Common.Types Interfaces Vm.Contracts.Dex Vm.Util;
 
 function GetConsensusReader(AVite: TVite): TVMConsensusReader;
 function AmountBytesToString(Amt: TBytes): string;

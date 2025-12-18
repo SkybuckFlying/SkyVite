@@ -3,9 +3,16 @@ unit Ledger.Chain.Utils.Keys;
 interface
 
 uses
-  System.SysUtils,
+  Common.Types,
+  Ledger.Chain.Utils.Conversion,
+  Ledger.Chain.Utils.Generate.Key,
+  Ledger.Chain.Utils.Generate.Key.Test,
+  Ledger.Chain.Utils.Key.Prefix,
+  Ledger.Chain.Utils.Keys.Index.DB,
+  Ledger.Chain.Utils.Keys.State.DB,
+  Ledger.Chain.Utils.Keys.State.Redo.DB,
   System.Classes,
-  Common.Types;
+  System.SysUtils;
 
 type
   TStorageRealKey = record

@@ -3,9 +3,19 @@ unit Ledger.Pool.Batch.Executor;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
+  Common.Types,
   Ledger.Pool.Batch,
-  Common.Types;
+  Ledger.Pool.Batch.Batch,
+  Ledger.Pool.Batch.Batch.Impl,
+  Ledger.Pool.Batch.Batch.Test,
+  Ledger.Pool.Batch.Bucket,
+  Ledger.Pool.Batch.Example.Test,
+  Ledger.Pool.Batch.Level,
+  Ledger.Pool.Batch.Level.Account,
+  Ledger.Pool.Batch.Level.Snapshot,
+  Ledger.Pool.Batch.Mock.Chain,
+  Ledger.Pool.Batch.Mock.Item,
+  System.SysUtils System.Classes System.Generics.Collections;
 
 type
   TBatchExecutor = class

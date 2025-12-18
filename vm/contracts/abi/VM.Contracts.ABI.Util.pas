@@ -3,8 +3,15 @@ unit Vm.Contracts.Abi.AbiUtil;
 interface
 
 uses
-  System.SysUtils, System.Classes,
-  Common.Types.Address, Interfaces.Chain;
+  Common.Types.Address Interfaces.Chain,
+  System.SysUtils System.Classes,
+  VM.Contracts.ABI.ABI.Asset,
+  VM.Contracts.ABI.ABI.Dex.Fund,
+  VM.Contracts.ABI.ABI.Dex.Fund.Test,
+  VM.Contracts.ABI.ABI.Dex.Trade,
+  VM.Contracts.ABI.ABI.Gonvernance,
+  VM.Contracts.ABI.ABI.Quota,
+  VM.Contracts.ABI.ABI.Test;
 
 type
   IStorageDatabase = interface

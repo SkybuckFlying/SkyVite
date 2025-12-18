@@ -3,7 +3,11 @@ unit Common.Upgrade;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, Common.Upgrade.Face, Common.Log;
+  Common.Upgrade.Face,
+  Common.Upgrade.Height.Point,
+  Common.Upgrade.Upgrade.Init,
+  Common.Upgrade.Upgrade.Test,
+  System.SysUtils System.Classes System.Generics.Collections Common.Upgrade.Face Common.Log;
 
 const
   EndlessHeight = 1000000000;

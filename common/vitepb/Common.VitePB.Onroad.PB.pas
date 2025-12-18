@@ -3,6 +3,14 @@ unit Common.VitePb.Onroad;
 interface
 
 uses
+  Common.VitePB.Account.Block.PB,
+  Common.VitePB.Account.Blockmeta.PB,
+  Common.VitePB.Account.PB,
+  Common.VitePB.Consensus.Point.PB,
+  Common.VitePB.Message.PB,
+  Common.VitePB.Snapshot.Block.PB,
+  Common.VitePB.Sync.Cache.PB,
+  Common.VitePB.VM.Log.List.PB,
   System.SysUtils;
 
 type

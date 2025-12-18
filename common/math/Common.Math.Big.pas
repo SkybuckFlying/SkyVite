@@ -19,9 +19,12 @@ unit Common.Math.Big;
 interface
 
 uses
-  System.SysUtils,
+  Common.Bytes,
+  Common.Math.Big.Test,
+  Common.Math.Integer,
+  Common.Math.Integer.Test,
   System.Math.BigInts,
-  Common.Bytes;
+  System.SysUtils;
 
 type
   TBytes = TArray<Byte>;

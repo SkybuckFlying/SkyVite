@@ -3,10 +3,18 @@ unit Vm.Contracts.Contracts;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Common.Types.Address, Common.Types.Hash, Common.Types.TokenTypeId, Common.Upgrade,
-  Interfaces.VmDb, Interfaces.Core.AccountBlock, Interfaces.Core.ContractMeta,
-  Vm.Abi.Abi, Vm.Util.Util, Vm.Quota.Quota;
+  Common.Types.Address Common.Types.Hash Common.Types.TokenTypeId Common.Upgrade,
+  Interfaces.VmDb Interfaces.Core.AccountBlock Interfaces.Core.ContractMeta,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vm.Abi.Abi Vm.Util.Util Vm.Quota.Quota,
+  VM.Contracts.Contracts.Asset,
+  VM.Contracts.Contracts.Dex.Fund,
+  VM.Contracts.Contracts.Dex.Trade,
+  VM.Contracts.Contracts.Governance,
+  VM.Contracts.Contracts.Quota,
+  VM.Contracts.Contracts.Test,
+  VM.Contracts.Params,
+  VM.Contracts.Reward.Test;
 
 type
   TContractsParams = record

@@ -3,6 +3,22 @@ unit Common.Lock;
 interface
 
 uses
+  Common.Bytes,
+  Common.Bytes.Test,
+  Common.Condtimeout,
+  Common.Condtimeout.Test,
+  Common.Condtimer,
+  Common.Condtimer.Test,
+  Common.Default.Params,
+  Common.GoRoutine,
+  Common.GoRoutine.Test,
+  Common.Lifecycle,
+  Common.Lock.Test,
+  Common.Log,
+  Common.Mock,
+  Common.Mock.Test,
+  Common.Utils,
+  Common.Version,
   System.SysUtils;
 
 type

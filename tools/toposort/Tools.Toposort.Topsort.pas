@@ -3,9 +3,11 @@ unit tools.toposort.topsort;
 interface
 
 uses
-  System.SysUtils,
   System.Classes,
-  System.Generics.Collections;
+  System.Generics.Collections,
+  System.SysUtils,
+  Tools.Toposort.Sort,
+  Tools.Toposort.Topsort.Test;
 
 type
   TNode = class

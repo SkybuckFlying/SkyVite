@@ -3,14 +3,20 @@ unit Common.Config.Config;
 interface
 
 uses
-  System.SysUtils,
-  Common.Config.Producer,
   Common.Config.Chain,
-  Common.Config.Vm,
-  Common.Config.Subscribe,
+  Common.Config.Genesis,
+  Common.Config.Genesis.Json,
+  Common.Config.Genesis.Mock.Json,
+  Common.Config.Genesis.Test,
   Common.Config.Net,
+  Common.Config.Node.Reward,
   Common.Config.Node_Reward,
-  Common.Config.Genesis;
+  Common.Config.Producer,
+  Common.Config.Subscribe,
+  Common.Config.Upgrade,
+  Common.Config.Vm,
+  Common.Config.Wallet,
+  System.SysUtils;
 
 /*
  * Copyright 2019 The go-vite Authors

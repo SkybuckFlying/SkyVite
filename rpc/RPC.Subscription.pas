@@ -21,7 +21,29 @@ unit Vite.Rpc.Subscription;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
+  RPC.Client,
+  RPC.Client.Example.Test,
+  RPC.Client.Test,
+  RPC.Doc,
+  RPC.Endpoints,
+  RPC.Errors,
+  RPC.Health,
+  RPC.Http,
+  RPC.Http.Test,
+  RPC.Inproc,
+  RPC.IPC,
+  RPC.IPC.Unix,
+  RPC.IPC.Windows,
+  RPC.Json,
+  RPC.Json.Test,
+  RPC.Server,
+  RPC.Server.Test,
+  RPC.Subscription.Test,
+  RPC.Types,
+  RPC.Utils,
+  RPC.Utils.Test,
+  RPC.Websocket,
+  System.SysUtils System.Classes System.Generics.Collections,
   Vite.Rpc.Server;
 
 type

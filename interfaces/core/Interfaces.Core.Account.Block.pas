@@ -3,13 +3,27 @@ unit Interfaces.Core.AccountBlock;
 interface
 
 uses
-  System.SysUtils, System.Generics.Collections, Math.BigInt,
-  GoToDelphi.Helpers.BigInt,
   Common.Types,
   Common.VitePb,
   Crypto,
   Crypto.Ed25519,
-  Interfaces.Core.HashHeight;
+  GoToDelphi.Helpers.BigInt,
+  Interfaces.Core.Account,
+  Interfaces.Core.Account.Block.Test,
+  Interfaces.Core.Contract.Meta,
+  Interfaces.Core.Contract.Meta.Test,
+  Interfaces.Core.Hash.Height,
+  Interfaces.Core.Hash.Height.Test,
+  Interfaces.Core.HashHeight,
+  Interfaces.Core.Info,
+  Interfaces.Core.Serializable,
+  Interfaces.Core.Snapshot.Block,
+  Interfaces.Core.Snapshot.Block.Test,
+  Interfaces.Core.Snapshot.Chunk,
+  Interfaces.Core.Token,
+  Interfaces.Core.VM.Log.List,
+  Interfaces.Core.VM.Log.List.Test,
+  System.SysUtils System.Generics.Collections Math.BigInt;
 
 const
   BlockTypeSendCreate = 1;

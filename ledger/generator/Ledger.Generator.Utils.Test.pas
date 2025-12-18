@@ -3,8 +3,11 @@ unit utils_test;
 interface
 
 uses
-  System.SysUtils, System.Classes, DUnitX.TestFramework,
-  Vite.Common, Vite.Ledger, Vite.Interfaces, generator.utils;
+  Ledger.Generator.Generator,
+  Ledger.Generator.Incoming.Message,
+  Ledger.Generator.Utils,
+  System.SysUtils System.Classes DUnitX.TestFramework,
+  Vite.Common Vite.Ledger Vite.Interfaces generator.utils;
 
 type
   [TestFixture]

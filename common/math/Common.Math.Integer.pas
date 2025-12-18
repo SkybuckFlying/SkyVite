@@ -19,8 +19,11 @@ unit Common.Math.Integer;
 interface
 
 uses
-  System.SysUtils,
-  Common.Bytes;
+  Common.Bytes,
+  Common.Math.Big,
+  Common.Math.Big.Test,
+  Common.Math.Integer.Test,
+  System.SysUtils;
 
 type
   // HexOrDecimal64 marshals uint64 as hex or decimal.

@@ -3,8 +3,13 @@ unit common.db.xleveldb.util.buffer;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes;
+  Common.DB.XLevelDB.Util.Buffer.Pool,
+  Common.DB.XLevelDB.Util.Crc32,
+  Common.DB.XLevelDB.Util.Hash,
+  Common.DB.XLevelDB.Util.Range,
+  Common.DB.XLevelDB.Util.Util,
+  System.Classes,
+  System.SysUtils;
 
 type
   TBuffer = class

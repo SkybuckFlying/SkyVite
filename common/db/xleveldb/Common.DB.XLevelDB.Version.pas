@@ -3,16 +3,34 @@ unit Common.Db.XLevelDB.Version;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  Common.Db.XLevelDB.Storage,
-  Common.Db.XLevelDB.Options,
+  Common.DB.XLevelDB.Batch,
   Common.Db.XLevelDB.Comparer,
+  Common.DB.XLevelDB.DB,
+  Common.DB.XLevelDB.DB.Compaction,
+  Common.DB.XLevelDB.DB.Iter,
+  Common.DB.XLevelDB.DB.Snapshot,
+  Common.DB.XLevelDB.DB.State,
+  Common.DB.XLevelDB.DB.Transaction,
+  Common.DB.XLevelDB.DB.Util,
+  Common.DB.XLevelDB.DB.Write,
+  Common.DB.XLevelDB.Doc,
+  Common.DB.XLevelDB.Errors,
+  Common.DB.XLevelDB.Filter,
   Common.Db.XLevelDB.Internal,
   Common.Db.XLevelDB.Iterator,
+  Common.DB.XLevelDB.Key,
+  Common.Db.XLevelDB.Options,
+  Common.DB.XLevelDB.Session,
+  Common.DB.XLevelDB.Session.Compaction,
+  Common.DB.XLevelDB.Session.Record,
+  Common.DB.XLevelDB.Session.Util,
+  Common.Db.XLevelDB.Storage,
   Common.Db.XLevelDB.Table,
-  GoToDelphi.Helpers.BigInt;
+  Common.DB.XLevelDB.Util,
+  GoToDelphi.Helpers.BigInt,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   TSessionRecord = class;

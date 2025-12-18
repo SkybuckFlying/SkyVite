@@ -3,10 +3,17 @@ unit Common.Db.Xleveldb.Storage.Mem_storage;
 interface
 
 uses
-  System.SysUtils,
+  Common.Db.Xleveldb.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage.Nacl,
+  Common.DB.XLevelDB.Storage.File.Storage.Plan9,
+  Common.DB.XLevelDB.Storage.File.Storage.Solaris,
+  Common.DB.XLevelDB.Storage.File.Storage.Unix,
+  Common.DB.XLevelDB.Storage.File.Storage.Windows,
+  Common.DB.XLevelDB.Storage.Storage,
   System.Classes,
   System.Generics.Collections,
-  Common.Db.Xleveldb.Storage;
+  System.SysUtils;
 
 type
   TMemStorage = class; // Forward declaration

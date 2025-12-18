@@ -3,7 +3,15 @@ unit Common.VitePb.VmLogList;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections;
+  Common.VitePB.Account.Block.PB,
+  Common.VitePB.Account.Blockmeta.PB,
+  Common.VitePB.Account.PB,
+  Common.VitePB.Consensus.Point.PB,
+  Common.VitePB.Message.PB,
+  Common.VitePB.Onroad.PB,
+  Common.VitePB.Snapshot.Block.PB,
+  Common.VitePB.Sync.Cache.PB,
+  System.SysUtils System.Classes System.Generics.Collections;
 
 type
   TVmLog = class;      // Forward declaration

@@ -3,9 +3,14 @@ unit Interfaces.Consensus;
 interface
 
 uses
-  SysUtils, Classes, Generics.Collections, Math.BigInt,
   Common.Types,
-  Ledger.Consensus.Core;
+  Interfaces.Chain,
+  Interfaces.Generator,
+  Interfaces.Verifier,
+  Interfaces.VMDB,
+  Interfaces.Wallet,
+  Ledger.Consensus.Core,
+  SysUtils Classes Generics.Collections Math.BigInt;
 
 type
   TVoteDetails = record

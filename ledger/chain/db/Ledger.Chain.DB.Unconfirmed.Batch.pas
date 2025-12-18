@@ -3,9 +3,16 @@ unit Ledger.Chain.Db.UnconfirmedBatch;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.SyncObjs,
+  Common.Db.XLevelDB.Batch,
   Common.Types,
-  Common.Db.XLevelDB.Batch;
+  Ledger.Chain.DB.Flush,
+  Ledger.Chain.DB.Flush.Test,
+  Ledger.Chain.DB.Mem.DB.Test,
+  Ledger.Chain.DB.Rollback,
+  Ledger.Chain.DB.Store,
+  Ledger.Chain.DB.Store.Test,
+  Ledger.Chain.DB.Write,
+  System.SysUtils System.Classes System.Generics.Collections System.SyncObjs;
 
 type
   TUnconfirmedBatchs = class

@@ -3,17 +3,40 @@ unit VM.Instructions;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
   GoToDelphi.Helpers.BigInt,
+  System.Classes,
+  System.SysUtils,
   Vite.Common.Helper,
   Vite.Common.Types,
   Vite.Crypto,
   Vite.Interfaces.Core,
   Vite.VM.Util,
+  VM.Contract,
+  VM.Contract.Test,
+  VM.Contracts.Dex.Fund.Test,
+  VM.Contracts.Dex.Trade.Test,
+  VM.Contracts.Test,
+  VM.Database.Memory.Test,
+  VM.Database.Test,
+  VM.Destination,
+  VM.Destination.Test,
+  VM.Gas.Table,
+  VM.Gas.Table.Test,
+  VM.Instructions.Test,
+  VM.Interpreter,
+  VM.Jump.Table,
   VM.Memory,
+  VM.Memory.Table,
+  VM.Memory.Test,
+  VM.Mock.DB,
+  VM.Opcodes,
+  VM.Params,
   VM.Stack,
-  VM.Vm;
+  VM.Stack.Table,
+  VM.Stack.Test,
+  VM.Vm,
+  VM.VM.Run.Test,
+  VM.VM.Test;
 
 type
   TExecutionFunc = function(ParaPc: PUInt64; const ParaVm: IVM; const ParaContract: IContract; const ParaMem: IMemory; const ParaStack: IStack): TPair<TBytes, Exception>;

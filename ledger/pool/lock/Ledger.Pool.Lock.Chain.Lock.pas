@@ -3,7 +3,8 @@ unit Ledger.Pool.Lock.Chain.Lock;
 interface
 
 uses
-  SysUtils, Classes, SyncObjs,
+  Ledger.Pool.Lock.Chain.Lock.Test,
+  SysUtils Classes SyncObjs,
   unit_GoLang_Compatibility_version_006;
 
 type

@@ -3,10 +3,34 @@ unit Ledger.Pool.Pipeline.Pool;
 interface
 
 uses
-  SysUtils, Classes,
-  Ledger.Pool.Pool, // For TPool
   Common.Types,
   Interfaces.Core,
+  Ledger.Pool.Account.Pool,
+  Ledger.Pool.Bc.Pool,
+  Ledger.Pool.Blacklist,
+  Ledger.Pool.Blacklist.Test,
+  Ledger.Pool.Branch.Chain,
+  Ledger.Pool.Chain.Pool,
+  Ledger.Pool.Chain.Pool.Test,
+  Ledger.Pool.Context,
+  Ledger.Pool.Face,
+  Ledger.Pool.Mock.Common.Block,
+  Ledger.Pool.Pool,
+  Ledger.Pool.Pool // For TPool,
+  Ledger.Pool.Pool.Batch,
+  Ledger.Pool.Pool.Batch.Chunk,
+  Ledger.Pool.Pool.Batch.Fork,
+  Ledger.Pool.Pool.Fork.Checker,
+  Ledger.Pool.Pool.Fork.Checker.Test,
+  Ledger.Pool.Snapshot.Listener,
+  Ledger.Pool.Snapshot.Pool,
+  Ledger.Pool.Snapshot.Pool.Test,
+  Ledger.Pool.Tools,
+  Ledger.Pool.Tools.Chain,
+  Ledger.Pool.Tools.Fetcher,
+  Ledger.Pool.Tools.Verifier,
+  Ledger.Pool.Worker,
+  SysUtils Classes,
   unit_GoLang_Compatibility_version_006;
 
 type

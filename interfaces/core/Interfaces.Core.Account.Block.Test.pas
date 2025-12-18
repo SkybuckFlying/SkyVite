@@ -3,13 +3,27 @@ unit Interfaces.Core.AccountBlock.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  Math.BigInt,
-  GoToDelphi.Helpers.BigInt,
   Common.Types,
   Crypto,
   Crypto.Ed25519,
-  Interfaces.Core.AccountBlock;
+  DUnitX.TestFramework,
+  GoToDelphi.Helpers.BigInt,
+  Interfaces.Core.Account,
+  Interfaces.Core.Account.Block,
+  Interfaces.Core.AccountBlock,
+  Interfaces.Core.Contract.Meta,
+  Interfaces.Core.Contract.Meta.Test,
+  Interfaces.Core.Hash.Height,
+  Interfaces.Core.Hash.Height.Test,
+  Interfaces.Core.Info,
+  Interfaces.Core.Serializable,
+  Interfaces.Core.Snapshot.Block,
+  Interfaces.Core.Snapshot.Block.Test,
+  Interfaces.Core.Snapshot.Chunk,
+  Interfaces.Core.Token,
+  Interfaces.Core.VM.Log.List,
+  Interfaces.Core.VM.Log.List.Test,
+  Math.BigInt;
 
 type
   [TestFixture]

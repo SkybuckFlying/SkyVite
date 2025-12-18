@@ -3,10 +3,12 @@ unit common.db.xleveldb.iterator.array_iter;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
+  Common.DB.XLevelDB.Iterator.Indexed.Iter,
   common.db.xleveldb.iterator.iter,
-  common.db.xleveldb.util; // For IBasicReleaser, EErrIterReleased
+  Common.DB.XLevelDB.Iterator.Merged.Iter,
+  common.db.xleveldb.util // For IBasicReleaser EErrIterReleased,
+  System.Classes,
+  System.SysUtils;
 
 type
   // BasicArray is the interface that wraps basic Len and Search method.

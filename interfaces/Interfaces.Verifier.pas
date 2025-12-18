@@ -3,9 +3,14 @@ unit Interfaces.Verifier;
 interface
 
 uses
-  SysUtils, Classes, Generics.Collections,
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Chain,
+  Interfaces.Consensus,
+  Interfaces.Core,
+  Interfaces.Generator,
+  Interfaces.VMDB,
+  Interfaces.Wallet,
+  SysUtils Classes Generics.Collections;
 
 type
   // ConsensusVerifier is the interface that can verify block consensus.

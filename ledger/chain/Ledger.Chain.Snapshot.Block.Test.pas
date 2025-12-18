@@ -3,14 +3,39 @@ unit Ledger.Chain.SnapshotBlock.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
   Common.Types,
+  DUnitX.TestFramework,
   Interfaces.Core,
   Ledger.Chain,
-  Ledger.Chain.Test;
+  Ledger.Chain.Account,
+  Ledger.Chain.Account.Block,
+  Ledger.Chain.Account.Block.Test,
+  Ledger.Chain.Account.Test,
+  Ledger.Chain.Builtin.Contract,
+  Ledger.Chain.Builtin.Contract.Test,
+  Ledger.Chain.Chain,
+  Ledger.Chain.Chain.Test,
+  Ledger.Chain.Check,
+  Ledger.Chain.Delete,
+  Ledger.Chain.Delete.Test,
+  Ledger.Chain.Event.Manager,
+  Ledger.Chain.Fork,
+  Ledger.Chain.Insert,
+  Ledger.Chain.Insert.Test,
+  Ledger.Chain.Interface,
+  Ledger.Chain.Meta,
+  Ledger.Chain.Onroad,
+  Ledger.Chain.Onroad.Test,
+  Ledger.Chain.Snapshot.Block,
+  Ledger.Chain.State,
+  Ledger.Chain.State.Test,
+  Ledger.Chain.Sync.Ledger,
+  Ledger.Chain.Test,
+  Ledger.Chain.Unconfirmed,
+  Ledger.Chain.Unconfirmed.Test,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   [TestFixture]

@@ -4,12 +4,12 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
+  GoToDelphi.Helpers.TChannel,
   System.Classes,
-  System.Threading,
   System.Diagnostics,
-  Tools.Queue.Queue,
-  GoToDelphi.Helpers.TChannel;
+  System.SysUtils,
+  System.Threading,
+  Tools.Queue.Queue;
 
 type
   [TestFixture]

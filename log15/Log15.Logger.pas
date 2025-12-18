@@ -3,8 +3,15 @@ unit Log15.Logger;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.SyncObjs, System.Generics.Collections, System.Rtti,
-  Log15, Log15.Handler;
+  Log15 Log15.Handler,
+  Log15.Doc,
+  Log15.Format,
+  Log15.Handler,
+  Log15.Handler.Go13,
+  Log15.Handler.Go14,
+  Log15.Root,
+  Log15.Syslog,
+  System.SysUtils System.Classes System.SyncObjs System.Generics.Collections System.Rtti;
 
 const
   ConstTimeKey = 't';

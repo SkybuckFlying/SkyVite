@@ -3,10 +3,22 @@ unit Common.Config.Producer;
 interface
 
 uses
-  System.SysUtils,
+  Common.Config.Chain,
+  Common.Config.Config,
+  Common.Config.Genesis,
+  Common.Config.Genesis.Json,
+  Common.Config.Genesis.Mock.Json,
+  Common.Config.Genesis.Test,
+  Common.Config.Net,
+  Common.Config.Node.Reward,
+  Common.Config.Subscribe,
+  Common.Config.Upgrade,
+  Common.Config.VM,
+  Common.Config.Wallet,
+  Common.Types,
   System.Classes,
   System.JSON,
-  Common.Types;
+  System.SysUtils;
 
 /*
  * Copyright 2019 The go-vite Authors

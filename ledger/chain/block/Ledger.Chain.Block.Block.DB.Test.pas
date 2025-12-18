@@ -3,10 +3,16 @@ unit Ledger.Chain.Block.Block.DB.Test;
 interface
 
 uses
-  SysUtils, Classes,
+  Common.Types,
+  Ledger.Chain.Block.Account.Block,
+  Ledger.Chain.Block.Block.DB,
+  Ledger.Chain.Block.Block.Parser,
   ledger.chain.block.block_db in 'ledger/chain/block/Ledger.Chain.Block.Block.DB.pas',
+  Ledger.Chain.Block.Buffer,
+  Ledger.Chain.Block.Flush,
+  Ledger.Chain.Block.Snapshot.Block,
   Ledger.Chain.FileManager.FileManager in 'ledger/chain/file_manager/Ledger.Chain.File.Manager.File.Manager.pas',
-  Common.Types;
+  SysUtils Classes;
 
 type
   TTestBlockDB = class

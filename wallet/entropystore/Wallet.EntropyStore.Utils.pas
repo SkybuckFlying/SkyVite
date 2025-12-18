@@ -3,11 +3,15 @@ unit Wallet.EntropyStore.Utils;
 interface
 
 uses
-  SysUtils,
   Classes,
   GoToDelphi.Helpers.TBytes,
+  SysUtils,
   Vite.Common.Types,
   Vite.Log15,
+  Wallet.EntropyStore.Crypto.Store,
+  Wallet.EntropyStore.Crypto.Store.Test,
+  Wallet.EntropyStore.Manager,
+  Wallet.EntropyStore.Manager.Test,
   Wallet.EntropyStore.Models;
 
 type

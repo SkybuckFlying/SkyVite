@@ -4,10 +4,17 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
-  System.Classes,
+  Interfaces.Core,
+  Ledger.Chain.Sync.Cache.Cache.Item,
+  Ledger.Chain.Sync.Cache.Cache.Item.Test,
   Ledger.Chain.Sync.Cache.Reader,
-  Interfaces.Core;
+  Ledger.Chain.Sync.Cache.Segment,
+  Ledger.Chain.Sync.Cache.Segment.Test,
+  Ledger.Chain.Sync.Cache.Sync.Cache,
+  Ledger.Chain.Sync.Cache.Sync.Cache.Test,
+  Ledger.Chain.Sync.Cache.Writer,
+  System.Classes,
+  System.SysUtils;
 
 type
   [TestFixture]

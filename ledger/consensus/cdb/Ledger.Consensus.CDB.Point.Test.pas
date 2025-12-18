@@ -4,8 +4,10 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
-  Ledger.Consensus.CDB.Point;
+  Ledger.Consensus.CDB.Consensus,
+  Ledger.Consensus.CDB.DB.Test,
+  Ledger.Consensus.CDB.Point,
+  System.SysUtils;
 
 type
   [TestFixture]

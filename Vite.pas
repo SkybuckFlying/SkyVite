@@ -3,20 +3,21 @@ unit Vite;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Common.Config.Config,
-	Common.Types.Address,
-	Interfaces.Chain,
-	Interfaces.Consensus,
-	Interfaces.Verifier,
-	Interfaces.Wallet,
-	Ledger.Onroad.Manager,
-	Ledger.Pool.Pool,
-	Log15.Logger,
-	Net.Interface,
-	Producer.Interface,
-	Wallet.Manager;
+  Common.Config.Config,
+  Common.Types.Address,
+  Interfaces.Chain,
+  Interfaces.Consensus,
+  Interfaces.Verifier,
+  Interfaces.Wallet,
+  Ledger.Onroad.Manager,
+  Ledger.Pool.Pool,
+  Log15.Logger,
+  Net.Interface,
+  Producer.Interface,
+  System.Classes,
+  System.SysUtils,
+  Vite.Mock,
+  Wallet.Manager;
 
 type
 	TVite = class(TObject)

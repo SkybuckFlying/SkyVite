@@ -3,10 +3,29 @@ unit VM.Contracts.Dex.Matcher;
 interface
 
 uses
-  System.SysUtils, System.Generics.Collections, System.BigInt,
-  GoVite.Types, GoVite.Interfaces, GoVite.Ledger,
-  VM.Contracts.Dex.Proto, VM.Contracts.Dex.Order, VM.Contracts.Dex.Storage,
-  VM.Contracts.Dex.Leveldb.Book;
+  GoVite.Types GoVite.Interfaces GoVite.Ledger,
+  System.SysUtils System.Generics.Collections System.BigInt,
+  VM.Contracts.Dex.Account,
+  VM.Contracts.Dex.Calculator,
+  VM.Contracts.Dex.Errors,
+  VM.Contracts.Dex.Events,
+  VM.Contracts.Dex.Fund.Dividend,
+  VM.Contracts.Dex.Fund.Event,
+  VM.Contracts.Dex.Fund.Finish.Pendings,
+  VM.Contracts.Dex.Fund.Helper,
+  VM.Contracts.Dex.Fund.Helper.Test,
+  VM.Contracts.Dex.Fund.Mine,
+  VM.Contracts.Dex.Fund.Settle,
+  VM.Contracts.Dex.Fund.Stake,
+  VM.Contracts.Dex.Fund.Storage,
+  VM.Contracts.Dex.Fund.Verifier,
+  VM.Contracts.Dex.Leveldb.Book,
+  VM.Contracts.Dex.Matcher.Test,
+  VM.Contracts.Dex.Order,
+  VM.Contracts.Dex.Proto VM.Contracts.Dex.Order VM.Contracts.Dex.Storage,
+  VM.Contracts.Dex.Trade.Helper,
+  VM.Contracts.Dex.Utils,
+  VM.Contracts.Dex.Utils.Test;
 
 const
   MaxTxsCountPerTaker = 100;

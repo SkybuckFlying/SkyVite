@@ -19,12 +19,25 @@ unit Common.Types.Address;
 interface
 
 uses
-  System.SysUtils,
-  System.Math.BigInts,
   Common.Bytes,
   Common.HexUtil,
+  Common.Types.Address.Test,
+  Common.Types.Block.Source,
+  Common.Types.Contracts,
+  Common.Types.Enum,
+  Common.Types.Error,
+  Common.Types.Gid,
+  Common.Types.Hash,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeID,
+  Common.Types.TokenTypeID.Test,
+  Crypto.Ed25519,
   Crypto.Hash,
-  Crypto.Ed25519;
+  System.Math.BigInts,
+  System.SysUtils;
 
 const
   ConstAddressPrefix = 'vite_';

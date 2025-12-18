@@ -3,11 +3,13 @@ unit Common.Math.Big.Test;
 interface
 
 uses
-	DUnitX.TestFramework,
-	System.SysUtils,
-	System.Math.BigInts,
-	Common.Bytes,
-	Common.Math.Big;
+  Common.Bytes,
+  Common.Math.Big,
+  Common.Math.Integer,
+  Common.Math.Integer.Test,
+  DUnitX.TestFramework,
+  System.Math.BigInts,
+  System.SysUtils;
 
 type
 	[TestFixture]

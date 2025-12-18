@@ -3,11 +3,13 @@ unit Cmd.GvitePlugins.MiscCmd;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	Cli,
-	Cmd.Utils,
-	Version;
+  Cli,
+  Cmd.Gvite.Plugins.Load.Plugins,
+  Cmd.Gvite.Plugins.SubCmd.Demo,
+  Cmd.Utils,
+  System.Classes,
+  System.SysUtils,
+  Version;
 
 var
 	versionCommand: ICommand;

@@ -3,13 +3,33 @@ unit Vm.Contracts.Dex.DexFundHelper;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Common.Types.Address, Common.Types.Hash, Common.Types.TokenTypeId, Common.Helper, Common.Upgrade,
-  Interfaces.VmDb, Interfaces.Core.AccountBlock, Interfaces.Core.ContractMeta,
-  Vm.Abi.Abi, Vm.Contracts.Abi.AbiAsset, Vm.Contracts.Abi.AbiDexFund, Vm.Contracts.Abi.AbiDexTrade,
-  Vm.Contracts.Contracts, Vm.Util.Util, Vm.Quota.Quota,
-  Vm.Contracts.Dex.DexErrors, Vm.Contracts.Dex.DexAccount, Vm.Contracts.Dex.DexCalculator,
-  Vm.Contracts.Dex.Proto.DexProto, Vm.Contracts.Dex.DexFundStorage, Vm.Contracts.Dex.DexEvents;
+  Common.Types.Address Common.Types.Hash Common.Types.TokenTypeId Common.Helper Common.Upgrade,
+  Interfaces.VmDb Interfaces.Core.AccountBlock Interfaces.Core.ContractMeta,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vm.Abi.Abi Vm.Contracts.Abi.AbiAsset Vm.Contracts.Abi.AbiDexFund Vm.Contracts.Abi.AbiDexTrade,
+  Vm.Contracts.Contracts Vm.Util.Util Vm.Quota.Quota,
+  VM.Contracts.Dex.Account,
+  VM.Contracts.Dex.Calculator,
+  Vm.Contracts.Dex.DexErrors Vm.Contracts.Dex.DexAccount Vm.Contracts.Dex.DexCalculator,
+  VM.Contracts.Dex.Errors,
+  VM.Contracts.Dex.Events,
+  VM.Contracts.Dex.Fund.Dividend,
+  VM.Contracts.Dex.Fund.Event,
+  VM.Contracts.Dex.Fund.Finish.Pendings,
+  VM.Contracts.Dex.Fund.Helper.Test,
+  VM.Contracts.Dex.Fund.Mine,
+  VM.Contracts.Dex.Fund.Settle,
+  VM.Contracts.Dex.Fund.Stake,
+  VM.Contracts.Dex.Fund.Storage,
+  VM.Contracts.Dex.Fund.Verifier,
+  VM.Contracts.Dex.Leveldb.Book,
+  VM.Contracts.Dex.Matcher,
+  VM.Contracts.Dex.Matcher.Test,
+  VM.Contracts.Dex.Order,
+  Vm.Contracts.Dex.Proto.DexProto Vm.Contracts.Dex.DexFundStorage Vm.Contracts.Dex.DexEvents,
+  VM.Contracts.Dex.Trade.Helper,
+  VM.Contracts.Dex.Utils,
+  VM.Contracts.Dex.Utils.Test;
 
 const
   NewMarketFeeAmount = 1000000000000000000; // 1 VITE

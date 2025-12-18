@@ -3,8 +3,12 @@ unit Cmd.Utils.Path;
 interface
 
 uses
-	System.SysUtils,
-	System.IOUtils;
+  Cmd.Utils.Cli,
+  Cmd.Utils.Customflags,
+  Cmd.Utils.Customflags.Test,
+  Cmd.Utils.Flags,
+  System.IOUtils,
+  System.SysUtils;
 
 function AbsolutePath(const ParaDataDir, ParaFileName: string): string;
 

@@ -3,9 +3,6 @@ unit Producer.Producer;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.SyncObjs,
   Common,
   Common.Types,
   Interfaces,
@@ -16,7 +13,14 @@ uses
   Log15,
   Net,
   Producer.Event,
-  Producer.Face;
+  Producer.Face,
+  Producer.Producer.Test,
+  Producer.Tools,
+  Producer.Worker,
+  Producer.Worker.Test,
+  System.Classes,
+  System.SyncObjs,
+  System.SysUtils;
 
 type
   ISnapshotChainRW = interface(IUnknown)

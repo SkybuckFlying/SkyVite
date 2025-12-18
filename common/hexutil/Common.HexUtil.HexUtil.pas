@@ -3,7 +3,11 @@ unit Common.HexUtil;
 interface
 
 uses
-  System.SysUtils, GoToDelphi.Helpers.BigInt;
+  Common.HexUtil.HexUtil.Test,
+  Common.HexUtil.Json,
+  Common.HexUtil.Json.Example.Test,
+  Common.HexUtil.Json.Test,
+  System.SysUtils GoToDelphi.Helpers.BigInt;
 
 type
   EDecodeError = class(Exception);

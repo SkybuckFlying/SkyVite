@@ -3,13 +3,13 @@ unit net.database.database.test;
 interface
 
 uses
-  TestFramework,
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
   common.bytes,
   net.database.database,
-  net.vnode;
+  net.vnode,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils,
+  TestFramework;
 
 type
   [TestFixture]

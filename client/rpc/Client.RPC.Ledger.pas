@@ -3,14 +3,19 @@ unit Client.Rpc.Ledger;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  System.JSON,
+  Client.RPC.Contract,
+  Client.RPC.Dex.Trade,
+  Client.RPC.Onroad,
+  Client.RPC.Random,
+  Client.RPC.Tx,
   Common.Types,
   Interfaces.Core,
   Rpc,
-  RpcApi.Api;
+  RpcApi.Api,
+  System.Classes,
+  System.Generics.Collections,
+  System.JSON,
+  System.SysUtils;
 
 type
 	ILedgerApi = interface

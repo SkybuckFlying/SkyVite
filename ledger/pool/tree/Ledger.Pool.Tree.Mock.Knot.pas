@@ -3,9 +3,18 @@ unit Ledger.Pool.Tree.Mock.Knot;
 interface
 
 uses
-  SysUtils, Classes,
   Common.Types,
-  Interfaces.Core; // Assuming IKnot is defined here
+  Interfaces.Core // Assuming IKnot is defined here,
+  Ledger.Pool.Tree.Branch,
+  Ledger.Pool.Tree.Branch.Base,
+  Ledger.Pool.Tree.Branch.Test,
+  Ledger.Pool.Tree.Checker,
+  Ledger.Pool.Tree.Mock.Root.Branch,
+  Ledger.Pool.Tree.Printer,
+  Ledger.Pool.Tree.Tree,
+  Ledger.Pool.Tree.Tree.Impl,
+  Ledger.Pool.Tree.Tree.Impl.Test,
+  SysUtils Classes;
 
 type
   // Mock implementation of IKnot for testing the tree structure

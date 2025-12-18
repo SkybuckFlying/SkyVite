@@ -3,12 +3,13 @@ unit Node.Config.Config.Test;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.JSON,
-	Common.Types,
-	Common.Config.Config,
-	Node.Config.Config;
+  Common.Config.Config,
+  Common.Types,
+  Node.Config.Config,
+  Node.Config.Defaults,
+  System.Classes,
+  System.JSON,
+  System.SysUtils;
 
 procedure TestChainConfig;
 procedure TestDeferReturn;

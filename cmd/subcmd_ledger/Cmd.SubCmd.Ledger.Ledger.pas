@@ -1,3 +1,7 @@
+uses
+  Cmd.SubCmd.Ledger.DumpBalance;
+uses
+  Cmd.SubCmd.Ledger.DumpBalance;
 program Ledger;
 
 {$APPTYPE CONSOLE}

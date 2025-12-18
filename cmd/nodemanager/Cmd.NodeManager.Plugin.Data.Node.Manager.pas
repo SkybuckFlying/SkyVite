@@ -3,11 +3,21 @@ unit Cmd.NodeManager.PluginDataNodeManager;
 interface
 
 uses
-	System.Classes,
-	GoToDelphi.Dependencies.Cli,
-	Cmd.NodeManager.NodeManager,
-	Cmd.NodeManager.NodeMaker,
-	Node.Node;
+  Cmd.NodeManager.Assist,
+  Cmd.NodeManager.Check.Chain,
+  Cmd.NodeManager.Default.Node.Manager,
+  Cmd.NodeManager.Export.Node.Manager,
+  Cmd.NodeManager.Full.Node.Maker,
+  Cmd.NodeManager.Local.Node.Maker,
+  Cmd.NodeManager.Node.Maker,
+  Cmd.NodeManager.Node.Manager,
+  Cmd.NodeManager.NodeMaker,
+  Cmd.NodeManager.NodeManager,
+  Cmd.NodeManager.Recover.Node.Manager,
+  Cmd.NodeManager.SubCmd.Node.Manager,
+  GoToDelphi.Dependencies.Cli,
+  Node.Node,
+  System.Classes;
 
 type
 	TPluginDataNodeManager = class( TInterfacedObject, INodeManager )

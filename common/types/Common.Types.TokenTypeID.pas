@@ -3,14 +3,27 @@ unit Common.Types.TokenTypeId;
 interface
 
 uses
-  System.SysUtils,
+  Common.HexUtil,
+  Common.Json,
+  Common.Types.Address,
+  Common.Types.Address.Test,
+  Common.Types.Block.Source,
+  Common.Types.Contracts,
+  Common.Types.Enum,
+  Common.Types.Error,
+  Common.Types.Gid,
+  Common.Types.Hash,
+  Common.Types.Hash.Test,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeID.Test,
+  Crypto.Hash,
+  GoToDelphi.Helpers.BigInt,
   System.Classes,
   System.Generics.Defaults,
   System.Net.Encoding,
-  GoToDelphi.Helpers.BigInt,
-  Common.HexUtil,
-  Common.Json,
-  Crypto.Hash;
+  System.SysUtils;
 
 const
   ConstTokenTypeIdPrefix = 'tti_';

@@ -3,9 +3,17 @@ unit Ledger.Chain.Sync.Cache.Segment;
 interface
 
 uses
-  System.SysUtils,
   Common.Types,
-  Interfaces;
+  Interfaces,
+  Ledger.Chain.Sync.Cache.Cache.Item,
+  Ledger.Chain.Sync.Cache.Cache.Item.Test,
+  Ledger.Chain.Sync.Cache.Reader,
+  Ledger.Chain.Sync.Cache.Reader.Test,
+  Ledger.Chain.Sync.Cache.Segment.Test,
+  Ledger.Chain.Sync.Cache.Sync.Cache,
+  Ledger.Chain.Sync.Cache.Sync.Cache.Test,
+  Ledger.Chain.Sync.Cache.Writer,
+  System.SysUtils;
 
 function NewSegment(const aFrom, aTo: UInt64; const aPrevHash, aHash: THash): ISegment;
 function NewSegmentByFilename(const aFilename: string): ISegment;

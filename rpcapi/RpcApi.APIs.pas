@@ -3,13 +3,14 @@ unit RpcApi.Apis;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  Vite,
   Rpc,
   RpcApi.Api,
-  RpcApi.Api.Filters;
+  RpcApi.Api.Filters,
+  RpcApi.APIs.Test,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils,
+  Vite;
 
 type
   TApiType = (

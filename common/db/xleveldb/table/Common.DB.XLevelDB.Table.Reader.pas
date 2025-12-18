@@ -3,9 +3,6 @@ unit Common.Db.Xleveldb.Table.Reader;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
   Common.Db.Xleveldb.Cache,
   Common.Db.Xleveldb.Comparer,
   Common.Db.Xleveldb.Errors,
@@ -14,8 +11,13 @@ uses
   Common.Db.Xleveldb.Opt,
   Common.Db.Xleveldb.Storage,
   Common.Db.Xleveldb.Table,
+  Common.DB.XLevelDB.Table.Table,
+  Common.DB.XLevelDB.Table.Writer,
   Common.Db.Xleveldb.Util,
-  Common.Db.Xleveldb.Util.Crc32;
+  Common.Db.Xleveldb.Util.Crc32,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   ELevelDBTable = class(Exception);

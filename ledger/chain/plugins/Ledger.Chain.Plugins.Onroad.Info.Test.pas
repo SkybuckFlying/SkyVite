@@ -3,7 +3,12 @@ unit Ledger.Chain.Plugins.Onroad.Info.Test;
 interface
 
 uses
-  Common.Types;
+  Common.Types,
+  Ledger.Chain.Plugins.DB.Key.Prefix,
+  Ledger.Chain.Plugins.Filter.Token,
+  Ledger.Chain.Plugins.Interface,
+  Ledger.Chain.Plugins.Onroad.Info,
+  Ledger.Chain.Plugins.Plugins;
 
 var
   Contract1, Contract2, Contract3: TAddress;

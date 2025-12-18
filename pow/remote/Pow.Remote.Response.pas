@@ -3,10 +3,13 @@ unit Pow.Remote.Response;
 interface
 
 uses
-  System.SysUtils,
+  Pow.Remote.Request,
+  Pow.Remote.Service,
+  Pow.Remote.Service.Test,
   System.Classes,
+  System.JSON,
   System.JSON.Serializers,
-  System.JSON;
+  System.SysUtils;
 
 type
   TResponseJson = class

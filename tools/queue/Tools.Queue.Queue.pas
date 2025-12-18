@@ -3,11 +3,12 @@ unit Tools.Queue.Queue;
 interface
 
 uses
-  System.SysUtils,
+  Common.CondTimeout,
   System.Classes,
   System.SyncObjs,
-  Common.CondTimeout,
-  Tools.List.List;
+  System.SysUtils,
+  Tools.List.List,
+  Tools.Queue.Queue.Test;
 
 type
   IQueue = interface

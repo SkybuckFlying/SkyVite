@@ -3,13 +3,17 @@ unit Wallet.Account;
 interface
 
 uses
-  SysUtils,
   GoToDelphi.Helpers.TBytes,
-  Vite.Crypto,
+  SysUtils,
   Vite.Common.Errors,
   Vite.Common.Types,
+  Vite.Crypto,
   Vite.Interfaces,
-  Wallet.HD_BIP.Derivation;
+  Wallet.Account.Test,
+  Wallet.HD_BIP.Derivation,
+  Wallet.Manager,
+  Wallet.Manager.Test,
+  Wallet.Wallet;
 
 type
   TAccount = class(TInterfacedObject, IAccount)

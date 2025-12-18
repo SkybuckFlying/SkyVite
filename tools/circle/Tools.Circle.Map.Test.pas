@@ -4,9 +4,11 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
   System.Classes,
+  System.SysUtils,
   Tools.Circle.Base,
+  Tools.Circle.List,
+  Tools.Circle.List.Test,
   Tools.Circle.Map;
 
 type

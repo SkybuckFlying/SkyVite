@@ -3,8 +3,11 @@ unit Common.Db.Xleveldb.Iterator.Iter;
 interface
 
 uses
-	System.SysUtils,
-	Common.Db.Xleveldb.Util;
+  Common.DB.XLevelDB.Iterator.Array.Iter,
+  Common.DB.XLevelDB.Iterator.Indexed.Iter,
+  Common.DB.XLevelDB.Iterator.Merged.Iter,
+  Common.Db.Xleveldb.Util,
+  System.SysUtils;
 
 var
 	ErrIterReleased : Exception;

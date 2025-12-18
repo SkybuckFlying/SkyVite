@@ -4,7 +4,9 @@ interface
 
 uses
   TestFramework,
-  VM.Quota.Params;
+  VM.Quota.Params,
+  VM.Quota.Quota,
+  VM.Quota.Quota.Test;
 
 type
   TTestVMQuotaParams = class(TTestCase)

@@ -3,8 +3,15 @@ unit Common.Db.Xleveldb.Storage;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes;
+  Common.DB.XLevelDB.Storage.File.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage.Nacl,
+  Common.DB.XLevelDB.Storage.File.Storage.Plan9,
+  Common.DB.XLevelDB.Storage.File.Storage.Solaris,
+  Common.DB.XLevelDB.Storage.File.Storage.Unix,
+  Common.DB.XLevelDB.Storage.File.Storage.Windows,
+  Common.DB.XLevelDB.Storage.Mem.Storage,
+  System.Classes,
+  System.SysUtils;
 
 type
   TFileType = (

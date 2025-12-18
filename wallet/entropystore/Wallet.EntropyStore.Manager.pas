@@ -3,13 +3,18 @@ unit Wallet.EntropyStore.Manager;
 interface
 
 uses
-  SysUtils,
   Classes,
   GoToDelphi.Helpers.TBytes,
+  SysUtils,
   Vite.Common.Types,
   Vite.Crypto,
   Vite.Log15,
+  Wallet.EntropyStore.Crypto.Store,
+  Wallet.EntropyStore.Crypto.Store.Test,
   Wallet.EntropyStore.CryptoStore,
+  Wallet.EntropyStore.Manager.Test,
+  Wallet.EntropyStore.Models,
+  Wallet.EntropyStore.Utils,
   Wallet.HD_BIP.Derivation;
 
 const

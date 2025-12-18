@@ -3,13 +3,19 @@ unit Ledger.Chain.Sync.Cache.Sync.Cache.Test;
 interface
 
 uses
-  DUnitX.TestFramework,
-  System.SysUtils,
-  System.IOUtils,
-  Interfaces,
   Common.Types,
+  DUnitX.TestFramework,
+  Interfaces,
+  Ledger.Chain.Sync.Cache.Cache.Item,
+  Ledger.Chain.Sync.Cache.Cache.Item.Test,
+  Ledger.Chain.Sync.Cache.Reader,
+  Ledger.Chain.Sync.Cache.Reader.Test,
+  Ledger.Chain.Sync.Cache.Segment,
+  Ledger.Chain.Sync.Cache.Segment.Test,
   Ledger.Chain.Sync.Cache.Sync.Cache,
-  Ledger.Chain.Sync.Cache.Reader;
+  Ledger.Chain.Sync.Cache.Writer,
+  System.IOUtils,
+  System.SysUtils;
 
 type
   [TestFixture]

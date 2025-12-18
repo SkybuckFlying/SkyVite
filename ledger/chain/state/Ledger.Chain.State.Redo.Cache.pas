@@ -3,12 +3,23 @@ unit Ledger.Chain.State.RedoCache;
 interface
 
 uses
-  System.SysUtils,
+  Common.Types,
+  Ledger.Chain.State.Cache,
+  Ledger.Chain.State.Delete,
+  Ledger.Chain.State.Interface,
+  Ledger.Chain.State.Interface.Mock,
+  Ledger.Chain.State.Iteration,
+  Ledger.Chain.State.Redo,
+  Ledger.Chain.State.Round.Cache,
+  Ledger.Chain.State.Round.Cache.Test,
+  Ledger.Chain.State.State.DB,
+  Ledger.Chain.State.Storage.Database,
+  Ledger.Chain.State.Transform.Iterator,
+  Ledger.Chain.State.Write,
   System.Classes,
   System.Generics.Collections,
   System.SyncObjs,
-  Common.Types,
-  Ledger.Chain.State.Redo;
+  System.SysUtils;
 
 type
   TRedoCache = class

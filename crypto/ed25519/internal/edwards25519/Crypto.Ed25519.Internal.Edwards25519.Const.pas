@@ -3,6 +3,7 @@ unit Crypto.Ed25519.Internal.Edwards25519.Consts;
 interface
 
 uses
+  Crypto.Ed25519.Internal.Edwards25519.Edwards25519,
   Crypto.Ed25519.Internal.Edwards25519.Types;
 
 const

@@ -3,18 +3,23 @@ unit Wallet.EntropyStore.Manager.Test;
 interface
 
 uses
-<<<<<<< HEAD
-  TestFramework,
-  SysUtils,
+  <<<<<<< HEAD,
+  Assert,
+  bip39,
   Classes,
-  entropystore.manager,
-  entropystore.models,
-  common.types,
   common.fileutils,
   common.hexutil,
-  wallet.hd_bip.derivation,
-  bip39,
-  Assert;
+  common.types,
+  entropystore.manager,
+  entropystore.models,
+  SysUtils,
+  TestFramework,
+  Wallet.EntropyStore.Crypto.Store,
+  Wallet.EntropyStore.Crypto.Store.Test,
+  Wallet.EntropyStore.Manager,
+  Wallet.EntropyStore.Models,
+  Wallet.EntropyStore.Utils,
+  wallet.hd_bip.derivation;
 =======
   SysUtils,
   DUnitX.TestFramework,

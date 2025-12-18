@@ -4,8 +4,15 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
-  Net.VNode.Host;
+  Net.Vnode.Endpoint,
+  Net.Vnode.Endpoint.Test,
+  Net.VNode.Host,
+  Net.Vnode.Mock,
+  Net.Vnode.Mode,
+  Net.Vnode.Node,
+  Net.Vnode.Node.PB,
+  Net.Vnode.Node.Test,
+  System.SysUtils;
 
 type
   [TestFixture]

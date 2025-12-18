@@ -3,12 +3,12 @@ unit Pow.Pow.Test;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.Math,
-	Common.Types,
-	Pow.Pow,
-	unit_GoLang_Compatibility_version_006;
+  Common.Types,
+  Pow.Pow,
+  System.Classes,
+  System.Math,
+  System.SysUtils,
+  unit_GoLang_Compatibility_version_006;
 
 procedure TestGetPowNonce;
 procedure TestCheckPowNonce;

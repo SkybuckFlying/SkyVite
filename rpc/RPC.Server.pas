@@ -21,8 +21,30 @@ unit Vite.Rpc.Server;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.Rtti,
-  Vite.Rpc.Connection, Vite.Rpc.Subscription, Vite.Rpc.Utils;
+  RPC.Client,
+  RPC.Client.Example.Test,
+  RPC.Client.Test,
+  RPC.Doc,
+  RPC.Endpoints,
+  RPC.Errors,
+  RPC.Health,
+  RPC.Http,
+  RPC.Http.Test,
+  RPC.Inproc,
+  RPC.IPC,
+  RPC.IPC.Unix,
+  RPC.IPC.Windows,
+  RPC.Json,
+  RPC.Json.Test,
+  RPC.Server.Test,
+  RPC.Subscription,
+  RPC.Subscription.Test,
+  RPC.Types,
+  RPC.Utils,
+  RPC.Utils.Test,
+  RPC.Websocket,
+  System.SysUtils System.Classes System.Generics.Collections System.Rtti,
+  Vite.Rpc.Connection Vite.Rpc.Subscription Vite.Rpc.Utils;
 
 type
   TCodecOption = (omMethodInvocation, omSubscriptions);

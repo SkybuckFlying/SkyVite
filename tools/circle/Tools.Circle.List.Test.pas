@@ -4,12 +4,14 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
   System.Classes,
-  System.Threading,
   System.Diagnostics,
+  System.SysUtils,
+  System.Threading,
   Tools.Circle.Base,
-  Tools.Circle.List;
+  Tools.Circle.List,
+  Tools.Circle.Map,
+  Tools.Circle.Map.Test;
 
 type
   [TestFixture]

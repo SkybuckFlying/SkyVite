@@ -3,9 +3,31 @@ unit Rpc.Health;
 interface
 
 uses
-  System.SysUtils,
+  RPC.Client,
+  RPC.Client.Example.Test,
+  RPC.Client.Test,
+  RPC.Doc,
+  RPC.Endpoints,
+  RPC.Errors,
+  RPC.Http,
+  RPC.Http.Test,
+  RPC.Inproc,
+  RPC.IPC,
+  RPC.IPC.Unix,
+  RPC.IPC.Windows,
+  RPC.Json,
+  RPC.Json.Test,
+  RPC.Server,
+  RPC.Server.Test,
+  RPC.Subscription,
+  RPC.Subscription.Test,
+  RPC.Types,
+  RPC.Utils,
+  RPC.Utils.Test,
+  RPC.Websocket,
+  System.Net.HttpClient,
   System.Net.URL,
-  System.Net.HttpClient;
+  System.SysUtils;
 
 function IsHealthCheckRouter(const ParaUrl: TURI): Boolean;
 

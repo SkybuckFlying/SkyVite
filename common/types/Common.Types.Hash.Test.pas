@@ -3,9 +3,21 @@ unit Common.Types.Hash.Test;
 interface
 
 uses
-	DUnitX.TestFramework,
-	System.SysUtils,
-	Common.Types.Hash;
+  Common.Types.Address,
+  Common.Types.Address.Test,
+  Common.Types.Block.Source,
+  Common.Types.Contracts,
+  Common.Types.Enum,
+  Common.Types.Error,
+  Common.Types.Gid,
+  Common.Types.Hash,
+  Common.Types.Height,
+  Common.Types.Jsonutils,
+  Common.Types.Quota,
+  Common.Types.TokenTypeID,
+  Common.Types.TokenTypeID.Test,
+  DUnitX.TestFramework,
+  System.SysUtils;
 
 type
 	[TestFixture]

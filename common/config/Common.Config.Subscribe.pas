@@ -3,9 +3,21 @@ unit Common.Config.Subscribe;
 interface
 
 uses
-  System.SysUtils,
+  Common.Config.Chain,
+  Common.Config.Config,
+  Common.Config.Genesis,
+  Common.Config.Genesis.Json,
+  Common.Config.Genesis.Mock.Json,
+  Common.Config.Genesis.Test,
+  Common.Config.Net,
+  Common.Config.Node.Reward,
+  Common.Config.Producer,
+  Common.Config.Upgrade,
+  Common.Config.VM,
+  Common.Config.Wallet,
   System.Classes,
-  System.JSON;
+  System.JSON,
+  System.SysUtils;
 
 /*
  * Copyright 2019 The go-vite Authors

@@ -3,12 +3,16 @@ unit Ledger.Chain.Genesis.SnapshotBlock;
 interface
 
 uses
-  System.SysUtils,
+  Interfaces,
+  Interfaces.Core,
+  Ledger.Chain.Genesis.Account.Block,
+  Ledger.Chain.Genesis.Check.Sum,
+  Ledger.Chain.Genesis.Genesis,
+  Ledger.Chain.Genesis.Interface,
   System.Classes,
   System.Generics.Collections,
-  System.Time,
-  Interfaces,
-  Interfaces.Core;
+  System.SysUtils,
+  System.Time;
 
 function NewGenesisSnapshotContent(ParaAccountBlocks: TArray<IVmAccountBlock>): ISnapshotContent;
 function NewGenesisSnapshotBlock(ParaAccountBlocks: TArray<IVmAccountBlock>): ISnapshotBlock;

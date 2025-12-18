@@ -3,12 +3,26 @@ unit VM.Abi.Reflect;
 interface
 
 uses
-  System.SysUtils,
-  System.Rtti,
   System.Generics.Collections,
+  System.Rtti,
+  System.SysUtils,
+  VM.ABI.ABI,
+  VM.ABI.ABI.Test,
   VM.Abi.Argument,
   VM.Abi.Error,
-  VM.Abi.Type;
+  VM.ABI.Event,
+  VM.ABI.Event.Test,
+  VM.ABI.Method,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.Abi.Type,
+  VM.ABI.Type.Test,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable,
+  VM.ABI.Variable.Test;
 
 function Indirect(const ParaValue: TValue): TValue;
 function ReflectIntKindAndType(IsUnsigned: Boolean; Size: Integer): TPair<TTypeKind, PTypeInfo>;

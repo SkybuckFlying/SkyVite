@@ -3,8 +3,16 @@ unit Ledger.Chain.Sync.Cache.Sync.Cache;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Interfaces, Common.DB.XLevelDB, Log15, Interfaces.Core;
+  Interfaces Common.DB.XLevelDB Log15 Interfaces.Core,
+  Ledger.Chain.Sync.Cache.Cache.Item,
+  Ledger.Chain.Sync.Cache.Cache.Item.Test,
+  Ledger.Chain.Sync.Cache.Reader,
+  Ledger.Chain.Sync.Cache.Reader.Test,
+  Ledger.Chain.Sync.Cache.Segment,
+  Ledger.Chain.Sync.Cache.Segment.Test,
+  Ledger.Chain.Sync.Cache.Sync.Cache.Test,
+  Ledger.Chain.Sync.Cache.Writer,
+  System.SysUtils System.Classes System.Generics.Collections;
 
 type
   TCacheItem = class; // Forward declaration

@@ -5,8 +5,15 @@ unit Common.Db.XLevelDb.Storage.FileStorage.NaCl;
 interface
 
 uses
-  System.SysUtils,
-  Common.Db.XLevelDb.Storage;
+  Common.Db.XLevelDb.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage.Plan9,
+  Common.DB.XLevelDB.Storage.File.Storage.Solaris,
+  Common.DB.XLevelDB.Storage.File.Storage.Unix,
+  Common.DB.XLevelDB.Storage.File.Storage.Windows,
+  Common.DB.XLevelDB.Storage.Mem.Storage,
+  Common.DB.XLevelDB.Storage.Storage,
+  System.SysUtils;
 
 function NewFileLock(const ParaPath: string; ParaReadOnly: Boolean): IFileLock;
 function SetFileLock(ParaFile: THandle; ParaReadOnly, ParaLock: Boolean): Boolean;

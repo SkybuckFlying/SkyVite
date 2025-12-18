@@ -3,7 +3,10 @@ unit hd_bip.derivation.bip_main_test;
 interface
 
 uses
-  DUnitX.TestFramework, hd_bip.derivation.bip_example, SysUtils;
+  DUnitX.TestFramework hd_bip.derivation.bip_example SysUtils,
+  Wallet.Hd.Bip.Derivation.Bip.Example,
+  Wallet.Hd.Bip.Derivation.Main,
+  Wallet.Hd.Bip.Derivation.Main.Test;
 
 type
   [TestFixture]

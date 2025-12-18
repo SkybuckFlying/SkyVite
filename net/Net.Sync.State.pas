@@ -3,7 +3,44 @@ unit Net.Sync.State;
 interface
 
 uses
-	System.SysUtils;
+  Net.Block.Feed,
+  Net.Block.Feed.Test,
+  Net.Broadcaster,
+  Net.Broadcaster.Test,
+  Net.Codec,
+  Net.Codec.Test,
+  Net.Fetcher,
+  Net.Fetcher.Test,
+  Net.Finder,
+  Net.Handshaker,
+  Net.Handshaker.Test,
+  Net.Interface,
+  Net.Message,
+  Net.Message.Test,
+  Net.Mock.Chain,
+  Net.Mock.Codec,
+  Net.Mock.Net,
+  Net.Mock.Receiver,
+  Net.MsgHandler,
+  Net.MsgHandler.Test,
+  Net.Net,
+  Net.Peer,
+  Net.Peer.Error,
+  Net.Peer.Test,
+  Net.Skeleton,
+  Net.Skeleton.Test,
+  Net.Sync.Cache.Reader,
+  Net.Sync.Cache.Reader.Test,
+  Net.Sync.Conn,
+  Net.Sync.Conn.Test,
+  Net.Sync.Downloader,
+  Net.Sync.Downloader.Test,
+  Net.Sync.Server,
+  Net.Sync.Server.Test,
+  Net.Sync.State.Test,
+  Net.Syncer,
+  Net.Syncer.Test,
+  System.SysUtils;
 
 type
 	TSyncState = ( SyncInit, Syncing, SyncDone, SyncError, SyncCancel );

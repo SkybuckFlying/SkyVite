@@ -3,7 +3,10 @@ unit Wallet.Hd_Bip.Derivation.Bip_Example;
 interface
 
 uses
-  SysUtils, Classes, bip39;
+  SysUtils Classes bip39,
+  Wallet.Hd.Bip.Derivation.Bip.Main.Test,
+  Wallet.Hd.Bip.Derivation.Main,
+  Wallet.Hd.Bip.Derivation.Main.Test;
 
 procedure RandomMnemonic12(const ParaPassphrase: string);
 procedure RandomMnemonic24(const ParaPassphrase: string);

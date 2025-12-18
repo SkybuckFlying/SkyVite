@@ -1,6 +1,15 @@
 unit VM.Contracts.Contracts.Test;
 
 interface
+uses
+  VM.Contracts.Contracts,
+  VM.Contracts.Contracts.Asset,
+  VM.Contracts.Contracts.Dex.Fund,
+  VM.Contracts.Contracts.Dex.Trade,
+  VM.Contracts.Contracts.Governance,
+  VM.Contracts.Contracts.Quota,
+  VM.Contracts.Params,
+  VM.Contracts.Reward.Test;
 
 procedure RunContractsTest;
 

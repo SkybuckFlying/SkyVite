@@ -3,8 +3,11 @@ unit Common.Bloom.Util;
 interface
 
 uses
-  System.SysUtils,
-  GoToDelphi.Helpers.FNV;
+  Common.Bloom.Bloom,
+  Common.Bloom.Bloom.Test,
+  Common.Bloom.Bucket,
+  GoToDelphi.Helpers.FNV,
+  System.SysUtils;
 
 /*
  * Copyright 2019 The go-vite Authors

@@ -3,13 +3,17 @@ unit Ledger.Chain.Genesis.Genesis;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
   Common.Types,
   Interfaces,
   Interfaces.Core,
-  Ledger.Chain.Genesis.CheckSum;
+  Ledger.Chain.Genesis.Account.Block,
+  Ledger.Chain.Genesis.Check.Sum,
+  Ledger.Chain.Genesis.CheckSum,
+  Ledger.Chain.Genesis.Interface,
+  Ledger.Chain.Genesis.Snapshot.Block,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils;
 
 const
   LedgerUnknown = Byte(0);

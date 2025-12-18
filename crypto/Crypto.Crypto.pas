@@ -3,17 +3,20 @@ unit Crypto.Crypto;
 interface
 
 uses
-  {$IFDEF FPC}
-  SysUtils,
+  {$ELSE},
+  {$ENDIF},
+  {$IFDEF FPC},
   Classes,
-  {$ELSE}
-  System.SysUtils,
-  System.Classes,
-  {$ENDIF}
+  Crypto.Crypto.Test,
+  Crypto.Hash,
+  Crypto.Hast.Test,
   DEC,
-  DECHash,
   DECCiphers,
-  DECKeys;
+  DECHash,
+  DECKeys,
+  System.Classes,
+  System.SysUtils,
+  SysUtils;
 
 type
   TCrypto = class

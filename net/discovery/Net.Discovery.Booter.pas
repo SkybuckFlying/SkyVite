@@ -3,8 +3,24 @@ unit net.discovery.booter;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.JSON,
-  Log15, net.vnode, net.discovery.discovery;
+  Log15 net.vnode net.discovery.discovery,
+  Net.Discovery.Booter.Test,
+  Net.Discovery.Bucket.Test,
+  Net.Discovery.Discovery,
+  Net.Discovery.Discovery.Test,
+  Net.Discovery.Finder,
+  Net.Discovery.Message,
+  Net.Discovery.Message.Test,
+  Net.Discovery.Mock.Socket,
+  Net.Discovery.Node,
+  Net.Discovery.Node.Test,
+  Net.Discovery.Pool,
+  Net.Discovery.Pool.Test,
+  Net.Discovery.Socket,
+  Net.Discovery.Socket.Test,
+  Net.Discovery.Table,
+  Net.Discovery.Table.Test,
+  System.SysUtils System.Classes System.Generics.Collections System.JSON;
 
 type
   IBooter = interface

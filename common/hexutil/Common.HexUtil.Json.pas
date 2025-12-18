@@ -3,7 +3,11 @@ unit Common.HexUtil.JSON;
 interface
 
 uses
-  System.SysUtils, System.Json, GoToDelphi.Helpers.BigInt, Common.HexUtil, System.Classes;
+  Common.HexUtil.HexUtil,
+  Common.HexUtil.HexUtil.Test,
+  Common.HexUtil.Json.Example.Test,
+  Common.HexUtil.Json.Test,
+  System.SysUtils System.Json GoToDelphi.Helpers.BigInt Common.HexUtil System.Classes;
 
 type
   Bytes = type TBytes;

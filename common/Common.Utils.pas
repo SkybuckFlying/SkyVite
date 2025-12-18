@@ -3,10 +3,26 @@ unit Common.Utils;
 interface
 
 uses
-<<<<<<< HEAD
-  System.SysUtils,
+  <<<<<<< HEAD,
+  Common.Bytes,
+  Common.Bytes.Test,
+  Common.Condtimeout,
+  Common.Condtimeout.Test,
+  Common.Condtimer,
+  Common.Condtimer.Test,
+  Common.Default.Params,
+  Common.GoRoutine,
+  Common.GoRoutine.Test,
+  Common.Lifecycle,
+  Common.Lock,
+  Common.Lock.Test,
+  Common.Log,
+  Common.Mock,
+  Common.Mock.Test,
+  Common.Version,
   System.Classes,
-  System.Generics.Collections;
+  System.Generics.Collections,
+  System.SysUtils;
 
 // SyncMapLen calculates the length of a dictionary.
 // Note: Unlike Go's sync.Map, the caller must ensure that the dictionary

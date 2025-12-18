@@ -1,6 +1,24 @@
 unit VM.ABI.Event.Test;
 
 interface
+uses
+  VM.ABI.ABI,
+  VM.ABI.ABI.Test,
+  VM.ABI.Argument,
+  VM.ABI.Error,
+  VM.ABI.Event,
+  VM.ABI.Method,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.ABI.Reflect,
+  VM.ABI.Type,
+  VM.ABI.Type.Test,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable,
+  VM.ABI.Variable.Test;
 
 procedure RunEventTests;
 

@@ -3,20 +3,36 @@ unit Common.Db.XLevelDb.Db_Write;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.SyncObjs,
-  System.Threading,
-  System.Generics.Collections,
+  Common.Db.XLevelDb.Batch,
+  Common.DB.XLevelDB.Comparer,
+  Common.Db.XLevelDb.DB,
+  Common.DB.XLevelDB.DB.Compaction,
+  Common.DB.XLevelDB.DB.Iter,
+  Common.DB.XLevelDB.DB.Snapshot,
+  Common.DB.XLevelDB.DB.State,
+  Common.DB.XLevelDB.DB.Transaction,
+  Common.DB.XLevelDB.DB.Util,
+  Common.DB.XLevelDB.Doc,
+  Common.Db.XLevelDb.Errors,
+  Common.DB.XLevelDB.Filter,
+  Common.Db.XLevelDb.Interfaces,
+  Common.Db.XLevelDb.Key,
   Common.Db.XLevelDb.MemDB,
   Common.Db.XLevelDb.Opt,
+  Common.DB.XLevelDB.Options,
+  Common.Db.XLevelDb.Session,
+  Common.DB.XLevelDB.Session.Compaction,
+  Common.DB.XLevelDB.Session.Record,
+  Common.DB.XLevelDB.Session.Util,
+  Common.DB.XLevelDB.Storage,
+  Common.DB.XLevelDB.Table,
   Common.Db.XLevelDb.Util,
-  Common.Db.XLevelDb.Errors,
-  Common.Db.XLevelDb.DB,
-  Common.Db.XLevelDb.Key,
-  Common.Db.XLevelDb.Batch,
-  Common.Db.XLevelDb.Interfaces,
-  Common.Db.XLevelDb.Session;
+  Common.DB.XLevelDB.Version,
+  System.Classes,
+  System.Generics.Collections,
+  System.SyncObjs,
+  System.SysUtils,
+  System.Threading;
 
 type
   TWriteMerge = record

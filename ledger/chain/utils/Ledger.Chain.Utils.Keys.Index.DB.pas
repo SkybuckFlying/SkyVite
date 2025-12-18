@@ -3,9 +3,15 @@ unit Ledger.Chain.Utils.Keys_Index_Db;
 interface
 
 uses
-  System.SysUtils,
   Common.Types,
-  Ledger.Chain.Utils.Keys;
+  Ledger.Chain.Utils.Conversion,
+  Ledger.Chain.Utils.Generate.Key,
+  Ledger.Chain.Utils.Generate.Key.Test,
+  Ledger.Chain.Utils.Key.Prefix,
+  Ledger.Chain.Utils.Keys,
+  Ledger.Chain.Utils.Keys.State.DB,
+  Ledger.Chain.Utils.Keys.State.Redo.DB,
+  System.SysUtils;
 
 type
   TAccountBlockHashKey = record

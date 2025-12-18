@@ -5,9 +5,16 @@ unit Common.Db.XLevelDb.Storage.FileStorage.Windows;
 interface
 
 uses
+  Common.Db.XLevelDb.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage,
+  Common.DB.XLevelDB.Storage.File.Storage.Nacl,
+  Common.DB.XLevelDB.Storage.File.Storage.Plan9,
+  Common.DB.XLevelDB.Storage.File.Storage.Solaris,
+  Common.DB.XLevelDB.Storage.File.Storage.Unix,
+  Common.DB.XLevelDB.Storage.Mem.Storage,
+  Common.DB.XLevelDB.Storage.Storage,
   System.SysUtils,
-  Windows,
-  Common.Db.XLevelDb.Storage;
+  Windows;
 
 type
   TWindowsFileLock = class(TInterfacedObject, IFileLock)

@@ -4,8 +4,9 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
   System.Classes,
+  System.SysUtils,
+  Tools.Unique.List.Unique.List,
   tools.unique_list.unique_list;
 
 type

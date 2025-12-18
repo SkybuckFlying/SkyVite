@@ -3,9 +3,18 @@ unit Ledger.Pool.Tree.Checker;
 interface
 
 uses
-  SysUtils, Classes,
-  Ledger.Pool.Tree.Tree, // For ITree
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Pool.Tree.Branch,
+  Ledger.Pool.Tree.Branch.Base,
+  Ledger.Pool.Tree.Branch.Test,
+  Ledger.Pool.Tree.Mock.Knot,
+  Ledger.Pool.Tree.Mock.Root.Branch,
+  Ledger.Pool.Tree.Printer,
+  Ledger.Pool.Tree.Tree,
+  Ledger.Pool.Tree.Tree // For ITree,
+  Ledger.Pool.Tree.Tree.Impl,
+  Ledger.Pool.Tree.Tree.Impl.Test,
+  SysUtils Classes;
 
 type
   TChecker = class

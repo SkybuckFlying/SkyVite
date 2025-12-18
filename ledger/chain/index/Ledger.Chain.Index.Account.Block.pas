@@ -3,14 +3,23 @@ unit Ledger.Chain.Index.AccountBlock;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
   Common.Types,
   Interfaces,
-  Ledger.Chain.Index,
   Ledger.Chain.FileManager,
-  Ledger.Chain.Utils;
+  Ledger.Chain.Index,
+  Ledger.Chain.Index.Account,
+  Ledger.Chain.Index.Cache,
+  Ledger.Chain.Index.Delete,
+  Ledger.Chain.Index.Index.DB,
+  Ledger.Chain.Index.Index.DB.Test,
+  Ledger.Chain.Index.Insert,
+  Ledger.Chain.Index.Interface,
+  Ledger.Chain.Index.Onroad,
+  Ledger.Chain.Index.Snapshot.Block,
+  Ledger.Chain.Utils,
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   TIndexDBHelper = class helper for TIndexDB

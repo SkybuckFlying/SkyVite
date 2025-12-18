@@ -3,10 +3,20 @@ unit Ledger.Pool.Batch.Mock.Chain;
 interface
 
 uses
-  SysUtils, Classes,
-  System.Generics.Collections,
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Pool.Batch.Batch,
+  Ledger.Pool.Batch.Batch.Executor.Impl,
+  Ledger.Pool.Batch.Batch.Impl,
+  Ledger.Pool.Batch.Batch.Test,
+  Ledger.Pool.Batch.Bucket,
+  Ledger.Pool.Batch.Example.Test,
+  Ledger.Pool.Batch.Level,
+  Ledger.Pool.Batch.Level.Account,
+  Ledger.Pool.Batch.Level.Snapshot,
+  Ledger.Pool.Batch.Mock.Item,
+  System.Generics.Collections,
+  SysUtils Classes;
 
 type
   // This is a mock implementation of IChain for testing the batch package

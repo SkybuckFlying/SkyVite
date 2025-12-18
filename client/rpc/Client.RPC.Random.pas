@@ -3,13 +3,18 @@ unit Client.Rpc.Random;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.JSON,
+  Client.RPC.Contract,
+  Client.RPC.Dex.Trade,
+  Client.RPC.Ledger,
+  Client.RPC.Onroad,
+  Client.RPC.Tx,
   Common.Types,
   Ledger.Consensus,
   Rpc,
-  RpcApi.Api;
+  RpcApi.Api,
+  System.Classes,
+  System.JSON,
+  System.SysUtils;
 
 type
 	IRandomApi = interface

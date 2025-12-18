@@ -3,8 +3,21 @@ unit Vm.Db.Interfaces;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Math.BigInteger,
-  Vite.Common.Types, Vite.Interfaces, Vite.Interfaces.Core;
+  System.SysUtils System.Classes System.Math.BigInteger,
+  Vite.Common.Types Vite.Interfaces Vite.Interfaces.Core,
+  VM.DB.Account.Block,
+  VM.DB.Balance,
+  VM.DB.Builtin.Contract,
+  VM.DB.Context,
+  VM.DB.Debug,
+  VM.DB.Meta.Code,
+  VM.DB.Snapshot.Block,
+  VM.DB.State,
+  VM.DB.Storage,
+  VM.DB.Storage.Iterator,
+  VM.DB.Unsaved,
+  VM.DB.VM.DB,
+  VM.DB.VM.Log;
 
 type
   IChain = interface

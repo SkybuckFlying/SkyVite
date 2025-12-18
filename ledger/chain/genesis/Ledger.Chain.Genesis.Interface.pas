@@ -3,10 +3,14 @@ unit Ledger.Chain.Genesis.Interface;
 interface
 
 uses
-  System.SysUtils,
   Common.Types,
   Interfaces,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Chain.Genesis.Account.Block,
+  Ledger.Chain.Genesis.Check.Sum,
+  Ledger.Chain.Genesis.Genesis,
+  Ledger.Chain.Genesis.Snapshot.Block,
+  System.SysUtils;
 
 type
   IChain = interface

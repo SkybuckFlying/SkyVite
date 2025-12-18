@@ -3,11 +3,19 @@ unit Vm.Contracts.ContractsDexTrade;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Common.Types.Address, Common.Types.Hash, Common.Types.TokenTypeId,
-  Interfaces.VmDb, Interfaces.Core.AccountBlock, Interfaces.Core.ContractMeta,
-  Vm.Abi.Abi, Vm.Contracts.Abi.AbiDexTrade, Vm.Contracts.Abi.AbiDexFund, Vm.Contracts.Contracts, Vm.Util.Util,
-  Vm.Contracts.Dex.Dex, Vm.Contracts.Dex.Proto.DexProto;
+  Common.Types.Address Common.Types.Hash Common.Types.TokenTypeId,
+  Interfaces.VmDb Interfaces.Core.AccountBlock Interfaces.Core.ContractMeta,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vm.Abi.Abi Vm.Contracts.Abi.AbiDexTrade Vm.Contracts.Abi.AbiDexFund Vm.Contracts.Contracts Vm.Util.Util,
+  VM.Contracts.Contracts,
+  VM.Contracts.Contracts.Asset,
+  VM.Contracts.Contracts.Dex.Fund,
+  VM.Contracts.Contracts.Governance,
+  VM.Contracts.Contracts.Quota,
+  VM.Contracts.Contracts.Test,
+  Vm.Contracts.Dex.Dex Vm.Contracts.Dex.Proto.DexProto,
+  VM.Contracts.Params,
+  VM.Contracts.Reward.Test;
 
 type
   TMethodDexTradePlaceOrder = class(TInterfacedObject, IBuiltinContractMethod)

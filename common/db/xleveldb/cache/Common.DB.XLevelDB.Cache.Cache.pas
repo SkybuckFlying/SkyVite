@@ -3,9 +3,10 @@ unit Common.Db.XLevelDB.Cache;
 interface
 
 uses
-  System.SysUtils,
+  Common.DB.XLevelDB.Cache.Lru,
   System.Classes,
-  System.Generics.Collections;
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   IValue = interface

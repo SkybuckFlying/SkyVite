@@ -3,8 +3,24 @@ unit net.discovery.discovery;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.Threading,
-  Log15, net.vnode, net.database.database, common.bytes;
+  Log15 net.vnode net.database.database common.bytes,
+  Net.Discovery.Booter,
+  Net.Discovery.Booter.Test,
+  Net.Discovery.Bucket.Test,
+  Net.Discovery.Discovery.Test,
+  Net.Discovery.Finder,
+  Net.Discovery.Message,
+  Net.Discovery.Message.Test,
+  Net.Discovery.Mock.Socket,
+  Net.Discovery.Node,
+  Net.Discovery.Node.Test,
+  Net.Discovery.Pool,
+  Net.Discovery.Pool.Test,
+  Net.Discovery.Socket,
+  Net.Discovery.Socket.Test,
+  Net.Discovery.Table,
+  Net.Discovery.Table.Test,
+  System.SysUtils System.Classes System.Generics.Collections System.Threading;
 
 const
   SeedMaxAge = 7 * 24 * 3600; // 7d

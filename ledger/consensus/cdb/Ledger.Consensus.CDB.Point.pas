@@ -3,11 +3,14 @@ unit Ledger.Consensus.CDB.Point;
 interface
 
 uses
-  System.SysUtils,
-  System.Generics.Collections,
   BigNumbers,
   Common.Types,
-  Common.VitePB;
+  Common.VitePB,
+  Ledger.Consensus.CDB.Consensus,
+  Ledger.Consensus.CDB.DB.Test,
+  Ledger.Consensus.CDB.Point.Test,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   IContent = interface

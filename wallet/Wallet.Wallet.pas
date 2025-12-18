@@ -3,11 +3,15 @@ unit Wallet.Wallet;
 interface
 
 uses
-  SysUtils,
   GoToDelphi.Helpers.TBytes,
+  SysUtils,
   Vite.Common.Types,
   Vite.Crypto,
-  Wallet.HD_BIP.Derivation;
+  Wallet.Account,
+  Wallet.Account.Test,
+  Wallet.HD_BIP.Derivation,
+  Wallet.Manager,
+  Wallet.Manager.Test;
 
 type
   TWallet = class

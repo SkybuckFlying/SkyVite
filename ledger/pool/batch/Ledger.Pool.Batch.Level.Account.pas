@@ -3,10 +3,20 @@ unit Ledger.Pool.Batch.Level.Account;
 interface
 
 uses
-  SysUtils, Classes,
   Common.Types,
   Interfaces.Core,
-  System.Math.BigInt;
+  Ledger.Pool.Batch.Batch,
+  Ledger.Pool.Batch.Batch.Executor.Impl,
+  Ledger.Pool.Batch.Batch.Impl,
+  Ledger.Pool.Batch.Batch.Test,
+  Ledger.Pool.Batch.Bucket,
+  Ledger.Pool.Batch.Example.Test,
+  Ledger.Pool.Batch.Level,
+  Ledger.Pool.Batch.Level.Snapshot,
+  Ledger.Pool.Batch.Mock.Chain,
+  Ledger.Pool.Batch.Mock.Item,
+  System.Math.BigInt,
+  SysUtils Classes;
 
 type
   TLevelAccount = class

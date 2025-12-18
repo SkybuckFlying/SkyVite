@@ -3,10 +3,18 @@ unit Vm.Contracts.ContractsQuota;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Common.Types.Address, Common.Types.Hash, Common.Types.TokenTypeId, Common.Helper, Common.Upgrade,
-  Interfaces.VmDb, Interfaces.Core.AccountBlock, Interfaces.Core.ContractMeta,
-  Vm.Abi.Abi, Vm.Contracts.Abi.AbiQuota, Vm.Contracts.Contracts, Vm.Util.Util, Vm.Quota.Quota;
+  Common.Types.Address Common.Types.Hash Common.Types.TokenTypeId Common.Helper Common.Upgrade,
+  Interfaces.VmDb Interfaces.Core.AccountBlock Interfaces.Core.ContractMeta,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vm.Abi.Abi Vm.Contracts.Abi.AbiQuota Vm.Contracts.Contracts Vm.Util.Util Vm.Quota.Quota,
+  VM.Contracts.Contracts,
+  VM.Contracts.Contracts.Asset,
+  VM.Contracts.Contracts.Dex.Fund,
+  VM.Contracts.Contracts.Dex.Trade,
+  VM.Contracts.Contracts.Governance,
+  VM.Contracts.Contracts.Test,
+  VM.Contracts.Params,
+  VM.Contracts.Reward.Test;
 
 const
   StakeAmountMin = 1000000000000000000; // 1 VITE

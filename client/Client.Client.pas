@@ -3,19 +3,27 @@ unit Client.Client;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Math.BigInt,
-  Common.Types,
+  Client.ABI.Client,
+  Client.ABI.Client.Test,
+  Client.Client.Test,
+  Client.Dex.Client,
+  Client.Dex.Client.Test,
+  Client.DexClient,
+  Client.RPC,
+  Client.RPC.Test,
+  Client.SBP.Upgrade.Test,
   Common.Errors,
+  Common.Types,
   Crypto.Ed25519,
   Interfaces.Core,
   RpcApi.Api,
+  System.Classes,
+  System.Math.BigInt,
+  System.SysUtils,
   Vm.Abi,
   Vm.Util,
   Wallet.EntropyStore,
-  Wallet.Hd_Bip.Derivation,
-  Client.DexClient;
+  Wallet.Hd_Bip.Derivation;
 
 type
   ERequestError = class(Exception);

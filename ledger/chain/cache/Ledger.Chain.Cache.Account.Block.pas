@@ -3,8 +3,18 @@ unit Ledger.Chain.Cache.AccountBlock;
 interface
 
 uses
-  System.SysUtils, System.Classes,
-  Vite.Common.Types, Interfaces.Core, Ledger.Chain.Cache.Cache;
+  Ledger.Chain.Cache.Cache,
+  Ledger.Chain.Cache.Dataset,
+  Ledger.Chain.Cache.Hot.Data,
+  Ledger.Chain.Cache.Init,
+  Ledger.Chain.Cache.Interface,
+  Ledger.Chain.Cache.Quota,
+  Ledger.Chain.Cache.Quota.List,
+  Ledger.Chain.Cache.Snapshot.Block,
+  Ledger.Chain.Cache.Unconfirmed,
+  Ledger.Chain.Cache.Unconfirmed.Pool,
+  System.SysUtils System.Classes,
+  Vite.Common.Types Interfaces.Core Ledger.Chain.Cache.Cache;
 
 type
   TCache = partial class

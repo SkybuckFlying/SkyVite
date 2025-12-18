@@ -3,9 +3,12 @@ unit Pow.Remote.Request;
 interface
 
 uses
-  System.SysUtils,
+  Pow.Remote.Response,
+  Pow.Remote.Service,
+  Pow.Remote.Service.Test,
   System.Classes,
-  System.JSON.Serializers;
+  System.JSON.Serializers,
+  System.SysUtils;
 
 type
   TWorkGenerate = class

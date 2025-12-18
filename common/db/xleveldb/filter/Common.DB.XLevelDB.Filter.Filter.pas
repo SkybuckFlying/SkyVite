@@ -3,6 +3,7 @@ unit Common.Db.XLevelDB.Filter;
 interface
 
 uses
+  Common.DB.XLevelDB.Filter.Bloom,
   System.SysUtils;
 
 type

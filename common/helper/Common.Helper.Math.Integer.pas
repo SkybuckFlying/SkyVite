@@ -3,6 +3,13 @@ unit Common.Helper.Math.Integer;
 interface
 
 uses
+  Common.Helper.Common,
+  Common.Helper.Common.Test,
+  Common.Helper.Math.Big,
+  Common.Helper.Math.Test,
+  Common.Helper.Rand,
+  Common.Helper.Rand.Test,
+  Common.Helper.Slice,
   System.SysUtils;
 
 type

@@ -4,7 +4,15 @@ interface
 
 uses
   interfaces.core,
-  SysUtils;
+  SysUtils,
+  VM.Util.Common,
+  VM.Util.Consensus.Reader,
+  VM.Util.DB.Helper,
+  VM.Util.Errors,
+  VM.Util.IntPool,
+  VM.Util.Intpool.Test,
+  VM.Util.Quota,
+  VM.Util.Quota.Test;
 
 type
   IGlobalStatus = interface

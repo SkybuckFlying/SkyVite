@@ -3,9 +3,11 @@ unit RpcApi.Api.Filters.ChainSubscribe;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Vite, Common.Types, Interfaces, Interfaces.Core,
-  RpcApi.Api.Filters.EventSystem, GoToDelphi.Helpers.TChannel;
+  RpcApi.API.Filters.Event.System,
+  RpcApi.Api.Filters.EventSystem GoToDelphi.Helpers.TChannel,
+  RpcApi.API.Filters.Subscribe,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vite Common.Types Interfaces Interfaces.Core;
 
 type
   TSendBlock = class

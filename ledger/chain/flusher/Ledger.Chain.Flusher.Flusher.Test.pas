@@ -4,9 +4,10 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils, System.Classes, System.Generics.Collections, System.IOUtils,
-  Ledger.Chain.Flusher.Flusher, Common.DB.XLevelDB, Common.Test.Tools,
-  Vite.Common.Types, Common.Utils, Crypto.Hash;
+  Ledger.Chain.Flusher.Flusher,
+  Ledger.Chain.Flusher.Flusher Common.DB.XLevelDB Common.Test.Tools,
+  System.SysUtils System.Classes System.Generics.Collections System.IOUtils,
+  Vite.Common.Types Common.Utils Crypto.Hash;
 
 type
   TMockDB = class(TInterfacedObject, IReplay)

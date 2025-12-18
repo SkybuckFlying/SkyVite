@@ -3,10 +3,17 @@ unit Ledger.Onroad.Pool.Pool;
 interface
 
 uses
-  SysUtils, Classes, SyncObjs,
-  System.Generics.Collections,
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Onroad.Pool.Caller.Cache.Test,
+  Ledger.Onroad.Pool.Contract.Pool,
+  Ledger.Onroad.Pool.Error.Table,
+  Ledger.Onroad.Pool.Storage,
+  Ledger.Onroad.Pool.Storage.Test,
+  Ledger.Onroad.Pool.Types,
+  Ledger.Onroad.Pool.Types.Test,
+  System.Generics.Collections,
+  SysUtils Classes SyncObjs;
 
 type
   TPool = class

@@ -3,12 +3,19 @@ unit Client.AbiClient;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Common.Types,
-	Client.Rpc,
-	Vm.Abi,
-	RpcApi.Api;
+  Client.ABI.Client.Test,
+  Client.Client,
+  Client.Client.Test,
+  Client.Dex.Client,
+  Client.Dex.Client.Test,
+  Client.Rpc,
+  Client.RPC.Test,
+  Client.SBP.Upgrade.Test,
+  Common.Types,
+  RpcApi.Api,
+  System.Classes,
+  System.SysUtils,
+  Vm.Abi;
 
 type
 	IAbiClient = interface

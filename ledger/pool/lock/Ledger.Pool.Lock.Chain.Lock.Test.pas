@@ -3,8 +3,8 @@ unit Ledger.Pool.Lock.Chain.Lock.Test;
 interface
 
 uses
-  SysUtils, Classes,
   Ledger.Pool.Lock.Chain.Lock,
+  SysUtils Classes,
   unit_GoLang_Compatibility_version_006;
 
 type

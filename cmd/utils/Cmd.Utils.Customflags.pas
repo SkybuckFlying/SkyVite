@@ -3,12 +3,16 @@ unit Cmd.Utils.CustomFlags;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.IOUtils,
-	System.StrUtils,
-	Cli,
-	Common;
+  Cli,
+  Cmd.Utils.Cli,
+  Cmd.Utils.Customflags.Test,
+  Cmd.Utils.Flags,
+  Cmd.Utils.Path,
+  Common,
+  System.Classes,
+  System.IOUtils,
+  System.StrUtils,
+  System.SysUtils;
 
 type
 	TDirectoryString = class

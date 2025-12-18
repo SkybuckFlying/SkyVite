@@ -3,10 +3,11 @@ unit Tools.Ticket.Ticket;
 interface
 
 uses
-  System.SysUtils,
+  GoToDelphi.Helpers.TChannel,
   System.Classes,
+  System.SysUtils,
   System.Threading,
-  GoToDelphi.Helpers.TChannel;
+  Tools.Ticket.Ticket.Test;
 
 type
   ETicketClosed = class(Exception)

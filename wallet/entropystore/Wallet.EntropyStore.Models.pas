@@ -3,7 +3,12 @@ unit Wallet.EntropyStore.Models;
 interface
 
 uses
-  System.JSON;
+  System.JSON,
+  Wallet.EntropyStore.Crypto.Store,
+  Wallet.EntropyStore.Crypto.Store.Test,
+  Wallet.EntropyStore.Manager,
+  Wallet.EntropyStore.Manager.Test,
+  Wallet.EntropyStore.Utils;
 
 const
   CryptoStoreVersion = 1;

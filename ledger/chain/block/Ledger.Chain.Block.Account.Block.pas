@@ -3,7 +3,13 @@ unit ledger.chain.block.account_block;
 interface
 
 uses
-  SysUtils, ledger.core, ledger.chain.file_manager;
+  Ledger.Chain.Block.Block.DB,
+  Ledger.Chain.Block.Block.DB.Test,
+  Ledger.Chain.Block.Block.Parser,
+  Ledger.Chain.Block.Buffer,
+  Ledger.Chain.Block.Flush,
+  Ledger.Chain.Block.Snapshot.Block,
+  SysUtils ledger.core ledger.chain.file_manager;
 
 type
   TBlockDB = class

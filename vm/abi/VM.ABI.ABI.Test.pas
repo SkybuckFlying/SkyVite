@@ -1,6 +1,41 @@
 unit VM.ABI.ABI.Test;
 
 interface
+uses
+  Log15.Doc,
+  Log15.Format,
+  Log15.Handler,
+  Log15.Handler.Go13,
+  Log15.Handler.Go14,
+  Log15.Logger,
+  Log15.Root,
+  Log15.Syslog,
+  Log15.Term.Terminal.AppEngine,
+  Log15.Term.Terminal.Darwin,
+  Log15.Term.Terminal.Freebsd,
+  Log15.Term.Terminal.Linux,
+  Log15.Term.Terminal.Netbsd,
+  Log15.Term.Terminal.NotWindows,
+  Log15.Term.Terminal.Openbsd,
+  Log15.Term.Terminal.Solaris,
+  Log15.Term.Terminal.Windows,
+  VM.ABI.ABI,
+  VM.ABI.Argument,
+  VM.ABI.Error,
+  VM.ABI.Event,
+  VM.ABI.Event.Test,
+  VM.ABI.Method,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.ABI.Reflect,
+  VM.ABI.Type,
+  VM.ABI.Type.Test,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable,
+  VM.ABI.Variable.Test;
 
 procedure RunAbiTests;
 

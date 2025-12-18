@@ -3,10 +3,10 @@ unit VM.GasTable;
 interface
 
 uses
-  System.SysUtils,
+  GoToDelphi.Helpers.BigInt,
   System.Classes,
   System.Generics.Collections,
-  GoToDelphi.Helpers.BigInt,
+  System.SysUtils,
   Vite.Common.Helper,
   Vite.Common.Types,
   Vite.Common.Upgrade,
@@ -14,9 +14,32 @@ uses
   Vite.Interfaces.Core,
   Vite.VM.Contracts,
   Vite.VM.Util,
+  VM.Contract,
+  VM.Contract.Test,
+  VM.Contracts.Dex.Fund.Test,
+  VM.Contracts.Dex.Trade.Test,
+  VM.Contracts.Test,
+  VM.Database.Memory.Test,
+  VM.Database.Test,
+  VM.Destination,
+  VM.Destination.Test,
+  VM.Gas.Table.Test,
+  VM.Instructions,
+  VM.Instructions.Test,
+  VM.Interpreter,
+  VM.Jump.Table,
   VM.Memory,
+  VM.Memory.Table,
+  VM.Memory.Test,
+  VM.Mock.DB,
+  VM.Opcodes,
+  VM.Params,
   VM.Stack,
-  VM.Vm;
+  VM.Stack.Table,
+  VM.Stack.Test,
+  VM.Vm,
+  VM.VM.Run.Test,
+  VM.VM.Test;
 
 type
   TGasFunc = function(const ParaVm: IVM; const ParaContract: IContract; const ParaStack: IStack; const ParaMem: IMemory; ParaMemorySize: UInt64): TTriple<UInt64, Boolean, Exception>;

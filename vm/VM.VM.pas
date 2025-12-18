@@ -3,12 +3,38 @@ unit Vm;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.SyncObjs,
-  System.Math.BigInteger, System.Diagnostics,
-  Vite.Common, Vite.Common.Helper, Vite.Common.Types, Vite.Common.Upgrade,
-  Vite.Interfaces, Vite.Interfaces.Core, Vite.Interfaces.VmDb,
-  Vite.Log15, Vite.Monitor,
-  Vite.Vm.Abi, Vite.Vm.Contracts, Vite.Vm.Quota, Vite.Vm.Util, Vm.Interpreter, Vm.Params;
+  System.Math.BigInteger System.Diagnostics,
+  System.SysUtils System.Classes System.Generics.Collections System.SyncObjs,
+  Vite.Common Vite.Common.Helper Vite.Common.Types Vite.Common.Upgrade,
+  Vite.Interfaces Vite.Interfaces.Core Vite.Interfaces.VmDb,
+  Vite.Log15 Vite.Monitor,
+  Vite.Vm.Abi Vite.Vm.Contracts Vite.Vm.Quota Vite.Vm.Util Vm.Interpreter Vm.Params,
+  VM.Contract,
+  VM.Contract.Test,
+  VM.Contracts.Dex.Fund.Test,
+  VM.Contracts.Dex.Trade.Test,
+  VM.Contracts.Test,
+  VM.Database.Memory.Test,
+  VM.Database.Test,
+  VM.Destination,
+  VM.Destination.Test,
+  VM.Gas.Table,
+  VM.Gas.Table.Test,
+  VM.Instructions,
+  VM.Instructions.Test,
+  VM.Interpreter,
+  VM.Jump.Table,
+  VM.Memory,
+  VM.Memory.Table,
+  VM.Memory.Test,
+  VM.Mock.DB,
+  VM.Opcodes,
+  VM.Params,
+  VM.Stack,
+  VM.Stack.Table,
+  VM.Stack.Test,
+  VM.VM.Run.Test,
+  VM.VM.Test;
 
 type
   TVmConfig = record

@@ -6,7 +6,15 @@ uses
   common.helper,
   common.upgrade,
   interfaces.core,
-  SysUtils;
+  SysUtils,
+  VM.Util.Common,
+  VM.Util.Consensus.Reader,
+  VM.Util.DB.Helper,
+  VM.Util.Errors,
+  VM.Util.IntPool,
+  VM.Util.Intpool.Test,
+  VM.Util.Quota.Test,
+  VM.Util.Types;
 
 const
   CommonQuotaMultiplier = 10;

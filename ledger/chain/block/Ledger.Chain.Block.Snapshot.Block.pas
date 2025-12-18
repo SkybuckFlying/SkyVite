@@ -3,10 +3,15 @@ unit Ledger.Chain.Block.Snapshot.Block;
 interface
 
 uses
-	System.SysUtils,
-	Interfaces.Core.Snapshot.Block,
-	Ledger.Chain.File.Manager.Location,
-	Ledger.Chain.Block.Block.DB;
+  Interfaces.Core.Snapshot.Block,
+  Ledger.Chain.Block.Account.Block,
+  Ledger.Chain.Block.Block.DB,
+  Ledger.Chain.Block.Block.DB.Test,
+  Ledger.Chain.Block.Block.Parser,
+  Ledger.Chain.Block.Buffer,
+  Ledger.Chain.Block.Flush,
+  Ledger.Chain.File.Manager.Location,
+  System.SysUtils;
 
 type
 	TSnapshotBlockHelper = class helper for TBlockDB

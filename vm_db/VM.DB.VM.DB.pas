@@ -3,18 +3,30 @@ unit VM.DB;
 interface
 
 uses
-  System.SysUtils,
+  Common.Db.MergedIterator,
+  GoToDelphi.Helpers.TBytes,
   System.Classes,
   System.Generics.Collections,
   System.Math.BigInteger,
-  GoToDelphi.Helpers.TBytes,
+  System.SysUtils,
   Vite.Common.Types,
   Vite.Interfaces,
   Vite.Interfaces.Core,
   Vite.Interfaces.VmDb,
+  VM.DB.Account.Block,
+  VM.DB.Balance,
+  VM.DB.Builtin.Contract,
+  VM.DB.Context,
+  VM.DB.Debug,
+  VM.DB.Interface,
   VM.DB.Interfaces,
+  VM.DB.Meta.Code,
+  VM.DB.Snapshot.Block,
+  VM.DB.State,
+  VM.DB.Storage,
+  VM.DB.Storage.Iterator,
   VM.DB.Unsaved,
-  Common.Db.MergedIterator;
+  VM.DB.VM.Log;
 
 type
   TVmDb = class(TInterfacedObject, IVmDb)

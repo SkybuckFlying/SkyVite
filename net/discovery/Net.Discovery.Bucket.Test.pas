@@ -3,13 +3,28 @@ unit net.discovery.bucket.test;
 interface
 
 uses
-  TestFramework,
-  System.SysUtils,
+  Net.Discovery.Booter,
+  Net.Discovery.Booter.Test,
+  net.discovery.bucket,
+  net.discovery.discovery,
+  Net.Discovery.Discovery.Test,
+  Net.Discovery.Finder,
+  Net.Discovery.Message,
+  Net.Discovery.Message.Test,
+  Net.Discovery.Mock.Socket,
+  Net.Discovery.Node,
+  Net.Discovery.Node.Test,
+  Net.Discovery.Pool,
+  Net.Discovery.Pool.Test,
+  Net.Discovery.Socket,
+  Net.Discovery.Socket.Test,
+  Net.Discovery.Table,
+  Net.Discovery.Table.Test,
+  net.vnode,
   System.Classes,
   System.Generics.Collections,
-  net.vnode,
-  net.discovery.discovery,
-  net.discovery.bucket;
+  System.SysUtils,
+  TestFramework;
 
 type
   [TestFixture]

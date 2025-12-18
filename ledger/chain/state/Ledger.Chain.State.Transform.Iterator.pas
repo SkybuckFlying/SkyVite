@@ -3,8 +3,20 @@ unit Ledger.Chain.State.TransformIterator;
 interface
 
 uses
-  System.SysUtils,
-  Common.DB.XLevelDB.Iterator;
+  Common.DB.XLevelDB.Iterator,
+  Ledger.Chain.State.Cache,
+  Ledger.Chain.State.Delete,
+  Ledger.Chain.State.Interface,
+  Ledger.Chain.State.Interface.Mock,
+  Ledger.Chain.State.Iteration,
+  Ledger.Chain.State.Redo,
+  Ledger.Chain.State.Redo.Cache,
+  Ledger.Chain.State.Round.Cache,
+  Ledger.Chain.State.Round.Cache.Test,
+  Ledger.Chain.State.State.DB,
+  Ledger.Chain.State.Storage.Database,
+  Ledger.Chain.State.Write,
+  System.SysUtils;
 
 type
   TTransformIterator = class(TInterfacedObject, IIterator)

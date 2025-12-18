@@ -4,7 +4,12 @@ interface
 
 uses
   Common.Types,
-  Producer.ProducerEvent;
+  Producer.Producer,
+  Producer.Producer.Test,
+  Producer.ProducerEvent,
+  Producer.Tools,
+  Producer.Worker,
+  Producer.Worker.Test;
 
 type
   TAccountEventFunc = procedure(const ParaAccountEvent: TAccountEvent);

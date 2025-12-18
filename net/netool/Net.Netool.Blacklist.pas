@@ -3,12 +3,14 @@ unit Net.Netool.Blacklist;
 interface
 
 uses
-  System.SysUtils,
+  Common.Bytes,
+  Net.Netool.Net,
+  Net.Netool.Net.Test,
   System.Classes,
-  System.Generics.Collections,
   System.DateUtils,
-  System.Threading,
-  Common.Bytes;
+  System.Generics.Collections,
+  System.SysUtils,
+  System.Threading;
 
 type
   TStrategy = reference to function(ParaT: Int64; ParaCount: Integer): Boolean;

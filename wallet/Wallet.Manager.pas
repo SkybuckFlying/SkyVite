@@ -3,18 +3,21 @@ unit Wallet.Manager;
 interface
 
 uses
-  SysUtils,
   Classes,
   Generics.Collections,
-  SyncObjs,
   GoToDelphi.Helpers.TBytes,
+  SyncObjs,
+  SysUtils,
   Vite.Common.Config,
   Vite.Common.Errors,
   Vite.Common.Types,
   Vite.Log15,
-  Wallet.EntropyStore,
   Wallet.Account,
-  Wallet.HD_BIP.Derivation;
+  Wallet.Account.Test,
+  Wallet.EntropyStore,
+  Wallet.HD_BIP.Derivation,
+  Wallet.Manager.Test,
+  Wallet.Wallet;
 
 type
   TUnlockChangedListener = reference to procedure(const ParaEvent: TUnlockEvent);

@@ -3,15 +3,17 @@ unit Node.Config.Config;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.Generics.Collections,
-	System.IOUtils,
-	System.JSON,
-	Common.Types,
-	Common.Config.Config,
-	Crypto.Ed25519,
-	unit_GoLang_Compatibility_version_006;
+  Common.Config.Config,
+  Common.Types,
+  Crypto.Ed25519,
+  Node.Config.Config.Test,
+  Node.Config.Defaults,
+  System.Classes,
+  System.Generics.Collections,
+  System.IOUtils,
+  System.JSON,
+  System.SysUtils,
+  unit_GoLang_Compatibility_version_006;
 
 type
 	TNodeConfig = class

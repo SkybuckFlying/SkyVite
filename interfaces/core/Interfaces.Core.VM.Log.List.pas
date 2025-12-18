@@ -3,11 +3,25 @@ unit Interfaces.Core.VmLogList;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
   Common.Types,
-  Common.VitePb,
   Common.Upgrade,
-  Crypto;
+  Common.VitePb,
+  Crypto,
+  Interfaces.Core.Account,
+  Interfaces.Core.Account.Block,
+  Interfaces.Core.Account.Block.Test,
+  Interfaces.Core.Contract.Meta,
+  Interfaces.Core.Contract.Meta.Test,
+  Interfaces.Core.Hash.Height,
+  Interfaces.Core.Hash.Height.Test,
+  Interfaces.Core.Info,
+  Interfaces.Core.Serializable,
+  Interfaces.Core.Snapshot.Block,
+  Interfaces.Core.Snapshot.Block.Test,
+  Interfaces.Core.Snapshot.Chunk,
+  Interfaces.Core.Token,
+  Interfaces.Core.VM.Log.List.Test,
+  System.SysUtils System.Classes System.Generics.Collections;
 
 type
   TVmLog = record

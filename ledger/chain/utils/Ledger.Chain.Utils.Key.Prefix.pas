@@ -1,6 +1,14 @@
 unit Ledger.Chain.Utils.Key_Prefix;
 
 interface
+uses
+  Ledger.Chain.Utils.Conversion,
+  Ledger.Chain.Utils.Generate.Key,
+  Ledger.Chain.Utils.Generate.Key.Test,
+  Ledger.Chain.Utils.Keys,
+  Ledger.Chain.Utils.Keys.Index.DB,
+  Ledger.Chain.Utils.Keys.State.DB,
+  Ledger.Chain.Utils.Keys.State.Redo.DB;
 
 const
   // index db

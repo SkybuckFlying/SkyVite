@@ -3,9 +3,14 @@ unit common.db.xleveldb.util.buffer_pool;
 interface
 
 uses
-  System.SysUtils,
+  Common.DB.XLevelDB.Util.Buffer,
+  Common.DB.XLevelDB.Util.Crc32,
+  Common.DB.XLevelDB.Util.Hash,
+  Common.DB.XLevelDB.Util.Range,
+  Common.DB.XLevelDB.Util.Util,
   System.Classes,
   System.Generics.Collections,
+  System.SysUtils,
   System.Threading;
 
 type

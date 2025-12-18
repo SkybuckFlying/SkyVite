@@ -3,8 +3,14 @@ unit Log15.Handler.Go13;
 interface
 
 uses
-	System.SyncObjs,
-	Log15.Handler;
+  Log15.Doc,
+  Log15.Format,
+  Log15.Handler,
+  Log15.Handler.Go14,
+  Log15.Logger,
+  Log15.Root,
+  Log15.Syslog,
+  System.SyncObjs;
 
 type
 	TSwapHandler = class(TInterfacedObject, IHandler)

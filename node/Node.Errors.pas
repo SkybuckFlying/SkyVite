@@ -3,6 +3,8 @@ unit Node.Errors;
 interface
 
 uses
+  Node.Node,
+  Node.RPC,
   System.SysUtils;
 
 var

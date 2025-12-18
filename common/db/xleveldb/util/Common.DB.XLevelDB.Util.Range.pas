@@ -3,6 +3,11 @@ unit common.db.xleveldb.util.range;
 interface
 
 uses
+  Common.DB.XLevelDB.Util.Buffer,
+  Common.DB.XLevelDB.Util.Buffer.Pool,
+  Common.DB.XLevelDB.Util.Crc32,
+  Common.DB.XLevelDB.Util.Hash,
+  Common.DB.XLevelDB.Util.Util,
   System.SysUtils;
 
 type

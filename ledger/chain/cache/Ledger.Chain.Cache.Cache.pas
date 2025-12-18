@@ -3,10 +3,20 @@ unit Ledger.Chain.Cache.Cache;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.SyncObjs,
-  Ledger.Chain.Cache.Interfaces, Ledger.Chain.Cache.DataSet,
-  Ledger.Chain.Cache.UnconfirmedPool, Ledger.Chain.Cache.HotData,
-  Ledger.Chain.Cache.QuotaList, Interfaces;
+  Ledger.Chain.Cache.Account.Block,
+  Ledger.Chain.Cache.Dataset,
+  Ledger.Chain.Cache.Hot.Data,
+  Ledger.Chain.Cache.Init,
+  Ledger.Chain.Cache.Interface,
+  Ledger.Chain.Cache.Interfaces Ledger.Chain.Cache.DataSet,
+  Ledger.Chain.Cache.Quota,
+  Ledger.Chain.Cache.Quota.List,
+  Ledger.Chain.Cache.QuotaList Interfaces,
+  Ledger.Chain.Cache.Snapshot.Block,
+  Ledger.Chain.Cache.Unconfirmed,
+  Ledger.Chain.Cache.Unconfirmed.Pool,
+  Ledger.Chain.Cache.UnconfirmedPool Ledger.Chain.Cache.HotData,
+  System.SysUtils System.Classes System.SyncObjs;
 
 type
   TCache = class

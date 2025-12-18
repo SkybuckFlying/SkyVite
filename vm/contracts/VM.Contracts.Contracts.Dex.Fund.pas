@@ -3,11 +3,19 @@ unit Vm.Contracts.ContractsDexFund;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Common.Types.Address, Common.Types.Hash, Common.Types.TokenTypeId,
-  Interfaces.VmDb, Interfaces.Core.AccountBlock, Interfaces.Core.ContractMeta,
-  Vm.Abi.Abi, Vm.Contracts.Abi.AbiDexFund, Vm.Contracts.Contracts, Vm.Util.Util, Vm.Quota.Quota,
-  Vm.Contracts.Dex.Dex, Vm.Contracts.Dex.Proto.DexProto;
+  Common.Types.Address Common.Types.Hash Common.Types.TokenTypeId,
+  Interfaces.VmDb Interfaces.Core.AccountBlock Interfaces.Core.ContractMeta,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vm.Abi.Abi Vm.Contracts.Abi.AbiDexFund Vm.Contracts.Contracts Vm.Util.Util Vm.Quota.Quota,
+  VM.Contracts.Contracts,
+  VM.Contracts.Contracts.Asset,
+  VM.Contracts.Contracts.Dex.Trade,
+  VM.Contracts.Contracts.Governance,
+  VM.Contracts.Contracts.Quota,
+  VM.Contracts.Contracts.Test,
+  Vm.Contracts.Dex.Dex Vm.Contracts.Dex.Proto.DexProto,
+  VM.Contracts.Params,
+  VM.Contracts.Reward.Test;
 
 type
   TMethodDexFundDeposit = class(TInterfacedObject, IBuiltinContractMethod)

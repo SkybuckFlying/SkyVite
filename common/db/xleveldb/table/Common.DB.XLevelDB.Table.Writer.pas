@@ -3,13 +3,15 @@ unit common.db.xleveldb.table.writer;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
   common.db.xleveldb.comparer,
   common.db.xleveldb.filter,
   common.db.xleveldb.opt,
   common.db.xleveldb.table,
-  common.db.xleveldb.util;
+  Common.DB.XLevelDB.Table.Reader,
+  Common.DB.XLevelDB.Table.Table,
+  common.db.xleveldb.util,
+  System.Classes,
+  System.SysUtils;
 
 type
   TBlockWriter = class

@@ -3,10 +3,42 @@ unit Common.Lock.Test;
 interface
 
 uses
-	System.SysUtils,
-	System.Threading,
-	DUnitX.TestFramework,
-	Common.Lock;
+  Common.Bytes,
+  Common.Bytes.Test,
+  Common.Condtimeout,
+  Common.Condtimeout.Test,
+  Common.Condtimer,
+  Common.Condtimer.Test,
+  Common.Default.Params,
+  Common.GoRoutine,
+  Common.GoRoutine.Test,
+  Common.Lifecycle,
+  Common.Lock,
+  Common.Log,
+  Common.Mock,
+  Common.Mock.Test,
+  Common.Utils,
+  Common.Version,
+  DUnitX.TestFramework,
+  Log15.Doc,
+  Log15.Format,
+  Log15.Handler,
+  Log15.Handler.Go13,
+  Log15.Handler.Go14,
+  Log15.Logger,
+  Log15.Root,
+  Log15.Syslog,
+  Log15.Term.Terminal.AppEngine,
+  Log15.Term.Terminal.Darwin,
+  Log15.Term.Terminal.Freebsd,
+  Log15.Term.Terminal.Linux,
+  Log15.Term.Terminal.Netbsd,
+  Log15.Term.Terminal.NotWindows,
+  Log15.Term.Terminal.Openbsd,
+  Log15.Term.Terminal.Solaris,
+  Log15.Term.Terminal.Windows,
+  System.SysUtils,
+  System.Threading;
 
 type
 	[TestFixture]

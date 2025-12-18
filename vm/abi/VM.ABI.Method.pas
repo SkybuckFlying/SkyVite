@@ -3,10 +3,26 @@ unit VM.Abi.Method;
 interface
 
 uses
-  System.SysUtils,
   System.Classes,
   System.Generics.Collections,
-  VM.Abi.Argument;
+  System.SysUtils,
+  VM.ABI.ABI,
+  VM.ABI.ABI.Test,
+  VM.Abi.Argument,
+  VM.ABI.Error,
+  VM.ABI.Event,
+  VM.ABI.Event.Test,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.ABI.Reflect,
+  VM.ABI.Type,
+  VM.ABI.Type.Test,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable,
+  VM.ABI.Variable.Test;
 
 type
   TMethod = record

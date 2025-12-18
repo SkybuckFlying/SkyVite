@@ -5,11 +5,36 @@ interface
 uses
   DUnitX.TestFramework,
   System.SysUtils,
+  Vite.Common.Helper,
   VM,
+  VM.Contract,
+  VM.Contract.Test,
+  VM.Contracts.Dex.Fund.Test,
+  VM.Contracts.Dex.Trade.Test,
+  VM.Contracts.Test,
+  VM.Database.Memory.Test,
+  VM.Database.Test,
+  VM.Destination,
+  VM.Destination.Test,
+  VM.Gas.Table,
   VM.GasTable,
+  VM.Instructions,
+  VM.Instructions.Test,
+  VM.Interpreter,
+  VM.Jump.Table,
   VM.Memory,
+  VM.Memory.Table,
+  VM.Memory.Test,
+  VM.Mock.DB,
+  VM.Opcodes,
+  VM.Params,
+  VM.Stack,
+  VM.Stack.Table,
+  VM.Stack.Test,
   VM.Util,
-  Vite.Common.Helper;
+  VM.VM,
+  VM.VM.Run.Test,
+  VM.VM.Test;
 
 type
   [TestFixture]

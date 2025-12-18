@@ -3,8 +3,16 @@ unit Common.VitePb.Message;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Common.VitePb.AccountBlock, Common.VitePb.SnapshotBlock;
+  Common.VitePB.Account.Block.PB,
+  Common.VitePB.Account.Blockmeta.PB,
+  Common.VitePB.Account.PB,
+  Common.VitePb.AccountBlock Common.VitePb.SnapshotBlock,
+  Common.VitePB.Consensus.Point.PB,
+  Common.VitePB.Onroad.PB,
+  Common.VitePB.Snapshot.Block.PB,
+  Common.VitePB.Sync.Cache.PB,
+  Common.VitePB.VM.Log.List.PB,
+  System.SysUtils System.Classes System.Generics.Collections;
 
 type
   // Forward declarations for all message classes

@@ -3,12 +3,17 @@ unit Ledger.Chain.Plugins.Filter.Token;
 interface
 
 uses
-  System.SysUtils,
-  System.Generics.Collections,
   Common.DB.XLevelDB,
   Common.Types,
   Interfaces.Core,
-  Ledger.Chain.DB;
+  Ledger.Chain.DB,
+  Ledger.Chain.Plugins.DB.Key.Prefix,
+  Ledger.Chain.Plugins.Interface,
+  Ledger.Chain.Plugins.Onroad.Info,
+  Ledger.Chain.Plugins.Onroad.Info.Test,
+  Ledger.Chain.Plugins.Plugins,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   TFilterToken = class(TInterfacedObject, IPlugin)

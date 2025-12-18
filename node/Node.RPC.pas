@@ -3,6 +3,7 @@ unit Node.Rpc;
 interface
 
 uses
+  Node.Errors,
   Node.Node,
   Rpc;
 

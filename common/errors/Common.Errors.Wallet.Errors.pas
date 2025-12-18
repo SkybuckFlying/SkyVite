@@ -3,6 +3,7 @@ unit Common.Errors.WalletErrors;
 interface
 
 uses
+  Common.Errors.Errors,
   System.SysUtils;
 
 var

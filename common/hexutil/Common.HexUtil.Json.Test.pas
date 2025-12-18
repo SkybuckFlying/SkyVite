@@ -3,8 +3,12 @@ unit Common.HexUtil.JSON.Test;
 interface
 
 uses
-  DUnitX.TestFramework, Common.HexUtil.JSON, Common.HexUtil,
-  GoToDelphi.Helpers.BigInt, System.SysUtils;
+  Common.HexUtil.HexUtil,
+  Common.HexUtil.HexUtil.Test,
+  Common.HexUtil.Json,
+  Common.HexUtil.Json.Example.Test,
+  DUnitX.TestFramework Common.HexUtil.JSON Common.HexUtil,
+  GoToDelphi.Helpers.BigInt System.SysUtils;
 
 type
   TUnmarshalTest = record

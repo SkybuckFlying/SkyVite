@@ -3,6 +3,13 @@ unit Common.Helper.Math.Test;
 interface
 
 uses
+  Common.Helper.Common,
+  Common.Helper.Common.Test,
+  Common.Helper.Math.Big,
+  Common.Helper.Math.Integer,
+  Common.Helper.Rand,
+  Common.Helper.Rand.Test,
+  Common.Helper.Slice,
   DUnitX.TestFramework;
 
 type

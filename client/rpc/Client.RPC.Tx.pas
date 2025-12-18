@@ -3,10 +3,15 @@ unit Client.Rpc.Tx;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
+  Client.RPC.Contract,
+  Client.RPC.Dex.Trade,
+  Client.RPC.Ledger,
+  Client.RPC.Onroad,
+  Client.RPC.Random,
   Rpc,
-  RpcApi.Api;
+  RpcApi.Api,
+  System.Classes,
+  System.SysUtils;
 
 type
 	ITxApi = interface

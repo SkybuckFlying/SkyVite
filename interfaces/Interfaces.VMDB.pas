@@ -3,11 +3,15 @@ unit Interfaces.VmDb;
 interface
 
 uses
-  SysUtils, Classes, Generics.Collections, Math.BigInt,
-  GoToDelphi.Helpers.BigInt,
   Common.Types,
+  GoToDelphi.Helpers.BigInt,
+  Interfaces.Chain,
+  Interfaces.Consensus,
   Interfaces.Core,
-  Interfaces.Chain;
+  Interfaces.Generator,
+  Interfaces.Verifier,
+  Interfaces.Wallet,
+  SysUtils Classes Generics.Collections Math.BigInt;
 
 type
   IVmDb = interface;

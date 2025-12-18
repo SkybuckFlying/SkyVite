@@ -3,7 +3,11 @@ unit Tools.Circle.List;
 interface
 
 uses
-  System.SysUtils, System.Classes, Tools.Circle.Base;
+  System.SysUtils System.Classes Tools.Circle.Base,
+  Tools.Circle.Base,
+  Tools.Circle.List.Test,
+  Tools.Circle.Map,
+  Tools.Circle.Map.Test;
 
 type
   IList = interface

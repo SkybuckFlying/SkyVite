@@ -3,12 +3,17 @@ unit Ledger.Chain.Plugins.Interface;
 interface
 
 uses
-  System.SysUtils,
   Common.DB.XLevelDB,
   Common.Types,
   Interfaces.Core,
   Ledger.Chain.DB,
-  Ledger.Chain.Flusher;
+  Ledger.Chain.Flusher,
+  Ledger.Chain.Plugins.DB.Key.Prefix,
+  Ledger.Chain.Plugins.Filter.Token,
+  Ledger.Chain.Plugins.Onroad.Info,
+  Ledger.Chain.Plugins.Onroad.Info.Test,
+  Ledger.Chain.Plugins.Plugins,
+  System.SysUtils;
 
 type
   IChain = interface

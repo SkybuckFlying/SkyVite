@@ -3,7 +3,10 @@ unit Common.Bloom.Bloom;
 interface
 
 uses
-	System.SysUtils, System.Hash, System.Classes, System.SyncObjs;
+  Common.Bloom.Bloom.Test,
+  Common.Bloom.Bucket,
+  Common.Bloom.Util,
+  System.SysUtils System.Hash System.Classes System.SyncObjs;
 
 type
 	IBuckets = interface

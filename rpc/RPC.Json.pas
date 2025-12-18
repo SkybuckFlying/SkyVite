@@ -21,8 +21,30 @@ unit Vite.Rpc.Json;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Json, System.Rtti,
-  Vite.Rpc.Server, Vite.Rpc.Connection;
+  RPC.Client,
+  RPC.Client.Example.Test,
+  RPC.Client.Test,
+  RPC.Doc,
+  RPC.Endpoints,
+  RPC.Errors,
+  RPC.Health,
+  RPC.Http,
+  RPC.Http.Test,
+  RPC.Inproc,
+  RPC.IPC,
+  RPC.IPC.Unix,
+  RPC.IPC.Windows,
+  RPC.Json.Test,
+  RPC.Server,
+  RPC.Server.Test,
+  RPC.Subscription,
+  RPC.Subscription.Test,
+  RPC.Types,
+  RPC.Utils,
+  RPC.Utils.Test,
+  RPC.Websocket,
+  System.SysUtils System.Classes System.Json System.Rtti,
+  Vite.Rpc.Server Vite.Rpc.Connection;
 
 const
   JsonRpcVersion = '2.0';

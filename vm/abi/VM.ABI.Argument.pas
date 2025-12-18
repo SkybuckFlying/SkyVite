@@ -3,18 +3,33 @@ unit VM.Abi.Argument;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
-  System.Generics.Collections,
-  System.Rtti,
-  System.JSON,
-  GoToDelphi.Helpers.BigInt,
   Common.HexUtil,
   Common.Types.Address,
   Common.Types.Gid,
   Common.Types.TokenTypeId,
+  GoToDelphi.Helpers.BigInt,
+  System.Classes,
+  System.Generics.Collections,
+  System.JSON,
+  System.Rtti,
+  System.SysUtils,
+  VM.ABI.ABI,
+  VM.ABI.ABI.Test,
+  VM.Abi.Error,
+  VM.ABI.Event,
+  VM.ABI.Event.Test,
+  VM.ABI.Method,
+  VM.ABI.Numbers,
+  VM.ABI.Numbers.Test,
+  VM.ABI.Pack,
+  VM.ABI.Pack.Test,
+  VM.ABI.Reflect,
   VM.Abi.Type,
-  VM.Abi.Error;
+  VM.ABI.Type.Test,
+  VM.ABI.Unpack,
+  VM.ABI.Unpack.Test,
+  VM.ABI.Variable,
+  VM.ABI.Variable.Test;
 
 type
   TArgument = record

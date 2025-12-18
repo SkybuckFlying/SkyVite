@@ -3,7 +3,32 @@ unit V2.Ledger.Chain.SnapshotBlock;
 interface
 
 uses
-  System.SysUtils, Classes, V2.Interfaces.Core, V2.Ledger.Chain.FileManager, V2.Common.Types, System.DateUtils;
+  Ledger.Chain.Account,
+  Ledger.Chain.Account.Block,
+  Ledger.Chain.Account.Block.Test,
+  Ledger.Chain.Account.Test,
+  Ledger.Chain.Builtin.Contract,
+  Ledger.Chain.Builtin.Contract.Test,
+  Ledger.Chain.Chain,
+  Ledger.Chain.Chain.Test,
+  Ledger.Chain.Check,
+  Ledger.Chain.Delete,
+  Ledger.Chain.Delete.Test,
+  Ledger.Chain.Event.Manager,
+  Ledger.Chain.Fork,
+  Ledger.Chain.Insert,
+  Ledger.Chain.Insert.Test,
+  Ledger.Chain.Interface,
+  Ledger.Chain.Meta,
+  Ledger.Chain.Onroad,
+  Ledger.Chain.Onroad.Test,
+  Ledger.Chain.Snapshot.Block.Test,
+  Ledger.Chain.State,
+  Ledger.Chain.State.Test,
+  Ledger.Chain.Sync.Ledger,
+  Ledger.Chain.Unconfirmed,
+  Ledger.Chain.Unconfirmed.Test,
+  System.SysUtils Classes V2.Interfaces.Core V2.Ledger.Chain.FileManager V2.Common.Types System.DateUtils;
 
 type
   TChainSnapshotBlockHelper = class helper for TChain

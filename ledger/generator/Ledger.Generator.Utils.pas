@@ -3,8 +3,11 @@ unit utils;
 interface
 
 uses
-  System.SysUtils, System.Classes,
-  Vite.Common, Vite.Ledger, Vite.Interfaces, big_int;
+  Ledger.Generator.Generator,
+  Ledger.Generator.Incoming.Message,
+  Ledger.Generator.Utils.Test,
+  System.SysUtils System.Classes,
+  Vite.Common Vite.Ledger Vite.Interfaces big_int;
 
 type
   TEnvPrepareForGenerator = record

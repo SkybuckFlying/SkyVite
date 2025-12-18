@@ -3,6 +3,11 @@ unit Interfaces.Chain;
 interface
 
 uses
+  Interfaces.Consensus,
+  Interfaces.Generator,
+  Interfaces.Verifier,
+  Interfaces.VMDB,
+  Interfaces.Wallet,
   System.SysUtils;
 
 type

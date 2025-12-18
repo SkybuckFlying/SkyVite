@@ -3,12 +3,13 @@ unit Pow.Pow;
 interface
 
 uses
-  System.SysUtils,
+  Common.Helper,
+  Common.Types,
+  Crypto,
+  Pow.Pow.Test,
   System.Classes,
   System.Math.BigInt,
-  Common.Types,
-  Common.Helper,
-  Crypto;
+  System.SysUtils;
 
 const
   ConstFullThreshold = $FFFFFFFFFFFFFFFF;

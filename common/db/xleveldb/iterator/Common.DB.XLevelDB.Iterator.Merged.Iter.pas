@@ -3,12 +3,14 @@ unit Common.Db.Xleveldb.Iterator.Merged_iter;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Common.Db.Xleveldb.Comparer,
-	Common.Db.Xleveldb.Errors,
-	Common.Db.Xleveldb.Iterator.Iter,
-	Common.Db.Xleveldb.Util;
+  Common.Db.Xleveldb.Comparer,
+  Common.Db.Xleveldb.Errors,
+  Common.DB.XLevelDB.Iterator.Array.Iter,
+  Common.DB.XLevelDB.Iterator.Indexed.Iter,
+  Common.Db.Xleveldb.Iterator.Iter,
+  Common.Db.Xleveldb.Util,
+  System.Classes,
+  System.SysUtils;
 
 type
 	TDir = ( dirReleased, dirSOI, dirEOI, dirBackward, dirForward );

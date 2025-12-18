@@ -4,9 +4,10 @@ interface
 
 uses
   DUnitX.TestFramework,
-  System.SysUtils,
+  Net.Netool.Blacklist,
+  Net.Netool.Net,
   System.Net.IP,
-  Net.Netool.Net;
+  System.SysUtils;
 
 type
   [TestFixture]

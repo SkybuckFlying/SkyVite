@@ -3,6 +3,7 @@ unit edwards25519;
 interface
 
 uses
+  Crypto.Ed25519.Internal.Edwards25519.Const,
   System.SysUtils;
 
 type

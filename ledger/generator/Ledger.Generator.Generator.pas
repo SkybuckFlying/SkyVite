@@ -3,9 +3,12 @@ unit generator;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections,
-  Vite.Abi, Vite.Common, Vite.Crypto, Vite.Ledger, Vite.Vm, Vite.Pow,
-  Vite.Interfaces, big_int;
+  Ledger.Generator.Incoming.Message,
+  Ledger.Generator.Utils,
+  Ledger.Generator.Utils.Test,
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vite.Abi Vite.Common Vite.Crypto Vite.Ledger Vite.Vm Vite.Pow,
+  Vite.Interfaces big_int;
 
 type
   TConsensus = interface

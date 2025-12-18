@@ -3,8 +3,12 @@ unit Monitor.Monitor;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.Generics.Collections, System.Diagnostics, System.Threading,
-  Log15, Ring;
+  Log15 Ring,
+  Monitor.Monitor.Test,
+  Monitor.Ntp,
+  Monitor.Ring,
+  Monitor.Ring.Test,
+  System.SysUtils System.Classes System.Generics.Collections System.Diagnostics System.Threading;
 
 type
   TMsg = class

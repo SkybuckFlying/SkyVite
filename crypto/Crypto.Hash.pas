@@ -3,8 +3,11 @@ unit Crypto.Hash;
 interface
 
 uses
-  System.SysUtils,
-  DECHash;
+  Crypto.Crypto,
+  Crypto.Crypto.Test,
+  Crypto.Hast.Test,
+  DECHash,
+  System.SysUtils;
 
 type
   THash = class

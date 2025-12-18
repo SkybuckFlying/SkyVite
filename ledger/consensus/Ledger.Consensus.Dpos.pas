@@ -3,12 +3,41 @@ unit Ledger.Consensus.Dpos;
 interface
 
 uses
-  System.SysUtils,
-  System.Classes,
   Common.Types,
-  Ledger.Consensus.Core,
+  Ledger.Consensus.API,
+  Ledger.Consensus.Chain.Rw,
+  Ledger.Consensus.Chain.Rw.Test,
+  Ledger.Consensus.Config,
+  Ledger.Consensus.Consensus,
+  Ledger.Consensus.Consensus.Contract,
+  Ledger.Consensus.Consensus.Contract.Dpos,
+  Ledger.Consensus.Consensus.Contract.Dpos.Test,
+  Ledger.Consensus.Consensus.Event,
+  Ledger.Consensus.Consensus.Impl,
+  Ledger.Consensus.Consensus.Point.Array,
+  Ledger.Consensus.Consensus.Point.Array.Test,
+  Ledger.Consensus.Consensus.Simple,
+  Ledger.Consensus.Consensus.Simple.Test,
+  Ledger.Consensus.Consensus.Snapshot,
+  Ledger.Consensus.Consensus.Snapshot.Test,
+  Ledger.Consensus.Consensus.Test,
+  Ledger.Consensus.Consensus.Verifier,
   Ledger.Consensus.ConsensusContract,
-  Log15;
+  Ledger.Consensus.Core,
+  Ledger.Consensus.Mock.Ch,
+  Ledger.Consensus.Mock.DposReader,
+  Ledger.Consensus.Mock.Linkedarray,
+  Ledger.Consensus.Mock.Rollback.Proof,
+  Ledger.Consensus.Result,
+  Ledger.Consensus.Rollback.Proof,
+  Ledger.Consensus.Rollback.Proof.Test,
+  Ledger.Consensus.Snapshot.Listener,
+  Ledger.Consensus.Subscriber,
+  Ledger.Consensus.Trigger,
+  Ledger.Consensus.Unittest.Util.Test,
+  Log15,
+  System.Classes,
+  System.SysUtils;
 
 type
   IDposReader = interface

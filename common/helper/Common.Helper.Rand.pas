@@ -3,8 +3,15 @@ unit Common.Helper.Rand;
 interface
 
 uses
-  System.SysUtils,
-  System.DateUtils;
+  Common.Helper.Common,
+  Common.Helper.Common.Test,
+  Common.Helper.Math.Big,
+  Common.Helper.Math.Integer,
+  Common.Helper.Math.Test,
+  Common.Helper.Rand.Test,
+  Common.Helper.Slice,
+  System.DateUtils,
+  System.SysUtils;
 
 type
   IRandomSource = interface

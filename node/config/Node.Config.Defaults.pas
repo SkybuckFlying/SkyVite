@@ -3,9 +3,10 @@ unit Node.Config.Defaults;
 interface
 
 uses
-	System.SysUtils,
-	System.IOUtils,
-	Node.Config.Config;
+  Node.Config.Config,
+  Node.Config.Config.Test,
+  System.IOUtils,
+  System.SysUtils;
 
 function DefaultNodeConfig : TNodeConfig;
 function DefaultDataDir : string;

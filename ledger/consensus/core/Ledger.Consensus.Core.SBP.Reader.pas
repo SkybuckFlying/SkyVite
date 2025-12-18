@@ -3,11 +3,22 @@ unit Ledger.Consensus.Core.SBP.Reader;
 interface
 
 uses
-  System.SysUtils,
-  System.Generics.Collections,
   BigNumbers,
   Common.Types,
-  Ledger.Consensus.Core.TimeIndex;
+  Ledger.Consensus.Core.Consensus,
+  Ledger.Consensus.Core.Group,
+  Ledger.Consensus.Core.Group.Test,
+  Ledger.Consensus.Core.Mock.SBP.Reader,
+  Ledger.Consensus.Core.SBP.Reader.Test,
+  Ledger.Consensus.Core.State.Reader,
+  Ledger.Consensus.Core.Time.Index,
+  Ledger.Consensus.Core.Time.Index.Test,
+  Ledger.Consensus.Core.TimeIndex,
+  Ledger.Consensus.Core.Utils,
+  Ledger.Consensus.Core.Vote.Algo,
+  Ledger.Consensus.Core.Vote.Algo.Test,
+  System.Generics.Collections,
+  System.SysUtils;
 
 type
   // Custom BigInt wrapper for JSON marshaling is not directly needed in Delphi if using a library that handles it.

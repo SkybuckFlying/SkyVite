@@ -3,11 +3,20 @@ unit Ledger.Pool.Batch.Example.Test;
 interface
 
 uses
-  SysUtils, Classes,
-  Ledger.Pool.Batch.Batch.Impl,
-  Ledger.Mock.Chain,
   Common.Types,
-  Interfaces.Core;
+  Interfaces.Core,
+  Ledger.Mock.Chain,
+  Ledger.Pool.Batch.Batch,
+  Ledger.Pool.Batch.Batch.Executor.Impl,
+  Ledger.Pool.Batch.Batch.Impl,
+  Ledger.Pool.Batch.Batch.Test,
+  Ledger.Pool.Batch.Bucket,
+  Ledger.Pool.Batch.Level,
+  Ledger.Pool.Batch.Level.Account,
+  Ledger.Pool.Batch.Level.Snapshot,
+  Ledger.Pool.Batch.Mock.Chain,
+  Ledger.Pool.Batch.Mock.Item,
+  SysUtils Classes;
 
 type
   TBatchExample = class

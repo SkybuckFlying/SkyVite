@@ -3,12 +3,13 @@ unit Vendor.Github.Com.Stackexchange.Wmi.Wmi;
 interface
 
 uses
-	Winapi.Windows,
-	Winapi.ActiveX,
-	System.Win.ComObj,
-	System.SysUtils,
-	System.Variants,
-	System.Classes;
+  System.Classes,
+  System.SysUtils,
+  System.Variants,
+  System.Win.ComObj,
+  Vendor.Github.Com.Stackexchange.Wmi.SwbemServices,
+  Winapi.ActiveX,
+  Winapi.Windows;
 
 type
 	EWmiError = class( Exception );

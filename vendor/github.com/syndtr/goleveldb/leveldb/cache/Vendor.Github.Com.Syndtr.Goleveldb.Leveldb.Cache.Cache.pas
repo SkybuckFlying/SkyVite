@@ -3,10 +3,11 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Cache.Cache;
 interface
 
 uses
-	System.SysUtils,
-	System.SyncObjs,
-	System.Generics.Collections,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
+  System.Generics.Collections,
+  System.SyncObjs,
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Cache.Lru,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
 
 type
 	TNode = class;

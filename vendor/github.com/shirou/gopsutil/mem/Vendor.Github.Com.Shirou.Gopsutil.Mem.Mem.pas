@@ -3,8 +3,20 @@ unit Vendor.Github.Com.Shirou.Gopsutil.Mem.Mem;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemDarwin,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemDarwinCgo,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemDarwinNocgo,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemFallback,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemFreebsd,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemLinux,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemOpenbsd,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemOpenbsd386,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemOpenbsdAmd64,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemOpenbsdArm64,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemSolaris,
+  Vendor.Github.Com.Shirou.Gopsutil.Mem.MemWindows;
 
 type
 	/// <summary>

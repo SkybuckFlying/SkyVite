@@ -3,8 +3,9 @@ unit Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.LruInterface;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.Lru;
 
 type
 	ILRUCache = interface

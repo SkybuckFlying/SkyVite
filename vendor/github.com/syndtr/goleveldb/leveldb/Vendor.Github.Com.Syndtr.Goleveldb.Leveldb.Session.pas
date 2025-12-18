@@ -3,19 +3,37 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Session;
 interface
 
 uses
-  System.SysUtils,
   System.Classes,
-  System.SyncObjs,
   System.Generics.Collections,
-  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util,
-  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.Storage,
-  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Journal.Journal,
-  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.Options,
+  System.SyncObjs,
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Batch,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Db,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.DbCompaction,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.DbIter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.DbSnapshot,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.DbState,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.DbTransaction,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.DbUtil,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.DbWrite,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Doc,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Errors,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Errors.Errors,
-  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Version,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Journal.Journal,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Key,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.Options,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Options,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.SessionCompaction,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.SessionRecord,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.SessionUtil,
-  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table;
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.Storage,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Version;
 
 type
   TSession = class

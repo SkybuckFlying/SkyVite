@@ -3,10 +3,12 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.IndexedIter;
 interface
 
 uses
-	System.SysUtils,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.Iter,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Errors.Errors;
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Errors.Errors,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.ArrayIter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.Iter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.MergedIter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
 
 type
 	IIteratorIndexer = interface( ICommonIterator )

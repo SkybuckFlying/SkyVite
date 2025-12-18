@@ -3,8 +3,9 @@ unit Vendor.Github.Com.Pkg.Errors.Go113;
 interface
 
 uses
-	System.SysUtils,
-	Vendor.Github.Com.Pkg.Errors.Errors;
+  System.SysUtils,
+  Vendor.Github.Com.Pkg.Errors.Errors,
+  Vendor.Github.Com.Pkg.Errors.Stack;
 
 function IsError( ParaErr, ParaTarget : IError ) : Boolean;
 function AsError( ParaErr : IError; const ParaTarget : GUID; out ParaResult : IInterface ) : Boolean;

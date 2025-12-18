@@ -17,7 +17,13 @@ uses
   System.Classes,
   System.Generics.Collections,
   System.SyncObjs,
-  System.SysUtils;
+  System.SysUtils,
+  Vendor.Github.Com.Hashicorp.GolangLru.2q,
+  Vendor.Github.Com.Hashicorp.GolangLru.Arc,
+  Vendor.Github.Com.Hashicorp.GolangLru.Doc,
+  Vendor.Github.Com.Hashicorp.GolangLru.Lru,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.Lru,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.LruInterface;
 
 type
   IWorker = interface(IUnknown)

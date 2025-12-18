@@ -3,8 +3,11 @@ unit Vendor.Github.Com.Mattn.GoColorable.NonColorable;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Mattn.GoColorable.ColorableAppengine,
+  Vendor.Github.Com.Mattn.GoColorable.ColorableOthers,
+  Vendor.Github.Com.Mattn.GoColorable.ColorableWindows;
 
 type
 	TNonColorable = class

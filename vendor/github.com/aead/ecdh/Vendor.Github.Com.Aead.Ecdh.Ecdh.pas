@@ -3,8 +3,10 @@ unit Vendor.Github.Com.Aead.Ecdh.Ecdh;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Aead.Ecdh.Curve25519,
+  Vendor.Github.Com.Aead.Ecdh.Generic;
 
 type
 	TCurveParams = record

@@ -3,9 +3,12 @@ unit Vendor.Github.Com.Mattn.GoColorable.ColorableWindows;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	Winapi.Windows;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Mattn.GoColorable.ColorableAppengine,
+  Vendor.Github.Com.Mattn.GoColorable.ColorableOthers,
+  Vendor.Github.Com.Mattn.GoColorable.NonColorable,
+  Winapi.Windows;
 
 type
 	TWriter = class

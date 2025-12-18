@@ -35,6 +35,10 @@ uses
   Ledger.Consensus.Unittest.Util.Test,
   System.Classes,
   System.SysUtils,
+  Vendor.Github.Com.Golang.Mock.GoMock.Call,
+  Vendor.Github.Com.Golang.Mock.GoMock.Callset,
+  Vendor.Github.Com.Golang.Mock.GoMock.Controller,
+  Vendor.Github.Com.Golang.Mock.GoMock.Matchers,
   Vite.Core,
   Vite.Types;
 

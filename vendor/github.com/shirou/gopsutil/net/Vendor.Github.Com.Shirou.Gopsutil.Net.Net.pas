@@ -3,9 +3,17 @@ unit Vendor.Github.Com.Shirou.Gopsutil.Net.Net;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.Generics.Collections;
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetAix,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetDarwin,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetFallback,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetFreebsd,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetLinux,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetOpenbsd,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetUnix,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetWindows;
 
 type
 	TIOCountersStat = record

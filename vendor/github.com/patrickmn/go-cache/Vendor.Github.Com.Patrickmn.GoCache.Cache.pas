@@ -3,10 +3,11 @@ unit Vendor.Github.Com.Patrickmn.GoCache.Cache;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.Generics.Collections,
-	System.SyncObjs;
+  System.Classes,
+  System.Generics.Collections,
+  System.SyncObjs,
+  System.SysUtils,
+  Vendor.Github.Com.Patrickmn.GoCache.Sharded;
 
 type
 	TItem = record

@@ -46,7 +46,13 @@ uses
   System.SyncObjs,
   System.SysUtils,
   V2.Interfaces,
-  V2.Interfaces.Core;
+  V2.Interfaces.Core,
+  Vendor.Github.Com.Hashicorp.GolangLru.2q,
+  Vendor.Github.Com.Hashicorp.GolangLru.Arc,
+  Vendor.Github.Com.Hashicorp.GolangLru.Doc,
+  Vendor.Github.Com.Hashicorp.GolangLru.Lru,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.Lru,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.LruInterface;
 
 type
   IChain = interface

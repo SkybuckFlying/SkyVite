@@ -3,12 +3,17 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.FileStorage;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.SyncObjs,
-	System.IOUtils,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.Storage,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.FileStorageWindows;
+  System.Classes,
+  System.IOUtils,
+  System.SyncObjs,
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.FileStorageNacl,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.FileStoragePlan9,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.FileStorageSolaris,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.FileStorageUnix,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.FileStorageWindows,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.MemStorage,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.Storage;
 
 type
 	TFileStorage = class;

@@ -3,8 +3,11 @@ unit Vendor.Github.Com.Deckarep.GolangSet.Set;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Deckarep.GolangSet.Iterator,
+  Vendor.Github.Com.Deckarep.GolangSet.ThreadSafe,
+  Vendor.Github.Com.Deckarep.GolangSet.ThreadUnsafe;
 
 type
 	ISet = interface;

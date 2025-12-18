@@ -3,9 +3,15 @@ unit Vendor.Github.Com.Golang.Snappy.Snappy;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.Hash;
+  System.Classes,
+  System.Hash,
+  System.SysUtils,
+  Vendor.Github.Com.Golang.Snappy.Decode,
+  Vendor.Github.Com.Golang.Snappy.DecodeAsm,
+  Vendor.Github.Com.Golang.Snappy.DecodeOther,
+  Vendor.Github.Com.Golang.Snappy.Encode,
+  Vendor.Github.Com.Golang.Snappy.EncodeAsm,
+  Vendor.Github.Com.Golang.Snappy.EncodeOther;
 
 const
 	tagLiteral = $00;

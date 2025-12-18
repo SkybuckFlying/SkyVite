@@ -3,7 +3,13 @@ unit Vendor.Github.Com.Mattn.GoIsAtty.IsAttyWindows;
 interface
 
 uses
-	Winapi.Windows;
+  Vendor.Github.Com.Mattn.GoIsAtty.Doc,
+  Vendor.Github.Com.Mattn.GoIsAtty.IsAttyBsd,
+  Vendor.Github.Com.Mattn.GoIsAtty.IsAttyOthers,
+  Vendor.Github.Com.Mattn.GoIsAtty.IsAttyPlan9,
+  Vendor.Github.Com.Mattn.GoIsAtty.IsAttySolaris,
+  Vendor.Github.Com.Mattn.GoIsAtty.IsAttyTcgets,
+  Winapi.Windows;
 
 function IsTerminal( ParaFd : THandle ) : Boolean;
 function IsCygwinTerminal( ParaFd : THandle ) : Boolean;

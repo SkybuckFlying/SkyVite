@@ -3,7 +3,12 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
 interface
 
 uses
-	System.SysUtils;
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Buffer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.BufferPool,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Crc32,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Hash,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Range;
 
 type
 	EReleased = class( Exception );

@@ -3,8 +3,11 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.Iter;
 interface
 
 uses
-	System.SysUtils,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.ArrayIter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.IndexedIter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.MergedIter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
 
 type
 	IIteratorSeeker = interface

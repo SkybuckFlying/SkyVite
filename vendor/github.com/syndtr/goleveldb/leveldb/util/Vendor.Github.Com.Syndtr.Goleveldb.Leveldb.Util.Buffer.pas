@@ -3,8 +3,13 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Buffer;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.BufferPool,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Crc32,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Hash,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Range,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
 
 type
 	TBuffer = class

@@ -3,9 +3,12 @@ unit Vendor.Github.Com.Golang.Mock.GoMock.Matchers;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.RTTI;
+  System.Classes,
+  System.RTTI,
+  System.SysUtils,
+  Vendor.Github.Com.Golang.Mock.GoMock.Call,
+  Vendor.Github.Com.Golang.Mock.GoMock.Callset,
+  Vendor.Github.Com.Golang.Mock.GoMock.Controller;
 
 type
 	IMatcher = interface

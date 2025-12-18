@@ -3,8 +3,9 @@ unit Vendor.Github.Com.Rs.Cors.Utils;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Rs.Cors.Cors;
 
 type
 	TConverter = reference to function( const ParaS : string ) : string;

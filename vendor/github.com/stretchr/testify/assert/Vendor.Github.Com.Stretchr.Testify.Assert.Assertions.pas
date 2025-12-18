@@ -3,11 +3,32 @@ unit Vendor.Github.Com.Stretchr.Testify.Assert.Assertions;
 interface
 
 uses
-	System.SysUtils,
-	System.Rtti,
-	System.TypInfo,
-	System.Generics.Collections,
-	System.Classes;
+  System.Classes,
+  System.Generics.Collections,
+  System.Rtti,
+  System.SysUtils,
+  System.TypInfo,
+  Vendor.Github.Com.Stretchr.Testify.Assert.AssertionCompare,
+  Vendor.Github.Com.Stretchr.Testify.Assert.AssertionFormat,
+  Vendor.Github.Com.Stretchr.Testify.Assert.AssertionForward,
+  Vendor.Github.Com.Stretchr.Testify.Assert.AssertionOrder,
+  Vendor.Github.Com.Stretchr.Testify.Assert.Doc,
+  Vendor.Github.Com.Stretchr.Testify.Assert.Errors,
+  Vendor.Github.Com.Stretchr.Testify.Assert.ForwardAssertions,
+  Vendor.Github.Com.Stretchr.Testify.Assert.HttpAssertions,
+  Vendor.Gopkg.In.Yaml.V3.Apic,
+  Vendor.Gopkg.In.Yaml.V3.Decode,
+  Vendor.Gopkg.In.Yaml.V3.Emitterc,
+  Vendor.Gopkg.In.Yaml.V3.Encode,
+  Vendor.Gopkg.In.Yaml.V3.Parsers,
+  Vendor.Gopkg.In.Yaml.V3.Readers,
+  Vendor.Gopkg.In.Yaml.V3.Resolve,
+  Vendor.Gopkg.In.Yaml.V3.Scanners,
+  Vendor.Gopkg.In.Yaml.V3.Sorter,
+  Vendor.Gopkg.In.Yaml.V3.Writers,
+  Vendor.Gopkg.In.Yaml.V3.Yaml,
+  Vendor.Gopkg.In.Yaml.V3.Yamlh,
+  Vendor.Gopkg.In.Yaml.V3.YamlPrivateh;
 
 type
 	ITestingT = interface

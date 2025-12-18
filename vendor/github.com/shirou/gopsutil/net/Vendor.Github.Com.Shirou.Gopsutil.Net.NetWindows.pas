@@ -3,12 +3,19 @@ unit Vendor.Github.Com.Shirou.Gopsutil.Net.NetWindows;
 interface
 
 uses
-	Winapi.Windows,
-	Winapi.Winsock2,
-	System.SysUtils,
-	System.Classes,
-	System.Win.Registry,
-	Vendor.Github.Com.Shirou.Gopsutil.Net.Net;
+  System.Classes,
+  System.SysUtils,
+  System.Win.Registry,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.Net,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetAix,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetDarwin,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetFallback,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetFreebsd,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetLinux,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetOpenbsd,
+  Vendor.Github.Com.Shirou.Gopsutil.Net.NetUnix,
+  Winapi.Windows,
+  Winapi.Winsock2;
 
 const
 	MAX_STRING_SIZE = 256;

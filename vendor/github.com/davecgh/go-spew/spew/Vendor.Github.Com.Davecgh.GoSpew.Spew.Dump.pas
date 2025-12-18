@@ -3,11 +3,17 @@ unit Vendor.Github.Com.Davecgh.GoSpew.Spew.Dump;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.Rtti,
-	System.Generics.Collections,
-	Vendor.Github.Com.Davecgh.GoSpew.Spew.Config;
+  System.Classes,
+  System.Generics.Collections,
+  System.Rtti,
+  System.SysUtils,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Bypass,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.BypassSafe,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Common,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Config,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Doc,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Format,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Spew;
 
 type
 	TdumpState = record

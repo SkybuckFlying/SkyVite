@@ -3,9 +3,21 @@ unit Vendor.Github.Com.Stretchr.Testify.Require.Require;
 interface
 
 uses
-	System.SysUtils,
-	System.Rtti,
-	Vendor.Github.Com.Stretchr.Testify.Assert.Assertions;
+  System.Rtti,
+  System.SysUtils,
+  Vendor.Github.Com.Stretchr.Testify.Assert.AssertionCompare,
+  Vendor.Github.Com.Stretchr.Testify.Assert.AssertionFormat,
+  Vendor.Github.Com.Stretchr.Testify.Assert.AssertionForward,
+  Vendor.Github.Com.Stretchr.Testify.Assert.AssertionOrder,
+  Vendor.Github.Com.Stretchr.Testify.Assert.Assertions,
+  Vendor.Github.Com.Stretchr.Testify.Assert.Doc,
+  Vendor.Github.Com.Stretchr.Testify.Assert.Errors,
+  Vendor.Github.Com.Stretchr.Testify.Assert.ForwardAssertions,
+  Vendor.Github.Com.Stretchr.Testify.Assert.HttpAssertions,
+  Vendor.Github.Com.Stretchr.Testify.Require.Doc,
+  Vendor.Github.Com.Stretchr.Testify.Require.ForwardRequirements,
+  Vendor.Github.Com.Stretchr.Testify.Require.RequireForward,
+  Vendor.Github.Com.Stretchr.Testify.Require.Requirements;
 
 type
 	ERequireError = class( Exception );

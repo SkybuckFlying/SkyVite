@@ -3,9 +3,10 @@ unit Vendor.Github.Com.Pkg.Errors.Errors;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Vendor.Github.Com.Pkg.Errors.Stack;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Pkg.Errors.Go113,
+  Vendor.Github.Com.Pkg.Errors.Stack;
 
 type
 	IError = interface

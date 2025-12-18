@@ -3,7 +3,8 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter.Filter;
 interface
 
 uses
-	System.SysUtils;
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter.Bloom;
 
 type
 	IBuffer = interface

@@ -79,7 +79,11 @@ uses
   Net.Vnode.Node.Test,
   System.Classes,
   System.Net.UDP,
-  System.SysUtils;
+  System.SysUtils,
+  Vendor.Github.Com.Golang.Mock.GoMock.Call,
+  Vendor.Github.Com.Golang.Mock.GoMock.Callset,
+  Vendor.Github.Com.Golang.Mock.GoMock.Controller,
+  Vendor.Github.Com.Golang.Mock.GoMock.Matchers;
 
 type
   TFindNodeResultChannel = TChannel<TArray<TVNodeEndPoint>>;

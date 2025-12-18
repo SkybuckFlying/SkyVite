@@ -3,23 +3,24 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Reader;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.SyncObjs,
-	System.Generics.Collections,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Buffer,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Crc32,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.Options,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.Comparer,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter.Filter,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.Iter,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.IndexedIter,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Table,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Errors.Errors,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.Storage,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Cache.Cache;
+  System.Classes,
+  System.Generics.Collections,
+  System.SyncObjs,
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Cache.Cache,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.Comparer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Errors.Errors,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter.Filter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.IndexedIter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.Iter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.Options,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.Storage,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Table,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Writer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Buffer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Crc32,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
 
 type
 	TTableReader = class;

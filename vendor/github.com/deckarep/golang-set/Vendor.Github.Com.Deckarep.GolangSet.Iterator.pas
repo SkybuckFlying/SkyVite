@@ -3,9 +3,12 @@ unit Vendor.Github.Com.Deckarep.GolangSet.Iterator;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.Generics.Collections;
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils,
+  Vendor.Github.Com.Deckarep.GolangSet.Set,
+  Vendor.Github.Com.Deckarep.GolangSet.ThreadSafe,
+  Vendor.Github.Com.Deckarep.GolangSet.ThreadUnsafe;
 
 type
 	TIterator = class

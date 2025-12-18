@@ -1,6 +1,8 @@
 unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.Comparer;
 
 interface
+uses
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.BytesComparer;
 
 type
 	IBasicComparer = interface

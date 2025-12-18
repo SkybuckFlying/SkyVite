@@ -3,11 +3,14 @@ unit Vendor.Github.Com.Hashicorp.GolangLru.Lru;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.SyncObjs,
-	Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.LruInterface,
-	Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.Lru;
+  System.Classes,
+  System.SyncObjs,
+  System.SysUtils,
+  Vendor.Github.Com.Hashicorp.GolangLru.2q,
+  Vendor.Github.Com.Hashicorp.GolangLru.Arc,
+  Vendor.Github.Com.Hashicorp.GolangLru.Doc,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.Lru,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.LruInterface;
 
 type
 	TCache = class

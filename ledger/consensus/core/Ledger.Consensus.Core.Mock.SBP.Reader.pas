@@ -12,7 +12,11 @@ uses
   Ledger.Consensus.Core.Time.Index.Test,
   Ledger.Consensus.Core.Utils,
   Ledger.Consensus.Core.Vote.Algo,
-  Ledger.Consensus.Core.Vote.Algo.Test;
+  Ledger.Consensus.Core.Vote.Algo.Test,
+  Vendor.Github.Com.Golang.Mock.GoMock.Call,
+  Vendor.Github.Com.Golang.Mock.GoMock.Callset,
+  Vendor.Github.Com.Golang.Mock.GoMock.Controller,
+  Vendor.Github.Com.Golang.Mock.GoMock.Matchers;
 
 // This unit is a placeholder for a mock implementation of ISBPStatReader.
 // In Delphi, mocking is typically done using a framework like Delphi Mocks or DUnitX's own mocking capabilities.

@@ -44,6 +44,10 @@ uses
   RPC.Utils.Test,
   RPC.Websocket,
   System.SysUtils System.Classes System.Rtti,
+  Vendor.Github.Com.Deckarep.GolangSet.Iterator,
+  Vendor.Github.Com.Deckarep.GolangSet.Set,
+  Vendor.Github.Com.Deckarep.GolangSet.ThreadSafe,
+  Vendor.Github.Com.Deckarep.GolangSet.ThreadUnsafe,
   Vite.Rpc.Server Vite.Rpc.Errors;
 
 type

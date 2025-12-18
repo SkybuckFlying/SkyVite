@@ -36,7 +36,13 @@ uses
   RpcApi.API.Wallet,
   RpcApi.API.Wallet.V2,
   System.JSON,
-  System.SysUtils System.Classes System.Generics.Collections;
+  System.SysUtils System.Classes System.Generics.Collections,
+  Vendor.Github.Com.Hashicorp.GolangLru.2q,
+  Vendor.Github.Com.Hashicorp.GolangLru.Arc,
+  Vendor.Github.Com.Hashicorp.GolangLru.Doc,
+  Vendor.Github.Com.Hashicorp.GolangLru.Lru,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.Lru,
+  Vendor.Github.Com.Hashicorp.GolangLru.Simplelru.LruInterface;
 
 var
   Log: ILogger;

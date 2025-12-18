@@ -3,10 +3,11 @@ unit Vendor.Github.Com.Aead.Ecdh.Generic;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.Math.Vectors,
-	Vendor.Github.Com.Aead.Ecdh.Ecdh;
+  System.Classes,
+  System.Math.Vectors,
+  System.SysUtils,
+  Vendor.Github.Com.Aead.Ecdh.Curve25519,
+  Vendor.Github.Com.Aead.Ecdh.Ecdh;
 
 type
 	TPoint = record

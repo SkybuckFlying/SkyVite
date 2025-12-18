@@ -3,10 +3,16 @@ unit Vendor.Github.Com.Davecgh.GoSpew.Spew.Common;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.Rtti,
-	Vendor.Github.Com.Davecgh.GoSpew.Spew.Config;
+  System.Classes,
+  System.Rtti,
+  System.SysUtils,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Bypass,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.BypassSafe,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Config,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Doc,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Dump,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Format,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Spew;
 
 var
 	Const_PanicBytes            : TBytes;

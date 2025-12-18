@@ -3,12 +3,13 @@ unit Vendor.Github.Com.Deckarep.GolangSet.ThreadUnsafe;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.Generics.Collections,
-	System.Rtti,
-	Vendor.Github.Com.Deckarep.GolangSet.Set,
-	Vendor.Github.Com.Deckarep.GolangSet.Iterator;
+  System.Classes,
+  System.Generics.Collections,
+  System.Rtti,
+  System.SysUtils,
+  Vendor.Github.Com.Deckarep.GolangSet.Iterator,
+  Vendor.Github.Com.Deckarep.GolangSet.Set,
+  Vendor.Github.Com.Deckarep.GolangSet.ThreadSafe;
 
 type
 	TthreadUnsafeSet = class( TInterfacedObject, ISet )

@@ -3,7 +3,12 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Hash;
 interface
 
 uses
-	System.SysUtils;
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Buffer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.BufferPool,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Crc32,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Range,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
 
 function Hash( const ParaData : TBytes; ParaSeed : UInt32 ) : UInt32;
 

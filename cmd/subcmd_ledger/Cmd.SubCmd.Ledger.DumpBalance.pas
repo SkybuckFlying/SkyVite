@@ -2,6 +2,8 @@ uses
   Cmd.SubCmd.Ledger.Ledger;
 uses
   Cmd.SubCmd.Ledger.Ledger;
+uses
+  Cmd.SubCmd.Ledger.Ledger;
 program DumpBalance;
 
 {$APPTYPE CONSOLE}

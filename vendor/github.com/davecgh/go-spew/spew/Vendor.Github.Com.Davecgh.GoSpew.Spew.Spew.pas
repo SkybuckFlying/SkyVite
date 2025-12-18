@@ -3,11 +3,16 @@ unit Vendor.Github.Com.Davecgh.GoSpew.Spew.Spew;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.Rtti,
-	Vendor.Github.Com.Davecgh.GoSpew.Spew.Config,
-	Vendor.Github.Com.Davecgh.GoSpew.Spew.Dump;
+  System.Classes,
+  System.Rtti,
+  System.SysUtils,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Bypass,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.BypassSafe,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Common,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Config,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Doc,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Dump,
+  Vendor.Github.Com.Davecgh.GoSpew.Spew.Format;
 
 // Convenience wrappers
 procedure Printf( ParaFormat : string; const ParaA : array of TValue );

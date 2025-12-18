@@ -3,9 +3,14 @@ unit Vendor.Github.Com.Golang.Snappy.Encode;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	Vendor.Github.Com.Golang.Snappy.Snappy;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Golang.Snappy.Decode,
+  Vendor.Github.Com.Golang.Snappy.DecodeAsm,
+  Vendor.Github.Com.Golang.Snappy.DecodeOther,
+  Vendor.Github.Com.Golang.Snappy.EncodeAsm,
+  Vendor.Github.Com.Golang.Snappy.EncodeOther,
+  Vendor.Github.Com.Golang.Snappy.Snappy;
 
 function MaxEncodedLen( ParaSrcLen : Integer ) : Integer;
 function Encode( ParaDst, ParaSrc : TBytes ) : TBytes;

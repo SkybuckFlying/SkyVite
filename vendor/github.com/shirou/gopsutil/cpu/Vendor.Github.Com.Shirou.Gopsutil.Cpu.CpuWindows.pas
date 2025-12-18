@@ -3,10 +3,24 @@ unit Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuWindows;
 interface
 
 uses
-	Winapi.Windows,
-	System.SysUtils,
-	System.Classes,
-	Vendor.Github.Com.Shirou.Gopsutil.Cpu.Cpu;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.Cpu,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuDarwin,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuDarwinCgo,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuDarwinNocgo,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuDragonfly,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuDragonflyAmd64,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuFallback,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuFreebsd,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuFreebsd386,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuFreebsdAmd64,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuFreebsdArm,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuFreebsdArm64,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuLinux,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuOpenbsd,
+  Vendor.Github.Com.Shirou.Gopsutil.Cpu.CpuSolaris,
+  Winapi.Windows;
 
 function WinTimes( ParaPercpu : Boolean ) : TArray<TTimesStat>;
 function WinInfo : TArray<TInfoStat>;

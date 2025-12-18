@@ -3,16 +3,17 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Writer;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Buffer,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Crc32,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.Options,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.Comparer,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter.Filter,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Table;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.Comparer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter.Filter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.Options,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Reader,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Table,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Buffer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Crc32,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;
 
 type
 	TBlockWriter = class

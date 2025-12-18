@@ -3,10 +3,12 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.Options;
 interface
 
 uses
-	System.SysUtils,
-	System.Math,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.Comparer,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter.Filter;
+  System.Math,
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.Comparer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter.Filter,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.OptionsDarwin,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Opt.OptionsDefault;
 
 const
 	KiB = 1024;

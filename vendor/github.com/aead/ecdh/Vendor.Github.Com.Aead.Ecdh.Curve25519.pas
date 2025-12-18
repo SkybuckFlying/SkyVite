@@ -3,10 +3,11 @@ unit Vendor.Github.Com.Aead.Ecdh.Curve25519;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	Vendor.Github.Com.Aead.Ecdh.Ecdh,
-	Vendor.Golang.Org.X.Crypto.Curve25519;
+  System.Classes,
+  System.SysUtils,
+  Vendor.Github.Com.Aead.Ecdh.Ecdh,
+  Vendor.Github.Com.Aead.Ecdh.Generic,
+  Vendor.Golang.Org.X.Crypto.Curve25519;
 
 type
 	Tecdh25519 = class(TInterfacedObject, IKeyExchange)

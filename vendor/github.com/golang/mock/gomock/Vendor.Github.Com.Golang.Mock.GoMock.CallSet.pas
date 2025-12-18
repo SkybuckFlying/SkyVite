@@ -3,11 +3,13 @@ unit Vendor.Github.Com.Golang.Mock.GoMock.CallSet;
 interface
 
 uses
-	System.Classes,
-	System.SysUtils,
-	System.Generics.Collections,
-	System.RTTI,
-	Vendor.Github.Com.Golang.Mock.GoMock.Call;
+  System.Classes,
+  System.Generics.Collections,
+  System.RTTI,
+  System.SysUtils,
+  Vendor.Github.Com.Golang.Mock.GoMock.Call,
+  Vendor.Github.Com.Golang.Mock.GoMock.Controller,
+  Vendor.Github.Com.Golang.Mock.GoMock.Matchers;
 
 type
 	TCallSetKey = record

@@ -25,7 +25,11 @@ uses
   System.Classes,
   System.Generics.Collections,
   System.Math.BigInt,
-  System.SysUtils;
+  System.SysUtils,
+  Vendor.Github.Com.Golang.Mock.GoMock.Call,
+  Vendor.Github.Com.Golang.Mock.GoMock.Callset,
+  Vendor.Github.Com.Golang.Mock.GoMock.Controller,
+  Vendor.Github.Com.Golang.Mock.GoMock.Matchers;
 
 type
   TMockConsensus = class(TInterfacedObject, IConsensus)

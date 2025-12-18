@@ -3,9 +3,11 @@ unit Vendor.Github.Com.Pkg.Errors.Stack;
 interface
 
 uses
-	System.SysUtils,
-	System.Classes,
-	System.Generics.Collections;
+  System.Classes,
+  System.Generics.Collections,
+  System.SysUtils,
+  Vendor.Github.Com.Pkg.Errors.Errors,
+  Vendor.Github.Com.Pkg.Errors.Go113;
 
 type
 	/// <summary>

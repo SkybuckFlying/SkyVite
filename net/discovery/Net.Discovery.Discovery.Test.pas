@@ -80,7 +80,11 @@ uses
   System.SysUtils,
   System.Threading,
   System.TimeSpan,
-  unit_GoLang_Compatibility_version_006;
+  unit_GoLang_Compatibility_version_006,
+  Vendor.Github.Com.Golang.Mock.GoMock.Call,
+  Vendor.Github.Com.Golang.Mock.GoMock.Callset,
+  Vendor.Github.Com.Golang.Mock.GoMock.Controller,
+  Vendor.Github.Com.Golang.Mock.GoMock.Matchers;
 
 procedure TestFindNode;
 procedure TestTimer;

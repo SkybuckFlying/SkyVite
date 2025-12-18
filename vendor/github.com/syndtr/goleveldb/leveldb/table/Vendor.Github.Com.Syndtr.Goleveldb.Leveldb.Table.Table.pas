@@ -3,8 +3,10 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Table;
 interface
 
 uses
-	System.SysUtils,
-	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util;
+  System.SysUtils,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Reader,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table.Writer,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util;
 
 const
 	BLOCK_TRAILER_LEN = 5;

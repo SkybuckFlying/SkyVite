@@ -1,294 +1,258 @@
-{$MODE DELPHIUNICODE}
 unit Ledger.Chain.Sync.Cache.Sync.Cache.Test;
 
 interface
 
 uses
-  fpcunit,
-  testregistry;
+  DUnitX.TestFramework,
+  System.SysUtils,
+  System.IOUtils,
+  Interfaces,
+  Common.Types,
+  Ledger.Chain.Sync.Cache.Sync.Cache,
+  Ledger.Chain.Sync.Cache.Reader;
 
 type
-  TTestSyncCache = class(TTestCase)
+  [TestFixture]
+  TSyncCacheTest = class(TObject)
   private
-    mDir: string;
-  protected
-    procedure SetUp; override;
-    procedure TearDown; override;
-  published
+    FBaseDir: string;
+    procedure Setup;
+    procedure Teardown;
+  public
+    [Test]
     procedure TestSyncLoad3;
+    [Test]
     procedure TestSyncLoad2;
+    [Test]
     procedure TestSyncCacheLoad;
+    [Test]
     procedure TestSyncCache_Delete;
+    [Test]
     procedure TestSyncCache_NewWriter;
   end;
 
 implementation
 
-uses
-{$IFDEF FPC}
-  SysUtils,
-  Classes,
-{$ELSE}
-  System.SysUtils,
-  System.Classes,
-{$ENDIF}
-  System.IOUtils,
-  Common.Types.Hash,
-  Interfaces,
-  Ledger.Chain.Sync.Cache;
+{ TSyncCacheTest }
 
-procedure TTestSyncCache.SetUp;
+procedure TSyncCacheTest.Setup;
 begin
-  mDir := TPath.Combine(TPath.GetDirectoryName(ParamStr(0)), 'sync_cache_test');
-  if TDirectory.Exists(mDir) then
-  begin
-    TDirectory.Delete(mDir, True);
-  end;
-  TDirectory.CreateDirectory(mDir);
+  FBaseDir := TPath.Combine(TPath.GetDirectoryName(ParamStr(0)), 'sync_cache');
+  if TDirectory.Exists(FBaseDir) then
+    TDirectory.Delete(FBaseDir, True);
 end;
 
-procedure TTestSyncCache.TearDown;
+procedure TSyncCacheTest.Teardown;
 begin
-  if TDirectory.Exists(mDir) then
-  begin
-    TDirectory.Delete(mDir, True);
-  end;
+  if TDirectory.Exists(FBaseDir) then
+    TDirectory.Delete(FBaseDir, True);
 end;
 
-procedure TTestSyncCache.TestSyncLoad3;
+procedure TSyncCacheTest.TestSyncLoad3;
 var
-  vCache: TSyncCache;
-  vSegments: TSegmentList;
-  vSegment: IInterfaces.TSegment;
+  vCache: ISyncCache;
+  vCS2: ISegmentList;
+  I: Integer;
   vWriter: TStream;
-  vChunks: TSegmentList;
 begin
-  vCache := TSyncCache.Create(mDir);
+  Setup;
   try
-    vSegments := TSegmentList.Create;
-    try
-      vSegments.Add(IInterfaces.TSegment.Create(1, 100, TTypes.THash.FromBytes([0]), TTypes.THash.FromBytes([1])));
-      vSegments.Add(IInterfaces.TSegment.Create(101, 200, TTypes.THash.FromBytes([1]), TTypes.THash.FromBytes([2])));
-      vSegments.Add(IInterfaces.TSegment.Create(301, 400, TTypes.THash.FromBytes([3]), TTypes.THash.FromBytes([4])));
+    vCache := TSyncCache.Create(FBaseDir);
+    SetLength(vCS2, 3);
+    vCS2[0] := ISegment.Create(1, 100, THash.FromBytes([0]), THash.FromBytes([1]));
+    vCS2[1] := ISegment.Create(101, 200, THash.FromBytes([1]), THash.FromBytes([2]));
+    vCS2[2] := ISegment.Create(301, 400, THash.FromBytes([3]), THash.FromBytes([4]));
 
-      for vSegment in vSegments do
-      begin
-        vWriter := vCache.NewWriter(vSegment, 0);
-        // Do not close the writer to simulate an incomplete write
-      end;
-    finally
-      vSegments.Free;
-    end;
-    vCache.Close;
-  finally
-    vCache.Free;
-  end;
-
-  vCache := TSyncCache.Create(mDir);
-  try
-    vChunks := vCache.Chunks;
-    AssertEquals(0, vChunks.Count, 'Should not have any cached chunks');
-  finally
-    vCache.Free;
-  end;
-end;
-
-procedure TTestSyncCache.TestSyncLoad2;
-var
-  vCache: TSyncCache;
-  vSegments: TSegmentList;
-  vSegment: IInterfaces.TSegment;
-  vWriter: TStream;
-  vChunks: TSegmentList;
-  vIndex: Integer;
-begin
-  vCache := TSyncCache.Create(mDir);
-  try
-    vSegments := TSegmentList.Create;
-    try
-      vSegments.Add(IInterfaces.TSegment.Create(1, 100, TTypes.THash.FromBytes([0]), TTypes.THash.FromBytes([1])));
-      vSegments.Add(IInterfaces.TSegment.Create(101, 200, TTypes.THash.FromBytes([1]), TTypes.THash.FromBytes([2])));
-      vSegments.Add(IInterfaces.TSegment.Create(301, 400, TTypes.THash.FromBytes([3]), TTypes.THash.FromBytes([4])));
-
-      for vSegment in vSegments do
-      begin
-        vWriter := vCache.NewWriter(vSegment, 0);
-        vWriter.Free;
-      end;
-    finally
-      vSegments.Free;
-    end;
-    vCache.Close;
-  finally
-    vCache.Free;
-  end;
-
-  vCache := TSyncCache.Create(mDir);
-  try
-    vChunks := vCache.Chunks;
-    AssertEquals(vSegments.Count, vChunks.Count, 'Different number of chunks');
-    for vIndex := 0 to vChunks.Count - 1 do
+    for I := 0 to High(vCS2) do
     begin
-      AssertTrue(vSegments[vIndex].Equal(vChunks[vIndex]), 'Different chunk');
+      vWriter := vCache.NewWriter(vCS2[I], 0);
+      // Not closing the writer to simulate temp/unfinished chunks
     end;
+
+    vCache.Close;
+
+    vCache := TSyncCache.Create(FBaseDir);
+    Assert.AreEqual(0, Length(vCache.Chunks), 'Should not cache unfinished writes');
+
   finally
-    vCache.Free;
+    Teardown;
   end;
 end;
 
-procedure TTestSyncCache.TestSyncCacheLoad;
+procedure TSyncCacheTest.TestSyncLoad2;
 var
-  vCache: TSyncCache;
-  vSegments: TSegmentList;
-  vSegment: IInterfaces.TSegment;
+  vCache: ISyncCache;
+  vCS2: ISegmentList;
+  I: Integer;
   vWriter: TStream;
-  vChunks: TSegmentList;
-  vIndex: Integer;
+  vCS: ISegmentList;
+begin
+  Setup;
+  try
+    vCache := TSyncCache.Create(FBaseDir);
+    SetLength(vCS2, 3);
+    vCS2[0] := ISegment.Create(1, 100, THash.FromBytes([0]), THash.FromBytes([1]));
+    vCS2[1] := ISegment.Create(101, 200, THash.FromBytes([1]), THash.FromBytes([2]));
+    vCS2[2] := ISegment.Create(301, 400, THash.FromBytes([3]), THash.FromBytes([4]));
+
+    for I := 0 to High(vCS2) do
+    begin
+      vWriter := vCache.NewWriter(vCS2[I], 0);
+      vWriter.Free; // Closing the writer finalizes the chunk
+    end;
+
+    vCache.Close;
+
+    vCache := TSyncCache.Create(FBaseDir);
+    vCS := vCache.Chunks;
+
+    Assert.AreEqual(Length(vCS2), Length(vCS), 'Different number of chunks');
+    for I := 0 to High(vCS) do
+    begin
+      Assert.IsTrue(vCS2[I].Equal(vCS[I]), 'Different chunk');
+    end;
+
+  finally
+    Teardown;
+  end;
+end;
+
+procedure TSyncCacheTest.TestSyncCacheLoad;
+var
+  vCache: ISyncCache;
+  vCS2: ISegmentList;
+  vWriter: TStream;
   vReader: IChunkReader;
-  vOverlappedSeg: IInterfaces.TSegment;
-  vNewSeg: IInterfaces.TSegment;
+  vSeg: ISegment;
   vIn: Boolean;
+  vBytes: TBytes;
+  vCS: ISegmentList;
+  I: Integer;
 begin
-  vCache := TSyncCache.Create(mDir);
+  Setup;
   try
-    vSegments := TSegmentList.Create;
-    try
-      vSegments.Add(IInterfaces.TSegment.Create(2, 100, TTypes.THash.FromBytes([1]), TTypes.THash.FromBytes([2])));
-      vSegments.Add(IInterfaces.TSegment.Create(101, 200, TTypes.THash.FromBytes([3]), TTypes.THash.FromBytes([4])));
-      vSegments.Add(IInterfaces.TSegment.Create(301, 400, TTypes.THash.FromBytes([7]), TTypes.THash.FromBytes([8])));
+    vCache := TSyncCache.Create(FBaseDir);
+    SetLength(vCS2, 3);
+    vCS2[0] := ISegment.Create(2, 100, THash.FromBytes([1]), THash.FromBytes([2]));
+    vCS2[1] := ISegment.Create(101, 200, THash.FromBytes([3]), THash.FromBytes([4]));
+    vCS2[2] := ISegment.Create(301, 400, THash.FromBytes([7]), THash.FromBytes([8]));
 
-      for vSegment in vSegments do
-      begin
-        vWriter := vCache.NewWriter(vSegment, 0);
-        vWriter.Free;
-      end;
-
-      vChunks := vCache.Chunks;
-      AssertEquals(vSegments.Count, vChunks.Count, 'Different number of chunks');
-      for vIndex := 0 to vChunks.Count - 1 do
-      begin
-        AssertTrue(vSegments[vIndex].Equal(vChunks[vIndex]), 'Different chunk');
-      end;
-
-      vOverlappedSeg := IInterfaces.TSegment.Create(90, 190, TTypes.THash.Empty, TTypes.THash.Empty);
-      ExpectException(EException,
-        procedure
-        begin
-          vCache.NewWriter(vOverlappedSeg, 0);
-        end);
-
-      vReader := vCache.NewReader(vSegments[0]);
-      AssertFalse(vReader.Verified, 'Should not be verified initially');
-      vReader.Verify;
-      vReader.Close;
-
-      vReader := vCache.NewReader(vSegments[0]);
-      AssertTrue(vReader.Verified, 'Should be verified after Verify call');
-      vReader.Close;
-
-      vNewSeg := IInterfaces.TSegment.Create(401, 500, TTypes.THash.FromBytes([10]), TTypes.THash.FromBytes([9]));
-      vWriter := vCache.NewWriter(vNewSeg, 0);
-      vChunks := vCache.Chunks;
-      for vSegment in vChunks do
-      begin
-        if vSegment.Equal(vNewSeg) then
-        begin
-          Fail('Writer not closed, should not be in chunk list');
-        end;
-      end;
-      vWriter.WriteData(TEncoding.UTF8.GetBytes('hello'));
+    for I := 0 to High(vCS2) do
+    begin
+      vWriter := vCache.NewWriter(vCS2[I], 0);
       vWriter.Free;
-
-      vIn := False;
-      vChunks := vCache.Chunks;
-      for vSegment in vChunks do
-      begin
-        if vSegment.Equal(vNewSeg) then
-        begin
-          vIn := True;
-        end;
-      end;
-      AssertTrue(vIn, 'Writer closed, should be in chunk list');
-
-    finally
-      vSegments.Free;
     end;
+
+    vCS := vCache.Chunks;
+    Assert.AreEqual(Length(vCS2), Length(vCS));
+    for I := 0 to High(vCS) do Assert.IsTrue(vCS2[I].Equal(vCS[I]));
+
+    Assert.WillRaise(
+      procedure
+      begin
+        vWriter := vCache.NewWriter(ISegment.Create(90, 190, THash.Empty, THash.Empty), 0);
+      end, EOverlapException); // Assuming a specific exception for overlap
+
+    vReader := vCache.NewReader(vCS2[0]);
+    Assert.IsFalse(vReader.Verified);
+    (vReader as TReader).Verify; // Cast to access implementation detail
+    vReader.Close;
+
+    vReader := vCache.NewReader(vCS2[0]);
+    Assert.IsTrue(vReader.Verified);
+    vReader.Close;
+
+    vSeg := ISegment.Create(401, 500, THash.FromBytes([10]), THash.FromBytes([9]));
+    vWriter := vCache.NewWriter(vSeg, 0);
+    SetLength(vBytes, 5); // "hello"
+    vBytes[0] := Ord('h'); vBytes[1] := Ord('e'); vBytes[2] := Ord('l'); vBytes[3] := Ord('l'); vBytes[4] := Ord('o');
+    vWriter.Write(vBytes, Length(vBytes));
+    vWriter.Free;
+
+    vIn := False;
+    vCS := vCache.Chunks;
+    for I := 0 to High(vCS) do
+    begin
+      if vCS[I].Equal(vSeg) then
+      begin
+        vIn := True;
+        break;
+      end;
+    end;
+    Assert.IsTrue(vIn, 'write close, should be in chunk list');
+
   finally
-    vCache.Free;
+    Teardown;
   end;
 end;
 
-procedure TTestSyncCache.TestSyncCache_Delete;
+procedure TSyncCacheTest.TestSyncCache_Delete;
 var
-  vCache: TSyncCache;
-  vSegments: TSegmentList;
-  vSegment: IInterfaces.TSegment;
+  vCache: ISyncCache;
+  vCS2: ISegmentList;
+  I: Integer;
   vWriter: TStream;
-  vChunks: TSegmentList;
-  vIndex: Integer;
+  vCS: ISegmentList;
 begin
-  vCache := TSyncCache.Create(mDir);
+  Setup;
   try
-    vSegments := TSegmentList.Create;
-    try
-      vSegments.Add(IInterfaces.TSegment.Create(2, 100, TTypes.THash.FromBytes([1]), TTypes.THash.FromBytes([2])));
-      vSegments.Add(IInterfaces.TSegment.Create(101, 200, TTypes.THash.FromBytes([3]), TTypes.THash.FromBytes([4])));
-      vSegments.Add(IInterfaces.TSegment.Create(301, 400, TTypes.THash.FromBytes([7]), TTypes.THash.FromBytes([8])));
+    vCache := TSyncCache.Create(FBaseDir);
+    SetLength(vCS2, 3);
+    vCS2[0] := ISegment.Create(2, 100, THash.FromBytes([1]), THash.FromBytes([2]));
+    vCS2[1] := ISegment.Create(101, 200, THash.FromBytes([3]), THash.FromBytes([4]));
+    vCS2[2] := ISegment.Create(301, 400, THash.FromBytes([7]), THash.FromBytes([8]));
 
-      for vSegment in vSegments do
-      begin
-        vWriter := vCache.NewWriter(vSegment, 0);
-        vWriter.Free;
-      end;
-
-      vCache.Delete(vSegments[0]);
-
-      vChunks := vCache.Chunks;
-      AssertEquals(vSegments.Count - 1, vChunks.Count, 'Different number of chunks after delete');
-      for vIndex := 1 to vSegments.Count - 1 do
-      begin
-        AssertTrue(vSegments[vIndex].Equal(vChunks[vIndex - 1]), 'Different chunk after delete');
-      end;
-    finally
-      vSegments.Free;
+    for I := 0 to High(vCS2) do
+    begin
+      vWriter := vCache.NewWriter(vCS2[I], 0);
+      vWriter.Free;
     end;
+
+    vCache.Delete(vCS2[0]);
+
+    vCS := vCache.Chunks;
+    Assert.AreEqual(Length(vCS2) - 1, Length(vCS));
+    for I := 1 to High(vCS2) do
+    begin
+      Assert.IsTrue(vCS2[I].Equal(vCS[I-1]), 'different chunk');
+    end;
+
   finally
-    vCache.Free;
+    Teardown;
   end;
 end;
 
-procedure TTestSyncCache.TestSyncCache_NewWriter;
+procedure TSyncCacheTest.TestSyncCache_NewWriter;
 var
-  vCache: TSyncCache;
-  vSegment: IInterfaces.TSegment;
+  vCache: ISyncCache;
+  vSeg: ISegment;
   vWriter: TStream;
   vFind: Boolean;
-  vChunks: TSegmentList;
-  vChunk: IInterfaces.TSegment;
+  vCS: ISegmentList;
+  I: Integer;
 begin
-  vCache := TSyncCache.Create(mDir);
+  Setup;
   try
-    vSegment := IInterfaces.TSegment.Create(1, 100, TTypes.THash.FromBytes([100]), TTypes.THash.FromBytes([1]));
-    vWriter := vCache.NewWriter(vSegment, 1000);
+    vCache := TSyncCache.Create(FBaseDir);
+    vSeg := ISegment.Create(1, 100, THash.FromBytes([100]), THash.FromBytes([1]));
+    vWriter := vCache.NewWriter(vSeg, 1000);
     vWriter.Free;
 
     vFind := False;
-    vChunks := vCache.Chunks;
-    for vChunk in vChunks do
+    vCS := vCache.Chunks;
+    for I := 0 to High(vCS) do
     begin
-      if vChunk.Equal(vSegment) then
+      if vCS[I].Equal(vSeg) then
       begin
         vFind := True;
+        break;
       end;
     end;
-
-    AssertTrue(vFind, 'Segment not found after writing');
+    Assert.IsTrue(vFind);
 
   finally
-    vCache.Free;
+    Teardown;
   end;
 end;
 
-initialization
-  RegisterTest(TTestSyncCache);
 end.

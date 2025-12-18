@@ -1,0 +1,43 @@
+Prompt for creation of GoToDelphiDependencyManager
+
+version 0.01 created on 18 december 2025 by Skybuck Flying.
+
+Write a Delphi 13 program which does the following:
+
+1. Read textfile: GoToDelphiMapping.txt (which contains a mapping from *.go to *.pas or *.dpr files).
+
+2. Read all entries from this text file. For each *.go file read/examine the import statement.
+
+3. The import statement has to be converted to multiple files/uses clausules for Delphi units.
+
+4. Find the correct delphi unit mapping for the read *.go entry and then find all *.go units which
+are part of the same go package, this means the same go folder.
+
+5. Then find each mapping for the *.go file and use this mapping to create the correct delphi uses clausule.
+
+Basically this should solve the dependency hell which Delphi units are currently facing.
+
+6. This program should then open the *.pas file associated with the initial *.go entry and carefully
+examine the uses clausule of the interface section and check if all necessary delphi units are on it, the delphi units from previous steps. If not carefull add them, each on it's own line. So they nicely line up below each other seperated by a comma, except the last unit should be finished with a ;
+So also check if the unit is already on the uses clausule then it does not need to be added again.
+
+Once this process is complete the program should then read \Vendor\VendorMappingV3.txt and do the same for all
+those entries and their files/file mappings.
+
+Example of content of file mappings text files (GoToDelphiMapping.txt):
+
+1:"vite.go","Vite.pas"
+2:"vite_mock.go","Vite.Mock.pas"
+3:"client\abi_client.go","client\Client.ABI.Client.pas"
+4:"client\abi_client_test.go","client\Client.ABI.Client.Test.pas"
+5:"client\client.go","client\Client.Client.pas"
+6:"client\client_test.go","client\Client.Client.Test.pas"
+7:"client\dex_client.go","client\Client.Dex.Client.pas"
+8:"client\dex_client_test.go","client\Client.Dex.Client.Test.pas"
+9:"client\rpc.go","client\Client.RPC.pas"
+
+
+
+
+
+

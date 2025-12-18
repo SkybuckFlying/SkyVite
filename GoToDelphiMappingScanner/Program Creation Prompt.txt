@@ -1,0 +1,47 @@
+GoToDelphiMappingScanner.dpr creation prompt
+
+version 0.01 created on 18 december 2025 by Skybuck Flying.
+
+1. Read the first 5 lines from GoToDelphiMapping.txt to get an understanding.
+
+2. This is a mapping from *.go to *.pas or *.dpr files.
+
+3. Write a delphi 13 console program which does the following:
+
+3.1 Read GoToDelphiMapping.txt
+
+3.2 Check if all *.go files are present.
+
+3.3 Check if all *.pas files are present.
+
+3.4 Check if all *.dpr files are present.
+
+3.5 Check if there are no duplicates.
+
+3.6 Report any additional *.go or *.pas files which are not in the GoToDelphiMapping.
+
+3.7 Do not process vendor subfolder.
+
+3.8 Do not process golang subfolder.
+
+3.9 Save this new delphi project to a new folder called: GoToDelphiMappingScanner
+
+3.10 Save any missing *.pas or *.dpr mappings to GoToDelphiMappingMissingNew.txt
+
+3.11 Save any additional files to AdditionalFiles.txt
+
+3.12 Check that each mapping is unique.
+
+3.13 Check that all numberings are sequential. Report if not sequential.
+
+
+
+
+
+
+
+
+
+
+
+

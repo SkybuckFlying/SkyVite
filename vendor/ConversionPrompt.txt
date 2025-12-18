@@ -1,0 +1,11 @@
+Conversion Prompt for vendor subfolder.
+
+version 0.01 created on 18 december 2025 by Skybuck Flying.
+
+Step 1. Read textfile: "AI System Prompts\JulesConversionPrompt.md"
+
+Step 2. Read textfile: "vendor\VendorMappingV3.txt"
+
+Step 3. Convert all *.go files to *.pas or *.dpr from the VendorMappingV3.txt
+
+Step 4. The converted *.pas or *.dpr files should stay next to the *.go files. So keep then in the same folders/subfolders.

@@ -72,8 +72,8 @@ type
     constructor Create(BufferSize: Integer = 1);
     destructor Destroy; override;
     procedure Send(const Value: T);
-    function Receive(out Value: T): Boolean; overload;
-    function Receive: T; overload;
+    function Receive(out Value: T; ParaTimeout: Cardinal): Boolean; overload;
+    function TryReceive(out Value: T): Boolean;
     procedure Close;
     function Len: Integer;
   end;
@@ -175,12 +175,28 @@ begin
   end;
 end;
 
-function TGoChannel<T>.Receive(out Value: T): Boolean;
+function TGoChannel<T>.Receive(out Value: T; ParaTimeout: Cardinal): Boolean;
+var
+  vStartTime: Cardinal;
+  vRemaining: Integer;
 begin
+  vStartTime := TThread.GetTickCount;
   System.TMonitor.Enter(FLock);
   try
     while (FQueue.Count = 0) and (not FClosed) do
-      System.TMonitor.Wait(FLock, INFINITE);
+    begin
+      if ParaTimeout = INFINITE then
+        System.TMonitor.Wait(FLock, INFINITE)
+      else
+      begin
+        vRemaining := ParaTimeout - (TThread.GetTickCount - vStartTime);
+        if (vRemaining <= 0) or (not System.TMonitor.Wait(FLock, vRemaining)) then
+        begin
+          Result := False;
+          Exit;
+        end;
+      end;
+    end;
 
     if FQueue.Count > 0 then
     begin
@@ -190,7 +206,6 @@ begin
     end
     else
     begin
-      // Queue is empty AND Closed is true
       Result := False;
     end;
   finally
@@ -198,13 +213,23 @@ begin
   end;
 end;
 
+function TGoChannel<T>.TryReceive(out Value: T): Boolean;
+begin
+  Result := Receive(Value, 0);
+end;
+
 function TGoChannel<T>.Receive: T;
 var
-  Temp: T;
+  vTemp: T;
 begin
-  if not Receive(Temp) then
+  if not Receive(vTemp, INFINITE) then
     raise EGoChannelClosed.Create('Channel closed');
-  Result := Temp;
+  Result := vTemp;
+end;
+
+function TGoChannel<T>.Receive(out Value: T): Boolean;
+begin
+  Result := Receive(Value, INFINITE);
 end;
 
 procedure TGoChannel<T>.Close;

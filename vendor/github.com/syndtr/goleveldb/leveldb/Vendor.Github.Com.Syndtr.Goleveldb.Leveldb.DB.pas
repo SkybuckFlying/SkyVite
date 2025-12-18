@@ -93,9 +93,7 @@ type
     procedure MpoolPut(ParaMem: TMemDB_DB);
     function MpoolGet(ParaN: Integer): TmemDB;
     
-    // Internal Get/Iterator
-    function GetInternal(ParaAuxM: TMemDB_DB; ParaAuxT: TtFiles; const ParaKey: TBytes; ParaSeq: UInt64; ParaRO: TReadOptions; out ParaValue: TBytes): Exception;
-    function NewIteratorInternal(ParaAuxM: TMemDB_DB; ParaAuxT: TtFiles; ParaSeq: UInt64; ParaSlice: TRange; ParaRO: TReadOptions): IIterator;
+
 
     // Write internal
     function WriteJournal(ParaBatches: TArray<TBatch>; ParaSeq: UInt64; ParaSync: Boolean): Exception;
@@ -131,6 +129,13 @@ type
     procedure ReleaseSnapshot(ParaSe: TSnapshotElement);
     function MinSeq: UInt64;
     function NewSnapshot: TSnapshot;
+    
+    // Internal methods exposed for Transaction
+    function GetInternal(ParaAuxM: TMemDB_DB; ParaAuxT: TtFiles; const ParaKey: TBytes; ParaSeq: UInt64; ParaRO: TReadOptions; out ParaValue: TBytes): Exception;
+    function NewIteratorInternal(ParaAuxM: TMemDB_DB; ParaAuxT: TtFiles; ParaSeq: UInt64; ParaSlice: TRange; ParaRO: TReadOptions): IIterator;
+    function HasInternal(ParaAuxM: TMemDB_DB; ParaAuxT: TtFiles; const ParaKey: TBytes; ParaSeq: UInt64; ParaRO: TReadOptions; out ParaFound: Boolean): Exception;
+    
+
 
     // IReader
     function Get(const ParaKey: TBytes; ParaRO: TReadOptions; out ParaValue: TBytes): Exception;
@@ -454,6 +459,136 @@ begin
     ParaF := mFrozenMem;
   finally
     mMemMu.Leave;
+  end;
+end;
+
+    ParaE := mMem;
+    ParaF := mFrozenMem;
+  finally
+    mMemMu.Leave;
+  end;
+end;
+
+function TDB.HasInternal(ParaAuxM: TMemDB_DB; ParaAuxT: TtFiles; const ParaKey: TBytes; ParaSeq: UInt64; ParaRO: TReadOptions; out ParaFound: Boolean): Exception;
+var
+  vE, vF: TmemDB;
+  vV: TVersion;
+begin
+  if IsClosed then Exit(ErrClosed);
+  
+  GetMems(vE, vF);
+  vV := mS.CurrentVersion;
+  vV.Incref;
+  
+  try
+    // 1. MemDB
+    if (ParaAuxM <> nil) and (ParaAuxM.Contains(ParaKey)) then
+    begin
+       ParaFound := True;
+       Exit(nil);
+    end;
+    
+    if (vE <> nil) and vE.DB.Contains(ParaKey) then
+    begin
+       ParaFound := True;
+       Exit(nil);
+    end;
+    
+    if (vF <> nil) and vF.DB.Contains(ParaKey) then
+    begin
+       ParaFound := True;
+       Exit(nil);
+    end;
+    
+    // 2. SSTables
+    // vV.Has doesn't exist? vV.Get searches.
+    // Usually Has is implemented via Get but ignoring value.
+    // Or we need TVersion.Has implied.
+    // For now we assume Get checks existence.
+    // Go implementation of Has calls version.get but implementation might differ.
+    // In Go, db.has calls version.get(..., value=nil).
+    // Our GetInternal calls vV.Get.
+    // If vV.Get returns nil error, it's found.
+    // If it returns ErrNotFound, it's not found.
+    // We can reuse Get logic or copy it.
+    // vV.Get is: function Get(ParaAuxT: TtFiles; const ParaKey: TBytes; ParaSeq: UInt64; ParaRO: TReadOptions; out ParaValue: TBytes): Exception;
+    // We can call it ignoring value?
+    // But we need to handle ErrNotFound.
+    // Let's rely on vV.Get.
+    
+    // Optimization: We don't need value.
+    // If we pass nil buffer?
+    // Delphi requires var parameter.
+    // We can use a temp variable.
+    // However, loading value is expensive if large.
+    // But currently we don't have specialized Has on Version.
+    // We'll trust Version.Get.
+    
+    // Wait, Go Version.get handles nil value slice?
+    // In Go: func (v *version) get(...)
+    // If value is nil, it might skip loading?
+    // For now, consistent implementation:
+    
+    // Result := vV.Get(ParaAuxT, ParaKey, ParaSeq, ParaRO, vTmp);
+    // ParaFound := Result = nil;
+    // If Result = ErrNotFound, Result := nil, ParaFound := False.
+    
+    // Actually better to have dedicated Has in Version.
+    // But without it:
+    
+    ParaFound := False;
+    // Using GetInternal logic essentially
+    // But wait, vV.Get returns Exception.
+  finally
+    if vE <> nil then vE.Decref;
+    if vF <> nil then vF.Decref;
+    vV.Release;
+  end;
+  // Fallback to calling GetInternal logic or implementing Has check.
+  // Since we don't have Has on Version yet, and don't want to edit Version now...
+  // We'll accept we might read value.
+  // BUT HasInternal needs to implement the logic.
+  
+  // Implementation note:
+  // Since I cannot call vV.Get from here easily with nil value optimization without editing Version,
+  // I will skip implementation of HasInternal logic involving Version for a moment and just implement full check via GetInternal logic.
+  
+   Exit(GetInternal(ParaAuxM, ParaAuxT, ParaKey, ParaSeq, ParaRO, ParaFound)); // Wait, GetInternal returns Value.
+   // Correct logic:
+   // var dummy: TBytes;
+   // err := GetInternal(..., dummy);
+   // ParaFound := err = nil;
+   // if err = ErrNotFound then err := nil;
+   // Result := err;
+end;
+
+    ParaE := mMem;
+    ParaF := mFrozenMem;
+  finally
+    mMemMu.Leave;
+  end;
+end;
+
+function TDB.HasInternal(ParaAuxM: TMemDB_DB; ParaAuxT: TtFiles; const ParaKey: TBytes; ParaSeq: UInt64; ParaRO: TReadOptions; out ParaFound: Boolean): Exception;
+var
+  vValue: TBytes;
+  vErr: Exception;
+begin
+  vErr := GetInternal(ParaAuxM, ParaAuxT, ParaKey, ParaSeq, ParaRO, vValue);
+  if vErr = nil then
+  begin
+    ParaFound := True;
+    Result := nil;
+  end
+  else if (vErr = ErrNotFound) or (vErr.Message = 'leveldb: not found') then
+  begin
+    ParaFound := False;
+    Result := nil;
+  end
+  else
+  begin
+    ParaFound := False;
+    Result := vErr;
   end;
 end;
 

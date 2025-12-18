@@ -24,6 +24,7 @@ uses
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.SessionRecord,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.SessionUtil,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Storage.Storage,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Table,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Version;
@@ -72,7 +73,7 @@ implementation
 
 constructor EInternalKeyCorrupted.Create( const ParaIkey : TBytes; const ParaReason : string );
 begin
-	inherited Create( Format( 'leveldb: internal key corrupted: %s', [ ParaReason ] ) );
+	inherited Create( Default( TFileDesc ), Format( 'leveldb: internal key corrupted: %s', [ ParaReason ] ) );
 	mIkey := ParaIkey;
 	mReason := ParaReason;
 end;

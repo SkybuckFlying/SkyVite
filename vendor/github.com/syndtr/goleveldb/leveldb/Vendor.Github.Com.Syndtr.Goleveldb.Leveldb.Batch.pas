@@ -3,6 +3,7 @@ unit Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Batch;
 interface
 
 uses
+  System.SysUtils,
   System.Classes,
   System.SysUtils,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer,
@@ -19,7 +20,7 @@ uses
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Errors.Errors,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Filter,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Key,
-  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Memdb,
+  Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Memdb.Memdb,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Options,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Session,
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.SessionCompaction,
@@ -32,7 +33,7 @@ uses
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Version;
 
 type
-  TMemDB_DB = Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Memdb.TDB;
+  TMemDB_DB = Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Memdb.Memdb.TDB;
 
   IBatchReplay = interface
     ['{E9A8B6C7-8D1F-4B1C-AF2A-1B2C3D4E5F80}']

@@ -4,6 +4,9 @@ interface
 uses
   Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.BytesComparer;
 
+uses
+	System.SysUtils;
+
 type
 	IBasicComparer = interface
 		['{C5A8B6C7-8D1F-4B1C-AF2A-1B2C3D4E5F6D}']

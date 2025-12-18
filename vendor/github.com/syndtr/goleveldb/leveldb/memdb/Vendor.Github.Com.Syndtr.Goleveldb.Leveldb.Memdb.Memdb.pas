@@ -6,6 +6,7 @@ uses
 	System.SysUtils,
 	System.SyncObjs,
 	System.Math,
+	System.Generics.Collections,
 	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Comparer.Comparer,
 	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Iterator.Iter,
 	Vendor.Github.Com.Syndtr.Goleveldb.Leveldb.Util.Util;

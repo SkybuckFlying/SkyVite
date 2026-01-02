@@ -598,45 +598,45 @@
 598:"vendor\golang.org\x\sys\unix\zsyscall_aix_ppc64_gccgo.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallAixPpc64Gccgo.pas", does not exist
 599:"vendor\golang.org\x\sys\unix\zsyscall_darwin_amd64.1_13.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallDarwinAmd64113.pas", does not exist
 600:"vendor\golang.org\x\sys\unix\zsyscall_darwin_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallDarwinAmd64.pas", does not exist
-601:"vendor\golang.org\x\sys\unix\zsyscall_darwin_arm64.1_13.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallDarwinArm64113.pas", does not exist
-602:"vendor\golang.org\x\sys\unix\zsyscall_darwin_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallDarwinArm64.pas", does not exist
-603:"vendor\golang.org\x\sys\unix\zsyscall_dragonfly_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallDragonflyAmd64.pas", does not exist
-604:"vendor\golang.org\x\sys\unix\zsyscall_freebsd_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallFreebsd386.pas", does not exist
-605:"vendor\golang.org\x\sys\unix\zsyscall_freebsd_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallFreebsdAmd64.pas", does not exist
-606:"vendor\golang.org\x\sys\unix\zsyscall_freebsd_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallFreebsdArm.pas", does not exist
-607:"vendor\golang.org\x\sys\unix\zsyscall_freebsd_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallFreebsdArm64.pas", does not exist
-608:"vendor\golang.org\x\sys\unix\zsyscall_illumos_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallIllumosAmd64.pas", does not exist
-609:"vendor\golang.org\x\sys\unix\zsyscall_linux.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinux.pas", does not exist
-610:"vendor\golang.org\x\sys\unix\zsyscall_linux_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinux386.pas", does not exist
-611:"vendor\golang.org\x\sys\unix\zsyscall_linux_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxAmd64.pas", does not exist
-612:"vendor\golang.org\x\sys\unix\zsyscall_linux_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxArm.pas", does not exist
-613:"vendor\golang.org\x\sys\unix\zsyscall_linux_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxArm64.pas", does not exist
-614:"vendor\golang.org\x\sys\unix\zsyscall_linux_mips.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxMips.pas", does not exist
-615:"vendor\golang.org\x\sys\unix\zsyscall_linux_mips64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxMips64.pas", does not exist
-616:"vendor\golang.org\x\sys\unix\zsyscall_linux_mips64le.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxMips64le.pas", does not exist
-617:"vendor\golang.org\x\sys\unix\zsyscall_linux_mipsle.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxMipsle.pas", does not exist
-618:"vendor\golang.org\x\sys\unix\zsyscall_linux_ppc.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxPpc.pas", does not exist
-619:"vendor\golang.org\x\sys\unix\zsyscall_linux_ppc64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxPpc64.pas", does not exist
-620:"vendor\golang.org\x\sys\unix\zsyscall_linux_ppc64le.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxPpc64le.pas", does not exist
-621:"vendor\golang.org\x\sys\unix\zsyscall_linux_riscv64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxRiscv64.pas", does not exist
-622:"vendor\golang.org\x\sys\unix\zsyscall_linux_s390x.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxS390x.pas", does not exist
-623:"vendor\golang.org\x\sys\unix\zsyscall_linux_sparc64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxSparc64.pas", does not exist
-624:"vendor\golang.org\x\sys\unix\zsyscall_netbsd_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallNetbsd386.pas", does not exist
-625:"vendor\golang.org\x\sys\unix\zsyscall_netbsd_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallNetbsdAmd64.pas", does not exist
-626:"vendor\golang.org\x\sys\unix\zsyscall_netbsd_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallNetbsdArm.pas", does not exist
-627:"vendor\golang.org\x\sys\unix\zsyscall_netbsd_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallNetbsdArm64.pas", does not exist
-628:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsd386.pas", does not exist
-629:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsdAmd64.pas", does not exist
-630:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsdArm.pas", does not exist
-631:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsdArm64.pas", does not exist
-632:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_mips64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsdMips64.pas", does not exist
-633:"vendor\golang.org\x\sys\unix\zsyscall_solaris_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallSolarisAmd64.pas", does not exist
-634:"vendor\golang.org\x\sys\unix\zsyscall_zos_s390x.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallZosS390x.pas", does not exist
-635:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsd386.pas", does not exist
-636:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsdAmd64.pas", does not exist
-637:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsdArm.pas", does not exist
-638:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsdArm64.pas", does not exist
-639:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_mips64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsdMips64.pas", does not exist
+601:"vendor\golang.org\x\sys\unix\zsyscall_darwin_arm64.1_13.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallDarwinArm64113.pas", exists
+602:"vendor\golang.org\x\sys\unix\zsyscall_darwin_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallDarwinArm64.pas", exists
+603:"vendor\golang.org\x\sys\unix\zsyscall_dragonfly_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallDragonflyAmd64.pas", exists
+604:"vendor\golang.org\x\sys\unix\zsyscall_freebsd_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallFreebsd386.pas", exists
+605:"vendor\golang.org\x\sys\unix\zsyscall_freebsd_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallFreebsdAmd64.pas", exists
+606:"vendor\golang.org\x\sys\unix\zsyscall_freebsd_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallFreebsdArm.pas", exists
+607:"vendor\golang.org\x\sys\unix\zsyscall_freebsd_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallFreebsdArm64.pas", exists
+608:"vendor\golang.org\x\sys\unix\zsyscall_illumos_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallIllumosAmd64.pas", exists
+609:"vendor\golang.org\x\sys\unix\zsyscall_linux.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinux.pas", exists
+610:"vendor\golang.org\x\sys\unix\zsyscall_linux_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinux386.pas", exists
+611:"vendor\golang.org\x\sys\unix\zsyscall_linux_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxAmd64.pas", exists
+612:"vendor\golang.org\x\sys\unix\zsyscall_linux_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxArm.pas", exists
+613:"vendor\golang.org\x\sys\unix\zsyscall_linux_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxArm64.pas", exists
+614:"vendor\golang.org\x\sys\unix\zsyscall_linux_mips.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxMips.pas", exists
+615:"vendor\golang.org\x\sys\unix\zsyscall_linux_mips64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxMips64.pas", exists
+616:"vendor\golang.org\x\sys\unix\zsyscall_linux_mips64le.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxMips64le.pas", exists
+617:"vendor\golang.org\x\sys\unix\zsyscall_linux_mipsle.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxMipsle.pas", exists
+618:"vendor\golang.org\x\sys\unix\zsyscall_linux_ppc.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxPpc.pas", exists
+619:"vendor\golang.org\x\sys\unix\zsyscall_linux_ppc64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxPpc64.pas", exists
+620:"vendor\golang.org\x\sys\unix\zsyscall_linux_ppc64le.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxPpc64le.pas", exists
+621:"vendor\golang.org\x\sys\unix\zsyscall_linux_riscv64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxRiscv64.pas", exists
+622:"vendor\golang.org\x\sys\unix\zsyscall_linux_s390x.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxS390x.pas", exists
+623:"vendor\golang.org\x\sys\unix\zsyscall_linux_sparc64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallLinuxSparc64.pas", exists
+624:"vendor\golang.org\x\sys\unix\zsyscall_netbsd_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallNetbsd386.pas", exists
+625:"vendor\golang.org\x\sys\unix\zsyscall_netbsd_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallNetbsdAmd64.pas", exists
+626:"vendor\golang.org\x\sys\unix\zsyscall_netbsd_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallNetbsdArm.pas", exists
+627:"vendor\golang.org\x\sys\unix\zsyscall_netbsd_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallNetbsdArm64.pas", exists
+628:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsd386.pas", exists
+629:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsdAmd64.pas", exists
+630:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsdArm.pas", exists
+631:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsdArm64.pas", exists
+632:"vendor\golang.org\x\sys\unix\zsyscall_openbsd_mips64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallOpenbsdMips64.pas", exists
+633:"vendor\golang.org\x\sys\unix\zsyscall_solaris_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallSolarisAmd64.pas", exists
+634:"vendor\golang.org\x\sys\unix\zsyscall_zos_s390x.go","Vendor.Golang.Org.X.Sys.Unix.ZsyscallZosS390x.pas", exists
+635:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_386.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsd386.pas", exists
+636:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsdAmd64.pas", exists
+637:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_arm.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsdArm.pas", exists
+638:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsdArm64.pas", exists
+639:"vendor\golang.org\x\sys\unix\zsysctl_openbsd_mips64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysctlOpenbsdMips64.pas", exists
 640:"vendor\golang.org\x\sys\unix\zsysnum_darwin_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysnumDarwinAmd64.pas", does not exist
 641:"vendor\golang.org\x\sys\unix\zsysnum_darwin_arm64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysnumDarwinArm64.pas", does not exist
 642:"vendor\golang.org\x\sys\unix\zsysnum_dragonfly_amd64.go","Vendor.Golang.Org.X.Sys.Unix.ZsysnumDragonflyAmd64.pas", does not exist

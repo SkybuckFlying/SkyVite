@@ -3,63 +3,76 @@ unit Vendor.Golang.Org.X.Crypto.Sha3.Sha3;
 interface
 
 uses
-  System.SysUtils;
+  System.SysUtils, Crypto.Hash;
+
+type
+  TSpongeDirection = (sdAbsorbing, sdSqueezing);
 
 const
   MaxRate = 168;
 
 type
-  TSpongeDirection = (SpongeAbsorbing, TSpongeSqueezing);
-
   TState = class
   private
-    FA: array[0..24] of UInt64;
+    FA: array [0 .. 24] of UInt64;
     FBuf: TBytes;
     FRate: Integer;
-    FDsbyte: Byte;
+    FDSByte: Byte;
     FOutputLen: Integer;
     FState: TSpongeDirection;
+
+    procedure Permute;
+    procedure PadAndPermute(ADSByte: Byte);
   public
-    function BlockSize: Integer;
-    function Size: Integer;
     procedure Reset;
-    function Write(const P: TBytes): Integer;
-    function Read(var Out_: TBytes): Integer;
-    function Sum(const In_: TBytes): TBytes;
+    procedure Write(const P: TBytes);
+    function Read(out P: TBytes): Integer;
+    function Sum(const InBytes: TBytes): TBytes;
   end;
 
 implementation
 
-{ TState }
+uses
+  Vendor.Golang.Org.X.Crypto.Sha3.Keccakf;
 
-function TState.BlockSize: Integer; begin Result := FRate; end;
-function TState.Size: Integer; begin Result := FOutputLen; end;
+{ TState }
 
 procedure TState.Reset;
 var
   I: Integer;
 begin
-  for I := 0 to 24 do FA[I] := 0;
-  FState := SpongeAbsorbing;
+  for I := 0 to 24 do
+    FA[I] := 0;
+  FState := sdAbsorbing;
   SetLength(FBuf, 0);
 end;
 
-function TState.Write(const P: TBytes): Integer;
+procedure TState.Permute;
 begin
-  // Implementation of Write
-  Result := Length(P);
+  // Implementation
+  KeccakF1600(FA);
 end;
 
-function TState.Read(var Out_: TBytes): Integer;
+procedure TState.PadAndPermute(ADSByte: Byte);
 begin
-  // Implementation of Read
-  Result := Length(Out_);
+  // Implementation
 end;
 
-function TState.Sum(const In_: TBytes): TBytes;
+procedure TState.Write(const P: TBytes);
 begin
-  // Implementation of Sum
-  Result := In_;
+  // Implementation
+end;
+
+function TState.Read(out P: TBytes): Integer;
+begin
+  // Implementation
+  Result := 0;
+end;
+
+function TState.Sum(const InBytes: TBytes): TBytes;
+begin
+  // Implementation
+  Result := nil;
 end;
 
 end.

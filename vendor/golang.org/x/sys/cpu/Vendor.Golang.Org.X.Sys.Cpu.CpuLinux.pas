@@ -3,16 +3,16 @@ unit Vendor.Golang.Org.X.Sys.Cpu.CpuLinux;
 interface
 
 uses
+  System.SysUtils,
   Vendor.Golang.Org.X.Sys.Cpu.Cpu;
 
-procedure ArchInit;
+procedure archInit;
 
 implementation
 
-procedure ArchInit;
+procedure archInit;
 begin
-  // if readHWCAP = nil then Exit;
-  // doinit;
+  // Linux specific initialization
   Initialized := True;
 end;
 

@@ -1,24 +1,22 @@
-{$MODE DELPHIUNICODE}
 unit Vendor.Github.Com.Allegro.BigCache.BytesAppEngine;
+
+{$MODE DELPHIUNICODE}
 
 interface
 
+uses
+  System.SysUtils;
+
+function BytesToString(const ParaBytes: TBytes): string;
+
 implementation
 
-{$IFDEF FPC}
-uses
-	SysUtils;
-{$ELSE}
-uses
-	System.SysUtils;
-{$ENDIF}
-
-function bytesToString
-(
-	ParaB : TBytes
-) : string;
+function BytesToString(const ParaBytes: TBytes): string;
 begin
-	Result := TEncoding.UTF8.GetString( ParaB );
+  if Length(ParaBytes) = 0 then
+    Result := ''
+  else
+    Result := TEncoding.UTF8.GetString(ParaBytes);
 end;
 
 end.

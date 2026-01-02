@@ -1,15 +1,16 @@
-{$MODE DELPHIUNICODE}
 unit Vendor.Github.Com.Allegro.BigCache.EntryNotFoundError;
+
+{$MODE DELPHIUNICODE}
 
 interface
 
-var
-	// ErrEntryNotFound is an error type struct which is returned when entry was not found for provided key
-	ErrEntryNotFound : string;
+uses
+  System.SysUtils;
+
+type
+  // ErrEntryNotFound is an error type struct which is returned when entry was not found for provided key
+  EEntryNotFound = class(Exception);
 
 implementation
-
-initialization
-	ErrEntryNotFound := 'Entry not found';
 
 end.

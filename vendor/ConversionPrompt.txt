@@ -1,11 +1,17 @@
 Conversion Prompt for vendor subfolder.
 
-version 0.01 created on 18 december 2025 by Skybuck Flying.
+version 0.03 created on 2 january 2025 by Skybuck Flying.
 
 Step 1. Read textfile: "AI System Prompts\JulesConversionPrompt.md"
 
-Step 2. Read textfile: "vendor\VendorMappingV3.txt"
+Step 2. Read textfile: "vendor\ConversionStatusV3_Output.txt"
 
-Step 3. Convert all *.go files to *.pas or *.dpr from the VendorMappingV3.txt
+Step 3. Find a *.go file inside ConversionStatusV3_Output.txt which does not yet have a *.pas file. Look for "does not exist".
+        Once found:
+        Change the entry "does not exist" to "converting"
+        Convert the *.go file using the jules conversion prompt directives to *.pas. Golang to Delphi conversion.
+        Save the *.pas next to the *.go file in the same folder. Make sure to follow coding style guide lines.
+	
+Step 4. Once the file is converted, run vendor\CheckPascalConversionStatus.exe this will automatically generate a new ConversionStatusV3_Output.txt which should update the exist status.
 
-Step 4. The converted *.pas or *.dpr files should stay next to the *.go files. So keep then in the same folders/subfolders.
+Step 5. Then proceed and pick a new *.go file to convert which does not yet have a *.pas file.

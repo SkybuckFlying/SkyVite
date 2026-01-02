@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{01B8C6E9-6904-46E3-BDED-0042ECC874E8}</ProjectGuid>
+        <ProjectGuid>{D4ECE51E-7BF7-4455-8C75-112F12FAF8E0}</ProjectGuid>
         <MainSource>CheckPascalConversionStatus.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>

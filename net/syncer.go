@@ -224,6 +224,7 @@ func (s *syncer) stop() {
 }
 
 func (s *syncer) start() {
+	s.log.Info("SNAPSYNC: start() called")
 	if !atomic.CompareAndSwapInt32(&s.running, 0, 1) {
 		return
 	}
@@ -457,22 +458,40 @@ func (s *syncer) verifyHashHeightList(start []*ledger.HashHeight, points []*Hash
 // start [start0 = currentHeight / syncTaskSize * syncTaskSize, start1 = start0 - 100, start2 = irrevHeight ]
 func (s *syncer) sync() error {
 	// get hash height list first
+	s.log.Info("SNAPSYNC: sync() called")
+	
 	start := s.getInitStart()
+	s.log.Info("SNAPSYNC: getInitStart returned", "start0", start[0].Height, "start0_hash", start[0].Hash)
+	if len(start) > 1 {
+		s.log.Info("SNAPSYNC: start1", "height", start[1].Height, "hash", start[1].Hash)
+	}
+	if len(start) > 2 {
+		s.log.Info("SNAPSYNC: start2", "height", start[2].Height, "hash", start[2].Hash)
+	}
+	
 	end := s.getEnd(start)
+	s.log.Info("SNAPSYNC: end calculated", "end", end)
 
 	// construct hash height list
 	points, err := s.getHashHeightList(start, end)
 	if err != nil {
 		return fmt.Errorf("failed to get hashheight list: %v", err)
 	}
+	s.log.Info("SNAPSYNC: skeleton built", "len", len(points))
+	if len(points) > 0 {
+		s.log.Info("SNAPSYNC: first point", "height", points[0].Height, "hash", points[0].Hash)
+		s.log.Info("SNAPSYNC: last point", "height", points[len(points)-1].Height, "hash", points[len(points)-1].Hash)
+	}
 
 	startPoint, err := s.verifyHashHeightList(start, points)
 	if err != nil {
 		return err
 	}
+	s.log.Info("SNAPSYNC: verified startPoint", "height", startPoint.Height, "hash", startPoint.Hash)
 
 	s.reader.reset()
 	s.from = startPoint.Height + 1
+	s.log.Info("SNAPSYNC: starting downloadLoop", "from", s.from, "to", end)
 	go s.downloadLoop(startPoint, end, points)
 
 	return nil
@@ -487,33 +506,40 @@ func (s *syncer) downloadLoop(point *ledger.HashHeight, end uint64, points []*Ha
 
 	var err error
 
-Loop:
 	for {
 		s.log.Info(fmt.Sprintf("construct skeleton: %d-%d", point.Height, end))
 
+		// FIRST: Submit tasks from compareCache
 		if tasks := s.reader.compareCache(point, points); len(tasks) > 0 {
 			for _, t := range tasks {
 				// could be blocked when downloader tasks queue is full
 				if false == s.downloader.download(t, false) || atomic.LoadInt32(&s.taskCanceled) == 1 {
 					s.log.Warn("break download loop")
 					s.downloader.cancelAllTasks()
-					break Loop
+					return
 				}
 			}
 		}
 
-		// the last task has been submitted
+		// THEN: Check if this is the final batch (partial tail)
+		// Do NOT exit before submitting tasks - that was the bug!
 		if end%syncTaskSize != 0 {
-			s.log.Info(fmt.Sprintf("download loop done at end: %d", end))
+			s.log.Info(fmt.Sprintf("download loop completed (partial tail) at end: %d", end))
 			return
 		}
 
-		// continue download
+		// continue download for next batch
 		point = &(points[len(points)-1].HashHeight)
 		start := []*ledger.HashHeight{
 			{point.Height, point.Hash},
 		}
 		end = s.getEnd(start)
+
+		// If no progress, exit
+		if end <= point.Height {
+			s.log.Info(fmt.Sprintf("download loop completed at height: %d", point.Height))
+			return
+		}
 
 		points, err = s.getHashHeightList(start, end)
 		if err != nil {

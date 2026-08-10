@@ -263,6 +263,15 @@ func (s *cacheReader) stop() {
 
 // start is use to confirm the first task.PrevHash
 func constructTasks(hhs []*HashHeightPoint) (ts syncTasks) {
+	log := netLog.New("module", "constructTasks")
+	log.Info("constructTasks called", "len", len(hhs))
+	if len(hhs) == 0 {
+		log.Warn("constructTasks: empty hhs")
+		return
+	}
+	log.Info("constructTasks first point", "height", hhs[0].Height, "hash", hhs[0].Hash)
+	log.Info("constructTasks last point", "height", hhs[len(hhs)-1].Height, "hash", hhs[len(hhs)-1].Hash)
+
 	const maxSnapshotChunksOneTask = 2000 // almost 2000 * 0.5k = 1mb
 	const maxSizeOneTask = 1 << 21        // 2mb
 
@@ -319,6 +328,7 @@ func constructTasks(hhs []*HashHeightPoint) (ts syncTasks) {
 		Segment: seg,
 	})
 
+	log.Info("constructTasks returning", "tasks", len(ts))
 	return
 }
 
@@ -433,87 +443,53 @@ func compareCache(segments interfaces.SegmentList, hashHeightList []*HashHeightP
 	return
 }
 
-//func compareCache(segments interfaces.SegmentList, hashHeightList []*message.HashHeightPoint, deleteChunk func(segment interfaces.Segment)) (ts syncTasks) {
-//	var start, from, index int
-//	var fromOK, toOK bool
-//	var hashHeight *message.HashHeightPoint
-//	for _, segment := range segments {
-//		fromOK = false
-//		toOK = false
-//		for index < len(hashHeightList) {
-//			hashHeight = hashHeightList[index]
-//			// compare from
-//			if segment.From == hashHeight.Height+1 {
-//				if segment.PrevHash == hashHeight.Hash {
-//					fromOK = true
-//					from = index
-//				}
-//				break
-//			} else if segment.From < hashHeight.Height {
-//				break
-//			}
-//
-//			index++
-//		}
-//
-//		if fromOK {
-//			// compare to
-//			for index < len(hashHeightList) {
-//				hashHeight = hashHeightList[index]
-//				if segment.To == hashHeight.Height {
-//					if segment.Hash == hashHeight.Hash {
-//						// to is ok
-//						toOK = true
-//					}
-//					break
-//				} else if segment.To < hashHeight.Height {
-//					break
-//				}
-//
-//				index++
-//			}
-//		}
-//
-//		if fromOK && toOK {
-//			// add tasks
-//			ts = append(ts, constructTasks(hashHeightList[start:from+1])...)
-//			start = index
-//			from = index
-//		} else {
-//			deleteChunk(segment)
-//		}
-//	}
-//
-//	// rest HashHeightList
-//	ts = append(ts, constructTasks(hashHeightList[from:])...)
-//
-//	return
-//}
-
 func (s *cacheReader) compareCache(start *ledger.HashHeight, hhs []*HashHeightPoint) syncTasks {
+	s.log.Info("SNAPSYNC: compareCache called", "startHeight", start.Height, "numPoints", len(hhs))
+	
 	s.pause()
 	defer s.resume() // will signal reader
 	atomic.CompareAndSwapUint64(&s.readHeight, 0, start.Height)
 
-	hhs[0].Height = start.Height
-	hhs[0].Hash = start.Hash
-
-	cs := s.localChunks()
-	if len(cs) == 0 {
-		return constructTasks(hhs)
+	// Clone the slice to avoid mutating the original skeleton points
+	points := make([]*HashHeightPoint, len(hhs))
+	for i, hp := range hhs {
+		newHP := *hp
+		points[i] = &newHP
 	}
 
-	if cs[0].From >= hhs[len(hhs)-1].Height {
-		return constructTasks(hhs)
+	// Modify the cloned copy
+	points[0].Height = start.Height
+	points[0].Hash = start.Hash
+
+	cs := s.localChunks()
+	s.log.Info("SNAPSYNC: localChunks", "count", len(cs))
+	
+	if len(cs) == 0 {
+		s.log.Info("SNAPSYNC: no local chunks, calling constructTasks")
+		tasks := constructTasks(points)
+		s.log.Info("SNAPSYNC: constructTasks returned", "tasks", len(tasks))
+		return tasks
+	}
+
+	if cs[0].From >= points[len(points)-1].Height {
+		s.log.Info("SNAPSYNC: chunks start beyond points end, calling constructTasks")
+		tasks := constructTasks(points)
+		s.log.Info("SNAPSYNC: constructTasks returned", "tasks", len(tasks))
+		return tasks
 	}
 
 	last := cs[len(cs)-1]
 	if last.To <= start.Height {
-		return constructTasks(hhs)
+		s.log.Info("SNAPSYNC: last chunk before start, calling constructTasks")
+		tasks := constructTasks(points)
+		s.log.Info("SNAPSYNC: constructTasks returned", "tasks", len(tasks))
+		return tasks
 	}
 
-	// chunk and tasks are overlapped
-	return compareCache(cs, hhs, s.deleteChunk)
+	s.log.Info("SNAPSYNC: calling compareCache (overlapped)")
+	tasks := compareCache(cs, points, s.deleteChunk)
+	s.log.Info("SNAPSYNC: compareCache returned", "tasks", len(tasks))
+	return tasks
 }
 
 func (s *cacheReader) deleteChunk(segment interfaces.Segment) {

@@ -47,18 +47,32 @@ func (cfg *Producer) Parse() error {
 }
 
 func parseCoinbase(coinbaseCfg string) (*types.Address, uint32, error) {
-	splits := strings.Split(coinbaseCfg, ":")
-	if len(splits) != 2 {
-		return nil, 0, errors.New("len is not equals 2")
-	}
-	i, err := strconv.Atoi(splits[0])
-	if err != nil {
-		return nil, 0, err
-	}
-	addr, err := types.HexToAddress(splits[1])
-	if err != nil {
-		return nil, 0, err
-	}
-
-	return &addr, uint32(i), nil
+    // Check if format is "index:address" or just "address"
+    splits := strings.Split(coinbaseCfg, ":")
+    
+    var index uint32 = 0
+    var addressStr string
+    
+    if len(splits) == 1 {
+        // Format: just "vite_..." (no index)
+        addressStr = splits[0]
+        index = 0
+    } else if len(splits) == 2 {
+        // Format: "index:vite_..."
+        i, err := strconv.Atoi(splits[0])
+        if err != nil {
+            return nil, 0, err
+        }
+        index = uint32(i)
+        addressStr = splits[1]
+    } else {
+        return nil, 0, errors.New("invalid coinbase format")
+    }
+    
+    addr, err := types.HexToAddress(addressStr)
+    if err != nil {
+        return nil, 0, err
+    }
+    
+    return &addr, index, nil
 }
